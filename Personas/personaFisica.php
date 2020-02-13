@@ -53,9 +53,9 @@ if(isset($_POST['Enviar'])){
 
 
 
- $insert = "INSERT INTO personafisica(folioImpreso,ventanidirRegional,ventaniMunicipio,nombre,genero,fechaNacimiento,nacionalidad,estadoCivil,estadoNacimiento,
-telefono,correoElectronico,tipoIdentificacion,numeroIdentificacion,curp,tipoDomicilio,tipoAsentamiento,nombreAsentamiento,
-tipoVialidad,nombreVialidad,nombreLocalidad,nombreMunicipio,referenciaVialidad,tipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
+ $insert = "INSERT INTO personafisica(sfolioImpreso,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
+stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
 
 
 

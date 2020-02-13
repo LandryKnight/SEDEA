@@ -1,62 +1,44 @@
+#Base de Datos Sedea
+
 
 drop Database Sedea;
 Create Database Sedea;
 
-drop table usuarios;
-
-Create Table Usuarios (
-id int Primary key auto_increment,	
-usuario varchar(60),
-contra varchar(60),
-estado varchar(60),
-municipio varchar(120)
---fechaRegistro time 
-
-);
 
 drop table personafisica;
 
 truncate table personafisica;
 
 
-
+#Tabla Persona Fisica
 Create Table personafisica(
-idPersonaFisica int Primary key auto_increment,
+sIdPersonaFisica int Primary key auto_increment,
 
-folioImpreso varchar(30),
-ventanidirRegional varchar(30),  
-ventaniMunicipio varchar(30),
-nombre varchar(80),
-genero varchar(25),
-fechaNacimiento varchar(8),
-nacionalidad varchar(25),
-estadoCivil varchar(25),
-estadoNacimiento varchar(25),
-telefono int(10),
-correoElectronico varchar(120),
-tipoIdentificacion varchar(30),
-numeroIdentificacion varchar(13),
-curp varchar(20),
-tipoDomicilio varchar(8),
-tipoAsentamiento varchar(8),
-nombreAsentamiento varchar(50),
-tipoVialidad varchar(10),
-nombreVialidad varchar(50),
-nombreLocalidad varchar(50),
-nombreMunicipio varchar(30),
-referenciaVialidad varchar(50),
-tipoActividad varchar(15)
+sfolioImpreso varchar(30),
+sventanidirRegional varchar(30),  
+sventaniMunicipio varchar(30),
+snombre varchar(80),
+sgenero varchar(25),
+sfechaNacimiento varchar(8),
+snacionalidad varchar(25),
+sestadoCivil varchar(25),
+sestadoNacimiento varchar(25),
+stelefono int(10),
+scorreoElectronico varchar(120),
+stipoIdentificacion varchar(30),
+snumeroIdentificacion varchar(13),
+scurp varchar(20),
+stipoDomicilio varchar(8),
+stipoAsentamiento varchar(8),
+snombreAsentamiento varchar(50),
+stipoVialidad varchar(10),
+snombreVialidad varchar(50),
+snombreLocalidad varchar(50),
+snombreMunicipio varchar(30),
+sreferenciaVialidad varchar(50),
+stipoActividad varchar(15)
 )
 
-
-
-
-insert into personafisica(folioImpreso,ventanidirRegional,ventaniMunicipio,nombre,genero,fechaNacimiento,nacionalidad,estadoCivil,estadoNacimiento,telefono) Values();
-
---Inserts 
-insert into Usuarios (usuario,contra,estado,municipio,fechaRegistro) Values ();
-
-insert into Usuarios (usuario,contra,estado,municipio) Values ('Sedea_Juan','Juan_SDA','Queretaro','Santiago de Queretaro');
 
 
 
@@ -64,7 +46,7 @@ drop table personamoral;
 truncate table personamoral;
 
 Create table personamoral(
-idPersonaMoral int Primary Key auto_increment,
+sIdPersonaMoral int Primary Key auto_increment,
 sFolioImpreso varchar(30) Primary key,
 sVentanillaDireccionRegional varchar(30),
 sVentanillaMunicipio varchar(30),
@@ -87,7 +69,7 @@ sTipoActividadEconomicaOrganizacion varchar(20)
 )
 
 Create table representante(
-idRepre int Primary Key auto_increment,
+sIdRepre int Primary Key auto_increment,
 sRFolioImpreso varchar(20),
 sNombreRepresentante varchar(80),
 sGeneroRepresentante varchar(10),
@@ -116,20 +98,20 @@ add constraint FK_Folio Foreign key(sRFolioImpreso) references personamoral(sFol
 
 /* telefono correo redundantes */
 
-Create Table nombreProyecto(
-idProyecto int Primary Key  auto_increment,
-nombreProyecto varchar(80),
-AntiguedadProyecto varchar(20),
-TelefonoProyecto varchar(100),
-CorreoElectronicoProyecto varchar(120),
-FechaConstitucion varchar(10),
-TipoDomicilioProyecto varchar(10),
-TipoAsentamientoProyecto varchar(10),
-NombreAsentamientoProyecto varchar(80),
-TipoVialidadProyecto  varchar(10),
-NombreVialidadProyecto varchar(80),
-NombreLocalidadProyecto varchar(80),
-NombreMunicipioProyecto varchar(30),
-ReferenciaVialidadProyecto varchar(50)
+Create Table nombreproyecto(
+sIdProyecto int Primary Key  auto_increment,
+sNombreProyecto varchar(80),
+sAntiguedadProyecto varchar(20),
+sTelefonoProyecto varchar(100),
+sCorreoElectronicoProyecto varchar(120),
+sFechaConstitucion varchar(10),
+sTipoDomicilioProyecto varchar(10),
+sTipoAsentamientoProyecto varchar(10),
+sNombreAsentamientoProyecto varchar(80),
+sTipoVialidadProyecto  varchar(10),
+sNombreVialidadProyecto varchar(80),
+sNombreLocalidadProyecto varchar(80),
+sNombreMunicipioProyecto varchar(30),
+sReferenciaVialidadProyecto varchar(50)
 
 )
