@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*Color de fonde de toda la pagina */
+	background-color: #FFFFFF;
+}
+
+
+.Marco{
+	align-content: center;
+	width: 500px;
+	height: 600px;
+	position: absolute;
+	top: 50px;
+	left: 32.5%;
+	/*redondeo de las esquinas */
+	border-radius: 15px;
+	border-style: solid;
+	border:none;
+	/* Color de Fondo */
+	/*background: #008040;*/
+	background: #1D447D;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+}
+
+.Marco h2{
+	margin-top: 20px;
+	
+	color: #FFFFFF;
+}
+
+.Marco h3{
+	margin-top: 20px;
+	margin-bottom: 80px;
+	color: #FFFFFF;
+}
+
+.Marco p{
+	color: #FFFFFF;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.Marco2{
+	/*align-content: center;*/
+	width: 700px;
+	height: 750px;
+	position: absolute;
+	top: 20px;
+	left: 32.5%;
+	/*redondeo de las esquinas */
+	border-radius: 15px;
+	border-style: solid;
+	border:none;
+	/* Color de Fondo */
+	background: #234085;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+}
+
+.Marco2 h2{
+	margin-top: 15px;
+	margin-bottom: 60px;
+	color: #FFFFFF;
+}
+
+.Marco2 p{
+	
+	left: 2%;
+	color: #FFFFFF;
+	margin-top: 15px;
+	font-size: 15px;
+}
+
+
+.marcoIzquierdo{
+	position: relative;
+	left: 15px;
+	width: 350px;
+	background: black;
+
+
+}
+ 
+	
+.marcoDerecho{
+	position: relative;
+	top: -700px;
+	right: 15px;
+	width: 350px;
+	--background: green;
+
+
+}
+
+.cuadro{
+	padding: 2px;
+	border-radius: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 25px;
+	/*27 caracteres */
+	width: 200px;
+	/* */
+}
+
+.Icuadro{
+
+	padding: 2px;
+	border-radius: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 20px;
+	/*27 caracteres */
+	width: 200px;
+
+
+
+}
+
+.boton{
+	/* color de fondo naranja
+	background: #C74826;
+	 */
+
+	/*color de fondo */
+	background: #FFFFFF;
+
+	border-style: solid;
+	/*redondeo de las esquinas */
+	border-radius: 15px;
+	/* ancho 
+	   alto */
+	width: 120px;
+	height: 35px;
+	/*color de la letra */
+	color: #9C1462;
+
+	/*font-style:  */
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+.boton2{
+	/* color de fondo blanco 
+	background: #FFFFFF; */
+
+	/*color de fondo */
+	background: #C74826;
+
+	border-style: solid;
+	/*redondeo de las esquinas */
+	border-radius: 15px;
+	/* ancho 
+	   alto */
+	width: 90px;
+	height: 35px;
+	/*color de la letra */
+	color: #FFFFFF;
+
+	/*font-style:  */
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
