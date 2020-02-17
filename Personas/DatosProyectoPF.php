@@ -8,12 +8,16 @@ $funcion = new funcion();
 $con = $funcion -> conectar();
 
 
-if(isset($_POST['EnviarDatos'])){
 
-$NombreProyecto = $_POST['NombreProyecto'];
+
+
+#Recepcion de datos del Proyecto
+if(isset($_POST['DatosProyectoPF'])){
+
+$NombreProyecto = sanitizeString($_POST['NombreProyecto']);
 $AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = $_POST['TelefonoProyecto'];
-$CorreoElectronicoProyecto = $_POST['CorreoElectronicoProyecto'];
+$TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto = sanitizeString($_POST['CorreoElectronicoProyecto']);
 
 $DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
 $MesFechaConstitucion = $_POST['MesFechaConstitucion'];
@@ -24,12 +28,12 @@ $FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFe
 
 $TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
 $TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = $_POST['NombreAsentamientoProyecto'];
+$NombreAsentamientoProyecto = sanitizeString($_POST['NombreAsentamientoProyecto']);
 $TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = $_POST['NombreVialidadProyecto'];
-$NombreLocalidadProyecto = $_POST['NombreLocalidadProyecto'];
+$NombreVialidadProyecto = sanitizeString($_POST['NombreVialidadProyecto']);
+$NombreLocalidadProyecto = sanitizeString($_POST['NombreLocalidadProyecto']);
 $NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = $_POST['ReferenciaVialidadProyecto'];
+$ReferenciaVialidadProyecto = sanitizeString($_POST['ReferenciaVialidadProyecto']);
 
 
 
@@ -50,6 +54,91 @@ $Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelef
 
 
 }
+
+
+if(isset($_POST['EnviarPF'])){
+
+  
+  $folioImpreso = sanitizeString($_POST['FolioImpreso']);
+  $direccionRegional = $_POST['DireccionRegional'];
+  $municipio = $_POST['ventanillaMunicipio'];
+  $nombre = sanitizeString($_POST['nombreCompleto']);
+  $genero = $_POST['genero'];
+
+  $diaNacimiento  = $_POST['DiaFechaNacimiento'];
+  $mesNacimiento  = $_POST['MesFechaNacimiento'];
+  $anioNacimiento  = $_POST['AnioFechaNacimiento'];
+
+  $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
+  echo $fechaNacimiento;
+
+  $nacionalidad = $_POST['Nacionalidad'];
+  $EstadoCivil = $_POST['EstadoCivil'];
+  $estadoNacimiento = $_POST['EstadoNacimiento'];
+  $telefono = sanitizeString($_POST['Telefono']);
+  $correoElectronico = sanitizeString($_POST['Correo']);
+  $tipoIdentificacion = $_POST['tipoIdentificacion'];
+  $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
+  $curp = sanitizeString($_POST['Curp']);
+  $tipoDomicilio = $_POST['tipoDomicilio'];
+  $tipoAsentamiento = $_POST['tipoAsentamiento'];
+  $nombreAsentamiento = sanitizeString($_POST['nombreAsentamiento']);
+  $tipoVialidad = $_POST['tipoVialidad'];
+  $nombreVialidad  = sanitizeString($_POST['nombreVialidad']);
+  $nombreLocalidad = sanitizeString($_POST['nombreLocalidad']);
+  $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
+  $referenciaVialidad = sanitizeString($_POST['referenciaVialidad']);
+  $actividadEconomica = $_POST['tipoActividadEconomica'];
+
+
+ 
+
+
+
+
+
+
+
+
+
+ $insert = "INSERT INTO personafisica(sfolioImpreso,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
+stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
+
+
+
+#utf8_encode
+
+  echo $insert;
+
+
+  if($con -> query($insert)){
+    echo "Datos Registrados <br>";
+  }else {
+    echo $con -> error, "<br>";
+    echo $insert, "<br>";
+  }
+
+ 
+    
+}
+
+
+
+
+function sanitizeString($var){
+
+  if(get_magic_quotes_gpc())
+    $var = stripcslashes($var);
+    $var = strip_tags($var);
+    $var = htmlentities($var);
+  return $var;
+}
+
+
+
+
+
  ?>
 
 
@@ -287,8 +376,8 @@ $Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelef
 <p>Referencia de la vialidad</p>
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> <br> <br>
 
-<input type="submit" name="EnviarDatos" value="Enviar">
-<input type="cancel">
+<input type="submit" name="DatosProyectoPF" value="Enviar">
+
 
 </form>
 </body>

@@ -7,7 +7,7 @@ $funcion = new funcion();
 $con = $funcion -> conectar();
 
 
-if(isset($_POST['enviarDatos'])){
+/*if(isset($_POST['enviarPM'])){
 
  
 $FolioImpreso = sanitizeString(($_POST['FolioImpreso']));
@@ -19,7 +19,7 @@ $NombreOrganizacion  = sanitizeString(($_POST['NombreOrganizacion']));
 $TipoOrganizacion  = sanitizeString(($_POST['TipoOrganizacion']));
 $NumeroTelefonoOrganizacion  = sanitizeString(($_POST['NumeroTelefonoOrganizacion']));
 $CorreoElectronicoOrganizacion  = sanitizeString(($_POST['CorreoElectronicoOrganizacion']));
-								
+                
 $DiaFechaConstitucion  = ($_POST['DiaFechaConstitucion']);
 $MesFechaConstitucion  = ($_POST['MesFechaConstitucion']);
 $AnioFechaConstitucion  = ($_POST['AnioFechaConstitucion']);
@@ -35,8 +35,8 @@ $NombreLocalidadOrganizacion  = sanitizeString(($_POST['NombreLocalidadOrganizac
 $NombreMunicipioOrganizacion  = ($_POST['NombreMunicipioOrganizacion']);
 $ReferenciaVialidadOrganizacion  = sanitizeString(($_POST['ReferenciaVialidadOrganizacion']));
 $TipoActividadEconomicaOrganizacion  = ($_POST['TipoActividadEconomicaOrganizacion']);
-								
-#Representante							
+                
+#Representante              
 $NombreRepresentante  = sanitizeString(($_POST['NombreRepresentante']));
 $GeneroRepresentante  = ($_POST['GeneroRepresentante']);
 
@@ -95,9 +95,9 @@ sNombreMunicipioRepresentante,sReferenciaVialidadRepresentante) VALUES('{$FolioI
 #echo $insert;
 
 if($con -> query($insert) ){
-	if ($con -> query($INSERT2)) {
-		echo "Datos Registrados <br>";
-	}
+  if ($con -> query($INSERT2)) {
+    echo "Datos Registrados <br>";
+  }
     
   }else {
     echo $con -> error, "<br>";
@@ -114,7 +114,7 @@ function sanitizeString($var){
     $var = strip_tags($var);
     $var = htmlentities($var);
   return $var;
-}
+} */
 ?>
 
 <!DOCTYPE html>
@@ -125,7 +125,7 @@ function sanitizeString($var){
 </head>
 <body>
 
-<form action="#" method="post">
+<form action="DatosProyectoPM.php" method="post">
   
   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
 
@@ -676,7 +676,7 @@ function sanitizeString($var){
  <input type="text" name="ReferenciaVialidadRepresentante" maxlength="50"> <br>
 
 
-<input type="submit" name="enviarDatos" value="Enviar">
+<input type="submit" name="enviarPM" value="Enviar">
 
 	
 

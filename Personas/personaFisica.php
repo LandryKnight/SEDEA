@@ -1,6 +1,6 @@
 <?php 
 #utf8_spanish_ci  spanish moderno
-require_once('conect.php');
+/*require_once('conect.php');
 
 
 $funcion = new funcion();
@@ -8,7 +8,7 @@ $funcion = new funcion();
 $con = $funcion -> conectar();
 
 
-if(isset($_POST['Enviar'])){
+if(isset($_POST['EnviarPF'])){
 
   
   $folioImpreso = sanitizeString($_POST['FolioImpreso']);
@@ -88,7 +88,7 @@ function sanitizeString($var){
 }
 
 
-
+ */
 
 
  ?>
@@ -102,7 +102,7 @@ function sanitizeString($var){
   </head>
 <body>
 
-	<form action="#" method="post">
+	<form action="DatosProyectoPF.php" method="post">
 
   
   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
@@ -443,7 +443,7 @@ function sanitizeString($var){
 
 
 
-<input type="submit" name="Enviar" value="Enviar">
+<input type="submit" name="EnviarPF" value="Enviar">
 <br>
 
 </form>
