@@ -18,7 +18,14 @@
 <h4>Documentos Admitidos solo en formato PDF</h4>
 
 <p>RFC Registro Federal de Contribuyentes</p>
-<input type="text" name="RFC">
+<input type="text" name="RFC" maxlength="20" required="required">
+
+<a href="https://www.sat.gob.mx/aplicacion/operacion/79615/valida-en-linea-rfc%C2%B4s-uno-a-uno-o-de-manera-masiva-hasta-5-mil-registros"> <button> Validar RFC en el SAT </button> </a>
+
+
+
+
+
 <p>Acta constitutiva de la Organización, Inscrita a el Registro Público de la Propiedad</p>
 
 <p>Identificación Oficial expedida por el IFE o el INE, <b>Solo del Presidente</b></p>
@@ -79,62 +86,62 @@
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35" 	required="required"> </td>
+		<td><input type="text" name="" maxlength="5" 	required="required">  </td>
+		<td><input type="text" name="" maxlength="5" 	required="required">  </td>
+		<td><input type="text" name="" maxlength="20" 	required="required"> </td>
+		<td><input type="text" name="" maxlength="20" 	required="required"> </td>
+		<td><input type="text" name="" maxlength="20" 	required="required"> </td>
+		<td><input type="text" name="" maxlength="20"	required="required"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 </table>

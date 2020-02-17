@@ -11,6 +11,7 @@
 <body>
 
 
+<form method="Post" action="requisitosGeneralesPF.php">
 
 <table border="1">
 	
@@ -25,67 +26,71 @@
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 	<tr>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name="">	 </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
-		<td><input type="text" name=""> </td>
+		<td><input type="text" name="" maxlength="35"> </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="5">  </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
+		<td><input type="text" name="" maxlength="20"> </td>
 	</tr>
 
 </table>
 
 
+
+</form>
+
+<input type="Submit" name="EnviarConceptos" value="Enviar ">
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 </body>
 </html>
