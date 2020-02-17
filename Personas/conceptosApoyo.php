@@ -85,5 +85,7 @@
 
 </table>
 
+
+<h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 </body>
 </html>
