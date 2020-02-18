@@ -7,6 +7,50 @@ $funcion = new funcion();
 
 $con = $funcion -> conectar();
 
+
+if(isset($_POST['DatosProyectoPM'])){
+
+$NombreProyecto = $_POST['NombreProyecto'];
+$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
+$TelefonoProyecto = $_POST['TelefonoProyecto'];
+$CorreoElectronicoProyecto = $_POST['CorreoElectronicoProyecto'];
+
+$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
+$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
+$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
+
+
+$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+
+$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
+$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
+$NombreAsentamientoProyecto = $_POST['NombreAsentamientoProyecto'];
+$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
+$NombreVialidadProyecto = $_POST['NombreVialidadProyecto'];
+$NombreLocalidadProyecto = $_POST['NombreLocalidadProyecto'];
+$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
+$ReferenciaVialidadProyecto = $_POST['ReferenciaVialidadProyecto'];
+
+
+
+$Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
+
+
+
+  echo $Insert;
+
+
+  if($con -> query($Insert)){
+    echo "Datos Registrados <br>";
+  }else {
+    echo $con -> error, "<br>";
+    echo $insert, "<br>";
+  }
+
+
+
+}
+
 if(isset($_POST['enviarPM'])){
 
  
@@ -114,50 +158,6 @@ function sanitizeString($var){
     $var = strip_tags($var);
     $var = htmlentities($var);
   return $var;
-}
-
-
-if(isset($_POST['DatosProyectoPM'])){
-
-$NombreProyecto = $_POST['NombreProyecto'];
-$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = $_POST['TelefonoProyecto'];
-$CorreoElectronicoProyecto = $_POST['CorreoElectronicoProyecto'];
-
-$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
-
-
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
-
-$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = $_POST['NombreAsentamientoProyecto'];
-$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = $_POST['NombreVialidadProyecto'];
-$NombreLocalidadProyecto = $_POST['NombreLocalidadProyecto'];
-$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = $_POST['ReferenciaVialidadProyecto'];
-
-
-
-$Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
-
-
-
-  echo $Insert;
-
-
-  if($con -> query($Insert)){
-    echo "Datos Registrados <br>";
-  }else {
-    echo $con -> error, "<br>";
-    echo $insert, "<br>";
-  }
-
-
-
 }
  ?>
 
