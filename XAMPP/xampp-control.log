@@ -1,0 +1,36 @@
+01:25:31 p. m.  [main] 	Initializing Control Panel
+01:25:31 p. m.  [main] 	Windows Version:  Home  64-bit
+01:25:31 p. m.  [main] 	XAMPP Version: 7.4.2
+01:25:31 p. m.  [main] 	Control Panel Version: 3.2.4  [ Compiled: Jun 5th 2019 ]
+01:25:31 p. m.  [main] 	You are not running with administrator rights! This will work for
+01:25:31 p. m.  [main] 	most application stuff but whenever you do something with services
+01:25:31 p. m.  [main] 	there will be a security dialogue or things will break! So think 
+01:25:31 p. m.  [main] 	about running this application with administrator rights!
+01:25:31 p. m.  [main] 	XAMPP Installation Directory: "c:\users\luis developer\documents\github\sedea\xampp\"
+01:25:31 p. m.  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+01:25:31 p. m.  [main] 	Checking for prerequisites
+01:25:32 p. m.  [main] 	All prerequisites found
+01:25:32 p. m.  [main] 	Initializing Modules
+01:25:32 p. m.  [main] 	Starting Check-Timer
+01:25:32 p. m.  [main] 	Control Panel Ready
+01:25:37 p. m.  [Apache] 	Attempting to start Apache app...
+01:25:37 p. m.  [Apache] 	Status change detected: running
+01:25:38 p. m.  [mysql] 	Attempting to start MySQL app...
+01:25:38 p. m.  [mysql] 	Status change detected: running
+04:25:14 p. m.  [Apache] 	Attempting to stop Apache (PID: 3064)
+04:25:14 p. m.  [Apache] 	Attempting to stop Apache (PID: 10716)
+04:25:14 p. m.  [Apache] 	Status change detected: stopped
+04:25:15 p. m.  [mysql] 	Attempting to stop MySQL app...
+04:25:15 p. m.  [mysql] 	Status change detected: stopped
+04:25:15 p. m.  [Apache] 	Attempting to start Apache app...
+04:25:16 p. m.  [Apache] 	Status change detected: running
+04:25:16 p. m.  [mysql] 	Attempting to start MySQL app...
+04:25:16 p. m.  [mysql] 	Status change detected: running
+04:31:47 p. m.  [Apache] 	Attempting to stop Apache (PID: 12928)
+04:31:47 p. m.  [Apache] 	Attempting to stop Apache (PID: 6716)
+04:31:47 p. m.  [Apache] 	Status change detected: stopped
+04:31:47 p. m.  [mysql] 	Attempting to stop MySQL app...
+04:31:47 p. m.  [mysql] 	Status change detected: stopped
+04:31:49 p. m.  [main] 	Deinitializing Modules
+04:31:49 p. m.  [main] 	Deinitializing Control Panel
+
