@@ -2,6 +2,7 @@
 require_once('conect.php');
 
 
+
 $funcion = new funcion();
 
 $con = $funcion -> conectar();
@@ -18,7 +19,7 @@ $InversionTotal1	=	sanitizeString(	$_POST['InversionTotal1']);
 
 echo $ApoyoSolicitado1;
 
-$insert1 = "INSERT INTO conceptosApoyoPF(ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{ApoyoSolicitado1}','{UniMedida1}','{CanSolicitada1}','{ApoyoEstatalSolicitado1}','{ApoyoMunicipalSolicitado1}','{AportacionBeneficiario1}','{InversionTotal1}');";
+$insert1 = "INSERT INTO conceptosApoyoPF(sfolioImpreso,ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{$folioImpreso}','{ApoyoSolicitado1}','{UniMedida1}','{CanSolicitada1}','{ApoyoEstatalSolicitado1}','{ApoyoMunicipalSolicitado1}','{AportacionBeneficiario1}','{InversionTotal1}');";
 
 		  if($con -> query($insert1)){
     		echo "Datos Registrados <br>";
@@ -104,14 +105,7 @@ $InversionTotal6	=	sanitizeString(	$_POST['InversionTotal6']);
 }
 
 
-function sanitizeString($var){
 
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
 ?>
 
 
@@ -205,11 +199,11 @@ function sanitizeString($var){
 
 </table>
 
-
+<input type="submit" name="EnviarConceptosPF" value="Enviar Información">
 
 </form>
 
-<input type="submit" name="EnviarConceptosPF" value="Enviar Información">
+
 
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 </body>

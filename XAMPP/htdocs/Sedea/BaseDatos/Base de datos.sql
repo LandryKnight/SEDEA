@@ -12,9 +12,7 @@ truncate table personafisica;
 
 #Tabla Persona Fisica
 Create Table personafisica(
-sIdPersonaFisica int Primary key auto_increment,
-
-sfolioImpreso varchar(30),
+sfolioImpresoPF varchar(30) Primary Key,
 sventanidirRegional varchar(30),  
 sventaniMunicipio varchar(30),
 snombre varchar(80),
@@ -36,15 +34,15 @@ snombreVialidad varchar(50),
 snombreLocalidad varchar(50),
 snombreMunicipio varchar(30),
 sreferenciaVialidad varchar(50),
-stipoActividad varchar(15),
-sIdProyecto int   #Foreign Key
+stipoActividad varchar(15)
+
 )
 
-ALTER Table personafisica
-add constraint FK_Id_Proyecto_PF Foreign Key (sIdProyecto) references  nombreproyectoPF(sIdProyectoPF);
+
 
 Create Table nombreproyectoPF(
-sIdProyectoPF int Primary Key  auto_increment,
+sIdProyecto int Primary Key auto_increment,
+sfolioImpreso varchar(30), #Foreign Key
 sNombreProyecto varchar(80),
 sAntiguedadProyecto varchar(20),
 sTelefonoProyecto varchar(100),
@@ -60,10 +58,40 @@ sNombreMunicipioProyecto varchar(30),
 sReferenciaVialidadProyecto varchar(50)
 
 )
+ALTER Table nombreproyectoPF
+add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
+
+Create Table conceptosapoyoPF(
+idConcepto int Primary key auto_increment,
+sfolioImpreso varchar(30), #Foreign Key
+ApoyoSolicitado varchar(35),
+UniMedida int(5),
+CanSolicitada int(5),
+ApoyoEstatalSolicitado varchar(20),
+ApoyoMunicipalSolicitado varchar(20),
+AportacionBeneficiario varchar(20),
+InversionTotal varchar(20)
+)
 
 
+ALTER Table conceptosapoyoPF
+add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
+
+Create Table requisitosGenePF(
+idRequisito int Primary Key auto_increment,
+sfolioImpreso varchar(30), #Foreign Key
 
 
+)
+
+
+ALTER Table requisitosGenePF
+add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisica(sfolioImpresoPF);
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Persona Moral 
 
 drop table personamoral;
 truncate table personamoral;

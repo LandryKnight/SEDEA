@@ -7,6 +7,65 @@ $funcion = new funcion();
 
 $con = $funcion -> conectar();
 
+global $folioImpreso;
+
+if(isset($_POST['EnviarPF'])){
+
+  
+  $folioImpreso = sanitizeString($_POST['FolioImpreso']);
+  $direccionRegional = $_POST['DireccionRegional'];
+  $municipio = $_POST['ventanillaMunicipio'];
+  $nombre = sanitizeString($_POST['nombreCompleto']);
+  $genero = $_POST['genero'];
+
+  $diaNacimiento  = $_POST['DiaFechaNacimiento'];
+  $mesNacimiento  = $_POST['MesFechaNacimiento'];
+  $anioNacimiento  = $_POST['AnioFechaNacimiento'];
+
+  $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
+  #echo $fechaNacimiento;
+
+  $nacionalidad = $_POST['Nacionalidad'];
+  $EstadoCivil = $_POST['EstadoCivil'];
+  $estadoNacimiento = $_POST['EstadoNacimiento'];
+  $telefono = sanitizeString($_POST['Telefono']);
+  $correoElectronico = sanitizeString($_POST['Correo']);
+  $tipoIdentificacion = $_POST['tipoIdentificacion'];
+  $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
+  $curp = sanitizeString($_POST['Curp']);
+  $tipoDomicilio = $_POST['tipoDomicilio'];
+  $tipoAsentamiento = $_POST['tipoAsentamiento'];
+  $nombreAsentamiento = sanitizeString($_POST['nombreAsentamiento']);
+  $tipoVialidad = $_POST['tipoVialidad'];
+  $nombreVialidad  = sanitizeString($_POST['nombreVialidad']);
+  $nombreLocalidad = sanitizeString($_POST['nombreLocalidad']);
+  $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
+  $referenciaVialidad = sanitizeString($_POST['referenciaVialidad']);
+  $actividadEconomica = $_POST['tipoActividadEconomica'];
+
+
+ 
+ $insertPF = "INSERT INTO personafisica(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
+stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
+
+
+
+#utf8_encode
+
+      
+
+      if($con -> query($insertPF)){
+        echo "Datos Registrados <br>";
+         } else {
+          echo $con -> error, "<br>";
+            echo $insertPF, "<br>";
+        }
+
+ 
+    
+}
+
 
 
 
@@ -37,91 +96,28 @@ $ReferenciaVialidadProyecto = sanitizeString($_POST['ReferenciaVialidadProyecto'
 
 
 
-$Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
+$InsertDatoProyecto = "INSERT INTO nombreproyectoPF(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
 
 
+ 
+  echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
 
-  echo $Insert;
 
-
-  if($con -> query($Insert)){
-    echo "Datos Registrados <br>";
-  }else {
-    echo $con -> error, "<br>";
-    echo $insert, "<br>";
-  }
+  if($con -> query($InsertDatoProyecto)){
+     echo "Datos Registrados <br>";
+      }else {
+       echo $con -> error, "<br>";
+       echo $InsertDatoProyecto, "<br>";
+    }
 
 
 
 }
 
 
-if(isset($_POST['EnviarPF'])){
-
-  
-  $folioImpreso = sanitizeString($_POST['FolioImpreso']);
-  $direccionRegional = $_POST['DireccionRegional'];
-  $municipio = $_POST['ventanillaMunicipio'];
-  $nombre = sanitizeString($_POST['nombreCompleto']);
-  $genero = $_POST['genero'];
-
-  $diaNacimiento  = $_POST['DiaFechaNacimiento'];
-  $mesNacimiento  = $_POST['MesFechaNacimiento'];
-  $anioNacimiento  = $_POST['AnioFechaNacimiento'];
-
-  $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
-  echo $fechaNacimiento;
-
-  $nacionalidad = $_POST['Nacionalidad'];
-  $EstadoCivil = $_POST['EstadoCivil'];
-  $estadoNacimiento = $_POST['EstadoNacimiento'];
-  $telefono = sanitizeString($_POST['Telefono']);
-  $correoElectronico = sanitizeString($_POST['Correo']);
-  $tipoIdentificacion = $_POST['tipoIdentificacion'];
-  $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
-  $curp = sanitizeString($_POST['Curp']);
-  $tipoDomicilio = $_POST['tipoDomicilio'];
-  $tipoAsentamiento = $_POST['tipoAsentamiento'];
-  $nombreAsentamiento = sanitizeString($_POST['nombreAsentamiento']);
-  $tipoVialidad = $_POST['tipoVialidad'];
-  $nombreVialidad  = sanitizeString($_POST['nombreVialidad']);
-  $nombreLocalidad = sanitizeString($_POST['nombreLocalidad']);
-  $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
-  $referenciaVialidad = sanitizeString($_POST['referenciaVialidad']);
-  $actividadEconomica = $_POST['tipoActividadEconomica'];
-
-
- 
 
 
 
-
-
-
-
-
-
- $insert = "INSERT INTO personafisica(sfolioImpreso,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
-stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
-stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
-
-
-
-#utf8_encode
-
-  echo $insert;
-
-
-  if($con -> query($insert)){
-    echo "Datos Registrados <br>";
-  }else {
-    echo $con -> error, "<br>";
-    echo $insert, "<br>";
-  }
-
- 
-    
-}
 
 
 
@@ -137,7 +133,7 @@ function sanitizeString($var){
 
 
 
-
+#conceptosApoyoPF.php
 
  ?>
 
@@ -153,6 +149,7 @@ function sanitizeString($var){
 
 <form method="post" action="#">
 
+<h2>Datos del Proyecto para Persona Física</h2>
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
 
@@ -218,7 +215,7 @@ function sanitizeString($var){
   </select>
 
   <p>Selecciona el Mes</p>
-  <select name="MesFechaConstitucion" required="required">
+  <select name="MesFechaConstitucion">
     	<option value="Sin Seleccionar">Sin Seleccionar</option>
     	<option value="01">01</option>
         <option value="02">02</option>
@@ -236,7 +233,7 @@ function sanitizeString($var){
   </select>
 
   <p>Selecciona el Año</p>
-  <select name="AnioFechaConstitucion" required="required">
+  <select name="AnioFechaConstitucion">
        <option value="Sin Seleccionar">Sin Seleccionar</option>
        <option value="2002">2002</option>
        <option value="2001">2001</option>
