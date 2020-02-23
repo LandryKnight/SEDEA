@@ -1,21 +1,33 @@
-
-
 <?php 
+
 require_once('conect.php');
 
 $funcion = new funcion();
 
 $con = $funcion -> conectar();
 
-global $folioImpreso;
+
+
+
+ global $folioImpreso;
+
+echo $folioImpreso;
 
 if(isset($_POST['EnviarPF'])){
 
-  
-  $folioImpreso = sanitizeString($_POST['FolioImpreso']);
+
+  $folioImpreso = strtoupper(sanitizeString($_POST['FolioImpreso']));
+
+  echo $folioImpreso ." recibido";
+
   $direccionRegional = $_POST['DireccionRegional'];
   $municipio = $_POST['ventanillaMunicipio'];
-  $nombre = sanitizeString($_POST['nombreCompleto']);
+  $nombres    = ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));
+  $apellidoPa = ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
+  $apellidoMa = ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
+
+  $nombre = $nombres." ".$apellidoPa." ".$apellidoMa;
+
   $genero = $_POST['genero'];
 
   $diaNacimiento  = $_POST['DiaFechaNacimiento'];
@@ -44,14 +56,17 @@ if(isset($_POST['EnviarPF'])){
   $actividadEconomica = $_POST['tipoActividadEconomica'];
 
 
+
  
  $insertPF = "INSERT INTO personafisica(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
 stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
 stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
 
-
  $insertPF = utf8_encode($insertPF);
-#utf8_encode
+ 
+ echo $insertPF;
+
+
 
       
 
@@ -66,13 +81,23 @@ stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaViali
     
 }
 
+ 
+  $PF[] = "$folioImpreso";
+  $PF[] = "$direccionRegional";
 
+  for ($j =0; $j < 2; ++$j){
+    echo "$PF[$j]<br>vvvvvv";
+  }
+  $R =0;
+  echo "$PF[0] <br>";
 
-
+ echo $folioImpreso ." 2recibido";
 
 #Recepcion de datos del Proyecto
 if(isset($_POST['DatosProyectoPF'])){
+$folioImpreso; 
 
+echo "folio".$folioImpreso; 
 $NombreProyecto = sanitizeString($_POST['NombreProyecto']);
 $AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
 $TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
@@ -98,7 +123,7 @@ $ReferenciaVialidadProyecto = sanitizeString($_POST['ReferenciaVialidadProyecto'
 
 $InsertDatoProyecto = "INSERT INTO nombreproyectoPF(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
 
-
+  $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
  
   echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
 
@@ -118,9 +143,14 @@ $InsertDatoProyecto = "INSERT INTO nombreproyectoPF(sfolioImpreso,sNombreProyect
 
 
 
+/*
+if(function_exists("sanitizeString")){
+  echo "existe la funcion";
+}else {
+  echo "no existe la funcion";
+}
 
-
-
+*/
 
 function sanitizeString($var){
 
