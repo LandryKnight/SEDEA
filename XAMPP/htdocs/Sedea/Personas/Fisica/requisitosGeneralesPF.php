@@ -16,27 +16,66 @@
 
 <h2>Persona Física</h2>
 <h4>Documentos Admitidos solo en formato PDF</h4>
-<p>Identificación Oficial expedida por el IFE o INE </p><br>
+
+<p>Identificación Oficial expedida por el IFE o INE </p>
 <form method="post" action="#" enctype="multipart/form-data">
-	Selecciona la Identificación Oficial: <input type="file" name="filename" size="10">
-	<input type="submit" name="subir">
+	Selecciona la Identificación Oficial: <input type="file" name="filenameINE" size="10">
+	<input type="submit" name="subirINE" value="Subir archivo">
 </form>
 
-<?php if ($_FILES) {
-	$name = $_FILES['filename']['name'];
+<?php 
+	
+	if ($_FILES) {
+	$nameINE = $_FILES['filenameINE']['name'];
 
-	switch ($_FILES['filename']['type']){
+	switch ($_FILES['filenameINE']['type']){
 		case 'application/pdf': $ext = 'pdf'; break;
 		default: 	$ext =''; break;
 	}
+	#echo count($_FILES)."<br>";
+
+
+	
 	if($ext){
-		$n = "INE.$ext";
-	move_uploaded_file($_FILES['filename']['tmp_name'],$n);
-	echo "Identiticacion INE Subida '$name'  como  '$n':<br>";
+		$n = "Documentos/INE_.$ext";
+	move_uploaded_file($_FILES['filenameINE']['tmp_name'],$n);
+	echo "Identiticacion INE Subida '$nameINE'  como  '$n':<br>";
 	} else echo "No es un archivo PDF";
-} ?>
+
+
+	
+}  
+ ?>
+
+
+
 <p>CURP Clave Única de Registro de Población</p>
+<form method="post" action="#" enctype="multipart/form-data">
+	Selecciona la Curp: <input type="file" name="filenameCurp" size="10">
+	<input type="submit" name="subirCURP" value="Subir archivo">
+</form>
+
+<?php 
+    
+	if($_FILES){
+		$nameCURP = $_FILES['filenameCurp']['name'];
+		switch ($_FILES['filenameCurp']['type']){
+		case 'application/pdf': $ext = 'pdf'; break;
+		default: 	$ext =''; break;
+	} if($ext){
+		$n = "Documentos/Curp_.$ext";
+		move_uploaded_file($_FILES['filesnameCurp']['tmp_name'], $n);
+		echo "Identificación Curp Subida '$nameCURP' como '$n': <br>";
+	} else echo "No es un archivo PDF";
+
+	}
+
+ ?>
+
 <p>Comprobante de domicilio o Constancia de Residencia firmado por la autoridad competente</p>
+
+
+
 <p>Croquis de bien a adquirir</p>
 
 

@@ -1,6 +1,5 @@
 #Base de Datos Sedea
 
-
 drop Database Sedea;
 Create Database Sedea;
 
@@ -36,8 +35,7 @@ snombreMunicipio varchar(30),
 sreferenciaVialidad varchar(50),
 stipoActividad varchar(15)
 
-)
-
+);
 
 
 Create Table nombreproyectoPF(
@@ -57,9 +55,8 @@ sNombreLocalidadProyecto varchar(80),
 sNombreMunicipioProyecto varchar(30),
 sReferenciaVialidadProyecto varchar(50)
 
-)
-ALTER Table nombreproyectoPF
-add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
+);
+
 
 Create Table conceptosapoyoPF(
 idConcepto int Primary key auto_increment,
@@ -71,11 +68,8 @@ ApoyoEstatalSolicitado varchar(20),
 ApoyoMunicipalSolicitado varchar(20),
 AportacionBeneficiario varchar(20),
 InversionTotal varchar(20)
-)
+);
 
-
-ALTER Table conceptosapoyoPF
-add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
 
 Create Table requisitosGenePF(
 idRequisito int Primary Key auto_increment,
@@ -85,8 +79,31 @@ sfolioImpreso varchar(30), #Foreign Key
 )
 
 
+#Add Constrain
+ALTER Table conceptosapoyoPF
+add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
+
+ALTER Table nombreproyectoPF
+add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
+
 ALTER Table requisitosGenePF
 add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisica(sfolioImpresoPF);
+
+
+#Drop Foreign Key
+ALTER table conceptosapoyoPF
+drop Foreign key FK_Folio_Concepto_PF
+
+ALTER table nombreproyectoPF
+drop Foreign key FK_Folio_Proyecto_PF;
+
+ALTER table requisitosGenePF
+drop Foreign Key FK_Folio_Requisito_PF;
+
+
+
+
+
 
 
 -----------------------------------------------------------------------------------------------------------------

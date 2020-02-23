@@ -97,21 +97,26 @@ function sanitizeString($var){
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Datos Persona Física</title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="">
   </head>
 <body>
 
-	<form action="DatosProyectoPF.php" method="post">
+<div class="Marco">
 
-  
-  <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
+<form action="requisitosGeneralesPF.php" method="post">
+
+  <div align="center" >
+ 
 
 
   
 
 
   <h2>Datos de la Ventanilla Receptora</h2>
+
+   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
   <p> Selecciona la Dirección Regional</p> 
   <select name="DireccionRegional"> 
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -148,7 +153,10 @@ function sanitizeString($var){
 
 </Select>
 
-  <h2>Datos Solicitante - Persona Física </h2> 
+  </div>
+
+  <div>
+  <h2>Datos del Solicitante - Persona Física </h2> 
   <p>Nombre Completo</p>
   <input type="text" name="nombreCompleto" placeholder=" Ej: Maria Guadalupe Fernandez Gutierrez" required="required" maxlength="80">
   
@@ -160,7 +168,7 @@ function sanitizeString($var){
   </select>
   
 
-
+  <div align="center" >
   <p>Selecciona la Fecha de Nacimiento</p>
   <p>Selecciona el Día </p>
         <select name="DiaFechaNacimiento" >
@@ -271,7 +279,7 @@ function sanitizeString($var){
        <option value="1952">1952</option>
   </select>
   
-
+</div>
   
 
   <p>Selecciona la Nacionalidad</p>
@@ -353,6 +361,9 @@ function sanitizeString($var){
 
   <p>Curp</p>
   <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20">
+
+  </div>
+
 
    <h2>Domicilio</h2>
 
@@ -447,5 +458,7 @@ function sanitizeString($var){
 <br>
 
 </form>
+
+</div>
 </body>
 </html>
