@@ -158,21 +158,23 @@ function sanitizeString($var){
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Datos del Proyecto Persona Física</title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 
-
+<div class="Marco">
 <form method="post" action="#">
 
 <h2>Datos del Proyecto para Persona Física</h2>
 
+<input type="hidden" name="folioImpreso" value="<?php echo $folioImpreso; ?>">
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
 
 
-
+<div class="antiguedad">
 <p>Antiguedad del proyecto</p>
 
 <select name="AntiguedadProyecto">
@@ -192,9 +194,10 @@ function sanitizeString($var){
 <p>Correo Electronico</p>
 <input type="text" name="CorreoElectronicoProyecto" placeholder="proyectoSedea@sedea.com" maxlength="120">
 
-
+</div>
 
 <p>Fecha Constitución</p>
+<div class="constitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion">
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -306,10 +309,10 @@ function sanitizeString($var){
        <option value="1952">1952</option>
   </select>
 
+</div>
 
-
-<h2>Domicilio del proyecto</h2>
-
+<h2 id="titulo2">Domicilio del proyecto</h2>
+<div class="domicilio">
 <p>Tipo de domicilio</p>
 
 <select name="TipoDomicilioProyecto">
@@ -359,9 +362,9 @@ function sanitizeString($var){
 <p>Nombre de la localidad</p>
 <input type="text" name="NombreLocalidadProyecto" maxlength="80">
 
+</div>
 
-
-
+<div class="municipio">
 <p>Selecciona el Municipio</p>
    	<Select name="NombreMunicipioProyecto">
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -390,10 +393,12 @@ function sanitizeString($var){
 
 <p>Referencia de la vialidad</p>
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> <br> <br>
+</div>
+<input type="submit" name="DatosProyectoPF" value="Enviar" class="boton">
 
-<input type="submit" name="DatosProyectoPF" value="Enviar">
-
-
+</div>
 </form>
+
+
 </body>
 </html>

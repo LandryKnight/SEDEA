@@ -43,7 +43,7 @@ body{
 }
 
 .Marco p{
-	ma
+	margin: 5px;
 }
 
 #titulo{
@@ -137,4 +137,13 @@ body{
 	margin-bottom: 50px;
 	position: relative;
 	left: 35%;
+}
+
+
+.antiguedad{
+	column-count:3;
+}
+
+.constitucion{
+	column-count: 3;
 }
