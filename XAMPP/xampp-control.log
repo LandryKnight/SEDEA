@@ -137,3 +137,30 @@
 01:36:23 p. m.  [main] 	Deinitializing Modules
 01:36:23 p. m.  [main] 	Deinitializing Control Panel
 
+01:43:45 p. m.  [main] 	Initializing Control Panel
+01:43:45 p. m.  [main] 	Windows Version:  Home  64-bit
+01:43:46 p. m.  [main] 	XAMPP Version: 7.4.2
+01:43:46 p. m.  [main] 	Control Panel Version: 3.2.4  [ Compiled: Jun 5th 2019 ]
+01:43:46 p. m.  [main] 	You are not running with administrator rights! This will work for
+01:43:46 p. m.  [main] 	most application stuff but whenever you do something with services
+01:43:46 p. m.  [main] 	there will be a security dialogue or things will break! So think 
+01:43:46 p. m.  [main] 	about running this application with administrator rights!
+01:43:46 p. m.  [main] 	XAMPP Installation Directory: "c:\users\luis developer\documents\github\sedea\xampp\"
+01:43:46 p. m.  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+01:43:46 p. m.  [main] 	Checking for prerequisites
+01:43:47 p. m.  [main] 	All prerequisites found
+01:43:47 p. m.  [main] 	Initializing Modules
+01:43:47 p. m.  [main] 	Starting Check-Timer
+01:43:47 p. m.  [main] 	Control Panel Ready
+01:43:48 p. m.  [Apache] 	Attempting to start Apache app...
+01:43:48 p. m.  [Apache] 	Status change detected: running
+01:43:49 p. m.  [mysql] 	Attempting to start MySQL app...
+01:43:49 p. m.  [mysql] 	Status change detected: running
+09:43:00 p. m.  [Apache] 	Attempting to stop Apache (PID: 18732)
+09:43:00 p. m.  [Apache] 	Attempting to stop Apache (PID: 3020)
+09:43:00 p. m.  [Apache] 	Status change detected: stopped
+09:43:00 p. m.  [mysql] 	Attempting to stop MySQL app...
+09:43:01 p. m.  [mysql] 	Status change detected: stopped
+09:43:03 p. m.  [main] 	Deinitializing Modules
+09:43:03 p. m.  [main] 	Deinitializing Control Panel
+

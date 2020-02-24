@@ -8,7 +8,7 @@
 <head>
 	<title>Datos Persona Física</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
 <body>
 
@@ -16,16 +16,17 @@
 
 <form action="DatosProyectoPF.php" method="post">
 
-  <div align="center" >
+
+
  
+ 
+ <h2>Datos de la Ventanilla Receptora</h2>
 
-
-  
-
-
-  <h2>Datos de la Ventanilla Receptora</h2>
 
    <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
+
+   <div class="regional">
+
   <p> Selecciona la Dirección Regional</p> 
   <select name="DireccionRegional"> 
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -64,8 +65,10 @@
 
   </div>
 
-  <div>
+  
   <h2>Datos del Solicitante - Persona Física </h2> 
+  
+  <div class="centro">
   <p>Nombre</p>
   <input type="text" name="nombresPF" placeholder=" Ej: Maria Guadalupe" required="required" maxlength="40">
 
@@ -75,16 +78,12 @@
   <p>Apellido Materno</p>
   <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20">
   
-  <p>Selecciona el Género</p>
-  <select name="genero" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
-    <option value="Masculino">Masculino</option>
-    <option value="Femenino">Femenino</option>
-  </select>
+ </div>
   
 
-  <div align="center" >
-  <p>Selecciona la Fecha de Nacimiento</p>
+ 
+  <h3>Selecciona la Fecha de Nacimiento</h3>
+   <div class="nacimiento" >
   <p>Selecciona el Día </p>
         <select name="DiaFechaNacimiento" >
         <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -195,14 +194,21 @@
   </select>
   
 </div>
-  
+   
+   <div class="genero">
+  <p>Selecciona el Género</p>
+  <select name="genero" >
+    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+  </select>
 
   <p>Selecciona la Nacionalidad</p>
     <select name="Nacionalidad" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
     <option value="Mexicana">Mexicana</option>
     <option value="Extranjera">Extranjera</option>
-  </select>
+  </select> 
   
 
   <P>Selecciona el Estado Civil</P>
@@ -277,11 +283,11 @@
   <p>Curp</p>
   <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20">
 
-  </div>
+ </div>
 
 
-   <h2>Domicilio</h2>
-
+   <h2 id="titulo">Domicilio</h2>
+ <div class="domicilio">
    <p>Selecciona el Tipo de Domicilio</p>
    <select name="tipoDomicilio" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -327,7 +333,8 @@
    <p>Nombre de la localidad </p>
    <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
 
-
+</div>
+<div class="municipio">
    <p>Selecciona el Nombre del Municipio</p>
    <Select name="nombreDomicilioMunicipio" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -356,8 +363,8 @@
    <p>Referencia de Vialidad</p>
    <input type="text" name="referenciaVialidad" maxlength="50">
 
-
-   <h2>Actividad Economica</h2>
+</div>
+   <h2 id="titulo2">Actividad Económica</h2>
    <p>Seleccion el Tipo de Actividad</p>
    <select name="tipoActividadEconomica" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -368,8 +375,8 @@
    </select>
 
 
-
-<input type="submit" name="EnviarPF" value="Enviar">
+<br>
+<input type="submit" name="EnviarPF" value="Enviar" class="boton">
 <br>
 
 </form>
