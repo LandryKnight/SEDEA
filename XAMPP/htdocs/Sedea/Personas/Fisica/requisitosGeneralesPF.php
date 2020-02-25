@@ -8,6 +8,7 @@ $funcion = new funcion();
 
 $con = $funcion -> conectar();
 
+global $folioImpreso;
 
 if (isset($_POST['EnviarConceptosPF'])){
 $folioImpreso  = sanitizeString($_POST['IfolioImpreso']);
@@ -143,16 +144,16 @@ if (isset($_POST[''])){
 
 
 
-	Selecciona la Identificación Oficial: <input type="file" name="documentos[]" size="10">
+	Selecciona la Identificación Oficial: <input type="file" name="INE" size="10">
 	<input type="submit" name="subirINE" value="Subir INE">
 
 
 <?php 
 	
 	if ($_FILES) {
-	$nameINE = $_FILES['documentos']['name'];
+	$nameINE = $_FILES['INE']['name'];
 
-	switch ($_FILES['documentos']['type']){
+	switch ($_FILES['INE']['type']){
 		case 'application/pdf': $ext = 'pdf'; break;
 		default: 	$ext =''; break;
 	}
@@ -161,9 +162,9 @@ if (isset($_POST[''])){
 
 	
 	if($ext){
-		$n = $folioImpreso."_"."Documentos/INE_.$ext";
-	move_uploaded_file($_FILES['documentos']['tmp_name'],$n);
-	echo "Identiticacion INE Subida '$nameINE'  como  '$n':<br>";
+		$n = "Documentos/".$folioImpreso."_INE_.$ext";
+	move_uploaded_file($_FILES['INE']['tmp_name'],$n);
+	echo "<br> El archivo '$nameINE' fue subido como Identiticacion INE  '$n':<br>";
 	} else echo "No es un archivo PDF";
 
 
@@ -175,26 +176,7 @@ if (isset($_POST[''])){
 
 <p>CURP Clave Única de Registro de Población</p>
 
-	Selecciona la Curp: <input type="file" name="documentos[]" size="10">
-	<input type="submit" name="subirCURP" value="Subir Curp">
-</form>
 
-<?php 
-   
-	if($_FILES){
-		$nameCURP = $_FILES['documentos[]']['name'];
-		switch ($_FILES['documentos[]']['type']){
-		case 'application/pdf': $ext = 'pdf'; break;
-		default: 	$ext =''; break;
-	} if($ext){
-		$n = "Documentos/Curp_.$ext";
-		move_uploaded_file($_FILES['documentos[]']['tmp_name'], $n);
-		echo "Identificación Curp Subida '$nameCURP' como '$n': <br>";
-	} else echo "No es un archivo PDF";
-
-	}
-
- ?>
 
 <p>Comprobante de domicilio o Constancia de Residencia firmado por la autoridad competente</p>
 
@@ -225,9 +207,9 @@ if (isset($_POST[''])){
 <input type="text" name="observa" maxlength="80">
 
 
-<h2>Firmas de entrega de Solicitud</h2>
 
-Fecha: <input type="text" name="FechaEntregaSolicitud">
+
+<!--Fecha: -->
 
 
 
