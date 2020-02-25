@@ -1,18 +1,4 @@
 <?php 
-
-
-/*
-Usuarios Admin
-		 Funcionario Sedea
-		 Funcionario Regional
-		 
-
-		 Logo de Secretaria de Desarrollo Agropecuario
-		 Logo  Qro orgullo de Qro
-		 
-
-
- */
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +13,7 @@ Usuarios Admin
 <div align="center" class="Marco">
 	<h2>Bienvenido al Portal de la Sedea</h2>
 
-	<h3>Productividad Agropecuaria Sustentable en los Municipios del Estado de Querétaro</h3>
+	<h3>Productividad Agropecuaria Sustentable</h3>
 
 	<p>Elija el tipo de persona que le corresponde</p>
 

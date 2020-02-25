@@ -226,3 +226,37 @@
 11:07:42 p. m.  [main] 	Deinitializing Modules
 11:07:42 p. m.  [main] 	Deinitializing Control Panel
 
+10:22:53 a.m.  [main] 	Initializing Control Panel
+10:22:53 a.m.  [main] 	Windows Version: Windows 7 Professional SP1 64-bit
+10:22:53 a.m.  [main] 	XAMPP Version: 7.4.2
+10:22:53 a.m.  [main] 	Control Panel Version: 3.2.4  [ Compiled: Jun 5th 2019 ]
+10:22:53 a.m.  [main] 	Running with Administrator rights - good!
+10:22:53 a.m.  [main] 	XAMPP Installation Directory: "c:\users\equipo\documents\github\sedea\xampp\"
+10:22:53 a.m.  [main] 	Checking for prerequisites
+10:22:53 a.m.  [main] 	All prerequisites found
+10:22:53 a.m.  [main] 	Initializing Modules
+10:22:53 a.m.  [main] 	Starting Check-Timer
+10:22:53 a.m.  [main] 	Control Panel Ready
+10:22:55 a.m.  [Apache] 	Attempting to start Apache app...
+10:22:55 a.m.  [Apache] 	Status change detected: running
+10:22:57 a.m.  [Apache] 	Status change detected: stopped
+10:22:57 a.m.  [Apache] 	Error: Apache shutdown unexpectedly.
+10:22:57 a.m.  [Apache] 	This may be due to a blocked port, missing dependencies, 
+10:22:57 a.m.  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+10:22:57 a.m.  [Apache] 	Press the Logs button to view error logs and check
+10:22:57 a.m.  [Apache] 	the Windows Event Viewer for more clues
+10:22:57 a.m.  [Apache] 	If you need more help, copy and post this
+10:22:57 a.m.  [Apache] 	entire log window on the forums
+10:22:58 a.m.  [mysql] 	Attempting to start MySQL app...
+10:22:58 a.m.  [mysql] 	Status change detected: running
+10:23:00 a.m.  [mysql] 	Status change detected: stopped
+10:23:00 a.m.  [mysql] 	Error: MySQL shutdown unexpectedly.
+10:23:00 a.m.  [mysql] 	This may be due to a blocked port, missing dependencies, 
+10:23:00 a.m.  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+10:23:00 a.m.  [mysql] 	Press the Logs button to view error logs and check
+10:23:00 a.m.  [mysql] 	the Windows Event Viewer for more clues
+10:23:00 a.m.  [mysql] 	If you need more help, copy and post this
+10:23:00 a.m.  [mysql] 	entire log window on the forums
+10:24:16 a.m.  [main] 	Deinitializing Modules
+10:24:16 a.m.  [main] 	Deinitializing Control Panel
+

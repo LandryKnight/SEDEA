@@ -1,5 +1,5 @@
 <?php 
-/*
+
 require_once('conect.php');
 
 $funcion = new funcion();
@@ -56,7 +56,7 @@ if(isset($_POST['EnviarPF'])){
 
   
 
- $insertPF = "INSERT INTO personafisicaDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+ $insertPF = "INSERT INTO personafisica(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
 stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
 stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
 
@@ -65,13 +65,9 @@ stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaViali
 
  echo $insertPF;
 
-    /* hacer una consulta para saber si el folio ya existe y si existe no hacer el envio del insert
-  if(){
-        }
 
 
-
-         if($con -> query($insertPF)){
+      if($con -> query($insertPF)){
         echo "Datos de Persona Física Registrados <br>";
           } else {
           echo $con -> error, "<br>";
@@ -79,10 +75,6 @@ stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaViali
         }
 
 
-    */
-
-      
-     
 
 
  
@@ -99,8 +91,9 @@ if(function_exists("sanitizeString")){
   echo "no existe la funcion";
 }
 
+*/
 
-#function sanitizeString($var){
+function sanitizeString($var){
 
   if(get_magic_quotes_gpc())
     $var = stripcslashes($var);
@@ -108,10 +101,6 @@ if(function_exists("sanitizeString")){
     $var = htmlentities($var);
   return $var;
 }
-
-
-*/
-
 
 
 
@@ -129,10 +118,10 @@ if(function_exists("sanitizeString")){
 </head>
 <body>
 
-<div class="Marco"> 
+<div class="Marco">
 <form method="post" action="conceptosApoyoPF.php">
 
-<h1 id="titulo3">Datos del Proyecto para Persona Física</h1>
+<h2>Datos del Proyecto para Persona Física</h2>
 
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
 
@@ -155,14 +144,14 @@ if(function_exists("sanitizeString")){
 
 
 <p>Telefono</p>
-<input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10" >
+<input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10">
 
-<p>Correo Electrónico</p>
+<p>Correo Electronico</p>
 <input type="text" name="CorreoElectronicoProyecto" placeholder="proyectoSedea@sedea.com" maxlength="120">
 
 </div>
 
-<h3 id="titulo">Fecha Constitución</h3>
+<p id="titulo">Fecha Constitución</p>
 <div class="constitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion">
@@ -203,8 +192,8 @@ if(function_exists("sanitizeString")){
 
   <p>Selecciona el Mes</p>
   <select name="MesFechaConstitucion">
-    	  <option value="Sin Seleccionar">Sin Seleccionar</option>
-    	  <option value="01">01</option>
+    	<option value="Sin Seleccionar">Sin Seleccionar</option>
+    	<option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -222,24 +211,6 @@ if(function_exists("sanitizeString")){
   <p>Selecciona el Año</p>
   <select name="AnioFechaConstitucion">
        <option value="Sin Seleccionar">Sin Seleccionar</option>
-       <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
-        <option value="2017">2017</option>
-        <option value="2016">2016</option>
-        <option value="2015">2015</option>
-        <option value="2014">2014</option>
-        <option value="2013">2013</option>
-        <option value="2012">2012</option>
-        <option value="2011">2011</option>
-        <option value="2010">2010</option>
-        <option value="2009">2009</option>
-        <option value="2008">2008</option>
-        <option value="2007">2007</option>
-        <option value="2006">2006</option>
-        <option value="2005">2005</option>
-        <option value="2004">2004</option>
-        <option value="2003">2003</option>
        <option value="2002">2002</option>
        <option value="2001">2001</option>
        <option value="2000">2000</option>
@@ -296,31 +267,7 @@ if(function_exists("sanitizeString")){
 </div>
 
 <h2 id="titulo2">Domicilio del proyecto</h2>
-<div class="municipio">
-<p>Selecciona el Municipio</p>
-    <Select name="NombreMunicipioProyecto">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
-    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
-    <option value="Arroyo Seco">Arroyo Seco</option>
-    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
-    <option value="Colón">Colón</option>
-    <option value="Corregidora">Corregidora</option>
-    <option value="El Marqués">El Marqués</option>
-    <option value="Ezequiel Montes">Ezequiel Montes</option>
-    <option value="Huimilpan">Huimilpan</option>
-    <option value="Jalpan de Serra">Jalpan de Serra </option>
-    <option value="Landa de Matamoros">Landa de Matamoros</option>
-    <option value="Pedro Escobedo">Pedro Escobedo</option>
-    <option value="Peñamiller">Peñamiller</option>
-    <option value="Pinal de Amoles">Pinal de Amoles</option>
-    <option value="Querétaro">Querétaro</option>
-    <option value="San Joaquín">San Joaquín</option>
-    <option value="San Juan del Río">San Juan del Río</option>
-    <option value="Tequisquiapan">Tequisquiapan</option>
-    <option value="Tolimán">Tolimán</option>
-
-</Select>
-
+<div class="domicilio">
 <p>Tipo de domicilio</p>
 
 <select name="TipoDomicilioProyecto">
@@ -345,40 +292,65 @@ if(function_exists("sanitizeString")){
 </select>
 
 
+<p>Nombre del Asentamiento</p>
+<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
 
 
 <p>Tipo de la vialidad</p>
 
 <select name="TipoVialidadProyecto">
-  <option value="Sin Seleccionar">Sin Seleccionar</option>
-  <option value="Calle">Calle</option>
-  <option value="Callejón">Callejón</option>
-  <option value="Carretera">Carretera</option>
-  <option value="Camino">Camino</option>
-  <option value="Privada">Privada</option>
-  <option value="Otro">Otro</option>
+	<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<option value="Calle">Calle</option>
+	<option value="Callejón">Callejón</option>
+	<option value="Carretera">Carretera</option>
+	<option value="Camino">Camino</option>
+	<option value="Privada">Privada</option>
+	<option value="Otro">Otro</option>
 
 </select>
 
-</div>
-<div class="asentamiento">
-<p>Nombre del Asentamiento</p>
-<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
 
 
-<p>Nombre de la Vialidad</p>
+<p>Nombre de la vialidad</p>
 <input type="text" name="NombreVialidadProyecto" maxlength="80">
 
-<p>Nombre de la Localidad</p>
+<p>Nombre de la localidad</p>
 <input type="text" name="NombreLocalidadProyecto" maxlength="80">
 
-
-<p>Referencia de la Vialidad</p>
-<input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
-<br> <br>
+
+<div class="municipio">
+<p>Selecciona el Municipio</p>
+   	<Select name="NombreMunicipioProyecto">
+    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
+    <option value="Arroyo Seco">Arroyo Seco</option>
+    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
+    <option value="Colón">Colón</option>
+    <option value="Corregidora">Corregidora</option>
+    <option value="El Marqués">El Marqués</option>
+    <option value="Ezequiel Montes">Ezequiel Montes</option>
+    <option value="Huimilpan">Huimilpan</option>
+    <option value="Jalpan de Serra">Jalpan de Serra </option>
+    <option value="Landa de Matamoros">Landa de Matamoros</option>
+    <option value="Pedro Escobedo">Pedro Escobedo</option>
+    <option value="Peñamiller">Peñamiller</option>
+    <option value="Pinal de Amoles">Pinal de Amoles</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="San Joaquín">San Joaquín</option>
+    <option value="San Juan del Río">San Juan del Río</option>
+    <option value="Tequisquiapan">Tequisquiapan</option>
+    <option value="Tolimán">Tolimán</option>
+
+</Select>
+
+
+
+<p>Referencia de la vialidad</p>
+<input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> <br> <br>
+</div>
 <input type="submit" name="DatosProyectoPF" value="Enviar" class="boton">
-<br>
+
 </div>
 </form>
 

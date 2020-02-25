@@ -11,13 +11,12 @@ body{
 
 .Marco{
  top: 10px;
- width: 60%;
+ width: 50%;
  position: relative;
- left: 17%;
-
+ left: 20%;
  color: #FFFFFF;
  background: #1D447D;
- padding-left: 43px;
+ padding-left: 80px;
  border-radius: 15px;
 	
  border:none;
@@ -29,7 +28,6 @@ body{
 .Marco input{
 	border-radius: 8px;
 	margin-bottom: 5px;
-
 }
 
 .Marco select{
@@ -37,20 +35,12 @@ body{
 	margin-bottom: 5px;
 }
 
-.Marco h1 {
-	position: relative;
-	left: 33%;
-
-}
-
 .Marco h2{
 	position: relative;
-	left: 24%;
+	left: 20%;
 	margin: 5px;
 	margin-bottom: 15px;
 }
-
-
 
 .Marco p{
 	margin: 5px;
@@ -63,33 +53,25 @@ body{
 
 #titulo2{
 	position: relative;
-	left: 30%;
-	margin-top: 12px;
-}
-
-#titulo3{
-	margin-top: 12px;
-	margin-bottom: 12px;
-	position: relative;
-	left: 16%;
+	left: 27%;
 }
 .Marco h3{
 	position: relative;
 	left: 20%;
-	margin: 6px;
+	margin: 3px;
 }
 
 .regional{
 	top: 25px;
 	margin-top: 5px;
-	margin-bottom: 10px;
-	
+	margin-bottom: 8px;
+	color: white;
 	column-count: 2;
 }
 
 .regional p{
 	margin-top: 3px;
-	margin-bottom: 6px;
+	margin-bottom: 3px;
 }
 
 
@@ -100,7 +82,7 @@ body{
 
 .centro p{
 	margin-top: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 .nacimiento{
 	
@@ -118,32 +100,26 @@ body{
 }
 
 .genero p{
-	margin-top: 6px;
-	margin-bottom: 6px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 .domicilio{
-	column-count: 2;
+	column-count: 3;
 }
-
 
 .domicilio p{
-	margin-top: 9px;
-	margin-bottom: 6px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
-
 
 .municipio{
 	column-count: 2;
 }
-.asentamiento{
-	column-count: 2
 
+.municipio p{
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
-
-.asentamiento input{
-	width: 350px;
-}
-
 
 .boton{
 	background: #FFFFFF;
@@ -160,7 +136,7 @@ body{
 	margin-top: 15px;
 	margin-bottom: 50px;
 	position: relative;
-	left: 38%;
+	left: 35%;
 }
 
 

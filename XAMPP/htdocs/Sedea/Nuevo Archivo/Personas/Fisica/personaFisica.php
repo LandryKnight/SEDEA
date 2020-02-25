@@ -20,7 +20,7 @@
 
 
  
- <h1>Persona Física</h1>
+ 
  <h2>Datos de la Ventanilla Receptora</h2>
 
 
@@ -38,7 +38,7 @@
   </select>
   
   
-
+<br> 
 
 <p>Selecciona el Municipio</p>
    <Select name="ventanillaMunicipio">
@@ -83,7 +83,7 @@
   
 
  
-  <h3 id="titulo2">Selecciona la Fecha de Nacimiento</h3>
+  <h3>Selecciona la Fecha de Nacimiento</h3>
    <div class="nacimiento" >
   <p>Selecciona el Día </p>
         <select name="DiaFechaNacimiento" >
@@ -277,8 +277,8 @@
   
 
 
-  <p>Numero de Identificación</p>
-  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="30">
+  <p>Numero de Identificacion</p>
+  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:123456789123" maxlength="30">
 
 
   <p>Curp</p>
@@ -296,16 +296,6 @@
     <option value="Rural">Rural</option>
    </select>
   
-   <p>Selecciona el Tipo de Vialidad</p>
-   <select name="tipoVialidad">
-      <option value="Sin Seleccionar">Sin Seleccionar</option>
-      <option value="Calle">Calle</option>  
-      <option value="Callejón">Callejón</option>
-      <option value="Privada">Privada</option>
-      <option value="Carretera">Carretera</option>
-      <option value="Camino">Camino</option>
-      <option value="Otro">Otro</option>
-   </select>
 
 
    <p>Selecciona el Tipo de Asentamiento</p>
@@ -318,8 +308,34 @@
     <option value="Hacienda">Hacienda</option>
     <option value="Otro">Otro</option>
    </select>
+   
 
- 
+   <p>Nombre del Asentamiento</p>
+   <input type="´Text" name="nombreAsentamiento" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
+
+   <p>Selecciona el Tipo de Vialidad</p>
+   <select name="tipoVialidad" >
+      <option value="Sin Seleccionar">Sin Seleccionar</option>
+      <option value="Calle">Calle</option>  
+      <option value="Callejón">Callejón</option>
+      <option value="Privada">Privada</option>
+      <option value="Carretera">Carretera</option>
+      <option value="Camino">Camino</option>
+      <option value="Otro">Otro</option>
+   </select>
+   
+  
+
+
+   <p>Nombre de la vialidad</p>
+   <input type="text" name="nombreVialidad" required="required" maxlength="50">
+
+
+   <p>Nombre de la localidad </p>
+   <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
+
+</div>
+<div class="municipio">
    <p>Selecciona el Nombre del Municipio</p>
    <Select name="nombreDomicilioMunicipio" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -344,33 +360,9 @@
    </Select>
   
 
-</div>
-
-   
-   <div class="asentamiento">
- <p>Nombre del Asentamiento</p>
-   <input type="Text" name="nombreAsentamiento" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
-
-     
-      <p>Nombre de la vialidad</p>
-   <input type="text" name="nombreVialidad" required="required" maxlength="50">
-
-
-
-  
-
- 
-   <p>Nombre de la localidad </p>
-   <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
 
    <p>Referencia de Vialidad</p>
    <input type="text" name="referenciaVialidad" maxlength="50">
-
-
-
-
-
-
 
 </div>
    <h2 id="titulo2">Actividad Económica</h2>

@@ -10,7 +10,7 @@ truncate table personafisica;
 
 
 #Tabla Persona Fisica
-Create Table personafisicaDatos(
+Create Table personafisica(
 sfolioImpresoPF varchar(30) Primary Key,
 sventanidirRegional varchar(30),  
 sventaniMunicipio varchar(30),
@@ -38,8 +38,7 @@ stipoActividad varchar(15)
 );
 
 
-#Nombre Proyecto
-Create Table personafisicaNP(
+Create Table nombreproyectoPF(
 sIdProyecto int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 sNombreProyecto varchar(80),
@@ -59,8 +58,7 @@ sReferenciaVialidadProyecto varchar(50)
 );
 
 
-#Concepto Apoyo
-Create Table personafisicaCA(
+Create Table conceptosapoyoPF(
 idConcepto int Primary key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
@@ -72,8 +70,8 @@ AportacionBeneficiario varchar(20),
 InversionTotal varchar(20)
 );
 
-#requisitos Generales
-Create Table personafisicaRG(
+
+Create Table requisitosGenePF(
 idRequisito int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 observaciones varchar(80),
@@ -83,24 +81,24 @@ observaciones varchar(80),
 
 
 #Add Constrain
-ALTER Table personafisicaCA
-add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
+ALTER Table conceptosapoyoPF
+add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
 
-ALTER Table personafisicaNP
-add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
+ALTER Table nombreproyectoPF
+add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisica(sfolioImpresoPF);
 
-ALTER Table personafisicaRG
-add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisicaDatos(sfolioImpresoPF);
+ALTER Table requisitosGenePF
+add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisica(sfolioImpresoPF);
 
 
 #Drop Foreign Key
-ALTER table personafisicaCA
+ALTER table conceptosapoyoPF
 drop Foreign key FK_Folio_Concepto_PF
 
-ALTER table personafisicaNP
+ALTER table nombreproyectoPF
 drop Foreign key FK_Folio_Proyecto_PF;
 
-ALTER table personafisicaRG
+ALTER table requisitosGenePF
 drop Foreign Key FK_Folio_Requisito_PF;
 
 

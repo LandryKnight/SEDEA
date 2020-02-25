@@ -1,89 +1,21 @@
-<?php 
-require_once('conect.php');
-
-
-
-$funcion = new funcion();
-
-$con = $funcion -> conectar();
-
-
-
-if(isset($_POST['DatosProyectoPF'])){
-
-$folioImpreso  = sanitizeString($_POST['IfolioImpreso']);
-$NombreProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
-$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto = ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
-
-$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
-
-
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
-
-$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
-$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
-$NombreLocalidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
-$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
-
-
-
-
-
-
-}
-
-$InsertDatoProyecto = "INSERT INTO personafisicaNP(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
-
- $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
-
- echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
-
-
-  if ($con -> query($InsertDatoProyecto)) {
-            echo "Datos del Proyecto Registrados <br>";
-          } else{
-            echo $con -> error, "<br>";
-            echo $InsertDatoProyecto, "<br>";
-              }
-
-
-
-
-function sanitizeString($var){
-
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conceptos de Apoyos</title>
-	<meta charset="utf-8">
+	<title>Dictamen de la solicitud</title>
 </head>
 <body>
 
 
-<form method="post" action="requisitosGeneralesPF.php">
+<h2>Dictamen de la solicitud</h2>
+
+<select name="DictSolicitud">
+	<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<option value="Positiva">Positiva</option>
+	<option value="Negativa">Negativa</option>
+
+</select>
 
 
-<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
 <table border="1">
 	
 	<tr>
@@ -162,12 +94,9 @@ function sanitizeString($var){
 
 </table>
 
-<input type="submit" name="EnviarConceptosPF" value="Enviar Información">
-
-</form>
 
 
+<p>Fecha </p>
 
-<h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 </body>
 </html>
