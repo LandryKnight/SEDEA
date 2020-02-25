@@ -7,103 +7,64 @@ $funcion = new funcion();
 
 $con = $funcion -> conectar();
 
-if (isset($_POST['EnviarConceptosPF'])){
-
-$ApoyoSolicitado1 = sanitizeString($_Post['ApoyoSolicitado1']);
-$UniMedida1	=	sanitizeString(	$_POST['UniMedida1']);
-$CanSolicitada1	=	sanitizeString(	$_POST['CanSolicitada1']);
-$ApoyoEstatalSolicitado1	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado1']);
-$ApoyoMunicipalSolicitado1	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado1']);
-$AportacionBeneficiario1	=	sanitizeString(	$_POST['AportacionBeneficiario1']);
-$InversionTotal1	=	sanitizeString(	$_POST['InversionTotal1']);
-
-echo $ApoyoSolicitado1;
-
-$insert1 = "INSERT INTO conceptosApoyoPF(sfolioImpreso,ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{$folioImpreso}','{ApoyoSolicitado1}','{UniMedida1}','{CanSolicitada1}','{ApoyoEstatalSolicitado1}','{ApoyoMunicipalSolicitado1}','{AportacionBeneficiario1}','{InversionTotal1}');";
-
-		  if($con -> query($insert1)){
-    		echo "Datos Registrados <br>";
-  				}else {
-   				 echo $con -> error, "<br>";
-    			echo $insert1, "<br>";
-  					}
-	/*				
-						
-$ApoyoSolicitado2	=	sanitizeString(	$_POST['ApoyoSolicitado2']);
-$UniMedida2	=	sanitizeString(	$_POST['UniMedida2']);
-$CanSolicitada2	=	sanitizeString(	$_POST['CanSolicitada2']);
-$ApoyoEstatalSolicitado2	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado2']);
-$ApoyoMunicipalSolicitado2	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado2']);
-$AportacionBeneficiario2	=	sanitizeString(	$_POST['AportacionBeneficiario2']);
-$InversionTotal2	=	sanitizeString(	$_POST['InversionTotal2']);
-						
-	
-	if(!is_null($ApoyoSolicitado2)){
-
-	}					
-						
-$ApoyoSolicitado3	=	sanitizeString(	$_POST['ApoyoSolicitado3']);
-$UniMedida3	=	sanitizeString(	$_POST['UniMedida3']);
-$CanSolicitada3	=	sanitizeString(	$_POST['CanSolicitada3']);
-$ApoyoEstatalSolicitado3	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado3']);
-$ApoyoMunicipalSolicitado3	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado3']);
-$AportacionBeneficiario3	=	sanitizeString(	$_POST['AportacionBeneficiario3']);
-$InversionTotal3	=	sanitizeString(	$_POST['InversionTotal3']);
-	
-	if(!is_null($ApoyoSolicitado3)){
-
-	}					
-						
-$ApoyoSolicitado4	=	sanitizeString(	$_POST['ApoyoSolicitado4']);
-$UniMedida4	=	sanitizeString(	$_POST['UniMedida4']);
-$CanSolicitada4	=	sanitizeString(	$_POST['CanSolicitada4']);
-$ApoyoEstatalSolicitado4	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 4']);
-$ApoyoMunicipalSolicitado4	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado4']);
-$AportacionBeneficiario4	=	sanitizeString(	$_POST['AportacionBeneficiario4']);
-$InversionTotal4	=	sanitizeString(	$_POST['InversionTotal4']);
-						
-		
-	if(!is_null($ApoyoSolicitado4)){
-
-	}				
-						
-$ApoyoSolicitado5	=	sanitizeString(	$_POST['ApoyoSolicitado5']);
-$UniMedida5	=	sanitizeString(	$_POST['UniMedida5']);
-$CanSolicitada5	=	sanitizeString(	$_POST['CanSolicitada5']);
-$ApoyoEstatalSolicitado5	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 5']);
-$ApoyoMunicipalSolicitado5	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado5']);
-$AportacionBeneficiario5	=	sanitizeString(	$_POST['AportacionBeneficiario5']);
-$InversionTotal5	=	sanitizeString(	$_POST['InversionTotal5']);
-						
-		
-	if(!is_null($ApoyoSolicitado5)){
-
-	}				
-						
-				
-						
-$ApoyoSolicitado6	=	sanitizeString(	$_POST['ApoyoSolicitado6']);
-$UniMedida6	=	sanitizeString(	$_POST['UniMedida6']);
-$CanSolicitada6	=	sanitizeString(	$_POST['CanSolicitada6']);
-$ApoyoEstatalSolicitado6	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 6']);
-$ApoyoMunicipalSolicitado6	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado6']);
-$AportacionBeneficiario6	=	sanitizeString(	$_POST['AportacionBeneficiario6']);
-$InversionTotal6	=	sanitizeString(	$_POST['InversionTotal6']);
 
 
-	if(!is_null($ApoyoSolicitado6)){
+if(isset($_POST['DatosProyectoPF'])){
 
-	}
-*/
+$folioImpreso  = sanitizeString($_POST['IfolioImpreso']);
+$NombreProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
+$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
+$TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto = ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+
+$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
+$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
+$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
+
+
+$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+
+$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
+$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
+$NombreAsentamientoProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
+$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
+$NombreVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
+$NombreLocalidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
+$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
+$ReferenciaVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
 
 
 
 
 
-	
 
 }
 
+$InsertDatoProyecto = "INSERT INTO nombreproyectoPF(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
+
+ $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
+
+ echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
+
+
+  if ($con -> query($InsertDatoProyecto)) {
+            echo "Datos del Proyecto Registrados <br>";
+          } else{
+            echo $con -> error, "<br>";
+            echo $InsertDatoProyecto, "<br>";
+              }
+
+
+
+
+function sanitizeString($var){
+
+  if(get_magic_quotes_gpc())
+    $var = stripcslashes($var);
+    $var = strip_tags($var);
+    $var = htmlentities($var);
+  return $var;
+}
 
 
 ?>
@@ -119,8 +80,10 @@ $InversionTotal6	=	sanitizeString(	$_POST['InversionTotal6']);
 <body>
 
 
-<form method="post" action="#">
+<form method="post" action="requisitosGeneralesPF.php">
 
+
+<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
 <table border="1">
 	
 	<tr>

@@ -191,3 +191,11 @@
 10:30:02 p. m.  [main] 	Deinitializing Modules
 10:30:02 p. m.  [main] 	Deinitializing Control Panel
 
+02:15:32 p. m.  [Apache] 	Attempting to stop Apache (PID: 1292)
+02:15:32 p. m.  [Apache] 	Attempting to stop Apache (PID: 21824)
+02:15:32 p. m.  [Apache] 	Status change detected: stopped
+02:15:32 p. m.  [mysql] 	Attempting to stop MySQL app...
+02:15:33 p. m.  [mysql] 	Status change detected: stopped
+02:15:35 p. m.  [main] 	Deinitializing Modules
+02:15:35 p. m.  [main] 	Deinitializing Control Panel
+

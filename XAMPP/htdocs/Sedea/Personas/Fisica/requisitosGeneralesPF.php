@@ -1,9 +1,132 @@
 
 <?php  
+require_once('conect.php');
 
+
+
+$funcion = new funcion();
+
+$con = $funcion -> conectar();
+
+
+if (isset($_POST['EnviarConceptosPF'])){
+$folioImpreso  = sanitizeString($_POST['IfolioImpreso']);
+$ApoyoSolicitado1 = ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado1'])));
+$UniMedida1	=	sanitizeString(	$_POST['UniMedida1']);
+$CanSolicitada1	=	sanitizeString(	$_POST['CanSolicitada1']);
+$ApoyoEstatalSolicitado1	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado1']);
+$ApoyoMunicipalSolicitado1	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado1']);
+$AportacionBeneficiario1	=	sanitizeString(	$_POST['AportacionBeneficiario1']);
+$InversionTotal1	=	sanitizeString(	$_POST['InversionTotal1']);
+
+
+
+$insert1 = "INSERT INTO conceptosApoyoPF(sfolioImpreso,ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{$folioImpreso}','{$ApoyoSolicitado1}','{$UniMedida1}','{$CanSolicitada1}','{$ApoyoEstatalSolicitado1}','{$ApoyoMunicipalSolicitado1}','{$AportacionBeneficiario1}','{$InversionTotal1}');";
+
+$insert1 = utf8_encode($insert1);
+
+		  if($con -> query($insert1)){
+    		echo "Datos Registrados <br>";
+  				}else {
+   				 echo $con -> error, "<br>";
+    			echo $insert1, "<br>";
+  					}
+	/*				
+						
+$ApoyoSolicitado2	=	sanitizeString(	$_POST['ApoyoSolicitado2']);
+$UniMedida2	=	sanitizeString(	$_POST['UniMedida2']);
+$CanSolicitada2	=	sanitizeString(	$_POST['CanSolicitada2']);
+$ApoyoEstatalSolicitado2	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado2']);
+$ApoyoMunicipalSolicitado2	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado2']);
+$AportacionBeneficiario2	=	sanitizeString(	$_POST['AportacionBeneficiario2']);
+$InversionTotal2	=	sanitizeString(	$_POST['InversionTotal2']);
+						
+	
+	if(!is_null($ApoyoSolicitado2)){
+
+	}					
+						
+$ApoyoSolicitado3	=	sanitizeString(	$_POST['ApoyoSolicitado3']);
+$UniMedida3	=	sanitizeString(	$_POST['UniMedida3']);
+$CanSolicitada3	=	sanitizeString(	$_POST['CanSolicitada3']);
+$ApoyoEstatalSolicitado3	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado3']);
+$ApoyoMunicipalSolicitado3	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado3']);
+$AportacionBeneficiario3	=	sanitizeString(	$_POST['AportacionBeneficiario3']);
+$InversionTotal3	=	sanitizeString(	$_POST['InversionTotal3']);
+	
+	if(!is_null($ApoyoSolicitado3)){
+
+	}					
+						
+$ApoyoSolicitado4	=	sanitizeString(	$_POST['ApoyoSolicitado4']);
+$UniMedida4	=	sanitizeString(	$_POST['UniMedida4']);
+$CanSolicitada4	=	sanitizeString(	$_POST['CanSolicitada4']);
+$ApoyoEstatalSolicitado4	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 4']);
+$ApoyoMunicipalSolicitado4	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado4']);
+$AportacionBeneficiario4	=	sanitizeString(	$_POST['AportacionBeneficiario4']);
+$InversionTotal4	=	sanitizeString(	$_POST['InversionTotal4']);
+						
+		
+	if(!is_null($ApoyoSolicitado4)){
+
+	}				
+						
+$ApoyoSolicitado5	=	sanitizeString(	$_POST['ApoyoSolicitado5']);
+$UniMedida5	=	sanitizeString(	$_POST['UniMedida5']);
+$CanSolicitada5	=	sanitizeString(	$_POST['CanSolicitada5']);
+$ApoyoEstatalSolicitado5	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 5']);
+$ApoyoMunicipalSolicitado5	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado5']);
+$AportacionBeneficiario5	=	sanitizeString(	$_POST['AportacionBeneficiario5']);
+$InversionTotal5	=	sanitizeString(	$_POST['InversionTotal5']);
+						
+		
+	if(!is_null($ApoyoSolicitado5)){
+
+	}				
+						
+				
+						
+$ApoyoSolicitado6	=	sanitizeString(	$_POST['ApoyoSolicitado6']);
+$UniMedida6	=	sanitizeString(	$_POST['UniMedida6']);
+$CanSolicitada6	=	sanitizeString(	$_POST['CanSolicitada6']);
+$ApoyoEstatalSolicitado6	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado 6']);
+$ApoyoMunicipalSolicitado6	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado6']);
+$AportacionBeneficiario6	=	sanitizeString(	$_POST['AportacionBeneficiario6']);
+$InversionTotal6	=	sanitizeString(	$_POST['InversionTotal6']);
+
+
+	if(!is_null($ApoyoSolicitado6)){
+
+	}
+*/
+
+
+
+
+
+	
+
+}
+
+
+function sanitizeString($var){
+
+  if(get_magic_quotes_gpc())
+    $var = stripcslashes($var);
+    $var = strip_tags($var);
+    $var = htmlentities($var);
+  return $var;
+}
 
 ?>
 
+<?php 
+
+if (isset($_POST[''])){
+
+}
+
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -12,24 +135,24 @@
 	<meta charset="utf-8">
 </head>
 <body>
-
-
 <h2>Persona Física</h2>
 <h4>Documentos Admitidos solo en formato PDF</h4>
 
 <p>Identificación Oficial expedida por el IFE o INE </p>
 <form method="post" action="requisitosGeneralesPF.php" enctype="multipart/form-data">
 
-	Selecciona la Identificación Oficial: <input type="file" name="documentos[][]" size="10">
-	<input type="submit" name="subirINE" value="Subir archivo">
+
+
+	Selecciona la Identificación Oficial: <input type="file" name="documentos[]" size="10">
+	<input type="submit" name="subirINE" value="Subir INE">
 
 
 <?php 
 	
 	if ($_FILES) {
-	$nameINE = $_FILES['documentos[][]']['name'];
+	$nameINE = $_FILES['documentos']['name'];
 
-	switch ($_FILES['documentos[][]']['type']){
+	switch ($_FILES['documentos']['type']){
 		case 'application/pdf': $ext = 'pdf'; break;
 		default: 	$ext =''; break;
 	}
@@ -38,8 +161,8 @@
 
 	
 	if($ext){
-		$n = "Documentos/INE_.$ext";
-	move_uploaded_file($_FILES['documentos[][]']['tmp_name'],$n);
+		$n = $folioImpreso."_"."Documentos/INE_.$ext";
+	move_uploaded_file($_FILES['documentos']['tmp_name'],$n);
 	echo "Identiticacion INE Subida '$nameINE'  como  '$n':<br>";
 	} else echo "No es un archivo PDF";
 
@@ -53,11 +176,11 @@
 <p>CURP Clave Única de Registro de Población</p>
 
 	Selecciona la Curp: <input type="file" name="documentos[]" size="10">
-	<input type="submit" name="subirCURP" value="Subir archivo">
+	<input type="submit" name="subirCURP" value="Subir Curp">
 </form>
 
 <?php 
-    
+   
 	if($_FILES){
 		$nameCURP = $_FILES['documentos[]']['name'];
 		switch ($_FILES['documentos[]']['type']){
@@ -98,108 +221,15 @@
 <h2>Observaciones</h2>
 
 <form action="#" method="post">
-
-<input type="text" name="observa">
+<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+<input type="text" name="observa" maxlength="80">
 
 
 <h2>Firmas de entrega de Solicitud</h2>
+
 Fecha: <input type="text" name="FechaEntregaSolicitud">
 
 
-
-<input type="text" name="firmaBeneficiado">
-<h4>Nombre y Firma del Beneficiario y/o del representante legal</h4>
-
-<input type="text" name="firmaFuncionario">
-<h4>Nombre y Firma del Funcionario receptor de la solicitud</h4>
-
-
-<h2>Dictamen de la solicitud</h2>
-
-<select name="DictSolicitud">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
-	<option value="Positiva">Positiva</option>
-	<option value="Negativa">Negativa</option>
-
-</select>
-
-
-<table border="1">
-	
-	<tr>
-		<td>Conceptos de Apoyo Solicitado</td>
-		<td>Unidad de Medida</td>
-		<td>Cantidad Solicitada</td>
-		<td>Apoyo Estatal Solicitado (pesos) </td>
-		<td>Apoyo Municipal Solicitado (pesos) </td>
-		<td>Aportación Beneficiario (pesos)</td>
-		<td>Inversión Total (pesos)</td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica" required="required"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2" required="required">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2" required="required">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000" required="required"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000" required="required"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000" required="required"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000" required="required"> </td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000"> </td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000"> </td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000"> </td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000"> </td>
-	</tr>
-	<tr>
-		<td><input type="text" name="" maxlength="35" 	placeholder="Estufa ecológica"> </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="5" 	placeholder="2">  </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$500,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20" 	placeholder="$250,000"> </td>
-		<td><input type="text" name="" maxlength="20"	placeholder="$1,000,000"> </td>
-	</tr>
-
-</table>
-
-
-
-<p>Fecha </p>
 
 
 <h5>Autorizo que mis datos personales sean empleados para el trámite de la solución. Otorgo el consentimiento para que sean transferidos en caso de ser necesario y dar el cumplimiento conforme a lo previsto en los artículos 16 fracción II,59 y 61 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Querétaro; así como a las obligaciones de transparencia y acceso a la información pública de conformidad con la Ley del Estado de Querétaro.

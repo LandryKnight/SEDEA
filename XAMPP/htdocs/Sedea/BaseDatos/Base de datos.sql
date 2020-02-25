@@ -46,8 +46,8 @@ sAntiguedadProyecto varchar(20),
 sTelefonoProyecto varchar(100),
 sCorreoElectronicoProyecto varchar(120),
 sFechaConstitucion varchar(10),
-sTipoDomicilioProyecto varchar(10),
-sTipoAsentamientoProyecto varchar(10),
+sTipoDomicilioProyecto varchar(15),
+sTipoAsentamientoProyecto varchar(15),
 sNombreAsentamientoProyecto varchar(80),
 sTipoVialidadProyecto  varchar(10),
 sNombreVialidadProyecto varchar(80),
@@ -74,6 +74,7 @@ InversionTotal varchar(20)
 Create Table requisitosGenePF(
 idRequisito int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
+observaciones varchar(80),
 
 
 )

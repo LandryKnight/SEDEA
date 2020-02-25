@@ -10,39 +10,7 @@ $con = $funcion -> conectar();
 
  global $folioImpreso;
 
- #Recepcion de datos del Proyecto
-if(isset($_POST['DatosProyectoPF'])){
-
-$NombreProyecto = sanitizeString($_POST['NombreProyecto']);
-$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto = sanitizeString($_POST['CorreoElectronicoProyecto']);
-
-$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
-
-
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
-
-$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = sanitizeString($_POST['NombreAsentamientoProyecto']);
-$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = sanitizeString($_POST['NombreVialidadProyecto']);
-$NombreLocalidadProyecto = sanitizeString($_POST['NombreLocalidadProyecto']);
-$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = sanitizeString($_POST['ReferenciaVialidadProyecto']);
-
-
-
-
-
-
-}
-
-
-
+ 
 if(isset($_POST['EnviarPF'])){
 
   $folioImpreso = strtoupper(sanitizeString($_POST['FolioImpreso']));
@@ -69,31 +37,24 @@ if(isset($_POST['EnviarPF'])){
   $EstadoCivil = $_POST['EstadoCivil'];
   $estadoNacimiento = $_POST['EstadoNacimiento'];
   $telefono = sanitizeString($_POST['Telefono']);
-  $correoElectronico = sanitizeString($_POST['Correo']);
+  $correoElectronico = strtolower(sanitizeString($_POST['Correo']));
   $tipoIdentificacion = $_POST['tipoIdentificacion'];
   $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
-  $curp = sanitizeString($_POST['Curp']);
+  $curp = strtoupper(sanitizeString($_POST['Curp']));
   $tipoDomicilio = $_POST['tipoDomicilio'];
   $tipoAsentamiento = $_POST['tipoAsentamiento'];
-  $nombreAsentamiento = sanitizeString($_POST['nombreAsentamiento']);
+  $nombreAsentamiento = ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
   $tipoVialidad = $_POST['tipoVialidad'];
-  $nombreVialidad  = sanitizeString($_POST['nombreVialidad']);
-  $nombreLocalidad = sanitizeString($_POST['nombreLocalidad']);
+  $nombreVialidad  = ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
+  $nombreLocalidad = ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
   $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
-  $referenciaVialidad = sanitizeString($_POST['referenciaVialidad']);
+  $referenciaVialidad = ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad'])));
   $actividadEconomica = $_POST['tipoActividadEconomica'];
 
     
 }
 
- 
- 
-
-$InsertDatoProyecto = "INSERT INTO nombreproyectoPF(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
-
- $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
- echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
-
+  
 
  $insertPF = "INSERT INTO personafisica(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
 stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
@@ -108,14 +69,7 @@ stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaViali
 
       if($con -> query($insertPF)){
         echo "Datos de Persona Física Registrados <br>";
-         if ($con -> query($InsertDatoProyecto)) {
-            echo "Datos del Proyecto Registrados <br>";
-          } else{
-            echo $con -> error, "<br>";
-            echo $InsertDatoProyecto, "<br>";
-              }
-
-         } else {
+          } else {
           echo $con -> error, "<br>";
             echo $insertPF, "<br>";
         }
@@ -165,11 +119,12 @@ function sanitizeString($var){
 <body>
 
 <div class="Marco">
-<form method="post" action="#">
+<form method="post" action="conceptosApoyoPF.php">
 
 <h2>Datos del Proyecto para Persona Física</h2>
 
-<input type="hidden" name="folioImpreso" value="<?php echo $folioImpreso; ?>">
+<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
 
@@ -196,7 +151,7 @@ function sanitizeString($var){
 
 </div>
 
-<p>Fecha Constitución</p>
+<p id="titulo">Fecha Constitución</p>
 <div class="constitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion">

@@ -61,11 +61,7 @@ body{
 
 
 .boton{
-	/* color de fondo naranja
-	background: #C74826;
-	 */
-
-	/*color de fondo */
+	
 	background: #FFFFFF;
 
 	border-style: solid;
@@ -79,7 +75,29 @@ body{
 	color: #9C1462;
 
 	/*font-style:  */
-	margin-top: 15px;
-	margin-bottom: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
+
+
+.boton2{
+	
+
+	/*color de fondo */
+	background: #FFFFFF;
+
+	border-style: solid;
+	/*redondeo de las esquinas */
+	border-radius: 15px;
+	/* ancho 
+	   alto */
+	width: 150px;
+	height: 35px;
+	/*color de la letra */
+	color: #9C1462;
+
+	/*font-style:  */
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
