@@ -174,3 +174,61 @@ body{
 .constitucion{
 	column-count: 3;
 }
+
+
+.conceptoApoyo{
+
+	width: 80%;
+	height: 500px;
+	position: relative;
+ 	left: 8%;
+ 	top: 50px;
+
+ 	color: #FFFFFF;
+ 	background: #1D447D;
+ 	padding-left: 43px;
+ 	border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ 	margin-bottom: 50px;
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
+}
+
+.conceptoApoyo h1{
+	position: relative;
+	left: 25%;
+	padding-bottom: 10px;
+}
+
+.conceptoApoyo h5{
+	position: absolute;
+	top: 510px;
+}
+table{
+	position: relative;
+	left: 6%;
+	border-radius:15px;
+	border-color: #FFFFFF;
+}
+
+
+
+
+.conceptoApoyo input{
+	border-radius: 15px;
+	color: #9C1462;
+
+}
+
+
+.UnidadMedida td{
+	width: 50px;
+	border-radius: 15px;
+}
+
+.UnidadMedida input{
+	width: 50px;
+	text-indent: 35px;
+}
