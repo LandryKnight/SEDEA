@@ -24,7 +24,7 @@
  <h2>Datos de la Ventanilla Receptora</h2>
 
 
-   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
+   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30" >
 
    <div class="regional">
 
@@ -289,6 +289,29 @@
 
    <h2 id="titulo">Domicilio</h2>
  <div class="domicilio">
+
+  <p>Selecciona el Nombre del Municipio</p>
+   <Select name="nombreDomicilioMunicipio" >
+    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
+    <option value="Arroyo Seco">Arroyo Seco</option>
+    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
+    <option value="Colón">Colón</option>
+    <option value="Corregidora">Corregidora</option>
+    <option value="El Marqués">El Marqués</option>
+    <option value="Ezequiel Montes">Ezequiel Montes</option>
+    <option value="Huimilpan">Huimilpan</option>
+    <option value="Jalpan de Serra">Jalpan de Serra </option>
+    <option value="Landa de Matamoros">Landa de Matamoros</option>
+    <option value="Pedro Escobedo">Pedro Escobedo</option>
+    <option value="Peñamiller">Peñamiller</option>
+    <option value="Pinal de Amoles">Pinal de Amoles</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="San Joaquín">San Joaquín</option>
+    <option value="San Juan del Río">San Juan del Río</option>
+    <option value="Tequisquiapan">Tequisquiapan</option>
+    <option value="Tolimán">Tolimán</option>
+   </Select>
    <p>Selecciona el Tipo de Domicilio</p>
    <select name="tipoDomicilio" >
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -320,28 +343,7 @@
    </select>
 
  
-   <p>Selecciona el Nombre del Municipio</p>
-   <Select name="nombreDomicilioMunicipio" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
-    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
-    <option value="Arroyo Seco">Arroyo Seco</option>
-    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
-    <option value="Colón">Colón</option>
-    <option value="Corregidora">Corregidora</option>
-    <option value="El Marqués">El Marqués</option>
-    <option value="Ezequiel Montes">Ezequiel Montes</option>
-    <option value="Huimilpan">Huimilpan</option>
-    <option value="Jalpan de Serra">Jalpan de Serra </option>
-    <option value="Landa de Matamoros">Landa de Matamoros</option>
-    <option value="Pedro Escobedo">Pedro Escobedo</option>
-    <option value="Peñamiller">Peñamiller</option>
-    <option value="Pinal de Amoles">Pinal de Amoles</option>
-    <option value="Querétaro">Querétaro</option>
-    <option value="San Joaquín">San Joaquín</option>
-    <option value="San Juan del Río">San Juan del Río</option>
-    <option value="Tequisquiapan">Tequisquiapan</option>
-    <option value="Tolimán">Tolimán</option>
-   </Select>
+   
   
 
 </div>
@@ -352,7 +354,7 @@
    <input type="Text" name="nombreAsentamiento" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
 
      
-      <p>Nombre de la vialidad</p>
+      <p>Nombre de la Vialidad</p>
    <input type="text" name="nombreVialidad" required="required" maxlength="50">
 
 
@@ -360,7 +362,7 @@
   
 
  
-   <p>Nombre de la localidad </p>
+   <p>Nombre de la Localidad </p>
    <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
 
    <p>Referencia de Vialidad</p>

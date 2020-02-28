@@ -25,21 +25,25 @@ Usuarios Admin
 <body>
 
 <div align="center" class="Marco">
-	<h2>Bienvenido al Portal de la Sedea</h2>
 
-	<h3>Productividad Agropecuaria Sustentable en los Municipios del Estado de Querétaro</h3>
+	<img class="imgder" src="img/sedealogo.jfif">
+	<h2>Bienvenido al <br>Portal de la Sedea</h2>
+	<img class="imgizq" src="img/qroOrgullo.png" >
+	<h3>Productividad Agropecuaria Sustentable en <br> los Municipios del Estado de Querétaro</h3>
 
-	<p>Elija el tipo de persona que le corresponde</p>
+	
+	<p>Elija el tipo de persona que le corresponde </p>
 
-	<p>Para Persona Física</p>
-	<a href="Personas/Fisica/personaFisica.php"> <button class="boton">Persona Física</button> </a> 
-	<p>Para Persona Moral</p>
-	<a href="Personas/Moral/personaMoral.php"><button class="boton"> Persona Moral</button> </a> 
+	<br>
+	<a href="Personas/Fisica/personaFisica.php"> <button class="boton"><b>Persona Física</b></button> </a> 
+	<br>
+	<a href="Personas/Moral/personaMoral.php"><button class="boton"><b>Persona Moral</b></button> </a> 
 	
 	<p>Dictamen de Solicitudes</p>
-	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2">Persona Física</button> </a>
-
-	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2">Persona Moral</button></a>
+	<br>
+	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2"><b>Persona Física</b></button> </a>
+ <br> 
+	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2"><b>Persona Moral</b></button></a>
 
 
 </div>

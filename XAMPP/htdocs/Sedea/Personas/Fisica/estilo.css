@@ -13,7 +13,7 @@ body{
  top: 10px;
  width: 60%;
  position: relative;
- left: 17%;
+ left: 18%;
 
  color: #FFFFFF;
  background: #1D447D;
@@ -22,6 +22,9 @@ body{
 	
  border:none;
  box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
 
 
 }
