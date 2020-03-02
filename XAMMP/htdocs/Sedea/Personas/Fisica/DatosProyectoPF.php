@@ -137,7 +137,7 @@ if(function_exists("sanitizeString")){
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
 
 <p>Nombre del proyecto</p>	
-<input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
+<input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
 
 
 <div class="antiguedad">
@@ -158,7 +158,7 @@ if(function_exists("sanitizeString")){
 <input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10" >
 
 <p>Correo Electrónico</p>
-<input type="text" name="CorreoElectronicoProyecto" placeholder="proyectoSedea@sedea.com" maxlength="120">
+<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="120">
 
 </div>
 

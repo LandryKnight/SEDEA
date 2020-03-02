@@ -3,6 +3,21 @@
 drop Database Sedea;
 Create Database Sedea;
 
+Create Table Usuarios(
+idUsuario int Primary Key auto_increment,
+nameUsuario varchar(50),
+constrasenaUsuario varchar(50)
+
+);
+
+#idUsuario 1 AdminSda
+#idUsuario 2 Sedea
+#idUsuario 3 SedeaRegional
+
+insert into Usuarios values(1,'adminSda','sdaAdmin@_@2020');
+insert into Usuarios values(2,'sedea','sde@_@2020');
+insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
+
 
 drop table personafisica;
 
@@ -66,9 +81,9 @@ sfolioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
 UniMedida int(5),
 CanSolicitada int(5),
-ApoyoEstatalSolicitado varchar(20),
-ApoyoMunicipalSolicitado varchar(20),
-AportacionBeneficiario varchar(20),
+ApoyoEstatalSolicitado varchar(10),
+ApoyoMunicipalSolicitado varchar(10),
+AportacionBeneficiario varchar(10),
 InversionTotal varchar(20)
 );
 
