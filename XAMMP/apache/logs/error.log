@@ -1,0 +1,23 @@
+[Sun Mar 01 12:05:22.697183 2020] [ssl:warn] [pid 13384:tid 668] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 01 12:05:22.740066 2020] [ssl:warn] [pid 13384:tid 668] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_sqlite' (tried: C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\pdo_sqlite (No se puede encontrar el m\xc3\xb3dulo especificado.), C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\php_pdo_sqlite.dll (No se puede encontrar el m\xc3\xb3dulo especificado.)) in Unknown on line 0
+[Sun Mar 01 12:05:22.826834 2020] [mpm_winnt:notice] [pid 13384:tid 668] AH00455: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.2 configured -- resuming normal operations
+[Sun Mar 01 12:05:22.826834 2020] [mpm_winnt:notice] [pid 13384:tid 668] AH00456: Apache Lounge VC15 Server built: Aug 11 2019 12:20:04
+[Sun Mar 01 12:05:22.826834 2020] [core:notice] [pid 13384:tid 668] AH00094: Command line: 'c:\\users\\development\\documents\\github\\sedea\\xammp\\apache\\bin\\httpd.exe -d C:/Users/Development/Documents/GitHub/SEDEA/XAMMP/apache'
+[Sun Mar 01 12:05:22.829827 2020] [mpm_winnt:notice] [pid 13384:tid 668] AH00418: Parent: Created child process 17764
+[Sun Mar 01 12:05:23.330527 2020] [ssl:warn] [pid 17764:tid 664] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 01 12:05:23.361445 2020] [ssl:warn] [pid 17764:tid 664] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_sqlite' (tried: C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\pdo_sqlite (No se puede encontrar el m\xc3\xb3dulo especificado.), C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\php_pdo_sqlite.dll (No se puede encontrar el m\xc3\xb3dulo especificado.)) in Unknown on line 0
+[Sun Mar 01 12:05:23.398352 2020] [mpm_winnt:notice] [pid 17764:tid 664] AH00354: Child: Starting 150 worker threads.
+[Sun Mar 01 12:25:23.194258 2020] [ssl:warn] [pid 18592:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 01 12:25:23.225175 2020] [core:warn] [pid 18592:tid 652] AH00098: pid file C:/Users/Development/Documents/GitHub/SEDEA/XAMMP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Mar 01 12:25:23.227170 2020] [ssl:warn] [pid 18592:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_sqlite' (tried: C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\pdo_sqlite (No se puede encontrar el m\xc3\xb3dulo especificado.), C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\php_pdo_sqlite.dll (No se puede encontrar el m\xc3\xb3dulo especificado.)) in Unknown on line 0
+[Sun Mar 01 12:25:23.254098 2020] [mpm_winnt:notice] [pid 18592:tid 652] AH00455: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.2 configured -- resuming normal operations
+[Sun Mar 01 12:25:23.254098 2020] [mpm_winnt:notice] [pid 18592:tid 652] AH00456: Apache Lounge VC15 Server built: Aug 11 2019 12:20:04
+[Sun Mar 01 12:25:23.254098 2020] [core:notice] [pid 18592:tid 652] AH00094: Command line: 'c:\\users\\development\\documents\\github\\sedea\\xammp\\apache\\bin\\httpd.exe -d C:/Users/Development/Documents/GitHub/SEDEA/XAMMP/apache'
+[Sun Mar 01 12:25:23.259086 2020] [mpm_winnt:notice] [pid 18592:tid 652] AH00418: Parent: Created child process 18880
+[Sun Mar 01 12:25:23.700902 2020] [ssl:warn] [pid 18880:tid 660] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 01 12:25:23.730822 2020] [ssl:warn] [pid 18880:tid 660] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_sqlite' (tried: C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\pdo_sqlite (No se puede encontrar el m\xc3\xb3dulo especificado.), C:\\Users\\Development\\Documents\\GitHub\\SEDEA\\XAMMP\\php\\ext\\php_pdo_sqlite.dll (No se puede encontrar el m\xc3\xb3dulo especificado.)) in Unknown on line 0
+[Sun Mar 01 12:25:23.755756 2020] [mpm_winnt:notice] [pid 18880:tid 660] AH00354: Child: Starting 150 worker threads.
