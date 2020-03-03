@@ -27,6 +27,7 @@ body{
  padding-bottom: 30px;
 
 
+
 }
 
 .Marco input{
@@ -212,7 +213,7 @@ body{
 	position: absolute;
 	top: 510px;
 }
-table{
+	table{
 	position: relative;
 	left: 30px;
 	border-radius:15px;
@@ -254,9 +255,9 @@ table{
 }
 
 
-.requerimientos{
+.requisitos{
 	width: 70%;
-	height: 700px;
+	height: 900px;
 	position: relative;
  	left: 200px;
  	top: 50px;
@@ -271,7 +272,60 @@ table{
  	margin-bottom: 50px;
  	padding-top: 30px;
  	padding-bottom: 30px;
+ 	padding-right: 35px;
+
+ 	text-align: justify;
 
 }
 
 
+.requisitos h1{
+	position:relative;
+	left: 120px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+
+
+.requisitos h3{
+	position: relative;
+	left: 380px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.requisitos p{
+	
+
+}
+
+.declaraciones{
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.declaraciones p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.requisitos input{
+	border-radius: 15px;
+}
+
+.observaciones{
+	position: relative;
+	left: 35px;
+	border-radius: 15px;
+	color: #9C1462;
+	font-weight: bold;
+	font-size: 14pt;
+	margin-bottom: 70px;
+
+}
+.documentos{
+	column-count:2;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}

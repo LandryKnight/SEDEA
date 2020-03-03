@@ -1,6 +1,6 @@
 
 <?php  
-require_once('conect.php');
+require_once('ConexionPF.php');
 
 
 
@@ -23,7 +23,7 @@ $InversionTotal1	=			$ApoyoEstatalSolicitado1 + $ApoyoMunicipalSolicitado1 + $Ap
 
 
 
-$insert1 = "INSERT INTO personafisicaCA(sfolioImpreso,ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{$folioImpreso}','{$ApoyoSolicitado1}','{$UniMedida1}','{$CanSolicitada1}','{$ApoyoEstatalSolicitado1}','{$ApoyoMunicipalSolicitado1}','{$AportacionBeneficiario1}','{$InversionTotal1}');";
+$insert1 = "INSERT INTO persfisCA(sfolioImpreso,ApoyoSolicitado,UniMedida ,CanSolicitada,ApoyoEstatalSolicitado,ApoyoMunicipalSolicitado,AportacionBeneficiario,InversionTotal) VALUES('{$folioImpreso}','{$ApoyoSolicitado1}','{$UniMedida1}','{$CanSolicitada1}','{$ApoyoEstatalSolicitado1}','{$ApoyoMunicipalSolicitado1}','{$AportacionBeneficiario1}','{$InversionTotal1}');";
 
 
 		$insert1 = utf8_encode($insert1);
@@ -290,14 +290,7 @@ if (!is_null($ApoyoSolicitado6) ){
 }
 
 
-function sanitizeString($var){
 
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
 
 ?>
 
@@ -318,18 +311,17 @@ if (isset($_POST[''])){
 </head>
 <body>
 
-<div class="requerimientos">
+<div class="requisitos">
 
-<h2>Persona Física</h2>
-<h4>Documentos Admitidos solo en formato PDF</h4>
+<h1>Requisitos Generales de Documentos para Persona Física</h1>
+<h4>Documentos Admitidos solo en formato PDF.</h4> <br>
 
-<p>Identificación Oficial expedida por el IFE o INE </p>
+<div class="documentos">
+<p>Selecciona la Identificación Oficial expedida por el <b>IFE o INE</b>: </p>
 <form method="post" action="requisitosGeneralesPF.php" enctype="multipart/form-data">
 
-
-
-	Selecciona la Identificación Oficial: <input type="file" name="INE" size="10">
-	<input type="submit" name="subirINE" value="Subir INE">
+	 <input type="file" name="INE" >
+	
 
 
 <?php 
@@ -356,39 +348,45 @@ if (isset($_POST[''])){
 }  
  ?>
 
+</div>
+<div class="documentos">
+<p>Selecciona la  <b>CURP</b> Clave Única de Registro de Población:</p>
+ <input type="file" name="INE" >
+</div>
 
 
-<p>CURP Clave Única de Registro de Población</p>
+<div class="documentos">
+<p> Selecciona el <b>Comprobante de domicilio</b> o <br> Constancia de Residencia firmado por la autoridad competente:</p>
+<input type="file" name="INE" >
+</div>
+
+<div class="documentos">
+<p>Selecciona el <b>Croquis</b> de bien a adquirir:</p>
+ <input type="file" name="INE" >
+ </div>
+
+<input type="submit" name="SubirDoc" value="Subir Documentos"  class="boton">
 
 
+<h2>Declaraciones del Solicitante:</h2>
+<div class="declaraciones">
+<p>a) Que no realizo actividades productivas ni comerciales ilícitas. </p>
+<p>b) Que no se aplicaran los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros.</p>
 
-<p>Comprobante de domicilio o Constancia de Residencia firmado por la autoridad competente</p>
+<p>c) Que no he recibido o estoy recibiendo apoyo alguno para el mismo concepto en otro programa, que implique duplicidad de incentivos.</p>
 
+<p>d) Que los datos aquí expuestos son verídicos y me comprometo a cumplir con los ordenamientos establecidos en la mecánica operativa establecida.</p>
 
+<p>e) Expreso mi total y cabal compromiso, para realizar las inversiones y/o trabajos que corresponden para ejecutar las acciones del proyecto que requieran.</p>
 
-<p>Croquis de bien a adquirir</p>
+<p>f) Que estoy cierto que la entrega de esta solicitud, así como la de los documentos solicitados, no implica aceptación u obligación del pago de los incentivos solicitados.</p>
+</div>
 
-
-
-<h2>Declaraciones del Solicitante</h2>
-
-<p>a) Que no realizo actividades productivas ni comerciales ilícitas </p>
-<p>b) Que no se aplicaran los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros</p>
-
-<p>c) Que no he recibido o estoy recibiendo apoyo alguno para el mismo concepto en otro programa, que implique duplicidad de incentivos</p>
-
-<p>d) Que los datos aquí expuestos son verídicos y me comprometo a cumplir con los ordenamientos establecidos en la mecánica operativa establecida</p>
-
-<p>e) Expreso mi total y cabal compromiso, para realizar las inversiones y/o trabajos que corresponden para ejecutar las acciones del proyecto que requieran</p>
-
-<p>f) Que estoy cierto que la entrega de esta solicitud, así como la de los documentos solicitados, no implica aceptación u obligación del pago de los incentivos solicitados</p>
-
-
-<h2>Observaciones</h2>
+<h3>Observaciones:</h3>
 
 <form action="#" method="post">
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
-<input type="text" name="observa" maxlength="80">
+<textarea class="observaciones" rows="2" cols="90" maxlength="90"></textarea>
 
 
 

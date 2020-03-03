@@ -88,3 +88,41 @@
 11:55:51 p. m.  [main] 	Deinitializing Modules
 11:55:51 p. m.  [main] 	Deinitializing Control Panel
 
+05:04:30 p. m.  [main] 	Deinitializing Modules
+05:04:30 p. m.  [main] 	Deinitializing Control Panel
+
+05:05:03 p. m.  [main] 	Initializing Control Panel
+05:05:03 p. m.  [main] 	Windows Version:  Home  64-bit
+05:05:03 p. m.  [main] 	XAMPP Version: 7.4.2
+05:05:03 p. m.  [main] 	Control Panel Version: 3.2.4  [ Compiled: Jun 5th 2019 ]
+05:05:03 p. m.  [main] 	You are not running with administrator rights! This will work for
+05:05:03 p. m.  [main] 	most application stuff but whenever you do something with services
+05:05:03 p. m.  [main] 	there will be a security dialogue or things will break! So think 
+05:05:03 p. m.  [main] 	about running this application with administrator rights!
+05:05:03 p. m.  [main] 	XAMPP Installation Directory: "c:\users\development\documents\github\sedea\xammp\"
+05:05:03 p. m.  [main] 	Checking for prerequisites
+05:05:03 p. m.  [main] 	All prerequisites found
+05:05:03 p. m.  [main] 	Initializing Modules
+05:05:03 p. m.  [main] 	Starting Check-Timer
+05:05:03 p. m.  [main] 	Control Panel Ready
+05:05:04 p. m.  [Apache] 	Attempting to start Apache app...
+05:05:05 p. m.  [Apache] 	Status change detected: running
+05:05:05 p. m.  [mysql] 	Attempting to start MySQL app...
+05:05:05 p. m.  [mysql] 	Status change detected: running
+10:17:22 p. m.  [Apache] 	Attempting to stop Apache (PID: 10156)
+10:17:22 p. m.  [Apache] 	Attempting to stop Apache (PID: 4688)
+10:17:22 p. m.  [Apache] 	Status change detected: stopped
+10:17:22 p. m.  [mysql] 	Attempting to stop MySQL app...
+10:17:22 p. m.  [mysql] 	Status change detected: stopped
+10:32:32 p. m.  [Apache] 	Attempting to start Apache app...
+10:32:33 p. m.  [Apache] 	Status change detected: running
+10:32:33 p. m.  [mysql] 	Attempting to start MySQL app...
+10:32:34 p. m.  [mysql] 	Status change detected: running
+11:40:20 p. m.  [Apache] 	Attempting to stop Apache (PID: 7988)
+11:40:20 p. m.  [Apache] 	Attempting to stop Apache (PID: 14792)
+11:40:20 p. m.  [Apache] 	Status change detected: stopped
+11:40:21 p. m.  [mysql] 	Attempting to stop MySQL app...
+11:40:21 p. m.  [mysql] 	Status change detected: stopped
+11:40:22 p. m.  [main] 	Deinitializing Modules
+11:40:22 p. m.  [main] 	Deinitializing Control Panel
+

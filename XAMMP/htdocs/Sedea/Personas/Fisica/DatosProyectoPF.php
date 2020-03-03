@@ -1,10 +1,9 @@
 <?php 
-/*
-require_once('conect.php');
 
-$funcion = new funcion();
 
-$con = $funcion -> conectar();
+require_once('ConexionPF.php');
+
+
 
 
 
@@ -13,84 +12,68 @@ $con = $funcion -> conectar();
  
 if(isset($_POST['EnviarPF'])){
 
-  $folioImpreso = strtoupper(sanitizeString($_POST['FolioImpreso']));
+  $folioImpreso =           strtoupper(sanitizeString($_POST['FolioImpreso']));
 
  
-  $direccionRegional = $_POST['DireccionRegional'];
-  $municipio = $_POST['ventanillaMunicipio'];
-  $nombres    = ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));
-  $apellidoPa = ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
-  $apellidoMa = ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
+  $direccionRegional =      $_POST['DireccionRegional'];
+  $municipio =              $_POST['ventanillaMunicipio'];
+  $nombres    =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
+  $apellidoPa =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
+  $apellidoMa =             strtolower(ucfirst(sanitizeString($_POST['apellidoMa'])));
 
   $nombre = $nombres." ".$apellidoPa." ".$apellidoMa;
 
-  $genero = $_POST['genero'];
+  $genero =                 $_POST['genero'];
 
-  $diaNacimiento  = $_POST['DiaFechaNacimiento'];
-  $mesNacimiento  = $_POST['MesFechaNacimiento'];
-  $anioNacimiento  = $_POST['AnioFechaNacimiento'];
+  $diaNacimiento  =         $_POST['DiaFechaNacimiento'];
+  $mesNacimiento  =         $_POST['MesFechaNacimiento'];
+  $anioNacimiento  =        $_POST['AnioFechaNacimiento'];
 
   $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
   #echo $fechaNacimiento;
 
-  $nacionalidad = $_POST['Nacionalidad'];
-  $EstadoCivil = $_POST['EstadoCivil'];
-  $estadoNacimiento = $_POST['EstadoNacimiento'];
-  $telefono = sanitizeString($_POST['Telefono']);
-  $correoElectronico = strtolower(sanitizeString($_POST['Correo']));
-  $tipoIdentificacion = $_POST['tipoIdentificacion'];
-  $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
-  $curp = strtoupper(sanitizeString($_POST['Curp']));
-  $tipoDomicilio = $_POST['tipoDomicilio'];
-  $tipoAsentamiento = $_POST['tipoAsentamiento'];
-  $nombreAsentamiento = ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
-  $tipoVialidad = $_POST['tipoVialidad'];
-  $nombreVialidad  = ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
-  $nombreLocalidad = ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
-  $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
-  $referenciaVialidad = ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad'])));
-  $actividadEconomica = $_POST['tipoActividadEconomica'];
+  $nacionalidad =           $_POST['Nacionalidad'];
+  $EstadoCivil =            $_POST['EstadoCivil'];
+  $estadoNacimiento =       $_POST['EstadoNacimiento'];
+  $telefono =               sanitizeString($_POST['Telefono']);
+  $correoElectronico =      strtolower(sanitizeString($_POST['Correo']));
+  $tipoIdentificacion =     $_POST['tipoIdentificacion'];
+  $numIdentificacion =      sanitizeString($_POST['numIdentificacion']);
+  $curp =                   strtoupper(sanitizeString($_POST['Curp']));
+  $tipoDomicilio =          $_POST['tipoDomicilio'];
+  $tipoAsentamiento =       $_POST['tipoAsentamiento'];
+  $nombreAsentamiento =     ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
+  $tipoVialidad =           $_POST['tipoVialidad'];
+  $nombreVialidad  =        ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
+  $nombreLocalidad =        ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
+  $nombreMunicipio =        $_POST['nombreDomicilioMunicipio'];
+  $referenciaVialidad =     ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad'])));
+  $actividadEconomica =     $_POST['tipoActividadEconomica'];
 
     
 }
 
   
+    $inserPFD = "INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+      stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
+          
+    $inserPFD = utf8_encode($inserPFD);
 
- $insertPF = "INSERT INTO personafisicaDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
-stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
-stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
+    echo $inserPFD;
 
- $insertPF = utf8_encode($insertPF);
- 
+    $result = queryMySql("SELECT * FROM persfisDatos WHERE sfolioImpresoPF = '$folioImpreso'");
 
- echo $insertPF;
+    if ($result -> num_rows) {
+      echo "El Folio ya existe";
 
-    /* hacer una consulta para saber si el folio ya existe y si existe no hacer el envio del insert
-  if(){
+          }else {
+           queryMySql("$inserPFD"); 
+
         }
-
-
-
-         if($con -> query($insertPF)){
-        echo "Datos de Persona Física Registrados <br>";
-          } else {
-          echo $con -> error, "<br>";
-            echo $insertPF, "<br>";
-        }
-
-
-    */
-
       
-     
-
+   
 
  
- 
-
-
-
-
 
 /*
 if(function_exists("sanitizeString")){
@@ -99,15 +82,8 @@ if(function_exists("sanitizeString")){
   echo "no existe la funcion";
 }
 
-
-#function sanitizeString($var){
-
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
+INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
+      stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}')
 
 
 */
@@ -115,7 +91,6 @@ if(function_exists("sanitizeString")){
 
 
 
-#conceptosApoyoPF.php
 
  ?>
 
@@ -143,8 +118,8 @@ if(function_exists("sanitizeString")){
 <div class="antiguedad">
 <p>Antiguedad del proyecto</p>
 
-<select name="AntiguedadProyecto">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="AntiguedadProyecto" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Antiguedad en años">Antiguedad en años</option>
 	<option value="Continuidad">Continuidad</option>
 	<option value="Nuevo">Nuevo</option>
@@ -165,8 +140,8 @@ if(function_exists("sanitizeString")){
 <h3 id="titulo">Fecha Constitución</h3>
 <div class="constitucion">
 <p>Selecciona el Día</p>
-<select name="DiaFechaConstitucion">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="DiaFechaConstitucion" required>
+    <option value="">Sin Seleccionar</option>
       	<option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -363,7 +338,7 @@ if(function_exists("sanitizeString")){
 </div>
 <div class="asentamiento">
 <p>Nombre del Asentamiento</p>
-<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
+<input type="text" name="NombreAsentamientoProyecto" required="required" maxlength="80">
 
 
 <p>Nombre de la Vialidad</p>

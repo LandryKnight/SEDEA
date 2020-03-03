@@ -19,13 +19,13 @@ insert into Usuarios values(2,'sedea','sde@_@2020');
 insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
 
 
-drop table personafisica;
+drop table persfisDatos;
 
-truncate table personafisica;
+truncate table persfisDatos;
 
 
 #Tabla Persona Fisica
-Create Table personafisicaDatos(
+Create Table persfisDatos(
 sfolioImpresoPF varchar(30) Primary Key,
 sventanidirRegional varchar(30),  
 sventaniMunicipio varchar(30),
@@ -54,7 +54,7 @@ stipoActividad varchar(15)
 
 
 #Nombre Proyecto
-Create Table personafisicaNP(
+Create Table persfisNP(
 sIdProyecto int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 sNombreProyecto varchar(80),
@@ -75,7 +75,7 @@ sReferenciaVialidadProyecto varchar(50)
 
 
 #Concepto Apoyo
-Create Table personafisicaCA(
+Create Table persfisCA(
 idConcepto int Primary key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
@@ -88,7 +88,7 @@ InversionTotal varchar(20)
 );
 
 #requisitos Generales
-Create Table personafisicaRG(
+Create Table persfisRG(
 idRequisito int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 observaciones varchar(80),

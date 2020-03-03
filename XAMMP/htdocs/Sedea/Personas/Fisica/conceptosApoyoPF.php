@@ -1,6 +1,6 @@
 <?php 
 /* 
-require_once('conect.php');
+require_once('ConexionPF.php');
 
 
 
@@ -41,7 +41,7 @@ $ReferenciaVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['Referenc
 
 }
 
-$InsertDatoProyecto = "INSERT INTO personafisicaNP(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
+$InsertDatoProyecto = "INSERT INTO persfisNP(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
 
  $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
 
@@ -59,14 +59,7 @@ $InsertDatoProyecto = "INSERT INTO personafisicaNP(sfolioImpreso,sNombreProyecto
 
 */
 
-function sanitizeString($var){
 
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
 
 
 ?>

@@ -24,13 +24,13 @@
  <h2>Datos de la Ventanilla Receptora</h2>
 
 
-   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30" >
+   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQWRWEQ156" maxlength="30" >
 
    <div class="regional">
 
   <p> Selecciona la Dirección Regional</p> 
-  <select name="DireccionRegional"> 
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="DireccionRegional"  required> 
+    <option value="">Sin Seleccionar</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
     <option value="Jalpan de Serra">Jalpan de Serra</option>
     <option value="Querétaro">Querétaro</option>
@@ -41,8 +41,8 @@
 
 
 <p>Selecciona el Municipio</p>
-   <Select name="ventanillaMunicipio">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <Select name="ventanillaMunicipio" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -86,8 +86,8 @@
   <h3 id="titulo2">Selecciona la Fecha de Nacimiento</h3>
    <div class="nacimiento" >
   <p>Selecciona el Día </p>
-        <select name="DiaFechaNacimiento" >
-        <option value="Sin Seleccionar">Sin Seleccionar</option>
+        <select name="DiaFechaNacimiento" required >
+        <option value="">Sin Seleccionar</option>
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -122,9 +122,9 @@
     
   </select>
   <p>Selecciona el Mes</p>
-  <select name="MesFechaNacimiento" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
-    <option value="01">01</option>
+  <select name="MesFechaNacimiento" required >
+    <option value="">Sin Seleccionar</option>
+        <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -139,8 +139,8 @@
     
   </select>
   <p>Selecciona el Año</p>
-  <select name="AnioFechaNacimiento">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="AnioFechaNacimiento" required>
+    <option value="">Sin Seleccionar</option>
     <option value="2002">2002</option>
        <option value="2001">2001</option>
        <option value="2000">2000</option>
@@ -194,27 +194,29 @@
        <option value="1952">1952</option>
   </select>
   
+
+
 </div>
    
    <div class="genero">
   <p>Selecciona el Género</p>
-  <select name="genero" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="genero" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Masculino">Masculino</option>
     <option value="Femenino">Femenino</option>
   </select>
 
   <p>Selecciona la Nacionalidad</p>
-    <select name="Nacionalidad" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <select name="Nacionalidad" required >
+    <option value="">Sin Seleccionar</option>
     <option value="Mexicana">Mexicana</option>
     <option value="Extranjera">Extranjera</option>
   </select> 
   
 
   <P>Selecciona el Estado Civil</P>
-    <select name="EstadoCivil" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <select name="EstadoCivil" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Soltero">Soltero</option>
     <option value="Casado">Casado</option>
     <option value="Divorciado">Divorciado</option>
@@ -224,8 +226,8 @@
   
 
   <p>Selecciona el Estado de Nacimiento</p>
-  <select name="EstadoNacimiento" >
-       <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="EstadoNacimiento" required >
+       <option value="">Sin Seleccionar</option>
        <option value="Aguascalientes">Aguascalientes</option>
        <option value="Baja California B.C.">Baja California B.C.</option>
        <option value="Baja California Sur">Baja California Sur</option>
@@ -270,8 +272,8 @@
   <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="120">
 
   <p>Tipo de Identificación</p>
-  <select name="tipoIdentificacion" required="required">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="tipoIdentificacion" required>
+    <option value="">Sin Seleccionar</option>
     <option value="INE">INE - IFE</option>
   </select>
   
@@ -291,8 +293,8 @@
  <div class="domicilio">
 
   <p>Selecciona el Nombre del Municipio</p>
-   <Select name="nombreDomicilioMunicipio" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <Select name="nombreDomicilioMunicipio"  required>
+    <option value="">Sin Seleccionar</option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -313,15 +315,15 @@
     <option value="Tolimán">Tolimán</option>
    </Select>
    <p>Selecciona el Tipo de Domicilio</p>
-   <select name="tipoDomicilio" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <select name="tipoDomicilio" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Urbano">Urbano</option>
     <option value="Rural">Rural</option>
    </select>
   
    <p>Selecciona el Tipo de Vialidad</p>
-   <select name="tipoVialidad">
-      <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <select name="tipoVialidad" required>
+      <option value="">Sin Seleccionar</option>
       <option value="Calle">Calle</option>  
       <option value="Callejón">Callejón</option>
       <option value="Privada">Privada</option>
@@ -332,8 +334,8 @@
 
 
    <p>Selecciona el Tipo de Asentamiento</p>
-   <select name="tipoAsentamiento" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <select name="tipoAsentamiento"  required>
+    <option value="">Sin Seleccionar</option>
     <option value="Colonia">Colonia</option>
     <option value="Pueblo">Pueblo</option>
     <option value="Rancho">Rancho</option>
@@ -377,8 +379,8 @@
 </div>
    <h2 id="titulo2">Actividad Económica</h2>
    <p>Seleccion el Tipo de Actividad</p>
-   <select name="tipoActividadEconomica" >
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <select name="tipoActividadEconomica" required >
+    <option value="">Sin Seleccionar</option>
     <option value="Agrícola">Agrícola</option>
     <option value="Pecuaria">Pecuaria</option>
     <option value="Pesca/Acuicola">Pesca/Acuícola</option>
