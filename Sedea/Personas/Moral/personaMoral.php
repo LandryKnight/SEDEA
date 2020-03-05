@@ -122,18 +122,24 @@ function sanitizeString($var){
 <head>
 	<title></title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 
+<div class="Marco">
 <form action="DatosProyectoPM.php" method="post">
+
+ <h1>Persona Moral</h1>
+ <h2>Datos de la Ventanilla Receptora</h2>
   
-  <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQW-RWEQ-156" maxlength="30">
+  <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DRWRWEQ156" maxlength="30">
 
 
   <h2>Datos de la Ventanilla Receptora</h2>
+  <div class="regional">
   <p> Selecciona la Dirección Regional</p> 
-  	<select name="VentanillaDireccionRegional"> 
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+  	<select name="VentanillaDireccionRegional" required> 
+    <option value="">Sin Seleccionar</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
     <option value="Querétaro">Querétaro</option>
     <option value="Jalpan de Serra">Jalpan de Serra</option>
@@ -142,8 +148,8 @@ function sanitizeString($var){
 
   
   <p>Selecciona el Municipio</p>
-   <Select name="VentanillaMunicipio">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+   <Select name="VentanillaMunicipio" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -165,11 +171,15 @@ function sanitizeString($var){
 
 </Select>
 
+
+</div>
+
+
 	<h2>Datos Solicitante - Persona Moral</h2>
 
 
 
-
+  <div class="organizacion" >
 	<p>Nombre de la Organización</p> 
 	<input type="text" name="NombreOrganizacion" placeholder="Ej: Agricultores Unidos" required="required" maxlength="50">
 
@@ -182,12 +192,14 @@ function sanitizeString($var){
 	<p>Correo Electrónico</p> 
 	<input type="text" name="CorreoElectronicoOrganizacion" placeholder="Ej: Sedea@gmail.com" required="required" maxlength="120">
 
-	<p>Fecha de Constitución</p> 
-	
+  </div>
+
+	<h3 id="titulo2">Fecha de Constitución</h3>
+	 <div class="centro">
 	<p>Selecciona el Día </p>
-	<select name="DiaFechaConstitucion" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-	    <option value="01">01</option>
+	<select name="DiaFechaConstitucion" required>
+		    <option value="">Sin Seleccionar</option>
+	      <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -220,9 +232,9 @@ function sanitizeString($var){
 		
 	</select>
 	<p>Selecciona el Mes</p>
-	<select name="MesFechaConstitucion" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="01">01</option>
+	<select name="MesFechaConstitucion" required>
+		<option value="">Sin Seleccionar</option>
+		    <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -237,9 +249,9 @@ function sanitizeString($var){
 		
 	</select>
 	<p>Selecciona el Año</p>
-	<select name="AnioFechaConstitucion" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-	   <option value="2020">2020</option>
+	<select name="AnioFechaConstitucion" required>
+		   <option value="">Sin Seleccionar</option>
+	     <option value="2020">2020</option>
        <option value="2019">2019</option>
        <option value="2018">2018</option>
        <option value="2017">2017</option>
@@ -315,20 +327,44 @@ function sanitizeString($var){
 	</select>
 
 	
-
+</div>
 
 	<h2>Domicilio de la Organización</h2>
+   <div class="organizacion">
+    <p>Selecciona el Nombre del Municipio</p>
+    <Select name="NombreMunicipioOrganizacion" required >
+    <option value="">Sin Seleccionar</option>
+    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
+    <option value="Arroyo Seco">Arroyo Seco</option>
+    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
+    <option value="Colón">Colón</option>
+    <option value="Corregidora">Corregidora</option>
+    <option value="El Marqués">El Marqués</option>
+    <option value="Ezequiel Montes">Ezequiel Montes</option>
+    <option value="Huimilpan">Huimilpan</option>
+    <option value="Jalpan de Serra">Jalpan de Serra </option>
+    <option value="Landa de Matamoros">Landa de Matamoros</option>
+    <option value="Pedro Escobedo">Pedro Escobedo</option>
+    <option value="Peñamiller">Peñamiller</option>
+    <option value="Pinal de Amoles">Pinal de Amoles</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="San Joaquín">San Joaquín</option>
+    <option value="San Juan del Río">San Juan del Río</option>
+    <option value="Tequisquiapan">Tequisquiapan</option>
+    <option value="Tolimán">Tolimán</option>
+   </Select>
+
 	<p>Tipo de Domicilio</p>
-	<select name="TipoDomicilioOrganizacion">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<select name="TipoDomicilioOrganizacion" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Urbano">Urbano</option>	
 	<option value="Rurar">Rural</option>
 	</select>
 	
 
 	<p>Tipo de Asentamiento</p>
-	<select name="TipoAsentamientoOrganizacion">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<select name="TipoAsentamientoOrganizacion" required>
+		<option value="">Sin Seleccionar</option>
 		<option value="Colonia">Colonia</option>
 		<option value="Pueblo">Pueblo</option>
 		<option value="Rancho">Rancho</option>
@@ -337,22 +373,23 @@ function sanitizeString($var){
 		<option value="Otro">Otro</option>
 	</select>
 	
+<p>Selecciona el Tipo de Vialidad</p>
+  <select name="TipoVialidadOrganizacion" required>
+    <option value="">Sin Seleccionar</option>
+    <option value="Calle">Calle</option>
+    <option value="Callejon">Callejon</option>
+    <option value="Privada">Privada</option>
+    <option value="Carretera">Carretera</option>
+    <option value="Camino">Camino</option>
+    <option value="Otro">Otro</option>
+    
+ </select>
 
 
 	<p>Nombre del Asentamiento</p>
 	<input type="Text" name="NombreAsentamientoOrganizacion" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
 
-	<p>Selecciona el Tipo de Vialidad</p>
-	<select name="TipoVialidadOrganizacion">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="Calle">Calle</option>
-		<option value="Callejon">Callejon</option>
-		<option value="Privada">Privada</option>
-		<option value="Carretera">Carretera</option>
-		<option value="Camino">Camino</option>
-		<option value="Otro">Otro</option>
-		
- </select>
+	
 
 
 
@@ -363,61 +400,43 @@ function sanitizeString($var){
 	<p>Nombre de la localidad</p>
 	<input type="text" name="NombreLocalidadOrganizacion" required="required" maxlength="50">
 
-	<p>Selecciona el Nombre del Municipio</p>
-   		<Select name="NombreMunicipioOrganizacion">
-   		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="Amealco de Bonfil">Amealco de Bonfil</option>
-		<option value="Arroyo Seco">Arroyo Seco</option>
-		<option value="Cadereyta de Montes">Cadereyta de Montes</option>
-		<option value="Colón">Colón</option>
-		<option value="Corregidora">Corregidora</option>
-		<option value="El Marqués">El Marqués</option>
-		<option value="Ezequiel Montes">Ezequiel Montes</option>
-		<option value="Huimilpan">Huimilpan</option>
-		<option value="Jalpan de Serra">Jalpan de Serra	</option>
-		<option value="Landa de Matamoros">Landa de Matamoros</option>
-		<option value="Pedro Escobedo">Pedro Escobedo</option>
-		<option value="Peñamiller">Peñamiller</option>
-		<option value="Pinal de Amoles">Pinal de Amoles</option>
-		<option value="Querétaro">Querétaro</option>
-		<option value="San Joaquín">San Joaquín</option>
-		<option value="San Juan del Río">San Juan del Río</option>
-		<option value="Tequisquiapan">Tequisquiapan</option>
-		<option value="Tolimán">Tolimán</option>
-   </Select>
+	
 
 	<p>Referencia de la Vialidad</p>
 	<input type="text" name="ReferenciaVialidadOrganizacion" maxlength="50">
 	
-
+</div>
 	<h2>Actividad Economica</h2>
    <p>Seleccion el Tipo de Actividad</p>
-   <select name="TipoActividadEconomicaOrganizacion" required="required">
-   	<option value="Sin Seleccionar">Sin Seleccionar</option>
+   <select name="TipoActividadEconomicaOrganizacion" required>
+   	<option value="">Sin Seleccionar</option>
    	<option value="Agrícola">Agrícola</option>
    	<option value="Pecuaria">Pecuaria</option>
    	<option value="Pesca/Agrícola">Pesca/Agrícola</option>
    	<option value="Otra">Otra</option>
    </select>
 
-   <h2>Datos Personales del representante de la organización</h2>
+   <h2 >Datos Personales del representante de la organización</h2>
 
-   <p>Nombre Completo</p>
-   <input type="text" name="NombreRepresentante" required="required" placeholder="Ej: Maria Guadalupe Fernandez Gutierrez" maxlength="80">
+   <div class="centro">
+  <p>Nombre</p>
+  <input type="text" name="nombresPF" placeholder=" Ej: Maria Guadalupe" required="required" maxlength="40">
 
-   <p>Selecciona el Género</p>
-    <select name="GeneroRepresentante">
-   	<option value="Sin Seleccionar">Sin Seleccionar</option>
-   	<option value="Femenino">Femenino</option>
-   	<option value="Masculino">Masculino</option>
-   </select>
+  <p>Apellido Paterno</p>
+  <input type="text" name="apellidoPa" placeholder=" Ej: Fernandez" required="required" maxlength="20">
 
+  <p>Apellido Materno</p>
+  <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20">
+  
+ </div>
 
-<p>Selecciona la Fecha de Nacimiento</p>
-	<p>Selecciona el Día </p>
-	<select name="DiaFechaNacimientoRepresentante" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-	    <option value="01">01</option>
+  
+<h3 id="titulo2">Selecciona la Fecha de Nacimiento</h3>
+ <div class="centro">
+	      <p>Selecciona el Día </p>
+	      <select name="DiaFechaNacimientoRepresentante" required>
+		    <option value="">Sin Seleccionar</option>
+	      <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -447,12 +466,13 @@ function sanitizeString($var){
         <option value="28">28</option>
         <option value="29">29</option>
         <option value="30">30</option>
+        <option value="31">31</option>
 		
 	</select>
 	<p>Selecciona el Mes</p>
-	<select name="MesFechaNacimientoRepresentante" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="01">01</option>
+	<select name="MesFechaNacimientoRepresentante" required>
+		    <option value="">Sin Seleccionar</option>
+		    <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
         <option value="04">04</option>
@@ -467,9 +487,9 @@ function sanitizeString($var){
 		
 	</select>
 	<p>Selecciona el Año</p>
-	<select name="AnioFechaNacimientoRepresentante" required="required">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="2002">2002</option>
+	<select name="AnioFechaNacimientoRepresentante" required>
+		<option value="">Sin Seleccionar</option>
+		   <option value="2002">2002</option>
        <option value="2001">2001</option>
        <option value="2000">2000</option>
        <option value="1999">1999</option>
@@ -522,18 +542,27 @@ function sanitizeString($var){
        <option value="1952">1952</option>
 	</select>
 
+</div>
+
+ <div class="centro">
+ <p>Selecciona el Género</p>
+    <select name="GeneroRepresentante" required >
+    <option value="">Sin Seleccionar</option>
+    <option value="Femenino">Femenino</option>
+    <option value="Masculino">Masculino</option>
+   </select>
 
 <p>Selecciona la Nacionalidad</p>
-<select name="NacionalidadRepresentante">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="NacionalidadRepresentante" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Mexicana">Mexicana</option>
 	<option value="Extranjera">Extranjera</option>
 
 </select>
 
 <p>Selecciona el Estado Civil</p>
-	<select name="EstadoCivilRepresentante">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<select name="EstadoCivilRepresentante" required>
+		<option value="">Sin Seleccionar</option>
 		<option value="Soltero">Soltero</option>
 		<option value="Casado">Casado</option>
 		<option value="Divorciado">Divorciado</option>
@@ -541,10 +570,11 @@ function sanitizeString($var){
 
 	</select>
 
-
+</div>
+<div class="centro">
 	<p>Selecciona el Estado de Nacimiento</p>
-	<select name="EstadoNacimientoRepresentante" required="required">
-	   <option value="Sin Seleccionar">Sin Seleccionar</option>
+	<select name="EstadoNacimientoRepresentante" required>
+	   <option value="">Sin Seleccionar</option>
        <option value="Aguascalientes">Aguascalientes</option>
        <option value="Baja California	B.C.">Baja California	B.C.</option>
        <option value="Baja California Sur">Baja California Sur</option>
@@ -587,11 +617,13 @@ function sanitizeString($var){
 
 	<p>Correo Electrónico</p>
 	<input type="text" name="CorreoElectronicoRepresentante" placeholder="Ej: Sedeaq@gmail.com" required="required" maxlength="120">
+ </div>
 
-	<p>Selecciona el tipo de Identificacion</p>
+ <div class="centro">
+	<p>Selecciona el tipo de Identificación</p>
 
-	<select name="TipoIdentificacionRepresentante">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
+	<select name="TipoIdentificacionRepresentante" required>
+		<option value="">Sin Seleccionar</option>
 		<option value="INE">INE - IFE</option>
 		
 	</select>
@@ -603,34 +635,63 @@ function sanitizeString($var){
 	<input type="text" name="CurpRepresentante" required="required" placeholder="Ej: SJFA451236SASD" maxlength="14">
 
 	
+</div>
+ <div class="asentamiento">
+  <p>Selecciona el Nombre del Municipio</p>
+      <Select name="NombreMunicipioRepresentante" required>
+    <option value="">Sin Seleccionar</option>
+    <option value="Amealco de Bonfil">Amealco de Bonfil</option>
+    <option value="Arroyo Seco">Arroyo Seco</option>
+    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
+    <option value="Colón">Colón</option>
+    <option value="Corregidora">Corregidora</option>
+    <option value="El Marqués">El Marqués</option>
+    <option value="Ezequiel Montes">Ezequiel Montes</option>
+    <option value="Huimilpan">Huimilpan</option>
+    <option value="Jalpan de Serra">Jalpan de Serra </option>
+    <option value="Landa de Matamoros">Landa de Matamoros</option>
+    <option value="Pedro Escobedo">Pedro Escobedo</option>
+    <option value="Peñamiller">Peñamiller</option>
+    <option value="Pinal de Amoles">Pinal de Amoles</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="San Joaquín">San Joaquín</option>
+    <option value="San Juan del Río">San Juan del Río</option>
+    <option value="Tequisquiapan">Tequisquiapan</option>
+    <option value="Tolimán">Tolimán</option>
+   </Select>
+  
+
 
 	<p>Selecciona el Tipo de Domicilio</p>
-		<select name="TipoDomicilioRepresentante">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
+		<select name="TipoDomicilioRepresentante" required>
+		<option value="">Sin Seleccionar</option>
 		<option value="Urbano">Urbano</option>
 		<option value="Rural">Rural</option>
     
 	</select>
 
+ </div>
 
-	<p>Tipo de Asentamiento</p>
-		<select name="TipoAsentamientoRepresentante">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="Colonia">Colonia</option>
-		<option value="Pueblo">Pueblo</option>
-		<option value="Rancho">Rancho</option>
-		<option value="Ejido">Ejido</option>
-		<option value="Hacienda">Hacienda</option>
-		<option value="Otro">Otro</option>
-	</select>
+ <div class="asentamiento">
+<p>Tipo de Asentamiento</p>
+    <select name="TipoAsentamientoRepresentante" required>
+    <option value="">Sin Seleccionar</option>
+    <option value="Colonia">Colonia</option>
+    <option value="Pueblo">Pueblo</option>
+    <option value="Rancho">Rancho</option>
+    <option value="Ejido">Ejido</option>
+    <option value="Hacienda">Hacienda</option>
+    <option value="Otro">Otro</option>
+  </select>
 
+  <p>Nombre del Asentamiento</p>
+  <input type="text" name="NombreAsentamientoReprsentante" maxlength="50">
+</div>
 
-	<p>Nombre del Asentamiento</p>
-	<input type="text" name="NombreAsentamientoReprsentante" maxlength="50">
-
+<div class="asentamiento">
 	<p>Selecciona el Tipo de vialidad</p>
-		<select name="TipoVialidadRepresentante">
-		<option value="Sin Seleccionar">Sin Seleccionar</option>
+		<select name="TipoVialidadRepresentante" required>
+		<option value="">Sin Seleccionar</option>
 		<option value="Calle">Calle</option>
 		<option value="Callejón">Callejón</option>
 		<option value="Privada">Privada</option>
@@ -648,38 +709,19 @@ function sanitizeString($var){
   	<input type="text" name="NombreLocalidadRepresentante" maxlength="30">
 
 
-	<p>Selecciona el Nombre del Municipio</p>
-   		<Select name="NombreMunicipioRepresentante" required="required">
-   		<option value="Sin Seleccionar">Sin Seleccionar</option>
-		<option value="Amealco de Bonfil">Amealco de Bonfil</option>
-		<option value="Arroyo Seco">Arroyo Seco</option>
-		<option value="Cadereyta de Montes">Cadereyta de Montes</option>
-		<option value="Colón">Colón</option>
-		<option value="Corregidora">Corregidora</option>
-		<option value="El Marqués">El Marqués</option>
-		<option value="Ezequiel Montes">Ezequiel Montes</option>
-		<option value="Huimilpan">Huimilpan</option>
-		<option value="Jalpan de Serra">Jalpan de Serra	</option>
-		<option value="Landa de Matamoros">Landa de Matamoros</option>
-		<option value="Pedro Escobedo">Pedro Escobedo</option>
-		<option value="Peñamiller">Peñamiller</option>
-		<option value="Pinal de Amoles">Pinal de Amoles</option>
-		<option value="Querétaro">Querétaro</option>
-		<option value="San Joaquín">San Joaquín</option>
-		<option value="San Juan del Río">San Juan del Río</option>
-		<option value="Tequisquiapan">Tequisquiapan</option>
-		<option value="Tolimán">Tolimán</option>
-   </Select>
-  
+	
 
  <p>Referencia de la vialidad</p>
  <input type="text" name="ReferenciaVialidadRepresentante" maxlength="50"> <br>
 
+</div>
 
-<input type="submit" name="enviarPM" value="Enviar">
+<input type="submit" name="enviarPM" value="Enviar" class="boton">
 
 	
 
 </form>
+</div>
+
 </body>
 </html>
