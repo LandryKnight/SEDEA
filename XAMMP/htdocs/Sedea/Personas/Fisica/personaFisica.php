@@ -141,7 +141,7 @@
   <p>Selecciona el Año</p>
   <select name="AnioFechaNacimiento" required>
     <option value="">Sin Seleccionar</option>
-    <option value="2002">2002</option>
+      <option value="2002">2002</option>
        <option value="2001">2001</option>
        <option value="2000">2000</option>
        <option value="1999">1999</option>
@@ -269,7 +269,7 @@
 
 
   <p>Correo Electrónico</p>
-  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="120">
+  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80">
 
   <p>Tipo de Identificación</p>
   <select name="tipoIdentificacion" required>
@@ -280,7 +280,7 @@
 
 
   <p>Numero de Identificación</p>
-  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="30">
+  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="15">
 
 
   <p>Curp</p>
@@ -393,7 +393,7 @@
 <br>
 
 </form>
-
+<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
 </div>
 </body>
 </html>

@@ -25,20 +25,20 @@ truncate table persfisDatos;
 
 
 #Tabla Persona Fisica
-Create Table persfisDatos(
+Create Table personafisicaDatos(
 sfolioImpresoPF varchar(30) Primary Key,
 sventanidirRegional varchar(30),  
 sventaniMunicipio varchar(30),
 snombre varchar(80),
 sgenero varchar(25),
-sfechaNacimiento varchar(8),
+sfechaNacimiento varchar(10),
 snacionalidad varchar(25),
 sestadoCivil varchar(25),
 sestadoNacimiento varchar(25),
-stelefono int(10),
-scorreoElectronico varchar(120),
+stelefono varchar(10),
+scorreoElectronico varchar(80),
 stipoIdentificacion varchar(30),
-snumeroIdentificacion varchar(13),
+snumeroIdentificacion varchar(15),
 scurp varchar(20),
 stipoDomicilio varchar(8),
 stipoAsentamiento varchar(8),
@@ -48,7 +48,8 @@ snombreVialidad varchar(50),
 snombreLocalidad varchar(50),
 snombreMunicipio varchar(30),
 sreferenciaVialidad varchar(50),
-stipoActividad varchar(15)
+stipoActividad varchar(15),
+sfechaRegistro varchar(30)
 
 );
 

@@ -4,9 +4,6 @@
 require_once('ConexionPF.php');
 
 
-
-
-
  global $folioImpreso;
 
  
@@ -15,7 +12,7 @@ if(isset($_POST['EnviarPF'])){
   $folioImpreso =           strtoupper(sanitizeString($_POST['FolioImpreso']));
 
  
-  $direccionRegional =      $_POST['DireccionRegional'];
+  $dirReg =                 $_POST['DireccionRegional']; #direccionRegional
   $municipio =              $_POST['ventanillaMunicipio'];
   $nombres    =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
   $apellidoPa =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
@@ -36,7 +33,7 @@ if(isset($_POST['EnviarPF'])){
   $EstadoCivil =            $_POST['EstadoCivil'];
   $estadoNacimiento =       $_POST['EstadoNacimiento'];
   $telefono =               sanitizeString($_POST['Telefono']);
-  $correoElectronico =      strtolower(sanitizeString($_POST['Correo']));
+  $correo =                 strtolower(sanitizeString($_POST['Correo'])); #correoElectronico
   $tipoIdentificacion =     $_POST['tipoIdentificacion'];
   $numIdentificacion =      sanitizeString($_POST['numIdentificacion']);
   $curp =                   strtoupper(sanitizeString($_POST['Curp']));
@@ -47,27 +44,27 @@ if(isset($_POST['EnviarPF'])){
   $nombreVialidad  =        ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
   $nombreLocalidad =        ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
   $nombreMunicipio =        $_POST['nombreDomicilioMunicipio'];
-  $referenciaVialidad =     ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad'])));
-  $actividadEconomica =     $_POST['tipoActividadEconomica'];
+  $refVial =                ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad']))); #referenciaVialidad
+  $actEco =                 $_POST['tipoActividadEconomica']; #actividadEconomica
 
     
 }
 
-  
-    $inserPFD = "INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
-      stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
-          
-    $inserPFD = utf8_encode($inserPFD);
+     $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
+   
+     $insertPF = utf8_encode($insertPF);
+   
 
-    echo $inserPFD;
-
-    $result = queryMySql("SELECT * FROM persfisDatos WHERE sfolioImpresoPF = '$folioImpreso'");
+    $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
 
     if ($result -> num_rows) {
       echo "El Folio ya existe";
 
           }else {
-           queryMySql("$inserPFD"); 
+            queryMySql("$insertPF "); 
+              echo "Datos Registrados";
+
+            
 
         }
       
@@ -81,6 +78,9 @@ if(function_exists("sanitizeString")){
 }else {
   echo "no existe la funcion";
 }
+
+$inserPFD = "INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad,sfechaRegistro) VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
+
 
 INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
       stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}')
@@ -352,10 +352,13 @@ INSERT INTO persfisDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,s
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Enviar" class="boton">
+<input type="submit" name="DatosProyectoPF" value="Enviar =>" class="boton">
 <br>
-</div>
+
 </form>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> <= Regresar  </button></a>
+</div>
+
 
 
 </body>
