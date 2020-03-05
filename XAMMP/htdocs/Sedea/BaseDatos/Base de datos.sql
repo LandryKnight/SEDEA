@@ -55,28 +55,29 @@ sfechaRegistro varchar(30)
 
 
 #Nombre Proyecto
-Create Table persfisNP(
+Create Table personafisicaProyecto(
 sIdProyecto int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 sNombreProyecto varchar(80),
-sAntiguedadProyecto varchar(20),
-sTelefonoProyecto varchar(100),
-sCorreoElectronicoProyecto varchar(120),
+sAntiguedadPr varchar(20), #sAntiguedadProyecto 
+sTelefonoPr varchar(100), #sTelefonoProyecto
+sCorreoPr varchar(80), #sCorreoElectronicoProyecto
 sFechaConstitucion varchar(10),
-sTipoDomicilioProyecto varchar(15),
-sTipoAsentamientoProyecto varchar(15),
-sNombreAsentamientoProyecto varchar(80),
-sTipoVialidadProyecto  varchar(10),
-sNombreVialidadProyecto varchar(80),
-sNombreLocalidadProyecto varchar(80),
-sNombreMunicipioProyecto varchar(30),
-sReferenciaVialidadProyecto varchar(50)
+sTiDomiPr varchar(15), #sTipoDomicilioProyecto
+sTiAsentPr varchar(15), #sTipoAsentamientoProyecto
+sNomAsentPr varchar(80), #sNombreAsentamientoProyecto
+sTiVialPr  varchar(10), #sTipoVialidadProyecto 
+sNomVialPr varchar(80),  #sNombreVialidadProyecto
+sNomLocalPr varchar(80), #sNombreLocalidadProyecto
+sNomMuniciPr varchar(30), #sNombreMunicipioProyecto
+sRefVialPr varchar(50), #sReferenciaVialidadProyecto
+sfechaRegistro varchar(30)
 
 );
 
 
 #Concepto Apoyo
-Create Table persfisCA(
+Create Table personafisicaConceptoApoyo(
 idConcepto int Primary key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
@@ -85,7 +86,8 @@ CanSolicitada int(5),
 ApoyoEstatalSolicitado varchar(10),
 ApoyoMunicipalSolicitado varchar(10),
 AportacionBeneficiario varchar(10),
-InversionTotal varchar(20)
+InversionTotal varchar(20),
+sfechaRegistro varchar(30)
 );
 
 #requisitos Generales

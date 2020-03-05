@@ -1,39 +1,32 @@
 <?php 
-/* 
+
 require_once('ConexionPF.php');
-
-
-
-$funcion = new funcion();
-
-$con = $funcion -> conectar();
-
 
 
 if(isset($_POST['DatosProyectoPF'])){
 
-$folioImpreso  = sanitizeString($_POST['IfolioImpreso']);
-$NombreProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
-$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto = ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+$folioImpreso  = 				sanitizeString($_POST['IfolioImpreso']);
+$NombreProyecto = 				ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
+$AntiguedadProyecto =  			$_POST['AntiguedadProyecto'];
+$TelefonoProyecto = 			sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto = 	ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
 
-$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
+$DiaFechaConstitucion = 		$_POST['DiaFechaConstitucion'];
+$MesFechaConstitucion = 		$_POST['MesFechaConstitucion'];
+$AnioFechaConstitucion = 		$_POST['AnioFechaConstitucion'];
 
 
 $FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
 
-$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
-$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
-$NombreLocalidadProyecto = ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
-$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
-
+$TipoDomicilioProyecto = 		$_POST['TipoDomicilioProyecto'];
+$TipoAsentamientoProyecto  = 	$_POST['TipoAsentamientoProyecto'];
+$NombreAsentamientoProyecto = 	ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
+$TipoVialidadProyecto  = 		$_POST['TipoVialidadProyecto'];
+$NombreVialidadProyecto = 		ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
+$NombreLocalidadProyecto = 		ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
+$NombreMunicipioProyecto = 		$_POST['NombreMunicipioProyecto'];
+$ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
+	
 
 
 
@@ -41,23 +34,30 @@ $ReferenciaVialidadProyecto = ucfirst(strtolower(sanitizeString($_POST['Referenc
 
 }
 
-$InsertDatoProyecto = "INSERT INTO persfisNP(sfolioImpreso,sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
+		$InsertProyecto = "INSERT INTO personafisicaProyecto VALUES(null,'{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}',curdate());";
 
- $InsertDatoProyecto = utf8_encode($InsertDatoProyecto);
+ 			$InsertProyecto = utf8_encode($InsertProyecto);
 
- echo "Datos del Proyecto<br> ".$InsertDatoProyecto;
-
-
-  if ($con -> query($InsertDatoProyecto)) {
-            echo "Datos del Proyecto Registrados <br>";
-          } else{
-            echo $con -> error, "<br>";
-            echo $InsertDatoProyecto, "<br>";
-              }
+ 			#echo $InsertProyecto;
+ 			$result = queryMySql("SELECT * FROM personafisicaProyecto WHERE sNombreProyecto = '{$NombreProyecto}'");
 
 
+ 			if ($result -> num_rows) {
+        		 echo "El Proyecto ya existe";
 
-*/
+         		 }else {
+           		 queryMySql("$InsertProyecto"); 
+              	echo "Datos Registrados";
+
+            
+
+        }
+
+
+
+
+
+
 
 
 
@@ -112,7 +112,7 @@ $InsertDatoProyecto = "INSERT INTO persfisNP(sfolioImpreso,sNombreProyecto,sAnti
 		<td class="UnidadMedida"><input type="text" name="CanSolicitada2" maxlength="5" 	placeholder="      2" >  </td>
 		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado2" maxlength="10" 	placeholder="   $500,000" > </td>
 		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado2" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario2" maxlength="10" 	placeholder="    $250,000" required="required"> </td>
+		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario2" maxlength="10" 	placeholder="    $250,000" > </td>
 	
 		
 	</tr>

@@ -55,10 +55,10 @@ if(isset($_POST['EnviarPF'])){
      $insertPF = utf8_encode($insertPF);
    
 
-    $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
+      $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
 
-    if ($result -> num_rows) {
-      echo "El Folio ya existe";
+      if ($result -> num_rows) {
+         echo "El Folio ya existe";
 
           }else {
             queryMySql("$insertPF "); 
@@ -170,8 +170,8 @@ if(function_exists("sanitizeString")){
   </select>
 
   <p>Selecciona el Mes</p>
-  <select name="MesFechaConstitucion">
-    	  <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="MesFechaConstitucion" required>
+    	  <option value="">Sin Seleccionar</option>
     	  <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -188,8 +188,8 @@ if(function_exists("sanitizeString")){
   </select>
 
   <p>Selecciona el Año</p>
-  <select name="AnioFechaConstitucion">
-       <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="AnioFechaConstitucion" required>
+       <option value="">Sin Seleccionar</option>
        <option value="2020">2020</option>
         <option value="2019">2019</option>
         <option value="2018">2018</option>
@@ -266,8 +266,8 @@ if(function_exists("sanitizeString")){
 <h2 id="titulo2">Domicilio del proyecto</h2>
 <div class="municipio">
 <p>Selecciona el Municipio</p>
-    <Select name="NombreMunicipioProyecto">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <Select name="NombreMunicipioProyecto" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -291,8 +291,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de domicilio</p>
 
-<select name="TipoDomicilioProyecto">
-	<option  value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoDomicilioProyecto" required>
+	<option  value="">Sin Seleccionar</option>
 	<option  value="Rural">Rural</option>
 	<option  value="Urbano">Urbano</option>
 	
@@ -300,8 +300,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de Asentamiento</p>
 
-<select name="TipoAsentamientoProyecto">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoAsentamientoProyecto" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Colonia">Colonia</option>
 	<option value="Ejido">Ejido</option>
 	<option value="Hacienda">Hacienda</option>
@@ -317,8 +317,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de la vialidad</p>
 
-<select name="TipoVialidadProyecto">
-  <option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoVialidadProyecto" required>
+  <option value="">Sin Seleccionar</option>
   <option value="Calle">Calle</option>
   <option value="Callejón">Callejón</option>
   <option value="Carretera">Carretera</option>
@@ -353,6 +353,6 @@ if(function_exists("sanitizeString")){
 </div>
 
 
-
+<?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'"); ?>
 </body>
 </html>
