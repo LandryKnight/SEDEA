@@ -352,7 +352,7 @@ if(function_exists("sanitizeString")){
 <a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> <= Regresar  </button></a>
 </div>
 
-
-<?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'"); ?>
+<?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'");  ?>
+ 
 </body>
 </html>
