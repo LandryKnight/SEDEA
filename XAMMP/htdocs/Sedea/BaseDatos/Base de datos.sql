@@ -91,28 +91,29 @@ sfechaRegistro varchar(30)
 );
 
 #requisitos Generales
-Create Table persfisRG(
+Create Table personafisicaReqenerales(
 idRequisito int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
-observaciones varchar(80),
+observaciones varchar(194),
+sfechaRegistro varchar(30)
 
 
-)
+);
 
 
 #Add Constrain
-ALTER Table personafisicaCA
+ALTER Table personafisicaConceptoApoyo
 add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
 
-ALTER Table personafisicaNP
+ALTER Table personafisicaProyecto
 add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
 
-ALTER Table personafisicaRG
+ALTER Table personafisicaReqenerales
 add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisicaDatos(sfolioImpresoPF);
 
 
 #Drop Foreign Key
-ALTER table personafisicaCA
+ALTER table personafisicaConceptoApoyo
 drop Foreign key FK_Folio_Concepto_PF
 
 ALTER table personafisicaNP

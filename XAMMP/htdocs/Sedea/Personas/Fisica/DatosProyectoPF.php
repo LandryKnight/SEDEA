@@ -9,6 +9,7 @@ require_once('ConexionPF.php');
  
 if(isset($_POST['EnviarPF'])){
 
+  #recepcion de datos PersonaFisica.php
   $folioImpreso =           strtoupper(sanitizeString($_POST['FolioImpreso']));
 
  
@@ -50,38 +51,8 @@ if(isset($_POST['EnviarPF'])){
     
 }
 
-     $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
+     
    
-     $insertPF = utf8_encode($insertPF);
-   
-
-      $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
-
-      if ($result -> num_rows) {
-         echo "El Folio ya existe";
-
-          }else {
-            queryMySql("$insertPF "); 
-              echo "Datos Registrados";
-
-            
-
-        }
-      
-   
-
- 
-
-/*
-if(function_exists("sanitizeString")){
-  echo "existe la funcion";
-}else {
-  echo "no existe la funcion";
-}
-
-*/
-
-
 
 
 
@@ -99,10 +70,38 @@ if(function_exists("sanitizeString")){
 
 <div class="Marco"> 
 <form method="post" action="conceptosApoyoPF.php">
+  
+
+
+<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+
+<input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?> ">
+<input type ="hidden" name ="municipio" value="<?php echo $municipio; ?> ">
+<input type ="hidden" name ="nombre" value="<?php echo $nombre; ?> ">
+<input type ="hidden" name ="genero" value="<?php echo $genero; ?> ">
+<input type ="hidden" name ="fechaNacimiento" value="<?php echo $fechaNacimiento; ?> ">
+<input type ="hidden" name ="nacionalidad" value="<?php echo $nacionalidad; ?> ">
+<input type ="hidden" name ="EstadoCivil" value="<?php echo $EstadoCivil; ?> ">
+<input type ="hidden" name ="estadoNacimiento" value="<?php echo $estadoNacimiento; ?> ">
+<input type ="hidden" name ="telefono" value="<?php echo $telefono; ?> ">
+<input type ="hidden" name ="correo" value="<?php echo $correo; ?> ">
+<input type ="hidden" name ="tipoIdentificacion" value="<?php echo $tipoIdentificacion; ?> ">
+<input type ="hidden" name ="numIdentificacion" value="<?php echo $numIdentificacion; ?> ">
+<input type ="hidden" name ="curp" value="<?php echo $curp; ?> ">
+<input type ="hidden" name ="tipoDomicilio" value="<?php echo $tipoDomicilio; ?> ">
+<input type ="hidden" name ="tipoAsentamiento" value="<?php echo $tipoAsentamiento; ?> ">
+<input type ="hidden" name ="nombreAsentamiento" value="<?php echo $nombreAsentamiento; ?> ">
+<input type ="hidden" name ="tipoVialidad" value="<?php echo $tipoVialidad; ?> ">
+<input type ="hidden" name ="nombreVialidad" value="<?php echo $nombreVialidad; ?> ">
+<input type ="hidden" name ="nombreLocalidad" value="<?php echo $nombreLocalidad; ?> ">
+<input type ="hidden" name ="nombreMunicipio" value="<?php echo $nombreMunicipio; ?> ">
+<input type ="hidden" name ="refVial" value="<?php echo $refVial; ?> ">
+<input type ="hidden" name ="actEco" value="<?php echo $actEco; ?> ">
+
 
 <h1 id="titulo3">Datos del Proyecto para Persona Física</h1>
 
-<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+
 
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
@@ -345,11 +344,12 @@ if(function_exists("sanitizeString")){
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Enviar =>" class="boton">
+<input type="submit" name="DatosProyectoPF" value="Enviar Información " class="boton">
 <br>
 
 </form>
-<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> <= Regresar  </button></a>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a>
+<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
 </div>
 
 <?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'");  ?>
