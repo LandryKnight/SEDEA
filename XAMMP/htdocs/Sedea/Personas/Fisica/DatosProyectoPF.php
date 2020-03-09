@@ -36,12 +36,14 @@ if(isset($_POST['EnviarPF'])){
   $telefono =               sanitizeString($_POST['Telefono']);
   $correo =                 strtolower(sanitizeString($_POST['Correo'])); #correoElectronico
   $tipoIdentificacion =     $_POST['tipoIdentificacion'];
+
   $numIdentificacion =      sanitizeString($_POST['numIdentificacion']);
   $curp =                   strtoupper(sanitizeString($_POST['Curp']));
   $tipoDomicilio =          $_POST['tipoDomicilio'];
   $tipoAsentamiento =       $_POST['tipoAsentamiento'];
   $nombreAsentamiento =     ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
   $tipoVialidad =           $_POST['tipoVialidad'];
+  
   $nombreVialidad  =        ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
   $nombreLocalidad =        ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
   $nombreMunicipio =        $_POST['nombreDomicilioMunicipio'];
@@ -52,7 +54,15 @@ if(isset($_POST['EnviarPF'])){
 }
 
      
-   
+ /*   $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
+
+        if ($result -> num_rows) {
+           echo "El Folio ya existe";
+
+           }
+
+
+           */  
 
 
 

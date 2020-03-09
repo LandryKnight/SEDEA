@@ -12,9 +12,10 @@
 	global $connection;
 	
 	$result = $connection -> query($query);
-	if(!$result) die("Fatal Error");
+	if(!$result) die("No Connection");
 	return $result; 
-		}
+	
+	}
 
  	function sanitizeString($var){
 	global $connection;
@@ -25,7 +26,7 @@
     if(get_magic_quotes_gpc())
     $var = stripcslashes($var);
     return $connection -> real_escape_string($var);
-}
+	}
 
 
 

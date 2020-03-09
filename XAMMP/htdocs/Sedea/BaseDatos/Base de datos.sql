@@ -19,6 +19,13 @@ insert into Usuarios values(2,'sedea','sde@_@2020');
 insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
 
 
+#Sedea regional 
+#Cadereyta de Montes
+#Jalpan de Serra
+#Querétaro
+#San Juan del Río
+
+
 drop table persfisDatos;
 
 truncate table persfisDatos;

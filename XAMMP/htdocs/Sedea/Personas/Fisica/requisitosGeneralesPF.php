@@ -39,9 +39,9 @@ $CorreoElectronicoProyecto =	$_POST['CorreoElectronicoProyecto'];
 $FechaConstitucion		=	 	$_POST['FechaConstitucion'];
 $TipoDomicilioProyecto		=	$_POST['TipoDomicilioProyecto'];
 $TipoAsentamientoProyecto	=	$_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto =	$_POST['NombreAsentamientoProyecto '];
+$NombreAsentamientoProyecto =	$_POST['NombreAsentamientoProyecto'];
 $TipoVialidadProyecto		=	$_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto  =	 	$_POST['NombreVialidadProyecto '];
+$NombreVialidadProyecto  =	 	$_POST['NombreVialidadProyecto'];
 $NombreLocalidadProyecto  =	 	$_POST['NombreLocalidadProyecto'];
 $NombreMunicipioProyecto	=   $_POST['NombreMunicipioProyecto'];
 $ReferenciaVialidadProyecto	=	$_POST['ReferenciaVialidadProyecto'];
@@ -62,7 +62,10 @@ $CanSolicitada2	=				sanitizeString(	$_POST['CanSolicitada2']);
 $ApoyoEstatalSolicitado2	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado2']);
 $ApoyoMunicipalSolicitado2	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado2']);
 $AportacionBeneficiario2	=	sanitizeString(	$_POST['AportacionBeneficiario2']);
-$InversionTotal2	=			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+if (is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) ) {
+	$InversionTotal2	=			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+}
+
 
 $ApoyoSolicitado3	=			sanitizeString(	$_POST['ApoyoSolicitado3']);
 $UniMedida3	=					sanitizeString(	$_POST['UniMedida3']);
@@ -70,7 +73,10 @@ $CanSolicitada3	=				sanitizeString(	$_POST['CanSolicitada3']);
 $ApoyoEstatalSolicitado3	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado3']);
 $ApoyoMunicipalSolicitado3	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado3']);
 $AportacionBeneficiario3	=	sanitizeString(	$_POST['AportacionBeneficiario3']);
-$InversionTotal3	=			$ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
+
+if (is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) ) {
+	$InversionTotal3	=			$ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
+}
 				
 $ApoyoSolicitado4	=			sanitizeString(	$_POST['ApoyoSolicitado4']);
 $UniMedida4	=					sanitizeString(	$_POST['UniMedida4']);
@@ -78,7 +84,10 @@ $CanSolicitada4	=				sanitizeString(	$_POST['CanSolicitada4']);
 $ApoyoEstatalSolicitado4	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado4']);
 $ApoyoMunicipalSolicitado4	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado4']);
 $AportacionBeneficiario4	=	sanitizeString(	$_POST['AportacionBeneficiario4']);
-$InversionTotal4	=			$ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
+
+if (is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) ) {
+	$InversionTotal4	=			$ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
+}
 
 $ApoyoSolicitado5	=			sanitizeString(	$_POST['ApoyoSolicitado5']);
 $UniMedida5	=					sanitizeString(	$_POST['UniMedida5']);
@@ -86,7 +95,10 @@ $CanSolicitada5	=				sanitizeString(	$_POST['CanSolicitada5']);
 $ApoyoEstatalSolicitado5	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado5']);
 $ApoyoMunicipalSolicitado5	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado5']);
 $AportacionBeneficiario5	=	sanitizeString(	$_POST['AportacionBeneficiario5']);
-$InversionTotal5	=			$ApoyoEstatalSolicitado5 +  $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
+
+if (is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) ) {
+	$InversionTotal5	=			$ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
+}
 						
 $ApoyoSolicitado6	=			sanitizeString(	$_POST['ApoyoSolicitado6']);
 $UniMedida6	=					sanitizeString(	$_POST['UniMedida6']);
@@ -94,7 +106,10 @@ $CanSolicitada6	=				sanitizeString(	$_POST['CanSolicitada6']);
 $ApoyoEstatalSolicitado6	=	sanitizeString(	$_POST['ApoyoEstatalSolicitado6']);
 $ApoyoMunicipalSolicitado6	=	sanitizeString(	$_POST['ApoyoMunicipalSolicitado6']);
 $AportacionBeneficiario6	=	sanitizeString(	$_POST['AportacionBeneficiario6']);
-$InversionTotal6	=			$ApoyoEstatalSolicitado6 +  $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
+
+if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) ) {
+	$InversionTotal6	=			$ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
+}
 
 	
 
@@ -344,7 +359,7 @@ if (!is_null($ApoyoSolicitado6) ){
 
 <div class="documentos">
 
-<form method="post" action="observasiones.php" enctype="multipart/form-data">
+<form method="post" action="observaciones.php" enctype="multipart/form-data">
 
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">

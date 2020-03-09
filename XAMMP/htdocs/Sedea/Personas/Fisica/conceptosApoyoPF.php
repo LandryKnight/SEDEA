@@ -63,6 +63,15 @@ $ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['Referen
 }
 
 
+
+	/* $result = queryMySql("SELECT * FROM personafisicaProyecto WHERE sNombreProyecto = '{$NombreProyecto}'");
+ 	if ($result -> num_rows) {
+        		 echo "El Proyecto ya existe";
+
+         		 }
+
+         		 */
+
 ?>
 
 
