@@ -3,10 +3,35 @@
 drop Database Sedea;
 Create Database Sedea;
 
+Create Table Usuarios(
+idUsuario int Primary Key auto_increment,
+nameUsuario varchar(50),
+constrasenaUsuario varchar(50)
 
-drop table personafisica;
+);
 
-truncate table personafisica;
+#idUsuario 1 AdminSda
+#idUsuario 2 Sedea
+#idUsuario 3 SedeaRegional
+
+insert into Usuarios values(1,'adminSda','sdaAdmin@_@2020');
+insert into Usuarios values(2,'sedea','sde@_@2020');
+insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
+
+
+#Sedea regional 
+#Cadereyta de Montes
+#Jalpan de Serra
+#Querétaro
+#San Juan del Río
+
+
+drop table persfisDatos;
+
+truncate table personafisicaDatos;
+truncate table personafisicaProyecto;
+truncate table personafisicaConceptoApoyo;
+truncate table personafisicaReqenerales;
 
 
 #Tabla Persona Fisica
@@ -16,14 +41,14 @@ sventanidirRegional varchar(30),
 sventaniMunicipio varchar(30),
 snombre varchar(80),
 sgenero varchar(25),
-sfechaNacimiento varchar(8),
+sfechaNacimiento varchar(10),
 snacionalidad varchar(25),
 sestadoCivil varchar(25),
 sestadoNacimiento varchar(25),
-stelefono int(10),
-scorreoElectronico varchar(120),
+stelefono varchar(10),
+scorreoElectronico varchar(80),
 stipoIdentificacion varchar(30),
-snumeroIdentificacion varchar(13),
+snumeroIdentificacion varchar(15),
 scurp varchar(20),
 stipoDomicilio varchar(8),
 stipoAsentamiento varchar(8),
@@ -33,68 +58,70 @@ snombreVialidad varchar(50),
 snombreLocalidad varchar(50),
 snombreMunicipio varchar(30),
 sreferenciaVialidad varchar(50),
-stipoActividad varchar(15)
+stipoActividad varchar(15),
+sfechaRegistro varchar(30)
 
 );
 
 
 #Nombre Proyecto
-Create Table personafisicaNP(
+Create Table personafisicaProyecto(
 sIdProyecto int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 sNombreProyecto varchar(80),
-sAntiguedadProyecto varchar(20),
-sTelefonoProyecto varchar(100),
-sCorreoElectronicoProyecto varchar(120),
+sAntiguedadPr varchar(20), #sAntiguedadProyecto 
+sTelefonoPr varchar(100), #sTelefonoProyecto
+sCorreoPr varchar(80), #sCorreoElectronicoProyecto
 sFechaConstitucion varchar(10),
-sTipoDomicilioProyecto varchar(15),
-sTipoAsentamientoProyecto varchar(15),
-sNombreAsentamientoProyecto varchar(80),
-sTipoVialidadProyecto  varchar(10),
-sNombreVialidadProyecto varchar(80),
-sNombreLocalidadProyecto varchar(80),
-sNombreMunicipioProyecto varchar(30),
-sReferenciaVialidadProyecto varchar(50)
+sTiDomiPr varchar(15), #sTipoDomicilioProyecto
+sTiAsentPr varchar(15), #sTipoAsentamientoProyecto
+sNomAsentPr varchar(80), #sNombreAsentamientoProyecto
+sTiVialPr  varchar(10), #sTipoVialidadProyecto 
+sNomVialPr varchar(80),  #sNombreVialidadProyecto
+sNomLocalPr varchar(80), #sNombreLocalidadProyecto
+sNomMuniciPr varchar(30), #sNombreMunicipioProyecto
+sRefVialPr varchar(50), #sReferenciaVialidadProyecto
+sfechaRegistro varchar(30)
 
 );
 
 
 #Concepto Apoyo
-Create Table personafisicaCA(
+Create Table personafisicaConceptoApoyo(
 idConcepto int Primary key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
 UniMedida int(5),
 CanSolicitada int(5),
-ApoyoEstatalSolicitado varchar(20),
-ApoyoMunicipalSolicitado varchar(20),
-AportacionBeneficiario varchar(20),
-InversionTotal varchar(20)
+ApoyoEstatalSolicitado varchar(10),
+ApoyoMunicipalSolicitado varchar(10),
+AportacionBeneficiario varchar(10),
+InversionTotal varchar(20),
+sfechaRegistro varchar(30)
 );
 
 #requisitos Generales
-Create Table personafisicaRG(
+Create Table personafisicaReqenerales(
 idRequisito int Primary Key auto_increment,
 sfolioImpreso varchar(30), #Foreign Key
-observaciones varchar(80),
-
-
-)
+observaciones varchar(194),
+sfechaRegistro varchar(30)
+);
 
 
 #Add Constrain
-ALTER Table personafisicaCA
+ALTER Table personafisicaConceptoApoyo
 add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
 
-ALTER Table personafisicaNP
+ALTER Table personafisicaProyecto
 add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
 
-ALTER Table personafisicaRG
+ALTER Table personafisicaReqenerales
 add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisicaDatos(sfolioImpresoPF);
 
 
 #Drop Foreign Key
-ALTER table personafisicaCA
+ALTER table personafisicaConceptoApoyo
 drop Foreign key FK_Folio_Concepto_PF
 
 ALTER table personafisicaNP

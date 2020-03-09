@@ -1,11 +1,7 @@
 <?php 
-/*
-require_once('conect.php');
 
-$funcion = new funcion();
 
-$con = $funcion -> conectar();
-
+require_once('ConexionPF.php');
 
 
  global $folioImpreso;
@@ -13,109 +9,62 @@ $con = $funcion -> conectar();
  
 if(isset($_POST['EnviarPF'])){
 
-  $folioImpreso = strtoupper(sanitizeString($_POST['FolioImpreso']));
+  #recepcion de datos PersonaFisica.php
+  $folioImpreso =           strtoupper(sanitizeString($_POST['FolioImpreso']));
 
  
-  $direccionRegional = $_POST['DireccionRegional'];
-  $municipio = $_POST['ventanillaMunicipio'];
-  $nombres    = ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));
-  $apellidoPa = ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
-  $apellidoMa = ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
+  $dirReg =                 $_POST['DireccionRegional']; #direccionRegional
+  $municipio =              $_POST['ventanillaMunicipio'];
+  $nombres    =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
+  $apellidoPa =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
+  $apellidoMa =             strtolower(ucfirst(sanitizeString($_POST['apellidoMa'])));
 
   $nombre = $nombres." ".$apellidoPa." ".$apellidoMa;
 
-  $genero = $_POST['genero'];
+  $genero =                 $_POST['genero'];
 
-  $diaNacimiento  = $_POST['DiaFechaNacimiento'];
-  $mesNacimiento  = $_POST['MesFechaNacimiento'];
-  $anioNacimiento  = $_POST['AnioFechaNacimiento'];
+  $diaNacimiento  =         $_POST['DiaFechaNacimiento'];
+  $mesNacimiento  =         $_POST['MesFechaNacimiento'];
+  $anioNacimiento  =        $_POST['AnioFechaNacimiento'];
 
   $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
   #echo $fechaNacimiento;
 
-  $nacionalidad = $_POST['Nacionalidad'];
-  $EstadoCivil = $_POST['EstadoCivil'];
-  $estadoNacimiento = $_POST['EstadoNacimiento'];
-  $telefono = sanitizeString($_POST['Telefono']);
-  $correoElectronico = strtolower(sanitizeString($_POST['Correo']));
-  $tipoIdentificacion = $_POST['tipoIdentificacion'];
-  $numIdentificacion = sanitizeString($_POST['numIdentificacion']);
-  $curp = strtoupper(sanitizeString($_POST['Curp']));
-  $tipoDomicilio = $_POST['tipoDomicilio'];
-  $tipoAsentamiento = $_POST['tipoAsentamiento'];
-  $nombreAsentamiento = ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
-  $tipoVialidad = $_POST['tipoVialidad'];
-  $nombreVialidad  = ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
-  $nombreLocalidad = ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
-  $nombreMunicipio = $_POST['nombreDomicilioMunicipio'];
-  $referenciaVialidad = ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad'])));
-  $actividadEconomica = $_POST['tipoActividadEconomica'];
+  $nacionalidad =           $_POST['Nacionalidad'];
+  $EstadoCivil =            $_POST['EstadoCivil'];
+  $estadoNacimiento =       $_POST['EstadoNacimiento'];
+  $telefono =               sanitizeString($_POST['Telefono']);
+  $correo =                 strtolower(sanitizeString($_POST['Correo'])); #correoElectronico
+  $tipoIdentificacion =     $_POST['tipoIdentificacion'];
+
+  $numIdentificacion =      sanitizeString($_POST['numIdentificacion']);
+  $curp =                   strtoupper(sanitizeString($_POST['Curp']));
+  $tipoDomicilio =          $_POST['tipoDomicilio'];
+  $tipoAsentamiento =       $_POST['tipoAsentamiento'];
+  $nombreAsentamiento =     ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
+  $tipoVialidad =           $_POST['tipoVialidad'];
+  
+  $nombreVialidad  =        ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
+  $nombreLocalidad =        ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
+  $nombreMunicipio =        $_POST['nombreDomicilioMunicipio'];
+  $refVial =                ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad']))); #referenciaVialidad
+  $actEco =                 $_POST['tipoActividadEconomica']; #actividadEconomica
 
     
 }
 
-  
-
- $insertPF = "INSERT INTO personafisicaDatos(sfolioImpresoPF,sventanidirRegional,sventaniMunicipio,snombre,sgenero,sfechaNacimiento,snacionalidad,sestadoCivil,sestadoNacimiento,
-stelefono,scorreoElectronico,stipoIdentificacion,snumeroIdentificacion,scurp,stipoDomicilio,stipoAsentamiento,snombreAsentamiento,
-stipoVialidad,snombreVialidad,snombreLocalidad,snombreMunicipio,sreferenciaVialidad,stipoActividad ) VALUES ('{$folioImpreso}','{$direccionRegional}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correoElectronico}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$referenciaVialidad}','{$actividadEconomica}');";
-
- $insertPF = utf8_encode($insertPF);
- 
-
- echo $insertPF;
-
-    /* hacer una consulta para saber si el folio ya existe y si existe no hacer el envio del insert
-  if(){
-        }
-
-
-
-         if($con -> query($insertPF)){
-        echo "Datos de Persona Física Registrados <br>";
-          } else {
-          echo $con -> error, "<br>";
-            echo $insertPF, "<br>";
-        }
-
-
-    */
-
-      
      
+ /*   $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
+
+        if ($result -> num_rows) {
+           echo "El Folio ya existe";
+
+           }
 
 
- 
- 
+           */  
 
 
-
-
-
-/*
-if(function_exists("sanitizeString")){
-  echo "existe la funcion";
-}else {
-  echo "no existe la funcion";
-}
-
-
-#function sanitizeString($var){
-
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
-
-
-*/
-
-
-
-
-#conceptosApoyoPF.php
 
  ?>
 
@@ -131,20 +80,48 @@ if(function_exists("sanitizeString")){
 
 <div class="Marco"> 
 <form method="post" action="conceptosApoyoPF.php">
+  
 
-<h1 id="titulo3">Datos del Proyecto para Persona Física</h1>
 
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
 
+<input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?> ">
+<input type ="hidden" name ="municipio" value="<?php echo $municipio; ?> ">
+<input type ="hidden" name ="nombre" value="<?php echo $nombre; ?> ">
+<input type ="hidden" name ="genero" value="<?php echo $genero; ?> ">
+<input type ="hidden" name ="fechaNacimiento" value="<?php echo $fechaNacimiento; ?> ">
+<input type ="hidden" name ="nacionalidad" value="<?php echo $nacionalidad; ?> ">
+<input type ="hidden" name ="EstadoCivil" value="<?php echo $EstadoCivil; ?> ">
+<input type ="hidden" name ="estadoNacimiento" value="<?php echo $estadoNacimiento; ?> ">
+<input type ="hidden" name ="telefono" value="<?php echo $telefono; ?> ">
+<input type ="hidden" name ="correo" value="<?php echo $correo; ?> ">
+<input type ="hidden" name ="tipoIdentificacion" value="<?php echo $tipoIdentificacion; ?> ">
+<input type ="hidden" name ="numIdentificacion" value="<?php echo $numIdentificacion; ?> ">
+<input type ="hidden" name ="curp" value="<?php echo $curp; ?> ">
+<input type ="hidden" name ="tipoDomicilio" value="<?php echo $tipoDomicilio; ?> ">
+<input type ="hidden" name ="tipoAsentamiento" value="<?php echo $tipoAsentamiento; ?> ">
+<input type ="hidden" name ="nombreAsentamiento" value="<?php echo $nombreAsentamiento; ?> ">
+<input type ="hidden" name ="tipoVialidad" value="<?php echo $tipoVialidad; ?> ">
+<input type ="hidden" name ="nombreVialidad" value="<?php echo $nombreVialidad; ?> ">
+<input type ="hidden" name ="nombreLocalidad" value="<?php echo $nombreLocalidad; ?> ">
+<input type ="hidden" name ="nombreMunicipio" value="<?php echo $nombreMunicipio; ?> ">
+<input type ="hidden" name ="refVial" value="<?php echo $refVial; ?> ">
+<input type ="hidden" name ="actEco" value="<?php echo $actEco; ?> ">
+
+
+<h1 id="titulo3">Datos del Proyecto para Persona Física</h1>
+
+
+
 <p>Nombre del proyecto</p>	
-<input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
+<input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
 
 
 <div class="antiguedad">
 <p>Antiguedad del proyecto</p>
 
-<select name="AntiguedadProyecto">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="AntiguedadProyecto" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Antiguedad en años">Antiguedad en años</option>
 	<option value="Continuidad">Continuidad</option>
 	<option value="Nuevo">Nuevo</option>
@@ -158,15 +135,15 @@ if(function_exists("sanitizeString")){
 <input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10" >
 
 <p>Correo Electrónico</p>
-<input type="text" name="CorreoElectronicoProyecto" placeholder="proyectoSedea@sedea.com" maxlength="120">
+<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="120">
 
 </div>
 
 <h3 id="titulo">Fecha Constitución</h3>
 <div class="constitucion">
 <p>Selecciona el Día</p>
-<select name="DiaFechaConstitucion">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="DiaFechaConstitucion" required>
+    <option value="">Sin Seleccionar</option>
       	<option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -202,8 +179,8 @@ if(function_exists("sanitizeString")){
   </select>
 
   <p>Selecciona el Mes</p>
-  <select name="MesFechaConstitucion">
-    	  <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="MesFechaConstitucion" required>
+    	  <option value="">Sin Seleccionar</option>
     	  <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -220,8 +197,8 @@ if(function_exists("sanitizeString")){
   </select>
 
   <p>Selecciona el Año</p>
-  <select name="AnioFechaConstitucion">
-       <option value="Sin Seleccionar">Sin Seleccionar</option>
+  <select name="AnioFechaConstitucion" required>
+       <option value="">Sin Seleccionar</option>
        <option value="2020">2020</option>
         <option value="2019">2019</option>
         <option value="2018">2018</option>
@@ -298,8 +275,8 @@ if(function_exists("sanitizeString")){
 <h2 id="titulo2">Domicilio del proyecto</h2>
 <div class="municipio">
 <p>Selecciona el Municipio</p>
-    <Select name="NombreMunicipioProyecto">
-    <option value="Sin Seleccionar">Sin Seleccionar</option>
+    <Select name="NombreMunicipioProyecto" required>
+    <option value="">Sin Seleccionar</option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -323,8 +300,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de domicilio</p>
 
-<select name="TipoDomicilioProyecto">
-	<option  value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoDomicilioProyecto" required>
+	<option  value="">Sin Seleccionar</option>
 	<option  value="Rural">Rural</option>
 	<option  value="Urbano">Urbano</option>
 	
@@ -332,8 +309,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de Asentamiento</p>
 
-<select name="TipoAsentamientoProyecto">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoAsentamientoProyecto" required>
+	<option value="">Sin Seleccionar</option>
 	<option value="Colonia">Colonia</option>
 	<option value="Ejido">Ejido</option>
 	<option value="Hacienda">Hacienda</option>
@@ -349,8 +326,8 @@ if(function_exists("sanitizeString")){
 
 <p>Tipo de la vialidad</p>
 
-<select name="TipoVialidadProyecto">
-  <option value="Sin Seleccionar">Sin Seleccionar</option>
+<select name="TipoVialidadProyecto" required>
+  <option value="">Sin Seleccionar</option>
   <option value="Calle">Calle</option>
   <option value="Callejón">Callejón</option>
   <option value="Carretera">Carretera</option>
@@ -363,7 +340,7 @@ if(function_exists("sanitizeString")){
 </div>
 <div class="asentamiento">
 <p>Nombre del Asentamiento</p>
-<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
+<input type="text" name="NombreAsentamientoProyecto" required="required" maxlength="80">
 
 
 <p>Nombre de la Vialidad</p>
@@ -377,11 +354,15 @@ if(function_exists("sanitizeString")){
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Enviar" class="boton">
+<input type="submit" name="DatosProyectoPF" value="Enviar Información " class="boton">
 <br>
-</div>
+
 </form>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a>
+<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
+</div>
 
-
+<?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'");  ?>
+ 
 </body>
 </html>
