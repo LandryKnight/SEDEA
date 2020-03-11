@@ -4,7 +4,7 @@
 }
 
 body{
-	/*Color de fonde de toda la pagina */
+
 	background-color: #FFFFFF;
 }
 
@@ -16,16 +16,62 @@ body{
 	position: absolute;
 	top: 30px;
 	left: 28%;
-	/*redondeo de las esquinas */
+
 	border-radius: 15px;
 	border-style: solid;
 	border:none;
-	/* Color de Fondo */
-	/*background: #008040;*/
+
 	background: #1D447D;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 	margin-bottom: 50px;
 
+}
+
+.login{
+
+	width: 650px;
+	height: 600px;
+	position: absolute;
+	top: 30px;
+	left: 28%;
+	
+	border-radius: 15px;
+	border-style: solid;
+	border:none;
+
+	background: #1D447D;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+	margin-bottom: 50px;
+	color: #FFFFFF;
+
+}
+
+.login h1{
+	margin-top: 15px;
+	margin-bottom: 25px;
+	
+}
+
+.login h2{
+	margin-top: 15px;
+	margin-bottom: 25px;
+	
+}
+
+
+
+.centrol h3{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.centrol input{
+	border-radius: 15px;
+	margin-bottom: 50px;
+	height: 30px;
+	width: 2.5in;
+	color: #9C1462;
+	font-size: 14pt;
+	text-indent: 10px;
 }
 
 .Marco h2{
@@ -56,9 +102,9 @@ body{
 	margin-top: 5px;
 	margin-bottom: 5px;
 	height: 25px;
-	/*27 caracteres */
+
 	width: 200px;
-	/* */
+
 }
 
 
@@ -68,16 +114,16 @@ body{
 	background: #FFFFFF;
 
 	border-style: solid;
-	/*redondeo de las esquinas */
+	
 	border-radius: 15px;
-	/* ancho 
-	   alto */
-	width: 120px;
+	
+	width: 200px;
 	height: 35px;
-	/*color de la letra */
+	font-size: 14pt;
+	font-weight: bold;
 	color: #9C1462;
 
-	/*font-style:  */
+	
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -87,20 +133,20 @@ body{
 .boton2{
 	
 
-	/*color de fondo */
+
 	background: #FFFFFF;
 
 	border-style: solid;
-	/*redondeo de las esquinas */
-	border-radius: 15px;
-	/* ancho 
-	   alto */
-	width: 150px;
-	height: 35px;
-	/*color de la letra */
-	color: #9C1462;
 
-	/*font-style:  */
+	border-radius: 15px;
+	
+	width: 200px;
+	height: 35px;
+
+	color: #9C1462;
+	font-size: 14pt;
+	font-weight: bold;
+
 	margin-top: 15px;
 	margin-bottom: 10px;
 }

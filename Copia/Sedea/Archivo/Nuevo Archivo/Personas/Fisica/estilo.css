@@ -1,0 +1,149 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*Color de fonde de toda la pagina */
+	background-color: #FFFFFF;
+}
+
+
+.Marco{
+ top: 10px;
+ width: 50%;
+ position: relative;
+ left: 20%;
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 80px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+
+}
+
+.Marco input{
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+.Marco select{
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+.Marco h2{
+	position: relative;
+	left: 20%;
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.Marco p{
+	margin: 5px;
+}
+
+#titulo{
+	position: relative;
+	left: 35%;
+}
+
+#titulo2{
+	position: relative;
+	left: 27%;
+}
+.Marco h3{
+	position: relative;
+	left: 20%;
+	margin: 3px;
+}
+
+.regional{
+	top: 25px;
+	margin-top: 5px;
+	margin-bottom: 8px;
+	color: white;
+	column-count: 2;
+}
+
+.regional p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+
+.centro{
+	column-count: 3;
+	
+}
+
+.centro p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.nacimiento{
+	
+	column-count: 3;
+}
+
+.nacimiento p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.genero{
+	margin-top: 10px;
+	column-count: 3;
+}
+
+.genero p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.domicilio{
+	column-count: 3;
+}
+
+.domicilio p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.municipio{
+	column-count: 2;
+}
+
+.municipio p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.boton{
+	background: #FFFFFF;
+
+	border-style: solid;
+	
+	border-radius: 15px;
+
+	width: 120px;
+	height: 35px;
+
+	color: #9C1462;
+
+	margin-top: 15px;
+	margin-bottom: 50px;
+	position: relative;
+	left: 35%;
+}
+
+
+.antiguedad{
+	column-count:3;
+}
+
+.constitucion{
+	column-count: 3;
+}

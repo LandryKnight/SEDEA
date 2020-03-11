@@ -136,7 +136,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
     		echo $insertPF;
 
-            queryMySql("INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate())"); 
+            queryMySql("$insertPF"); 
               	echo "Datos Registrados de persona fisica";
 
            echo $InsertProyecto;
@@ -173,7 +173,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
  <div class="final">
  
 
-<h1>Se realizo con éxito el registro del Folio: <?php echo $folioimpreso; ?> </h1>
+<h1>Se realizo con éxito el registro del Folio: <?php echo $folioImpreso; ?> </h1>
 
 
 

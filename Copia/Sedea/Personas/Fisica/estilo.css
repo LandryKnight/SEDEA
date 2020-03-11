@@ -1,0 +1,357 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*Color de fonde de toda la pagina */
+	background-color: #FFFFFF;
+}
+
+
+.Marco{
+ top: 10px;
+ width: 60%;
+ position: relative;
+ left: 18%;
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+
+
+}
+
+.Marco input{
+	border-radius: 8px;
+	margin-bottom: 5px;
+	text-indent: 5px;
+
+}
+
+.Marco select{
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+.Marco h1 {
+	position: relative;
+	left: 33%;
+
+}
+
+.Marco h2{
+	position: relative;
+	left: 24%;
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+
+
+.Marco p{
+	margin: 5px;
+}
+
+#titulo{
+	position: relative;
+	left: 35%;
+}
+
+#titulo2{
+	position: relative;
+	left: 30%;
+	margin-top: 12px;
+}
+
+#titulo3{
+	margin-top: 12px;
+	margin-bottom: 12px;
+	position: relative;
+	left: 16%;
+}
+
+#correo{
+	width: 200px;
+}
+.Marco h3{
+	position: relative;
+	left: 20%;
+	margin: 6px;
+}
+
+.regional{
+	top: 25px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+	column-count: 2;
+}
+
+.regional p{
+	margin-top: 3px;
+	margin-bottom: 6px;
+}
+
+
+.centro{
+	column-count: 3;
+	
+}
+
+.centro p{
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.nacimiento{
+	
+	column-count: 3;
+}
+
+.nacimiento p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.genero{
+	margin-top: 10px;
+	column-count: 3;
+}
+
+.genero p{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.domicilio{
+	column-count: 2;
+}
+
+
+.domicilio p{
+	margin-top: 9px;
+	margin-bottom: 6px;
+}
+
+
+.municipio{
+	column-count: 2;
+}
+.asentamiento{
+	column-count: 2
+
+}
+
+.asentamiento input{
+	width: 350px;
+}
+
+
+.boton{
+	background: #FFFFFF;
+
+	border-style: solid;
+	
+	border-radius: 15px;
+
+	width: 150px;
+	height: 35px;
+	font-weight: bold;
+	color: #9C1462;
+
+	margin-top: 15px;
+	margin-bottom: 50px;
+	position: relative;
+	left: 38%;
+}
+
+
+.antiguedad{
+	column-count:3;
+}
+
+.constitucion{
+	column-count: 3;
+}
+
+
+.conceptoApoyo{
+
+	width: 70%;
+	height: 500px;
+	position: relative;
+ 	left: 200px;
+ 	top: 50px;
+
+ 	color: #FFFFFF;
+ 	background: #1D447D;
+ 	padding-left: 43px;
+ 	border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ 	margin-bottom: 50px;
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
+}
+
+.conceptoApoyo h1{
+	margin-top: 10px;
+	position: relative;
+	left: 19%;
+	padding-bottom: 20px;
+}
+
+.conceptoApoyo h5{
+	position: absolute;
+	top: 510px;
+}
+	table{
+	position: relative;
+	left: 30px;
+	border-radius:15px;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	margin-bottom: 12px;
+}
+
+.conceptoApoyo input{
+	border-radius: 15px;
+	color: #9C1462;
+	
+
+}
+
+.ApoyoSolicitado input{
+	text-indent: 15px;
+
+}
+
+.UnidadMedida input{
+	width: 70px;
+	text-indent: 30px;
+	color: #9C1462;
+}
+
+.ApoyoEstatal input{
+	width: 200px;
+	text-indent: 120px;
+	color: #9C1462;
+    
+}
+.ApoyoMunicipal input{
+ 	width: 200px;
+	text-indent: 120px;
+	color: #9C1462;
+}
+
+
+.AportaciónBeneficiario input{
+	width: 200px;
+	text-indent: 120px;
+	color: #9C1462;
+}
+
+
+.requisitos{
+	width: 70%;
+	height: 10in;
+	position: relative;
+ 	left: 200px;
+ 	top: 50px;
+
+ 	color: #FFFFFF;
+ 	background: #1D447D;
+ 	padding-left: 43px;
+ 	border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ 	margin-bottom: 50px;
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
+ 	padding-right: 35px;
+
+ 	text-align: justify;
+
+}
+
+
+.requisitos h1{
+	position:relative;
+	left: 120px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+
+
+.requisitos h3{
+	position: relative;
+	left: 380px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.requisitos p{
+	
+
+}
+
+.declaraciones{
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.declaraciones p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.requisitos input{
+	border-radius: 15px;
+}
+
+.observaciones{
+	position: relative;
+	text-indent: 5px;
+	border-radius: 15px;
+	color: #9C1462;
+	font-weight: bold;
+	font-size: 14pt;
+	margin-bottom: 70px;
+
+}
+.documentos{
+	column-count:2;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+
+.final{
+ top: 10px;
+ width: 60%;
+ position: relative;
+ left: 18%;
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+

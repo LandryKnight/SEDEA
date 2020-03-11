@@ -389,7 +389,7 @@
 
 
 <br>
-<input type="submit" name="EnviarPF" value="Enviar" class="boton">
+<input type="submit" name="EnviarPF" value="Enviar Información" class="boton">
 <br>
 
 </form>

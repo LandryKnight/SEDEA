@@ -12,7 +12,7 @@
 	global $connection;
 	
 	$result = $connection -> query($query);
-	if(!$result) die("No Connection");
+	if(!$result) die("No Connection to insert");
 	return $result; 
 	
 	}
@@ -28,6 +28,12 @@
     return $connection -> real_escape_string($var);
 	}
 
+	function destroySession(){
+		$_SESSION = arrat();
+		if(session_id() != "" || isset($_COOKIE[session_name()]))
+			setcookie(session_name(), '',time()-2592000,'/');
+		session_destroy();
+	}
 
 
  ?>

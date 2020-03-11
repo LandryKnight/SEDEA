@@ -10,13 +10,25 @@ constrasenaUsuario varchar(50)
 
 );
 
+insert into Usuarios values(null,'adminSda','sdaAdmin@_@2020');
+insert into Usuarios values(null,'sedea','sde@_@2020');
+
+Create Table UsuariosReg(
+idUsuario int Primary Key auto_increment,
+nameUsuario varchar(50),
+constrasenaUsuario varchar(50)
+
+);
+
 #idUsuario 1 AdminSda
 #idUsuario 2 Sedea
-#idUsuario 3 SedeaRegional
+#idUsuario 3 - 6 SedeaRegional
 
-insert into Usuarios values(1,'adminSda','sdaAdmin@_@2020');
-insert into Usuarios values(2,'sedea','sde@_@2020');
-insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
+
+insert into UsuariosReg values(null,'sedeaCadereyta','C@dereyt@sede@2020';
+insert into UsuariosReg values(null,'sedeaJalpan','J@lp@nsede@2020')
+insert into UsuariosReg values(null,'sedeaQro','Qrosede@2020');
+insert into UsuariosReg values(null,'sedeaSanJuan','S@nJu@nsede@2020');
 
 
 #Sedea regional 
@@ -26,9 +38,18 @@ insert into Usuarios values(3,'sedearegional','sda@Regional_2020');
 #San Juan del Río
 
 
-drop table persfisDatos;
+DROP DATABASE sedea;
 
-truncate table persfisDatos;
+drop table personafisicaDatos;
+drop table personafisicaProyecto;
+drop table personafisicaConceptoApoyo;
+drop table personafisicaReqenerales;
+
+
+truncate table personafisicaDatos;
+truncate table personafisicaProyecto;
+truncate table personafisicaConceptoApoyo;
+Truncate table personafisicaReqenerales;
 
 
 #Tabla Persona Fisica
