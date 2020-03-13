@@ -241,7 +241,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-<textarea class="observaciones" name="observaciones" rows="2" cols="90" maxlength="184" placeholder=" (opcional)"></textarea>
+<textarea class="observaciones" name="observaciones" rows="2" cols="90" maxlength="184" placeholder="(opcional)"></textarea>
 
 
 
