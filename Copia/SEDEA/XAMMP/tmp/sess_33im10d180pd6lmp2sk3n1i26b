@@ -1,0 +1,99 @@
+ PMA_token |s:32:"694f576d76237e5c4775567042712d50"; HMAC_secret |s:16:"ge4ox)eZEF&=;'&";browser_access_time|a:8:{s:7:"default";i:1583382880;s:36:"02d8d2bf-d64b-8a30-3f08-12b818df76ba";i:1583125892;s:36:"48e92bf1-8802-3c61-c5cc-9107dd8cafc3";i:1583184607;s:36:"75c99611-cddb-cc04-6991-e5707b9b672f";i:1583187067;s:36:"76d16d3a-db01-acf3-fb5b-7e03fde97903";i:1583188460;s:36:"0703b3a3-1503-3db7-19d2-49cbf2864cb1";i:1583193928;s:36:"353c7822-44e2-6783-2130-50274a87a9f8";i:1583197391;s:36:"483ba1ae-997e-4313-7ea8-409c0f30ff15";i:1583206618;}relation|a:1:{i:1;a:41:{s:11:"PMA_VERSION";s:5:"5.0.1";s:7:"relwork";b:1;s:11:"displaywork";b:1;s:12:"bookmarkwork";b:1;s:7:"pdfwork";b:1;s:8:"commwork";b:1;s:8:"mimework";b:1;s:11:"historywork";b:1;s:10:"recentwork";b:1;s:12:"favoritework";b:1;s:11:"uiprefswork";b:1;s:12:"trackingwork";b:1;s:14:"userconfigwork";b:1;s:9:"menuswork";b:1;s:7:"navwork";b:1;s:17:"savedsearcheswork";b:1;s:18:"centralcolumnswork";b:1;s:20:"designersettingswork";b:1;s:19:"exporttemplateswork";b:1;s:8:"allworks";b:1;s:4:"user";s:4:"root";s:2:"db";s:10:"phpmyadmin";s:8:"bookmark";s:13:"pma__bookmark";s:15:"central_columns";s:20:"pma__central_columns";s:11:"column_info";s:16:"pma__column_info";s:17:"designer_settings";s:22:"pma__designer_settings";s:16:"export_templates";s:21:"pma__export_templates";s:8:"favorite";s:13:"pma__favorite";s:7:"history";s:12:"pma__history";s:16:"navigationhiding";s:21:"pma__navigationhiding";s:9:"pdf_pages";s:14:"pma__pdf_pages";s:6:"recent";s:11:"pma__recent";s:8:"relation";s:13:"pma__relation";s:13:"savedsearches";s:18:"pma__savedsearches";s:12:"table_coords";s:17:"pma__table_coords";s:10:"table_info";s:15:"pma__table_info";s:13:"table_uiprefs";s:18:"pma__table_uiprefs";s:8:"tracking";s:13:"pma__tracking";s:10:"userconfig";s:15:"pma__userconfig";s:10:"usergroups";s:15:"pma__usergroups";s:5:"users";s:10:"pma__users";}}two_factor_check|b:1;cache|a:3:{s:13:"server_1_root";a:18:{s:14:"mysql_cur_user";s:14:"root@localhost";s:17:"is_create_db_priv";b:1;s:14:"is_reload_priv";b:1;s:12:"db_to_create";s:0:"";s:30:"dbs_where_create_table_allowed";a:1:{i:0;s:1:"*";}s:11:"dbs_to_test";b:0;s:9:"proc_priv";b:1;s:10:"table_priv";b:1;s:8:"col_priv";b:1;s:7:"db_priv";b:1;s:12:"is_grantuser";b:1;s:13:"is_createuser";b:1;s:12:"is_superuser";b:1;s:11:"binary_logs";a:0:{}s:18:"menu-levels-server";a:13:{s:9:"databases";s:14:"Bases de datos";s:3:"sql";s:3:"SQL";s:6:"status";s:13:"Estado actual";s:6:"rights";s:8:"Usuarios";s:6:"export";s:8:"Exportar";s:6:"import";s:8:"Importar";s:8:"settings";s:14:"Configuración";s:6:"binlog";s:16:"Registro binario";s:11:"replication";s:12:"Replicación";s:4:"vars";s:9:"Variables";s:7:"charset";s:20:"Juegos de caracteres";s:7:"plugins";s:12:"Complementos";s:6:"engine";s:7:"Motores";}s:14:"menu-levels-db";a:14:{s:9:"structure";s:10:"Estructura";s:3:"sql";s:3:"SQL";s:6:"search";s:6:"Buscar";s:5:"query";s:20:"Generar una consulta";s:6:"export";s:8:"Exportar";s:6:"import";s:8:"Importar";s:9:"operation";s:11:"Operaciones";s:10:"privileges";s:11:"Privilegios";s:8:"routines";s:7:"Rutinas";s:6:"events";s:7:"Eventos";s:8:"triggers";s:12:"Disparadores";s:8:"tracking";s:11:"Seguimiento";s:8:"designer";s:10:"Diseñador";s:15:"central_columns";s:18:"Columnas centrales";}s:19:"profiling_supported";b:1;s:17:"menu-levels-table";a:11:{s:6:"browse";s:8:"Examinar";s:9:"structure";s:10:"Estructura";s:3:"sql";s:3:"SQL";s:6:"search";s:6:"Buscar";s:6:"insert";s:8:"Insertar";s:6:"export";s:8:"Exportar";s:6:"import";s:8:"Importar";s:10:"privileges";s:11:"Privilegios";s:9:"operation";s:11:"Operaciones";s:8:"tracking";s:11:"Seguimiento";s:8:"triggers";s:12:"Disparadores";}}s:8:"server_1";a:4:{s:15:"userprefs_mtime";s:10:"1583382856";s:14:"userprefs_type";s:2:"db";s:12:"config_mtime";i:1578449051;s:9:"userprefs";a:2:{s:7:"Console";a:1:{s:4:"Mode";s:8:"collapse";}s:4:"lang";s:2:"es";}}s:13:"version_check";a:2:{s:8:"response";s:419:"{
+    "date": "2020-01-08", 
+    "version": "5.0.1", 
+    "releases": [
+        {
+            "date": "2020-01-08", 
+            "php_versions": ">=5.5,<8.0", 
+            "version": "4.9.4", 
+            "mysql_versions": ">=5.5"
+        }, 
+        {
+            "date": "2020-01-08", 
+            "php_versions": ">=7.1,<8.0", 
+            "version": "5.0.1", 
+            "mysql_versions": ">=5.5"
+        }
+    ]
+}";s:9:"timestamp";i:1583381984;}}git_location|N;is_git_revision|b:0;tmpval|a:16:{s:14:"favoriteTables";a:1:{i:1;a:0:{}}s:12:"recentTables";a:1:{i:1;a:6:{i:0;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";}i:1;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";}i:2;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:9:"persfisca";}i:3;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:9:"persfisnp";}i:4;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:15:"personafisicaca";}i:5;a:2:{s:2:"db";s:5:"sedea";s:5:"table";s:8:"usuarios";}}}s:18:"table_limit_offset";i:0;s:21:"table_limit_offset_db";s:5:"sedea";s:5:"query";a:10:{s:32:"b2f71cabb525ee889f17dc1fc5531a24";a:8:{s:3:"sql";s:617:"#Nombre Proyecto
+Create Table persfisNP(
+sIdProyecto int Primary Key auto_increment,
+sfolioImpreso varchar(30), #Foreign Key
+sNombreProyecto varchar(80),
+sAntiguedadProyecto varchar(20),
+sTelefonoProyecto varchar(100),
+sCorreoElectronicoProyecto varchar(120),
+sFechaConstitucion varchar(10),
+sTipoDomicilioProyecto varchar(15),
+sTipoAsentamientoProyecto varchar(15),
+sNombreAsentamientoProyecto varchar(80),
+sTipoVialidadProyecto  varchar(10),
+sNombreVialidadProyecto varchar(80),
+sNombreLocalidadProyecto varchar(80),
+sNombreMunicipioProyecto varchar(30),
+sReferenciaVialidadProyecto varchar(50)
+
+)";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"3f40c01cf6aec16d0094d5393eba89f5";a:8:{s:3:"sql";s:341:"#Concepto Apoyo
+Create Table persfisCA(
+idConcepto int Primary key auto_increment,
+sfolioImpreso varchar(30), #Foreign Key
+ApoyoSolicitado varchar(35),
+UniMedida int(5),
+CanSolicitada int(5),
+ApoyoEstatalSolicitado varchar(10),
+ApoyoMunicipalSolicitado varchar(10),
+AportacionBeneficiario varchar(10),
+InversionTotal varchar(20)
+)";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"46c6e8019558f6aaac80b6f97a4aed1c";a:8:{s:3:"sql";s:25:"SELECT * FROM `persfisnp`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"05820ddb3d38558fdb2efd0e722d2537";a:8:{s:3:"sql";s:25:"SELECT * FROM `persfisca`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"aae81f3de30dbc72f897578af70f45f9";a:8:{s:3:"sql";s:28:"SELECT * FROM `persfisdatos`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"3a629ff92482bb74faa5985cbb1d5506";a:8:{s:3:"sql";s:756:"Create Table personafisicaDatos(
+sfolioImpresoPF varchar(30) Primary Key,
+sventanidirRegional varchar(30),  
+sventaniMunicipio varchar(30),
+snombre varchar(80),
+sgenero varchar(25),
+sfechaNacimiento varchar(10),
+snacionalidad varchar(25),
+sestadoCivil varchar(25),
+sestadoNacimiento varchar(25),
+stelefono int(10),
+scorreoElectronico varchar(80),
+stipoIdentificacion varchar(30),
+snumeroIdentificacion varchar(15),
+scurp varchar(20),
+stipoDomicilio varchar(8),
+stipoAsentamiento varchar(8),
+snombreAsentamiento varchar(50),
+stipoVialidad varchar(10),
+snombreVialidad varchar(50),
+snombreLocalidad varchar(50),
+snombreMunicipio varchar(30),
+sreferenciaVialidad varchar(50),
+stipoActividad varchar(15),
+sfechaRegistro varchar(30)
+
+)";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"56ddac911d55eb9958d56793c33bccca";a:8:{s:3:"sql";s:374:"INSERT INTO personafisicaDatos VALUES ('SADL8115161QQ','Cadereyta de Montes','Amealco de Bonfil','luis ernesto Sánchez dleónqq','Masculino','03/02/1998','Mexicana','Soltero','Aguascalientes','4442565555','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Colonia','León','Calle','Poxoxo','Poxox','Arroyo Seco','Poxox','AgrÃ­cola',curdate())";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"eae4c647ff78bc85d091a166065282f3";a:8:{s:3:"sql";s:364:"INSERT INTO personafisicaDatos VALUES ('QWESS','Cadereyta de Montes','Arroyo Seco','luis ernesto Sánchez dorantes','Masculino','01/02/2002','Mexicana','Casado','Aguascalientes','1234567890','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Colonia','León','Calle','León','Poxox','Amealco de Bonfil','Poxox','AgrÃ­cola',curdate())";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"5472b35641458647fa7b75febfd0136d";a:8:{s:3:"sql";s:375:"INSERT INTO personafisicaDatos VALUES ('SADL8115161QQ','Jalpan de Serra','Amealco de Bonfil','luis ernesto Sánchez dleónqq','Masculino','01/02/2002','Mexicana','Soltero','Aguascalientes','4442565555','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Pueblo','León','Calle','Poxoxo','Poxox','Amealco de Bonfil','Poxox','AgrÃ­cola',curdate())";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"58f897bf133aa2d12c043cfca9268bed";a:8:{s:3:"sql";s:34:"SELECT * FROM `personafisicadatos`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";s:1:"0";s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}}s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;s:12:"display_blob";b:0;s:19:"hide_transformation";b:0;s:3:"pos";s:1:"0";s:8:"max_rows";i:25;s:12:"repeat_cells";i:100;s:13:"table_uiprefs";a:1:{i:1;a:1:{s:5:"sedea";a:6:{s:8:"usuarios";a:0:{}s:18:"personafisicadatos";a:0:{}s:15:"personafisicaca";a:0:{}s:9:"persfisnp";a:0:{}s:9:"persfisca";a:0:{}s:12:"persfisdatos";a:0:{}}}}s:20:"possible_as_geometry";b:1;}ConfigFile1|a:2:{s:7:"Console";a:1:{s:4:"Mode";s:8:"collapse";}s:7:"Servers";a:1:{i:1;a:2:{s:7:"only_db";s:0:"";s:7:"hide_db";s:0:"";}}}debug|a:0:{}Import_message|a:2:{s:7:"message";N;s:11:"go_back_url";s:49:"tbl_sql.php?db=sedea&amp;table=personafisicadatos";}is_multi_query|b:0;sql_history|a:25:{i:0;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:1;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:2;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:3;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:4;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:5;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:6;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:7;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:12:"persfisdatos";s:8:"sqlquery";s:28:"SELECT * FROM `persfisdatos`";}i:8;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:0:"";s:8:"sqlquery";s:756:"Create Table personafisicaDatos(
+sfolioImpresoPF varchar(30) Primary Key,
+sventanidirRegional varchar(30),  
+sventaniMunicipio varchar(30),
+snombre varchar(80),
+sgenero varchar(25),
+sfechaNacimiento varchar(10),
+snacionalidad varchar(25),
+sestadoCivil varchar(25),
+sestadoNacimiento varchar(25),
+stelefono int(10),
+scorreoElectronico varchar(80),
+stipoIdentificacion varchar(30),
+snumeroIdentificacion varchar(15),
+scurp varchar(20),
+stipoDomicilio varchar(8),
+stipoAsentamiento varchar(8),
+snombreAsentamiento varchar(50),
+stipoVialidad varchar(10),
+snombreVialidad varchar(50),
+snombreLocalidad varchar(50),
+snombreMunicipio varchar(30),
+sreferenciaVialidad varchar(50),
+stipoActividad varchar(15),
+sfechaRegistro varchar(30)
+
+)";}i:9;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:10;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:11;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:12;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:13;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:14;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:374:"INSERT INTO personafisicaDatos VALUES ('SADL8115161QQ','Cadereyta de Montes','Amealco de Bonfil','luis ernesto Sánchez dleónqq','Masculino','03/02/1998','Mexicana','Soltero','Aguascalientes','4442565555','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Colonia','León','Calle','Poxoxo','Poxox','Arroyo Seco','Poxox','AgrÃ­cola',curdate())";}i:15;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:16;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:17;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:364:"INSERT INTO personafisicaDatos VALUES ('QWESS','Cadereyta de Montes','Arroyo Seco','luis ernesto Sánchez dorantes','Masculino','01/02/2002','Mexicana','Casado','Aguascalientes','1234567890','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Colonia','León','Calle','León','Poxox','Amealco de Bonfil','Poxox','AgrÃ­cola',curdate())";}i:18;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:19;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:20;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:21;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:22;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}i:23;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:375:"INSERT INTO personafisicaDatos VALUES ('SADL8115161QQ','Jalpan de Serra','Amealco de Bonfil','luis ernesto Sánchez dleónqq','Masculino','01/02/2002','Mexicana','Soltero','Aguascalientes','4442565555','luis_doeow@gmail.com','INE','222222222222222','222222222222SSSSSSSS','Urbano','Pueblo','León','Calle','Poxoxo','Poxox','Amealco de Bonfil','Poxox','AgrÃ­cola',curdate())";}i:24;a:3:{s:2:"db";s:5:"sedea";s:5:"table";s:18:"personafisicadatos";s:8:"sqlquery";s:34:"SELECT * FROM `personafisicadatos`";}}errors|a:0:{}
