@@ -32,7 +32,7 @@ if(isset($_POST['sesion'])){
 
 <div class="login" align="center">
 <h1>SEDEA TI </h1>
-<h2>Ingresa los datos para <br>el inicio de sesión </h2>
+<h2>Ingresa los datos para <br>iniciar sesión </h2>
 
 <div class="centrol">
 

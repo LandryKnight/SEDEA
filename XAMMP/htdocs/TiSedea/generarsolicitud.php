@@ -21,7 +21,16 @@
 <form method="post" action="fin.php">
 
 <p>Tu Nombre:</p>
-<input type="text" name="NombreAsistencia" placeholder="Cesar Miguel" required="required" maxlength="25">
+<input type="text" name="NombreAsistencia" placeholder="César Miguel" required="required" maxlength="25">
+
+<p>Departamento:</p>
+<select name="departamento" required>
+	<option value="">Sin Seleccionar</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
 
 <p>Ubicación:</p>
 <select name="Ubicacion" required>
@@ -34,13 +43,14 @@
 
 
 
-<p>Describe cual es la falla que presentas:</p>
-<input type="text" name="falla" placeholder="Ej: No puedo usar Office" required="required" maxlength="25">
+<p>Describe la falla que presentas:</p>
+<textarea name="falla" rows="3" cols="70" maxlength="184" placeholder="Ej: No Puedo usar Office" required="required"></textarea>
+
 
 <p>Mas detalles:</p>
 <textarea name="masdetalles" rows="3" cols="70" maxlength="184" placeholder="(opcional)"></textarea>
 </div>
-<input type="submit" name="EnviarSolicitud" value="Enviar reporte" class="boton">
+<input type="submit" name="EnviarSolicitud" value="Enviar Reporte" class="boton">
 </form>
 
 

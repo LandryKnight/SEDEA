@@ -22,6 +22,7 @@ Create table reportes(
 id int primary key auto_increment,
 nombre varchar(25),
 ubicacion varchar(20),
+departamento varchar(20),
 falla varchar(25),
 masdetalles varchar(184),
 fecha varchar(30)
@@ -32,6 +33,7 @@ Create table reportesHistorial(
 id int primary key auto_increment,
 nombre varchar(25),
 ubicacion varchar(20),
+departamento varchar(20),
 falla varchar(25),
 masdetalles varchar(184),
 fecha varchar(30)
