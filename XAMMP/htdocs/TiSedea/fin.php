@@ -47,12 +47,12 @@ if(!is_null($masdetalles)){
 <body>
 
 <div class="fin" align="center">
-	<p>Gracias <?php echo $nombre; ?>, tu reporte fue recibido. </p>
+	<p>Gracias <?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre; }?>, tu reporte fue recibido. </p>
  	
 
 	<p>¡Que tengas un excelente día!</p>
 
-	<a href="http://localhost/TiSedea/inicio.php"><button class="boton">Ir a Menú Principal</button></a>
+	<a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
  
   
 </div>

@@ -40,13 +40,14 @@ if(isset($_POST['sesion'])){
 <h3>Usuario: </h3>
 <input type="text" name="usuarios" placeholder="Usuario de sedea" required="required" maxlength="21" >
 <h3>Contraseña: </h3>
-<input type="text" name="contras" placeholder="Contraseña de sedea" required="required" maxlength="21" >
+<input type="text" name="contras" placeholder="Contraseña de sedea" required="required" maxlength="21">
 
 </div>
 
 
 <input type="submit" name="sesion" value="Iniciar sesión" class="boton"></a>
  </form>
+<br> <a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 

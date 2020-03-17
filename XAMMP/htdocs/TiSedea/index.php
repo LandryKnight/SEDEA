@@ -21,14 +21,14 @@
 	
 	
 
-	<h3>Si necesita de la asistencias del area de TI <br>de la SEDEA envie su reporte.</h3>
+	<h3>Elija la opción que te corresponde.</h3>
 
 	
-	<p>Para Generar Reporte:</p>
+	<p>Para Generar un Reporte:</p>
 	<a href="generarsolicitud.php"> <button class="boton"><b>Solicitud de Asistencia</b></button> </a> 
 	<br>
 	<p>Para Checar los Reportes:</p>
-	<a href="verReportesC.php"><button class="boton"><b>Ver Solicitudes</b></button> </a> 
+	<a href="iniciosesion.php"><button class="boton"><b>Ver Solicitudes</b></button> </a> 
 	
 
 </div>

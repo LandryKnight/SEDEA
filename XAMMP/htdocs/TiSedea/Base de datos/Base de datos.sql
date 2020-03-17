@@ -23,11 +23,12 @@ id int primary key auto_increment,
 nombre varchar(25),
 ubicacion varchar(20),
 departamento varchar(20),
-falla varchar(25),
+falla varchar(184),
 masdetalles varchar(184),
 fecha varchar(30)
 );
 
+insert into reportes Values(null,'luis','juridico','no sirve office','no funcina bien allljhdshfdshfkjshh hdsh','no funcina bien allljhdshfdshfkjshh hdsh',curdate());
 
 Create table reportesHistorial(
 id int primary key auto_increment,

@@ -12,16 +12,16 @@
 
 
 
-<div class="Marco" align="center">
 
-<div class="medio"> 
+
+<div class="medio" align="center"> 
 <h2>Bienvenido al <br>Portal TI de la SEDEA</h2>
 
 
 <form method="post" action="fin.php">
 
 <p>Tu Nombre:</p>
-<input type="text" name="NombreAsistencia" placeholder="César Miguel" required="required" maxlength="25">
+<input type="text" name="NombreAsistencia" placeholder="César Miguel" required="required" maxlength="25" autocomplete="off">
 
 <p>Departamento:</p>
 <select name="departamento" required>
@@ -44,16 +44,16 @@
 
 
 <p>Describe la falla que presentas:</p>
-<textarea name="falla" rows="3" cols="70" maxlength="184" placeholder="Ej: No Puedo usar Office" required="required"></textarea>
+<textarea name="falla" rows="3" cols="70" maxlength="184" placeholder="Ej: No Puedo usar Office" required="required" autocomplete="off"></textarea>
 
 
 <p>Mas detalles:</p>
-<textarea name="masdetalles" rows="3" cols="70" maxlength="184" placeholder="(opcional)"></textarea>
-</div>
+<textarea name="masdetalles" rows="3" cols="70" maxlength="184" placeholder="(opcional)" autocomplete="off"></textarea>
+
 <input type="submit" name="EnviarSolicitud" value="Enviar Reporte" class="boton">
 </form>
 
-
+<br> <a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 </body>
