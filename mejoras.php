@@ -7,7 +7,7 @@ color blanco y negro
 
 seccionar los reportes  15 reportes * pagina 
 
-ancho de cada reporte
+ancho de cada reporte mas grande y espaciado
 
 
 
