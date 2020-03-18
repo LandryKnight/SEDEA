@@ -15,7 +15,7 @@
 
 
 <div class="medio" align="center"> 
-<h2>Bienvenido al <br>Portal TI de la SEDEA</h2>
+<h2>Completa los campos vacíos para reportar una falla. </h2>
 
 
 <form method="post" action="fin.php">

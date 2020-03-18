@@ -1,6 +1,7 @@
 <?php require_once('Funciones.php');
 
 $Select = "SELECT * FROM reportes";
+$Select = utf8_decode($Select);
 
 $result = queryMySql("$Select");
 

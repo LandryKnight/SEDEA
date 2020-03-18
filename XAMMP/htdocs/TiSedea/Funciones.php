@@ -14,6 +14,7 @@
 	$result = $connection -> query($query);
 	if(!$result) die("No Connection to insert");
 	return $result; 
+	$connection -> close();
 	
 	}
 

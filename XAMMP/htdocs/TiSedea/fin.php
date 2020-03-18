@@ -11,6 +11,16 @@ $falla = 				ucfirst(strtolower(sanitizeString($_POST['falla'])));
 $masdetalles = 			ucfirst(strtolower(sanitizeString($_POST['masdetalles'])));
 
  }
+
+$select = "SELECT * FROM reportes WHERE nombre = '{$nombre}' AND falla = '{$falla}'";
+$result = queryMySql("$select");
+
+IF($result -> num_rows){
+ echo "Ya existe este reporte.";
+
+}else{ 
+
+
 if(!is_null($masdetalles)){
 
  $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$masdetalles}',curdate());";
@@ -33,6 +43,12 @@ if(!is_null($masdetalles)){
  
 }
 
+
+
+
+
+}
+
  ?>
 
 
@@ -46,7 +62,7 @@ if(!is_null($masdetalles)){
 </head>
 <body>
 
-<div class="fin" align="center">
+<div class="final" align="center">
 	<p>Gracias <?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre; }?>, tu reporte fue recibido. </p>
  	
 
