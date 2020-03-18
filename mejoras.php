@@ -7,11 +7,14 @@ color blanco y negro
 
 seccionar los reportes  15 reportes * pagina 
 
+ancho de cada reporte
+
 
 
 boton posponer reportes, borrar cada reporte
 
-250 de varchar en para reporte de falla y mas detalles 
+250 de varchar en para reporte de falla y mas detalles  
+
 
 al generar el reporte que de el numero de id del reporte
 ver estatus del reporte para el usuario
@@ -20,7 +23,8 @@ ver estatus del reporte para el usuario
 poner diferentes tipos de letras 
 
 
-departamentos -> 
+departamentos -> que  se escriba 
+
 
 
 
