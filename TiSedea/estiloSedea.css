@@ -177,8 +177,16 @@ body{
 	border-radius: 15px;
 	margin-bottom: 15px;
 	color: #9C1462;
-	width: 2in;
+	width: 2.5in;
 	height: 0.3in;
+	font-weight: bold;
+	font-size: 12pt;
+
+}
+
+.medio option{
+	margin-right: 15px;
+	padding-left: 30px;
 	font-weight: bold;
 }
 .medio input{
@@ -189,6 +197,7 @@ body{
 	font-size: 14pt;
 	text-indent: 10px;
 	margin-bottom: 20px;
+	font-weight: bold;
 }
 
 .medio textarea{
@@ -198,6 +207,7 @@ body{
 	color: #9C1462;
 	margin-bottom: 15px;
 	font-size: 12pt;
+	font-weight: bold;
 }
 
 

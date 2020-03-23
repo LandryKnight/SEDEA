@@ -23,8 +23,8 @@ id int primary key auto_increment,
 nombre varchar(25),
 ubicacion varchar(20),
 departamento varchar(20),
-falla varchar(184),
-masdetalles varchar(184),
+falla varchar(250),
+masdetalles varchar(250),
 fecha varchar(30)
 );
 
@@ -35,7 +35,7 @@ id int primary key auto_increment,
 nombre varchar(25),
 ubicacion varchar(20),
 departamento varchar(20),
-falla varchar(25),
-masdetalles varchar(184),
+falla varchar(250),
+masdetalles varchar(250),
 fecha varchar(30)
 );
