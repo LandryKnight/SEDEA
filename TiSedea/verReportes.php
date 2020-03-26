@@ -25,10 +25,13 @@ $rows = $result -> num_rows;
 	<link rel="stylesheet" type="text/css" href="estiloSedea.css">
 </head>
 <body>
+<img  class="Finimg" src="img/top.png">
 
 <div class="fin" align="center">
 
 <h2>Solicitudes de Asistencia: </h2>
+
+
 
 <?php 
 
@@ -36,11 +39,13 @@ $rows = $result -> num_rows;
 
 
 echo "<table border='1'><tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Mas Detalles</th><th>Fecha</th></tr>";
-for ($i=0; $i<$rows; $i++) {
+for ($i=0; $i<1; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
+
 echo "<tr>"; 
 for($j=0; $j<7; $j++)
-echo "<td>" . htmlspecialchars($row[$j])."</td>";
+echo "<td>" . htmlspecialchars(utf8_decode($row[$j]))."</td>";
+
 echo "</tr>";
 	
 }
