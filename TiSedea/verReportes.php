@@ -44,6 +44,7 @@ echo "<td>" . htmlspecialchars($row[$j])."</td>";
 echo "</tr>";
 	
 }
+
 echo "</table>";
 
  ?>

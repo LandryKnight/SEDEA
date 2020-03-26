@@ -12,7 +12,7 @@
 	global $connection;
 	
 	$result = $connection -> query($query);
-	if(!$result) die("No Connection to insert");
+	if(!$result) die("Failed to make a query");
 	return $result; 
 	$connection -> close();
 	

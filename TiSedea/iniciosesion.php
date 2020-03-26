@@ -3,9 +3,11 @@ require_once('Funciones.php');
 
 if(isset($_POST['sesion'])){
 	$usuario  = sanitizeString($_POST['usuarios']);
-	$contraseña = sanitizeString($_POST['contras']);
+	$pazz = sanitizeString($_POST['contras']);
 
-	$result = queryMySql("SELECT * FROM usuariosTI WHERE  usuario = '{$usuario}' AND contraseña ='{$contraseña}'");
+
+	$Select = "SELECT * FROM usuariosTI WHERE  usuario = '{$usuario}' AND pazz ='{$pazz}'";
+	$result = queryMySql("$Select");
 	if($result -> num_rows){
 		header('location: verReportes.php');
 
@@ -47,7 +49,7 @@ if(isset($_POST['sesion'])){
 
 <input type="submit" name="sesion" value="Iniciar sesión" class="boton"></a>
  </form>
-<br> <a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<br> <a href="http://localhost/sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 

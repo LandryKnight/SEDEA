@@ -45,10 +45,10 @@ body{
 .fin{
 	
 	position: absolute;
-	top: 30px;
-	left: 20%;
-
-	border-radius: 15px;
+	top: 100px;
+	left: 90px;
+	width: 14in;
+	border-radius: 5px 5px 15px 15px;
 	border-style: solid;
 	border:none;
     background: #1D447D;
@@ -97,9 +97,18 @@ body{
 
 .fin img{
 
-	width: 3in;
+	width: 10in;
 	height: 2in;
 	border-radius: 15px;
+}
+
+
+
+.Finimg{
+	position: relative;
+	left: 90px;
+	margin-bottom: 25px;
+	width: 14in;
 }
 
 .fin h2{
@@ -108,17 +117,23 @@ body{
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 10px;
+
 }
 
 .fin table{
+	width: 13in;
 	color: #FFFFFF;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	margin-left: 30px;
-	margin-right: 30px;
-	border-radius: 15px;
+	margin-left: 5px;
 
+	word-wrap: break-word;
+	border-radius: 15px;
+	font-size: 14pt;
+	font-weight: bold;;
+	
 	border-color: #FFFFFF;
+
 }
 .fin input{
 	border-radius: 15px;

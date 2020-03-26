@@ -68,7 +68,7 @@ if(!is_null($masdetalles)){
 
 	<p>¡Que tengas un excelente día!</p>
 
-	<a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+	<a href="http://localhost/Sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
  
   
 </div>
