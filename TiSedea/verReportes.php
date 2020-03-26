@@ -1,7 +1,7 @@
 <?php require_once('Funciones.php');
 
 $Select = "SELECT * FROM reportes";
-$Select = utf8_decode($Select);
+
 
 $result = queryMySql("$Select");
 
@@ -34,11 +34,12 @@ $rows = $result -> num_rows;
 
 
 <?php 
+/*class="detalles" */
 
 
 
-
-echo "<table border='1'><tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Mas Detalles</th><th>Fecha</th></tr>";
+echo "<table border='1'><tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
+if($rows > 0){
 for ($i=0; $i<1; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
@@ -49,7 +50,7 @@ echo "<td>" . htmlspecialchars(utf8_decode($row[$j]))."</td>";
 echo "</tr>";
 	
 }
-
+}
 echo "</table>";
 
  ?>
@@ -75,7 +76,7 @@ queryMySql("$Delete");
 
 
 
-<a href="http://localhost/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<a href="http://localhost/sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 

@@ -26,7 +26,7 @@ nombre varchar(25),
 ubicacion varchar(20),
 departamento varchar(60),
 falla varchar(250),
-masdetalles varchar(250),
+Estado varchar(35),
 fecha varchar(30)
 );
 
@@ -36,7 +36,7 @@ nombre varchar(25),
 ubicacion varchar(20),
 departamento varchar(20),
 falla varchar(250),
-masdetalles varchar(250),
+Estado varchar(35), 
 fecha varchar(30)
 );
 

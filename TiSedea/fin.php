@@ -8,11 +8,11 @@ $nombre = 				ucfirst(strtolower(sanitizeString($_POST['NombreAsistencia'])));
 $Ubicacion =			$_POST['Ubicacion'];
 $Departamento = 		$_POST['departamento'];
 $falla = 				ucfirst(strtolower(sanitizeString($_POST['falla'])));
-$masdetalles = 			ucfirst(strtolower(sanitizeString($_POST['masdetalles'])));
-
+$Estado = 				'Reportado';
  }
 
 $select = "SELECT * FROM reportes WHERE nombre = '{$nombre}' AND falla = '{$falla}'";
+$select = utf8_decode($select);
 $result = queryMySql("$select");
 
 IF($result -> num_rows){
@@ -21,28 +21,15 @@ IF($result -> num_rows){
 }else{ 
 
 
-if(!is_null($masdetalles)){
-
- $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$masdetalles}',curdate());";
+ $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$Estado}',curdate());";
  $insertFalla = utf8_encode($insertFalla);
  queryMySql("$insertFalla");
 
- $insertFallaH = "INSERT INTO reportesHistorial VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$masdetalles}',curdate());";
- $insertFallaH = utf8_encode($insertFallaH);
- queryMySql("$insertFallaH");
- 
-}else{
-
- $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','S/D',curdate());";
- $insertFalla = utf8_encode($insertFalla);
- queryMySql("$insertFalla");
-
- $insertFallaH = "INSERT INTO reportesHistorial VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','S/D',curdate());";
+ $insertFallaH = "INSERT INTO reportesHistorial VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$Estado}',curdate());";
  $insertFallaH = utf8_encode($insertFallaH);
  queryMySql("$insertFallaH");
  
 }
-
 
 
 

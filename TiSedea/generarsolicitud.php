@@ -56,12 +56,11 @@
 
 
 
-<p>Describe la falla que presentas:</p>
-<textarea name="falla" rows="4" cols="70" maxlength="250" placeholder="Ej: No Puedo usar Office" required="required" autocomplete="off"></textarea>
+<p>Describe a detalle la falla que presentas:</p>
+<textarea name="falla" rows="8" cols="70" maxlength="500" placeholder="Ej: No Puedo usar Office" required="required" autocomplete="off"></textarea>
 
 
-<p>Mas detalles:</p>
-<textarea name="masdetalles" rows="4" cols="70" maxlength="250" placeholder="(opcional)" autocomplete="off"></textarea>
+
 
 <input type="submit" name="EnviarSolicitud" value="Enviar Reporte" class="boton">
 </form>
