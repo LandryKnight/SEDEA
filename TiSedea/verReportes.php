@@ -35,17 +35,17 @@ $rows = $result -> num_rows;
 
 
 <?php 
-/*class="detalles" */
+/*En Revision Resuelto */
 
 
 
-echo "<table border='1'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
+echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
 if($rows > 0){
 for ($i=0; $i<1; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=1; $j<6; $j++)
+for($j=1; $j<7; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 

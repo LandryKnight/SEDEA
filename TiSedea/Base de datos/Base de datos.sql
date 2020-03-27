@@ -27,7 +27,8 @@ ubicacion varchar(20),
 departamento varchar(60),
 falla varchar(250),
 Estado varchar(35),
-fecha varchar(30)
+fecha varchar(30),
+NumeroReporte varchar (15)
 );
 
 Create table reportesHistorial(
@@ -37,7 +38,8 @@ ubicacion varchar(20),
 departamento varchar(20),
 falla varchar(250),
 Estado varchar(35), 
-fecha varchar(30)
+fecha varchar(30),
+NumeroReporte varchar (15)
 );
 
 insert into reportes Values(null,'luis','juridico','Segundo Piso','no funcina bien allljhdshfdshfkjshh hdsh','no funcina bien allljhdshfdshfkjshh hdsh',curdate());
