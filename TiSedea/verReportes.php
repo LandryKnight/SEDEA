@@ -2,6 +2,7 @@
 
 $Select = "SELECT * FROM reportes";
 
+$Select = utf8_decode($Select);
 
 $result = queryMySql("$Select");
 
@@ -38,14 +39,17 @@ $rows = $result -> num_rows;
 
 
 
-echo "<table border='1'><tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
+echo "<table border='1'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
 if($rows > 0){
 for ($i=0; $i<1; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=0; $j<7; $j++)
-echo "<td>" . htmlspecialchars(utf8_decode($row[$j]))."</td>";
+for($j=1; $j<6; $j++)
+
+echo "<td>" . utf8_decode($row[$j])."</td>";
+
+
 
 echo "</tr>";
 	

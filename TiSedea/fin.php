@@ -9,7 +9,12 @@ $Ubicacion =			$_POST['Ubicacion'];
 $Departamento = 		$_POST['departamento'];
 $falla = 				ucfirst(strtolower(sanitizeString($_POST['falla'])));
 $Estado = 				'Reportado';
+$NumeroReporte =      	strtoupper(substr($nombre,0,2).strlen($nombre).random_int(1,1000));
+
+
  }
+
+
 
 $select = "SELECT * FROM reportes WHERE nombre = '{$nombre}' AND falla = '{$falla}'";
 $select = utf8_decode($select);
@@ -34,7 +39,7 @@ IF($result -> num_rows){
 
 
 
-}
+
 
  ?>
 
@@ -50,7 +55,7 @@ IF($result -> num_rows){
 <body>
 
 <div class="final" align="center">
-	<p>Gracias <?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre; }?>, tu reporte fue recibido. </p>
+	<p>Gracias <?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre;  }?>, tu reporte fue recibido.<br> Este es tu número de reporte: <?php echo $NumeroReporte; ?>, anótalo para que después puedas checar el estatus de tu reporte.  </p>
  	
 
 	<p>¡Que tengas un excelente día!</p>

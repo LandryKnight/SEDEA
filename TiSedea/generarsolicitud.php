@@ -57,7 +57,7 @@
 
 
 <p>Describe a detalle la falla que presentas:</p>
-<textarea name="falla" rows="8" cols="70" maxlength="500" placeholder="Ej: No Puedo usar Office" required="required" autocomplete="off"></textarea>
+<textarea name="falla" rows="8" cols="70" maxlength="500" placeholder="Ej: Mi Computadora se reinicia sola después de cierto tiempo de uso, incluso sin usar ningún programa se sigue reiniciando sola." required="required" autocomplete="off"></textarea>
 
 
 
