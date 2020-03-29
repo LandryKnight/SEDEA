@@ -1,5 +1,3 @@
-drop Database sedeaTI;
-
 drop table usuariosTI;
 drop table reportes;
 drop table reportesHistorial;
@@ -25,9 +23,9 @@ insert into usuariosTI Values(null,'Francisco','FranTISEDA','SDE@TI20');
 Create table reportes(
 id int primary key auto_increment,
 nombre varchar(25),
-departamento varchar(60),
 ubicacion varchar(20),
-falla varchar(500),
+departamento varchar(60),
+falla varchar(250),
 Estado varchar(35),
 fecha varchar(30),
 NumeroReporte varchar (15)
@@ -36,13 +34,15 @@ NumeroReporte varchar (15)
 Create table reportesHistorial(
 id int primary key auto_increment,
 nombre varchar(25),
-departamento varchar(20),
 ubicacion varchar(20),
-falla varchar(500),
+departamento varchar(20),
+falla varchar(250),
 Estado varchar(35), 
 fecha varchar(30),
 NumeroReporte varchar (15)
 );
 
+insert into reportes Values(null,'luis','juridico','Segundo Piso','no funcina bien allljhdshfdshfkjshh hdsh','no funcina bien allljhdshfdshfkjshh hdsh',curdate());
+insert into reportes Values(null,'Lui','Planta Baja','Juridico','No funciona bien el office','le doy clic y no  se inicia',curdate());
 
-insert into reportes Values(null,'Luis','Juridico','Planta Baja','No prende mi computadora','reportado',curdate(),'UOI00');
+insert into reportes Values(null,'Luis Fernando','Planta Baja','Juridico','qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq','qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq',curdate());

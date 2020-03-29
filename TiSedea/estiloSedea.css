@@ -135,7 +135,6 @@ body{
 	border-color: #FFFFFF;
 
 }
-
 .fin input{
 	border-radius: 15px;
 	height: 30px;
@@ -193,7 +192,7 @@ body{
 	border-radius: 15px;
 	margin-bottom: 15px;
 	color: #9C1462;
-	
+	width: 2.5in;
 	height: 0.3in;
 	font-weight: bold;
 	font-size: 12pt;

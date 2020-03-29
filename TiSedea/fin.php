@@ -26,11 +26,11 @@ IF($result -> num_rows){
 }else{ 
 
 
- $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Departamento}','{$Ubicacion}','{$falla}','{$Estado}',curdate(),'{$NumeroReporte}');";
+ $insertFalla = "INSERT INTO reportes VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$Estado}',curdate(),'{$NumeroReporte}');";
  $insertFalla = utf8_encode($insertFalla);
  queryMySql("$insertFalla");
 
- $insertFallaH = "INSERT INTO reportesHistorial VALUES(null,'{$nombre}','{$Departamento}','{$Ubicacion}','{$falla}','{$Estado}',curdate(),'{$NumeroReporte}');";
+ $insertFallaH = "INSERT INTO reportesHistorial VALUES(null,'{$nombre}','{$Ubicacion}','{$Departamento}','{$falla}','{$Estado}',curdate(),'{$NumeroReporte}');";
  $insertFallaH = utf8_encode($insertFallaH);
  queryMySql("$insertFallaH");
  
