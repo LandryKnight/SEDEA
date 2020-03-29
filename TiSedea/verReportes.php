@@ -35,28 +35,44 @@ $rows = $result -> num_rows;
 
 
 <?php 
-/*En Revision Resuelto */
+/* Reportado En Revision Resuelto */
 
 
 
-echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th></tr>";
+echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th><th>Numero de Reporte</th></tr>";
 if($rows > 0){
-for ($i=0; $i<1; $i++) {
+
+for ($i=0; $i<$rows; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=1; $j<7; $j++)
+for($j=1; $j<8; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
 
 
+
+
+
 echo "</tr>";
 	
-}
+		}
 }
 echo "</table>";
+switch ($rows) {
+	case $rows > 0:
+	echo "hw";
+		break;
 
+	case $rows <10:
+		echo "menor de 10";
+		break;
+	
+	default:
+		# code...
+		break;
+		}
  ?>
 
 
