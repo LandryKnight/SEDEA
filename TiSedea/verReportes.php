@@ -61,12 +61,12 @@ echo "</tr>";
 }
 echo "</table>";
 switch ($rows) {
-	case $rows > 0:
-	echo "hw";
+	case $rows > 0 && $rows < 10:
+	echo "mayor que 0 y menor que 10";
 		break;
 
-	case $rows <10:
-		echo "menor de 10";
+	case $rows > 10:
+		echo "mayor de 10";
 		break;
 	
 	default:
