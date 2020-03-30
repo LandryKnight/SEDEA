@@ -40,6 +40,7 @@ $rows = $result -> num_rows;
 
 
 echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th><th>Numero de Reporte</th></tr>";
+
 if($rows > 0){
 
 for ($i=0; $i<$rows; $i++) {
@@ -60,19 +61,13 @@ echo "</tr>";
 		}
 }
 echo "</table>";
-switch ($rows) {
-	case $rows > 0 && $rows < 10:
-	echo "mayor que 0 y menor que 10";
-		break;
 
-	case $rows > 10:
-		echo "mayor de 10";
-		break;
-	
-	default:
-		# code...
-		break;
-		}
+echo "<select name='Estado' required>
+	<option value=''>Reportado</option>
+	<option value='En Revision'>En Revisión</option>
+	<option value='Resuelto'>Resulto</option>
+</select>";
+
  ?>
 
 

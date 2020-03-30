@@ -51,14 +51,15 @@ IF($result -> num_rows){
 	<title>Fin</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estiloSedea.css">
+	<link href="https://fonts.googleapis.com/css?family=Aldrich|Amaranth|Arapey|Audiowide|Bad+Script|Boogaloo|Bungee+Inline|Cookie|Frijole|Handlee|IM+Fell+French+Canon+SC|Kalam|Lobster|Marck+Script|Monoton|Mr+Dafoe|Oleo+Script|Racing+Sans+One|Rock+Salt|Satisfy|Shojumaru|Sigmar+One|Yesteryear&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="final" align="center">
-	<p>Gracias <?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre;  }?>, tu reporte fue recibido.<br> Este es tu número de reporte: <?php echo $NumeroReporte; ?>, anótalo para que después puedas checar el estatus de tu reporte.  </p>
+	<p>Gracias <b><?php if(is_null($nombre)) { header('location:index.php');} else {echo $nombre;  }?></b>, tu reporte fue recibido.<br> <br>Este es tu número de reporte: <b> <?php echo $NumeroReporte; ?></b>, anótalo para que después puedas checar el estatus de tu reporte.  </p>
  	
 
-	<p>¡Que tengas un excelente día!</p>
+	<p class="Gracias">¡Que tengas un excelente día!</p>
 
 	<a href="http://localhost/Sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
  

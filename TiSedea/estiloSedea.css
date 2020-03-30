@@ -1,3 +1,32 @@
+
+
+/* Fuentes 
+font-family: 'Lobster', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Audiowide', cursive;
+font-family: 'Bad Script', cursive;
+font-family: 'IM Fell French Canon SC', serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Boogaloo', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Arapey', serif;
+font-family: 'Sigmar One', cursive;
+font-family: 'Amaranth', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Mr Dafoe', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Aldrich', sans-serif;
+font-family: 'Frijole', cursive;
+font-family: 'Yesteryear', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Racing Sans One', cursive;
+font-family: 'Shojumaru', cursive;
+
+*/
+
 *{
 	margin: 0;
 	padding: 0;
@@ -95,6 +124,17 @@ body{
 
 }
 
+.Gracias{
+	font-family: 'Lobster', cursive;
+}
+
+.final b{
+
+	font-family: 'Aldrich', sans-serif;
+
+
+
+}
 .fin img{
 
 	width: 10in;
