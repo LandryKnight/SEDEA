@@ -65,7 +65,7 @@
 <input type="submit" name="EnviarSolicitud" value="Enviar Reporte" class="boton">
 </form>
 
-<br> <a href="http://localhost/Sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<br> <a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 </body>

@@ -21,7 +21,7 @@
 	
 	
 
-	<h3>Elija la opción que te corresponde.</h3>
+	<h3>Elige la opción que te corresponde.</h3>
 
 	
 	<p>Para Generar un Reporte:</p>

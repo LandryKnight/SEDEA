@@ -19,7 +19,7 @@ pazz varchar(50)
 );
 
 
-insert into usuariosTI Values(null,'Francisco','FranTISEDA','SDE@TI20');
+insert into usuariosTI Values(null,'FranciscoTI','FranTISEDA','SDE@TI20');
 
 
 Create table reportes(
@@ -30,7 +30,7 @@ ubicacion varchar(20),
 falla varchar(500),
 Estado varchar(35),
 fecha varchar(30),
-NumeroReporte varchar (15)
+NumeroReporte varchar(15)
 );
 
 Create table reportesHistorial(
@@ -41,7 +41,7 @@ ubicacion varchar(20),
 falla varchar(500),
 Estado varchar(35), 
 fecha varchar(30),
-NumeroReporte varchar (15)
+NumeroReporte varchar(15)
 );
 
 

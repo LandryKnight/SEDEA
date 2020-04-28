@@ -49,7 +49,7 @@ if(isset($_POST['sesion'])){
 
 <input type="submit" name="sesion" value="Iniciar sesión" class="boton"></a>
  </form>
-<br> <a href="http://localhost/sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<br> <a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 
