@@ -33,22 +33,32 @@ if(isset($_POST['sesion'])){
 <body>
 
 <div class="login" align="center">
+
 <h1>SEDEA TI </h1>
-<h2>Ingresa los datos para <br>iniciar sesión </h2>
+<h2>Ingresa los siguientes datos: </h2>
 
 <div class="centrol">
 
 <form action="#" method="post">
+
 <h3>Usuario: </h3>
-<input type="text" name="usuarios" placeholder="Usuario de sedea" required="required" maxlength="21" >
+<input type="text" name="usuarios" placeholder="Usuario de SEDEATI" required="required" maxlength="21" >
 <h3>Contraseña: </h3>
-<input type="text" name="contras" placeholder="Contraseña de sedea" required="required" maxlength="21">
+<input type="text" name="contras" placeholder="Contraseña de SEDEATI" required="required" maxlength="21">
 
 </div>
 
 
-<input type="submit" name="sesion" value="Iniciar sesión" class="boton"></a>
- </form>
+<input type="submit" name="sesion" value="Iniciar Sesión" class="boton"></a>
+
+</form>
+
+<?php 
+
+
+
+ ?>
+
 <br> <a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 

@@ -198,7 +198,13 @@ body{
 	border-style: solid;
 	border:none;
 
+	/* 
+	background: #262722; oscuro
+	background: #131311; +oscuro
+	*/
 	background: #1D447D;
+	
+
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 	margin-bottom: 50px;
 	color: #FFFFFF;
