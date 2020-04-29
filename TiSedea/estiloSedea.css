@@ -222,6 +222,18 @@ body{
 	margin-bottom: 25px;
 	
 }
+
+.mensaje{
+	font-size: 14pt;
+	width: 280px;
+	border: none;
+	border-radius: 15px;
+	position: relative;
+	left: 40%;
+	
+
+
+}
 .medio h2{
 	margin-top: 15px;
 	padding-bottom: 10px;

@@ -12,7 +12,7 @@ if(isset($_POST['sesion'])){
 		header('location: verReportes.php');
 
 	}else {
-		echo "Checa el usuario y contraseña que ingresaste.";
+		echo "<input class='mensaje' type='text' name='mensaje' value='Usuario/Contraseña incorrectos.'>";
 	}
 
 
