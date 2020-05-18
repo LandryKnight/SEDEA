@@ -35,15 +35,15 @@ $rows = $result -> num_rows;
 
 
 <?php 
-/* Reportado En Revision Resuelto */
 
 
 
-echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Fallas</th><th>Estado</th><th>Fecha</th><th>Numero de Reporte</th></tr>";
+
+echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Descripción de Fallas</th><th>Estado</th><th>Fecha (Año/Mes/Dia)</th><th>Número de Reporte</th></tr>";
 
 if($rows > 0){
 
-for ($i=0; $i<$rows; $i++) {
+for ($i=0; $i<10; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
@@ -62,19 +62,31 @@ echo "</tr>";
 }
 echo "</table>";
 
-echo "<select name='Estado' required>
-	<option value=''>Reportado</option>
-	<option value='En Revision'>En Revisión</option>
-	<option value='Resuelto'>Resulto</option>
-</select>";
+
 
  ?>
 
-
-<h2>Borrar Falla Resuelta.</h2>
+<h2>Actualizar Estado de Reporte.</h2>
 <form method="POST" action="#">
-<input type="text" name="Fallas" placeholder="ID a borrar Ej: 1" required="required" > 
-<input type="submit" name="BorrarFalla" value="Borrar Falla" class="boton">
+<input type="text" name="Fallas" placeholder="Numero de Reporte: PA4513" required="required" > 
+<select class='estado' name='Estado' required>
+	<option value=''>Reportado</option>
+	<option value='En Revision'>En Revisión</option>
+	<option value='Resuelto'>Resuelto</option>
+
+</select>
+
+	
+<br>
+<input type="submit" name="ActualizarEstatus" value="Actualizar Estatus" class="boton">
+
+</form>
+
+
+<h2>Borrar Reporte Resuelto.</h2>
+<form method="POST" action="#">
+<input type="text" name="Fallas" placeholder="Numero de Reporte: CE5236" required="required" ><br> 
+<input type="submit" name="BorrarFalla" value="Borrar Falla"  class="boton">
 </form>
 
 <?php 

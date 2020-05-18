@@ -75,13 +75,13 @@ body{
 	
 	position: absolute;
 	top: 100px;
-	left: 90px;
-	width: 14in;
+	left: 35px;
+	width: 15in;
 	border-radius: 5px 5px 15px 15px;
 	border-style: solid;
 	border:none;
     background: #1D447D;
-
+    border: none;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 	margin-bottom: 50px;
 
@@ -161,7 +161,7 @@ body{
 }
 
 .fin table{
-	width: 13in;
+	width: 14in;
 	color: #FFFFFF;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -171,7 +171,7 @@ body{
 	border-radius: 15px;
 	font-size: 14pt;
 	font-weight: bold;;
-	
+	text-indent: 5px;
 	border-color: #FFFFFF;
 
 }
@@ -184,6 +184,19 @@ body{
 	font-size: 14pt;
 	text-indent: 10px;
 	margin-bottom: 30px;
+	border: none;
+}
+
+.estado{
+	border: none;
+	border-radius: 15px;
+	width: 1.5in;
+	height: 0.3in;
+	color: #9C1462;
+	font-size: 14pt;
+	font-weight: bold;
+	margin-left: 15px;
+	text-indent: 5px;
 }
 
 .login{

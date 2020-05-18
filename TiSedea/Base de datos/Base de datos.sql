@@ -36,7 +36,7 @@ NumeroReporte varchar(15)
 Create table reportesHistorial(
 id int primary key auto_increment,
 nombre varchar(25),
-departamento varchar(20),
+departamento varchar(60),
 ubicacion varchar(20),
 falla varchar(500),
 Estado varchar(35), 

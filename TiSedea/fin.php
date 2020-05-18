@@ -61,7 +61,7 @@ IF($result -> num_rows){
 
 	<p class="Gracias">¡Que tengas un excelente día!</p>
 
-	<a href="http://localhost/Sedea/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+	<a href="http://localhost/Sedea/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
  
   
 </div>

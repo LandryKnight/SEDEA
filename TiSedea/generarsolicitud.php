@@ -32,7 +32,7 @@
     <option value="Departamento de Comercialización">Departamento de Comercialización</option>
     <option value="Departamento Jurídico">Departamento Jurídico</option>
     <option value="Dirección Administrativa">Dirección Administrativa</option>
-    <option value="Dirección de Fomente y Desarrollo Agropecuario">Dirección de Fomento y Desarrollo Agropecuario  </option>
+    <option value="Dirección de Fomento y Desarrollo Agropecuario">Dirección de Fomento y Desarrollo Agropecuario</option>
     <option value="Dirección de Infraestructura Hidroagrícola">Dirección de Infraestructura Hidroagrícola</option>
     <option value="Dirección Regional Cadereyta">Dirección Regional Cadereyta</option>
     <option value="Dirección Regional Jalpan">Dirección Regional Jalpan</option>
@@ -48,7 +48,7 @@
 <p>Ubicación:</p>
 <select name="Ubicacion" required>
 	<option value="">Sin Seleccionar</option>
-	<option value="PlantaBaja">Planta Baja</option>
+	<option value="Planta Baja">Planta Baja</option>
 	<option value="Primer Piso">Primer Piso</option>
 	<option value="Segundo Piso">Segundo Piso</option>
 	<option value="Tercer Piso">Tercer Piso</option>
