@@ -59,7 +59,7 @@ if(isset($_POST['sesion'])){
 
  ?>
 
-<br> <a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<br> <a href="http://localhost/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 

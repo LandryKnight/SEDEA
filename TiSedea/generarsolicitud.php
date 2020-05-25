@@ -1,6 +1,3 @@
-<?php  ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +54,7 @@
 
 
 <p>Describe a detalle la falla que presentas:</p>
-<textarea name="falla" rows="8" cols="70" maxlength="500" placeholder="Ej: Mi Computadora se reinicia sola después de cierto tiempo de uso, incluso sin usar ningún programa se sigue reiniciando sola." required="required" autocomplete="off"></textarea>
+<textarea name="falla" rows="8" cols="70" maxlength="500" placeholder="Ejemplo: Mi Computadora se reinicia sola después de cierto tiempo de uso, incluso sin usar ningún programa se sigue reiniciando sola." required="required" autocomplete="off"></textarea>
 
 
 
@@ -65,8 +62,14 @@
 <input type="submit" name="EnviarSolicitud" value="Enviar Reporte" class="boton">
 </form>
 
-<br> <a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<br> <a href="http://localhost/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
+
+
+
+
+
+
 
 </body>
 </html>

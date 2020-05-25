@@ -41,9 +41,9 @@ $rows = $result -> num_rows;
 
 echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Descripción de Fallas</th><th>Estado</th><th>Fecha (Año/Mes/Dia)</th><th>Número de Reporte</th></tr>";
 
-if($rows > 0){
+if($rows < 10){
 
-for ($i=0; $i<10; $i++) {
+for ($i=0; $i<$rows; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
@@ -52,14 +52,25 @@ for($j=1; $j<8; $j++)
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
 
+echo "</tr>";
 
+	
+		}
 
+}if($rows > 10){
+
+	for ($i=0; $i<10; $i++) {
+$row = $result -> fetch_array(MYSQLI_NUM);
+
+echo "<tr>"; 
+for($j=1; $j<8; $j++)
+
+echo "<td>" . utf8_decode($row[$j])."</td>";
 
 
 echo "</tr>";
-	
 		}
-}
+ }
 echo "</table>";
 
 
@@ -103,7 +114,7 @@ queryMySql("$Delete");
 
 
 
-<a href="http://localhost/SEDEA/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
+<a href="http://localhost/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
 </div>
 
 
