@@ -9,18 +9,16 @@ $Ubicacion =            $_POST['Ubicacion'];
 $Departamento =         $_POST['departamento'];
 $falla =                ucfirst(strtolower(sanitizeString($_POST['falla'])));
 $Estado =               'Reportado';
-$NumeroReporte = null;
-if( is_null($NumeroReporte)){ 
-
-	$NumeroReporte =       strtoupper(substr($nombre,0,2).strlen($nombre).random_int(1,1000));
-
-				}
-
 
 
  		}
  
+$NumeroReporte= null;
+if( is_null($NumeroReporte) | empty($NumeroReporte)){ 
+ 
+	$NumeroReporte =   strtoupper(substr($nombre,0,2).strlen($nombre).random_int(1,1000));
 
+				}
 
 
 
@@ -29,7 +27,7 @@ $select = utf8_decode($select);
 $result = queryMySql("$select");
 
 if($result -> num_rows){
- echo "Ya existe este reporte.";
+ /*echo "Ya existe este reporte.";*/
 
 }else{ 
 

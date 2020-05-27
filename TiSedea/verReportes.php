@@ -41,7 +41,7 @@ $rows = $result -> num_rows;
 
 echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Descripción de Fallas</th><th>Estado</th><th>Fecha (Año/Mes/Dia)</th><th>Número de Reporte</th></tr>";
 
-if($rows < 10){
+if($rows < 7){
 
 for ($i=0; $i<$rows; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
@@ -57,61 +57,52 @@ echo "</tr>";
 	
 		}
 
-}if($rows > 10){
+}if($rows > 7){
 
-	for ($i=0; $i<10; $i++) {
+	for ($i=0; $i<7; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=1; $j<8; $j++)
+for($j=7; $j<8; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
 
 echo "</tr>";
 		}
+
  }
 echo "</table>";
 
+/*poner un solo input que reciba el numero de reporte y que un selecte seleccecione si es en revision el reporte se actualiza pero si es reusleto que se borre y con el mismo botn
+
+*/
 
 
  ?>
 
-<h2>Actualizar Estado de Reporte.</h2>
-<form method="POST" action="#">
-<input type="text" name="Fallas" placeholder="Numero de Reporte: PA4513" required="required" > 
-<select class='estado' name='Estado' required>
-	<option value=''>Reportado</option>
-	<option value='En Revision'>En Revisión</option>
-	<option value='Resuelto'>Resuelto</option>
 
-</select>
-
-	
-<br>
-<input type="submit" name="ActualizarEstatus" value="Actualizar Estatus" class="boton">
-
-</form>
-
-
-<h2>Borrar Reporte Resuelto.</h2>
-<form method="POST" action="#">
-<input type="text" name="Fallas" placeholder="Numero de Reporte: CE5236" required="required" ><br> 
-<input type="submit" name="BorrarFalla" value="Borrar Falla"  class="boton">
-</form>
 
 <?php 
-if(isset($_POST['BorrarFalla'])){
 
-$Falla = sanitizeString($_POST['Fallas']);
+if($rows < 7){
+echo "<select class='estado' name='Estado' required>";
+echo "<option value=''>Reportado</option>";
+for($i=0; $i<7; $i++){
+	$row = $result -> fetch_array(MYSQLI_NUM);
 
-$Delete = "DELETE FROM reportes WHERE id = $Falla";
+for($j = 7; $j<8 $j++){
 
-queryMySql("$Delete");
 
-}
+	echo "<option>".utf8_decode($row[$j])."</option>";
+		}
+
+	
+	}
+	echo "</select>";
+ }
+
  ?>
-
 
 
 <a href="http://localhost/SEDEA/TiSedea/index.php"><button class="boton">Ir a Menú Principal</button></a>
