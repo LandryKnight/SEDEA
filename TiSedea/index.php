@@ -23,13 +23,17 @@
 
 	<h3>Elige la opción que te corresponde.</h3>
 
-	
-	<p>Para Generar un Reporte:</p>
+	<b><P>Para Usuario:</P></b>
+	<p>Generar un Reporte:</p>
 	<a href="generarsolicitud.php"> <button class="boton"><b>Solicitud de Asistencia</b></button> </a> 
 	<br>
-	<p>Para Checar los Reportes:</p>
-	<a href="iniciosesion.php"><button class="boton"><b>Ver Solicitudes</b></button> </a> 
 	
+	<p>Checar Estado de un Reporte</p>
+	<a href="estatusReporte.php"><button class="boton"><b>Ver el Estado de tu Reporte</b></button></a>
+
+	<b><p>Para Área de TI:</p></b>
+	<p>Checar los Reportes:</p>
+	<a href="iniciosesion.php"><button class="boton"><b>Ver Solicitudes</b></button> </a> 
 
 </div>
 </body>

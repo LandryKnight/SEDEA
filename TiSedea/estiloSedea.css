@@ -97,22 +97,7 @@ body{
 
 }
 
-.final{
-	width: 7.5in;
-	height: 5in;
-	position: absolute;
-	top: 30px;
-	left: 28%;
 
-	border-radius: 15px;
-	border-style: solid;
-	border:none;
-    background: #1D447D; 
-
-	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
-	margin-bottom: 50px;
-
-}
 
 .final p{
 	font-size: 20pt;
@@ -323,7 +308,7 @@ body{
 }
 
 .Marco h3{
-	margin-top: 100px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	color: #FFFFFF;
 }
