@@ -44,7 +44,7 @@ if(isset($_POST['sesion'])){
 <h3>Usuario: </h3>
 <input type="text" name="usuarios" placeholder="Usuario de SEDEATI" required="required" maxlength="21" >
 <h3>Contraseña: </h3>
-<input type="text" name="contras" placeholder="Contraseña de SEDEATI" required="required" maxlength="21">
+<input type="password" name="contras" placeholder="Contraseña de SEDEATI" required="required" maxlength="21">
 
 </div>
 

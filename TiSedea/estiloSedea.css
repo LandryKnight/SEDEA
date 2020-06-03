@@ -1,30 +1,27 @@
 
 
 /* Fuentes 
+Lobster
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 font-family: 'Lobster', cursive;
-font-family: 'Handlee', cursive;
-font-family: 'Audiowide', cursive;
-font-family: 'Bad Script', cursive;
-font-family: 'IM Fell French Canon SC', serif;
-font-family: 'Satisfy', cursive;
-font-family: 'Kalam', cursive;
-font-family: 'Cookie', cursive;
-font-family: 'Marck Script', cursive;
-font-family: 'Boogaloo', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Arapey', serif;
-font-family: 'Sigmar One', cursive;
-font-family: 'Amaranth', sans-serif;
-font-family: 'Rock Salt', cursive;
-font-family: 'Mr Dafoe', cursive;
-font-family: 'Oleo Script', cursive;
-font-family: 'Aldrich', sans-serif;
-font-family: 'Frijole', cursive;
-font-family: 'Yesteryear', cursive;
-font-family: 'Bungee Inline', cursive;
-font-family: 'Racing Sans One', cursive;
-font-family: 'Shojumaru', cursive;
 
+
+Courgette
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+font-family: 'Courgette', cursive;
+
+
+Marck Script
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet"> 
+font-family: 'Marck Script', cursive;
+
+Monoton
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
+font-family: 'Monoton', cursive;
+
+Pacifico
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+font-family: 'Pacifico', cursive;
 */
 
 *{
@@ -43,7 +40,7 @@ body{
 	width: 650px;
 	height: 8in;
 	position: absolute;
-	top: 30px;
+	top: 15px;
 	left: 28%;
 
 	border-radius: 15px;
@@ -53,6 +50,11 @@ body{
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 	margin-bottom: 50px;
 
+}
+
+.Marco l{
+	font-family: 'Marck Script', cursive;
+	font-size: 35pt;
 }
 
 .medio{
@@ -75,7 +77,7 @@ body{
 	
 	position: absolute;
 	top: 100px;
-	left: 35px;
+	left: 45px;
 	width: 15in;
 	border-radius: 5px 5px 15px 15px;
 	border-style: solid;
@@ -98,6 +100,21 @@ body{
 }
 
 
+.final{
+
+	background: #1D447D;
+	position: relative;
+	left: 4in;
+	top: 1in;
+	width: 8in;
+	height: 5in;
+	border-radius: 15px;
+	border: none;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+
+
+}
 
 .final p{
 	font-size: 20pt;
@@ -115,7 +132,7 @@ body{
 
 .final b{
 
-	font-family: 'Aldrich', sans-serif;
+	font-family: 'Courgette', cursive;
 
 
 }
@@ -184,6 +201,74 @@ body{
 	margin-left: 15px;
 	text-indent: 5px;
 }
+
+
+
+.estatusReporte{
+ position: relative;
+ left: 2in;
+ border: none;
+ border-radius: 15px;
+ width: 12in;
+ height: 6in;
+ color: #FFFFFF;
+ background: #1D447D;
+ margin-top: 50px;
+ /* #282923*/
+
+}
+
+.estatusReporte input{
+	border-radius: 15px;
+	width: 2in;
+	height: .5in;
+	font-size: 14pt;
+	color: #9C1462;
+	text-indent: 10px;
+	margin: 20px;
+	border: none;
+}
+
+
+ .tituloTable{
+ 	font-family: 'Lobster', cursive;
+ 	font-size: 15pt;
+ 	font-style: bold;
+ }
+.estatusReporte table{
+	width: 10in;
+	color: #FFFFFF;
+	margin-top: 15px;
+	
+	margin-left: 5px;
+
+	word-wrap: break-word;
+	border-radius: 15px;
+	font-size: 14pt;
+	font-weight: bold;;
+	text-indent: 5px;
+	border-color: #FFFFFF;
+	margin-bottom: 50px;
+	
+}
+
+.estatusReporte{
+	font-size: 14pt;
+}
+
+.estatusReporte h2
+{
+	padding-top: 30px;
+	font-family: 'Lobster', cursive;
+	font-size: 30pt;
+}
+
+.menuEstatus{
+	position: relative;
+	top: 330px;
+}
+
+
 
 .login{
 
@@ -308,9 +393,11 @@ body{
 }
 
 .Marco h3{
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-bottom: 50px;
 	color: #FFFFFF;
+	font-family: 'Pacifico', cursive;
+	font-size: 20pt;
 }
 
 .Marco p{
@@ -392,7 +479,7 @@ body{
 	width: 120px;
 	height: 120px;
 	position: relative;
-	bottom: 40px;
+	bottom: 70px;
 	left: 240px;
 	border-radius: 15px;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);

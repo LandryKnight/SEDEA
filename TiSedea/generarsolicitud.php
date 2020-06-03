@@ -1,3 +1,10 @@
+<?php 
+
+$numeroRand = random_int(1,10000);
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +24,7 @@
 
 <form method="post" action="fin.php">
 
+<input type="hidden" name="numeroRand" value="<?php echo $numeroRand; ?> ">
 <p>Tu Nombre:</p>
 <input type="text" name="NombreAsistencia" placeholder="Ej: César Miguel" required="required" maxlength="25" autocomplete="off">
 

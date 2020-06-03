@@ -25,6 +25,7 @@ $rows = $result -> num_rows;
 	<title>Ver Reportes</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estiloSedea.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <img  class="Finimg" src="img/top.png">
@@ -40,7 +41,7 @@ $rows = $result -> num_rows;
 
 
 
-echo "<table border='2'><tr><th>Nombre</th><th>Departamento</th><th>Ubicación</th><th>Descripción de Fallas</th><th>Estado</th><th>Fecha (Año/Mes/Dia)</th><th>Número de Reporte</th></tr>";
+echo "<table border='2'><tr><th class='tituloTable'>Nombre</th><th class='tituloTable'>Departamento</th><th class='tituloTable'>Ubicación</th><th class='tituloTable'>Descripción de Falla</th><th class='tituloTable'>Estado</th><th class='tituloTable'>Fecha (Año/Mes/Dia)</th><th class='tituloTable'>Número de Reporte</th></tr>";
 
 if($rows < 7){
 
@@ -64,7 +65,7 @@ echo "</tr>";
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=7; $j<8; $j++)
+for($j=1; $j<8; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
@@ -75,9 +76,7 @@ echo "</tr>";
  }
 echo "</table>";
 
-/*poner un solo input que reciba el numero de reporte y que un selecte seleccecione si es en revision el reporte se actualiza pero si es reusleto que se borre y con el mismo botn
 
-*/
 
 
  ?>
@@ -88,7 +87,7 @@ echo "</table>";
 <input type="text" name="NReporte" placeholder="Número de Reporte: PA4513" required="required" > 
 <select class='estado' name='Estado' required>
 	<option value=''>Reportado</option>
-	<option value='En Revision'>En Revisión</option>
+	<option value='En Revisión'>En Revisión</option>
 	<option value='Resuelto'>Resuelto</option>
 
 </select>
@@ -108,17 +107,21 @@ $Estado  = ($_POST{'Estado'});
 
 
 
-/*echo "El Estado del reporte es: ".$NReporte. $Estado;*/
 
-if ($Estado = 'En Revision') {
+
+if ($Estado == 'En Revisión') {
 	
-	$UpdateR ="UPDATE reportes SET Estado = 'En Revision' WHERE NumeroReporte = '{$NReporte}'";
+	$UpdateR ="UPDATE reportes SET Estado = 'En Revisión' WHERE NumeroReporte = '{$NReporte}'";
+	$UpdateR = utf8_encode($UpdateR);
 	queryMySql("$UpdateR");
 	
+	$UpdateRH = "UPDATE reportesHistorial SET Estado = 'En Revisión' WHERE NumeroReporte = '{$NReporte}'";
+	$UpdateRH = utf8_encode($UpdateRH);
+	queryMySql("$UpdateRH");
 
 }
 
-if($Estado = 'Resuelto'){
+if($Estado == 'Resuelto'){
 
 	$Delete = "DELETE FROM reportes WHERE NumeroReporte = '{$NReporte}'";
 	$Delete = utf8_encode($Delete);
