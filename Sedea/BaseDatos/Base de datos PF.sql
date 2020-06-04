@@ -24,9 +24,9 @@ fechaReg varchar(30)
 );
 
 
-##Domicilio Persona Fisica
+#Domicilio Persona Fisica
 
-Create Table personafisicaDomicilio{
+Create Table personafisicaDomicilio( 
 idDomicilio int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 tipoDomicilio varchar(8),
@@ -40,7 +40,7 @@ referenciaVialidad varchar(50),
 tipoActividad varchar(15),
 fechaReg varchar(30)
 
-}
+);
 
 
 #Nombre Proyecto
@@ -82,9 +82,9 @@ sfechaRegistro varchar(30)
 #requisitos Generales
 Create Table personafisicaReqenerales(
 idRequisito int Primary Key auto_increment,
-sfolioImpreso varchar(30), #Foreign Key
+folioImpreso varchar(30), #Foreign Key
 observaciones varchar(194),
-sfechaRegistro varchar(30)
+fechaRegistro varchar(30)
 
 
 );

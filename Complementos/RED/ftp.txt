@@ -1,3 +1,0 @@
-ftp://172.42.1.63
-user ftpsedea
-pass 123456

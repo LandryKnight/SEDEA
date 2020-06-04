@@ -10,7 +10,10 @@ constrasenaUsuario varchar(50)
 );
 
 insert into Usuarios values(null,'adminSda','sdaAdmin@_@2020');
-insert into Usuarios values(null,'sedea','sde@_@2020');
+
+Create database SedeaUsuarios;
+
+
 
 Create Table UsuariosReg(
 idUsuario int Primary Key auto_increment,
@@ -18,6 +21,8 @@ nameUsuario varchar(50),
 constrasenaUsuario varchar(50)
 
 );
+
+insert into Usuarios values(null,'sedea','sde@_@2020');
 
 #idUsuario 1 AdminSda
 #idUsuario 2 Sedea
