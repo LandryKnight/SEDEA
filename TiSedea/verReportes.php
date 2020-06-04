@@ -86,7 +86,7 @@ echo "</table>";
 <form method="POST" action="verReportes.php">
 <input type="text" name="NReporte" placeholder="Número de Reporte: PA4513" required="required" > 
 <select class='estado' name='Estado' required>
-	<option value=''>Reportado</option>
+	<option value=''>Sin Seleccionar</option>
 	<option value='En Revisión'>En Revisión</option>
 	<option value='Resuelto'>Resuelto</option>
 

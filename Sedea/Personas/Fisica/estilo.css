@@ -33,24 +33,33 @@ body{
 .Marco input{
 	border-radius: 8px;
 	margin-bottom: 5px;
-	text-indent: 5px;
+	font-style: bold;
+	font-size: 14pt;
+	border: none;
+	text-indent: 10px;
+    color: #9C1462;
+
 
 }
 
 .Marco select{
 	border-radius: 8px;
 	margin-bottom: 5px;
+	color: #9C1462;
+	font-style: bold;
+	font-size: 14pt;
+	border: none;
 }
 
 .Marco h1 {
 	position: relative;
-	left: 33%;
+	left: 35%;
 
 }
 
 .Marco h2{
 	position: relative;
-	left: 24%;
+	left: 26%;
 	margin: 5px;
 	margin-bottom: 15px;
 }
@@ -58,7 +67,9 @@ body{
 
 
 .Marco p{
-	margin: 5px;
+	margin: 8px;
+	font-size: 14pt;
+	font-style: bold;
 }
 
 #titulo{

@@ -1,9 +1,9 @@
 <?php 
 
-	$dbhost = 	'localhost';
-	$dbuser = 	'root';
-	$dbpass =	'';
-	$dbname =	'sedeaPF';
+	$hostname 	= 	'localhost';
+	$user 		= 	'root';
+	$password 	=	'';
+	$database 	=	'sedeaPM';
 
 	$connection = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 	if($connection-> connect_error) die("Fatal Erorr");
@@ -36,4 +36,11 @@
 	}
 
 
+
+
+	
+
+
+
+}
  ?>
