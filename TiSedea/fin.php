@@ -24,7 +24,7 @@ $numeroRand = ($Cifrador * 2) *3;
 
 
 
-$NumeroReporte =   strtoupper(substr($nombre,0,2).strlen($nombre).substr($nombre, 2,4).$numeroRand);
+$NumeroReporte =   strtoupper(substr($nombre,0,2).strlen($nombre).$numeroRand);
 
 
 $select = "SELECT * FROM reportes WHERE nombre = '{$nombre}' AND falla = '{$falla}'";

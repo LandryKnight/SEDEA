@@ -30,7 +30,7 @@ random_int(1,10000); */
 
 <input type="hidden" name="numeroRand" value="<?php echo $numeroRand; ?> ">
 <p>Tu Nombre:</p>
-<input type="text" name="NombreAsistencia" placeholder="Ej: César Miguel" required="required" maxlength="25" autocomplete="off">
+<input type="text" name="NombreAsistencia" placeholder="Ej: César Miguel" required="required" maxlength="100" autocomplete="off">
 
 <p>Departamento:</p>
 <select name="departamento" required>
