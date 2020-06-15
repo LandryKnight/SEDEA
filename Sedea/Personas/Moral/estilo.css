@@ -11,7 +11,8 @@ body{
 
 .Marco{
  top: 10px;
- width: 60%;
+ width: 62%;
+ height: 12in;
  position: relative;
  left: 18%;
 
@@ -33,13 +34,21 @@ body{
 .Marco input{
 	border-radius: 8px;
 	margin-bottom: 5px;
-	text-indent: 5px;
+	text-indent: 10px;
+	font-weight: bold;
+	font-size: 14pt;
+	color: #9C1462;
+	border: none;
 
 }
 
 .Marco select{
 	border-radius: 8px;
 	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14pt;
+	color: #9C1462;
+	border: none;
 }
 
 .Marco h1 {
@@ -55,10 +64,16 @@ body{
 	margin-bottom: 15px;
 }
 
-
+.Marco h3{
+	position: relative;
+	left: 20%;
+	margin: 6px;
+}
 
 .Marco p{
-	margin: 5px;
+	margin: 10px;
+	font-weight: bold;
+	font-size: 14pt;
 }
 
 
@@ -90,12 +105,15 @@ body{
 
 #correo{
 	width: 200px;
+	margin-top: 15px;
 }
-.Marco h3{
+
+
+#Dsolicitante{
 	position: relative;
-	left: 20%;
-	margin: 6px;
+	right: 192px;
 }
+
 
 .regional{
 	top: 25px;
@@ -170,18 +188,22 @@ body{
 	
 	border-radius: 15px;
 
-	width: 130px;
+	width: 200px;
 	height: 35px;
 	font-weight: bold;
 	color: #9C1462;
-
+	font-size: 14pt;
+	font-weight: bold;
 	margin-top: 15px;
 	margin-bottom: 50px;
 	position: relative;
 	left: 38%;
 }
 
-
+#botonPM{
+	bottom: 200px;
+	left: 6.4in;
+}
 
 
 
@@ -196,10 +218,10 @@ body{
 
 .conceptoApoyo{
 
-	width: 70%;
+	width: 75%;
 	height: 500px;
 	position: relative;
- 	left: 200px;
+ 	left: 180px;
  	top: 50px;
 
  	color: #FFFFFF;
@@ -217,7 +239,7 @@ body{
 .conceptoApoyo h1{
 	margin-top: 10px;
 	position: relative;
-	left: 19%;
+	left: 26%;
 	padding-bottom: 20px;
 }
 
@@ -227,7 +249,7 @@ body{
 }
 	table{
 	position: relative;
-	left: 30px;
+	left: 5px;
 	
 	border-radius:15px;
 	border-color: #FFFFFF;
@@ -240,6 +262,9 @@ body{
 .conceptoApoyo input{
 	border-radius: 15px;
 	color: #9C1462;
+	width: 330px;
+	text-indent: 5px;
+	font-size: 14pt;
 
 }
 
@@ -248,23 +273,23 @@ body{
 
 .UnidadMedida input{
 	width: 70px;
-	text-indent: 30px;
+	text-indent: 10px;
 }
 
 .ApoyoEstatal input{
-	width: 200px;
-	text-indent: 120px;
+	width: 180px;
+	text-indent: 75px;
     
 }
 .ApoyoMunicipal input{
- 	width: 200px;
-	text-indent: 120px;
+ 	width: 180px;
+	text-indent: 75px;
 }
 
 
 .AportaciónBeneficiario input{
-	width: 200px;
-	text-indent: 120px;
+	width: 220px;
+	text-indent: 100px;
 }
 
 
@@ -342,3 +367,24 @@ body{
 	margin-top: 12px;
 	margin-bottom: 12px;
 }
+
+
+.final{
+ top: 10px;
+ width: 60%;
+ position: relative;
+ left: 18%;
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+

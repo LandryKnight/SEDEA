@@ -131,11 +131,11 @@ if(isset($_POST['EnviarPF'])){
 </select>
 
 
-<p>Telefono</p>
+<p>Teléfono</p>
 <input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10" >
 
 <p>Correo Electrónico</p>
-<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="120">
+<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="80">
 
 </div>
 
@@ -358,7 +358,8 @@ if(isset($_POST['EnviarPF'])){
 <br>
 
 </form>
-<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a>
+<br>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
 <a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
 </div>
 

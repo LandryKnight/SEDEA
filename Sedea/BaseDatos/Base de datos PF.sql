@@ -7,18 +7,18 @@ Create Database sedeaPF;
 #Tabla Persona Fisica
 Create Table personafisicaDatos(
 folioImpresoPF varchar(30) Primary Key,
-ventanidirRegional varchar(30),  
-ventaniMunicipio varchar(30),
+dirRegional varchar(30),  #Ventanilla Direccion regional
+Municipio varchar(30), #Ventanilla Regional Municipio
 nombre varchar(80),
 genero varchar(25),
-fechaNacimiento varchar(10),
+FNacimiento varchar(10),#fecha Nacimiento
 nacionalidad varchar(25),
 estadoCivil varchar(25),
-estadoNacimiento varchar(25),
+ENacimiento varchar(25),#estado de nacimiento
 telefono varchar(10),
 correoPF varchar(80),
-tipoIdentificacion varchar(30),
-numeroIdentificacion varchar(15),
+tipoIdent varchar(30), #Tipo de identificacion
+NIdent varchar(15),#Numero de identificacion
 curp varchar(20),
 fechaReg varchar(30)
 );
@@ -47,11 +47,11 @@ fechaReg varchar(30)
 Create Table personafisicaProyecto(
 IdProyecto int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
-NombreProyecto varchar(80),
+NProyecto varchar(80), #Nombre Proyecto
 AntiguedadPr varchar(20), #sAntiguedadProyecto 
 TelefonoPr varchar(100), #sTelefonoProyecto
 CorreoPr varchar(80), #sCorreoElectronicoProyecto
-FechaConstitucion varchar(10),
+FConst varchar(10), #Fecha Constitucion 
 TiDomiPr varchar(15), #sTipoDomicilioProyecto
 TiAsentPr varchar(15), #sTipoAsentamientoProyecto
 NomAsentPr varchar(80), #sNombreAsentamientoProyecto
@@ -76,7 +76,7 @@ ApoyoEstatalSolicitado varchar(10),
 ApoyoMunicipalSolicitado varchar(10),
 AportacionBeneficiario varchar(10),
 InversionTotal varchar(20),
-sfechaRegistro varchar(30)
+fechaRegistro varchar(30)
 );
 
 #requisitos Generales

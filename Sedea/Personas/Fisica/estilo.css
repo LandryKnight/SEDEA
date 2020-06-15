@@ -33,7 +33,7 @@ body{
 .Marco input{
 	border-radius: 8px;
 	margin-bottom: 5px;
-	font-style: bold;
+	font-weight:  bold;
 	font-size: 14pt;
 	border: none;
 	text-indent: 10px;
@@ -46,7 +46,7 @@ body{
 	border-radius: 8px;
 	margin-bottom: 5px;
 	color: #9C1462;
-	font-style: bold;
+	font-weight:  bold;
 	font-size: 14pt;
 	border: none;
 }
@@ -69,7 +69,7 @@ body{
 .Marco p{
 	margin: 8px;
 	font-size: 14pt;
-	font-style: bold;
+	font-weight:  bold;
 }
 
 #titulo{
@@ -91,7 +91,7 @@ body{
 }
 
 #correo{
-	width: 200px;
+	width: 270px;
 }
 .Marco h3{
 	position: relative;
@@ -196,10 +196,10 @@ body{
 
 .conceptoApoyo{
 
-	width: 70%;
+	width: 75%;
 	height: 500px;
 	position: relative;
- 	left: 200px;
+ 	left: 180px;
  	top: 50px;
 
  	color: #FFFFFF;
@@ -217,7 +217,7 @@ body{
 .conceptoApoyo h1{
 	margin-top: 10px;
 	position: relative;
-	left: 19%;
+	left: 26%;
 	padding-bottom: 20px;
 }
 
@@ -227,7 +227,8 @@ body{
 }
 	table{
 	position: relative;
-	left: 30px;
+	left: 5px;
+
 	border-radius:15px;
 	border-color: #FFFFFF;
 	color: #FFFFFF;
@@ -236,10 +237,12 @@ body{
 
 
 
-
 .conceptoApoyo input{
 	border-radius: 15px;
 	color: #9C1462;
+	width: 330px;
+	text-indent: 5px;
+	font-size: 14pt;
 
 }
 
@@ -248,23 +251,23 @@ body{
 
 .UnidadMedida input{
 	width: 70px;
-	text-indent: 30px;
+	text-indent: 10px;
 }
 
 .ApoyoEstatal input{
-	width: 200px;
-	text-indent: 120px;
+	width: 180px;
+	text-indent: 75px;
     
 }
 .ApoyoMunicipal input{
- 	width: 200px;
-	text-indent: 120px;
+ 	width: 180px;
+	text-indent: 75px;
 }
 
 
 .AportaciónBeneficiario input{
-	width: 200px;
-	text-indent: 120px;
+	width: 220px;
+	text-indent: 100px;
 }
 
 

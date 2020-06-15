@@ -1,164 +1,75 @@
 
-
 <?php 
-require_once('conect.php');
-
-$funcion = new funcion();
-
-$con = $funcion -> conectar();
 
 
-if(isset($_POST['DatosProyectoPM'])){
+if(isset($_POST['DatosPersonalesRepre'])){
 
-$NombreProyecto = $_POST['NombreProyecto'];
-$AntiguedadProyecto =  $_POST['AntiguedadProyecto'];
-$TelefonoProyecto = $_POST['TelefonoProyecto'];
-$CorreoElectronicoProyecto = $_POST['CorreoElectronicoProyecto'];
-
-$DiaFechaConstitucion = $_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = $_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = $_POST['AnioFechaConstitucion'];
-
-
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
-
-$TipoDomicilioProyecto = $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = $_POST['NombreAsentamientoProyecto'];
-$TipoVialidadProyecto  = $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = $_POST['NombreVialidadProyecto'];
-$NombreLocalidadProyecto = $_POST['NombreLocalidadProyecto'];
-$NombreMunicipioProyecto = $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = $_POST['ReferenciaVialidadProyecto'];
-
-
-
-$Insert = "INSERT INTO nombreproyecto(sNombreProyecto,sAntiguedadProyecto,sTelefonoProyecto,sCorreoElectronicoProyecto,sFechaConstitucion,sTipoDomicilioProyecto,sTipoAsentamientoProyecto,sNombreAsentamientoProyecto,sTipoVialidadProyecto,sNombreVialidadProyecto,sNombreLocalidadProyecto,sNombreMunicipioProyecto,sReferenciaVialidadProyecto) VALUES('{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}');";
-
-
-
-  echo $Insert;
-
-
-  if($con -> query($Insert)){
-    echo "Datos Registrados <br>";
-  }else {
-    echo $con -> error, "<br>";
-    echo $insert, "<br>";
-  }
-
-
-
-}
-
-if(isset($_POST['enviarPM'])){
-
- 
-$FolioImpreso = sanitizeString(($_POST['FolioImpreso']));
-$VentanillaDireccionRegional  = ($_POST['VentanillaDireccionRegional']);
-$VentanillaMunicipio  = ($_POST['VentanillaMunicipio']);
+ #Persona Moral
+$FolioImpreso                       = strtoupper(sanitizeString($_POST['FolioImpreso']));
+$VentanillaDireccionRegional        = ($_POST['VentanillaDireccionRegional']);
+$VentanillaMunicipio                = ($_POST['VentanillaMunicipio']);
 
 #Organizacion
-$NombreOrganizacion  = sanitizeString(($_POST['NombreOrganizacion']));
-$TipoOrganizacion  = sanitizeString(($_POST['TipoOrganizacion']));
-$NumeroTelefonoOrganizacion  = sanitizeString(($_POST['NumeroTelefonoOrganizacion']));
-$CorreoElectronicoOrganizacion  = sanitizeString(($_POST['CorreoElectronicoOrganizacion']));
+$NombreOrganizacion                 = ucfirst(strtolower(sanitizeString($_POST['NombreOrganizacion'])));
+$TipoOrganizacion                   = ucfirst(strtolower(sanitizeString($_POST['TipoOrganizacion'])));
+$NumeroTelefonoOrganizacion         = sanitizeString($_POST['NumeroTelefonoOrganizacion']);
+$CorreoElectronicoOrganizacion      = strtolower(sanitizeString($_POST['CorreoElectronicoOrganizacion']));
                 
-$DiaFechaConstitucion  = ($_POST['DiaFechaConstitucion']);
-$MesFechaConstitucion  = ($_POST['MesFechaConstitucion']);
-$AnioFechaConstitucion  = ($_POST['AnioFechaConstitucion']);
-
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
-
-$TipoDomicilioOrganizacion  = ($_POST['TipoDomicilioOrganizacion']);
-$TipoAsentamientoOrganizacion  = ($_POST['TipoAsentamientoOrganizacion']);
-$NombreAsentamientoOrganizacion  = sanitizeString(($_POST['NombreAsentamientoOrganizacion']));
-$TipoVialidadOrganizacion  = ($_POST['TipoVialidadOrganizacion']);
-$NombreVialidadOrganizacion  = sanitizeString(($_POST['NombreVialidadOrganizacion']));
-$NombreLocalidadOrganizacion  = sanitizeString(($_POST['NombreLocalidadOrganizacion']));
-$NombreMunicipioOrganizacion  = ($_POST['NombreMunicipioOrganizacion']);
-$ReferenciaVialidadOrganizacion  = sanitizeString(($_POST['ReferenciaVialidadOrganizacion']));
-$TipoActividadEconomicaOrganizacion  = ($_POST['TipoActividadEconomicaOrganizacion']);
-                
-#Representante              
-$NombreRepresentante  = sanitizeString(($_POST['NombreRepresentante']));
-$GeneroRepresentante  = ($_POST['GeneroRepresentante']);
-
-$DiaFechaNacimientoRepresentante  = ($_POST['DiaFechaNacimientoRepresentante']);
-$MesFechaNacimientoRepresentante  = ($_POST['MesFechaNacimientoRepresentante']);
-$AnioFechaNacimientoRepresentante  = ($_POST['AnioFechaNacimientoRepresentante']);
-
-$FechaNacimientoRepresentante = $DiaFechaNacimientoRepresentante."/".$MesFechaNacimientoRepresentante."/".$AnioFechaNacimientoRepresentante;
-
-$NacionalidadRepresentante  = ($_POST['NacionalidadRepresentante']);
-$EstadoCivilRepresentante  = ($_POST['EstadoCivilRepresentante']);
-$EstadoNacimientoRepresentante  = ($_POST['EstadoNacimientoRepresentante']);
-$TelefonoRepresentante  = sanitizeString(($_POST['TelefonoRepresentante']));
-$CorreoElectronicoRepresentante  = sanitizeString(($_POST['CorreoElectronicoRepresentante']));
-$TipoIdentificacionRepresentante  = ($_POST['TipoIdentificacionRepresentante']);
-$NumeroIdentificacionRepresentante  = sanitizeString(($_POST['NumeroIdentificacionRepresentante']));
-$CurpRepresentante  = sanitizeString(($_POST['CurpRepresentante']));
-$TipoDomicilioRepresentante  = ($_POST['TipoDomicilioRepresentante']);
-$TipoAsentamientoRepresentante  = ($_POST['TipoAsentamientoRepresentante']);
-$NombreAsentamientoReprsentante  = sanitizeString(($_POST['NombreAsentamientoReprsentante']));
-$TipoVialidadRepresentante  = ($_POST['TipoVialidadRepresentante']);
-$NombreVialidadRepresentante  = sanitizeString(($_POST['NombreVialidadRepresentante']));
-$NombreLocalidadRepresentante  = sanitizeString(($_POST['NombreLocalidadRepresentante']));
-$NombreMunicipioRepresentante  = ($_POST['NombreMunicipioRepresentante']);
-$ReferenciaVialidadRepresentante  = sanitizeString(($_POST['ReferenciaVialidadRepresentante']));
 
 
-$insert = "INSERT INTO personamoral (sFolioImpreso,sVentanillaDireccionRegional,sVentanillaMunicipio,sNombreOrganizacion,
-sTipoOrganizacion,sNumeroTelefonoOrganizacion,sCorreoElectronicoOrganizacion,sFechaConstitucion,sTipoDomicilioOrganizacion,
-sTipoAsentamientoOrganizacion,sNombreAsentamientoOrganizacion,sTipoVialidadOrganizacion,
-sNombreVialidadOrganizacion,sNombreLocalidadOrganizacion,sNombreMunicipioOrganizacion,
-sReferenciaVialidadOrganizacion,sTipoActividadEconomicaOrganizacion) VALUES('{$FolioImpreso}','{$VentanillaDireccionRegional}','{$VentanillaMunicipio}','{$NombreOrganizacion}','{$TipoOrganizacion}','{$NumeroTelefonoOrganizacion}','{$CorreoElectronicoOrganizacion}',
-'{$FechaConstitucion}','{$TipoDomicilioOrganizacion}','{$TipoAsentamientoOrganizacion}','{$NombreAsentamientoOrganizacion}','{$TipoVialidadOrganizacion}',
-'{$NombreVialidadOrganizacion}','{$NombreLocalidadOrganizacion}','{$NombreMunicipioOrganizacion}',
-'{$ReferenciaVialidadOrganizacion}','{$TipoActividadEconomicaOrganizacion}');"; 
+$FechaConstitucion                  = ($_POST['FechaConstitucion']);   
+
+$TipoDomicilioOrganizacion          = ($_POST['TipoDomicilioOrganizacion']);
+$TipoAsentamientoOrganizacion       = ($_POST['TipoAsentamientoOrganizacion']);
+$NombreAsentamientoOrganizacion     = sanitizeString(($_POST['NombreAsentamientoOrganizacion']));
+$TipoVialidadOrganizacion           = ($_POST['TipoVialidadOrganizacion']);
+$NombreVialidadOrganizacion         = ucfirst(sanitizeString($_POST['NombreVialidadOrganizacion']));
+$NombreLocalidadOrganizacion        = ucfirst(sanitizeString($_POST['NombreLocalidadOrganizacion']));
+$NombreMunicipioOrganizacion        = ($_POST['NombreMunicipioOrganizacion']);
+$ReferenciaVialidadOrganizacion     = ucfirst(sanitizeString($_POST['ReferenciaVialidadOrganizacion']));
+$TipoActividadEconomicaOrganizacion = ($_POST['TipoActividadEconomicaOrganizacion']);
 
 
+#Datos Personales Representante 
+$NombreRepre                        = ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));     
+$ApellidoPaRepre                    = ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
+$ApellidoMaRepre                    = ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
 
+$NombreRepresentante                = $NombreRepre." ".$ApellidoPaRepre." ".$ApellidoMaRepre;
+$GeneroRepresentante                = ($_POST['GeneroRepresentante']);
 
+$DiaFechaNacimientoRepresentante      = ($_POST['DiaFechaNacimientoRepresentante']);
+$MesFechaNacimientoRepresentante      = ($_POST['MesFechaNacimientoRepresentante']);
+$AnioFechaNacimientoRepresentante     = ($_POST['AnioFechaNacimientoRepresentante']);
 
-$INSERT2 ="INSERT INTO representante(sRFolioImpreso,sNombreRepresentante,sGeneroRepresentante,sFechaNacimientoRepresentante,sNacionalidadRepresentante,
-sEstadoCivilRepresentante,sEstadoNacimientoRepresentante,sTelefonoRepresentante,
-sCorreoElectronicoRepresentante,sTipoIdentificacionRepresentante,sNumeroIdentificacionRepresentante,
-sCurpRepresentante,sTipoDomicilioRepresentante,sTipoAsentamientoRepresentante,
-sNombreAsentamientoReprsentante,sTipoVialidadRepresentante,sNombreVialidadRepresentante,sNombreLocalidadRepresentante,
-sNombreMunicipioRepresentante,sReferenciaVialidadRepresentante) VALUES('{$FolioImpreso}','{$NombreRepresentante}',
-'{$GeneroRepresentante}','{$FechaNacimientoRepresentante}',
-'{$NacionalidadRepresentante}','{$EstadoCivilRepresentante}','{$EstadoNacimientoRepresentante}',
-'{$TelefonoRepresentante}','{$CorreoElectronicoRepresentante}',
-'{$TipoIdentificacionRepresentante}','{$NumeroIdentificacionRepresentante}',
-'{$CurpRepresentante}','{$TipoDomicilioRepresentante}','{$TipoAsentamientoRepresentante}','{$NombreAsentamientoReprsentante}',
-'{$TipoVialidadRepresentante}','{$NombreVialidadRepresentante}','{$NombreLocalidadRepresentante}',
-'{$NombreMunicipioRepresentante}','{$ReferenciaVialidadRepresentante}');"; 
+$FechaNacimientoRepresentante       = $DiaFechaNacimientoRepresentante."/".$MesFechaNacimientoRepresentante."/".$AnioFechaNacimientoRepresentante;
 
+$NacionalidadRepresentante          = ($_POST['NacionalidadRepresentante']);
+$EstadoCivilRepresentante           = ($_POST['EstadoCivilRepresentante']);
+$EstadoNacimientoRepresentante      = ($_POST['EstadoNacimientoRepresentante']);
+$TelefonoRepresentante              = sanitizeString(($_POST['TelefonoRepresentante']));
+$CorreoElectronicoRepresentante     = strtolower(sanitizeString($_POST['CorreoElectronicoRepresentante']));
+$TipoIdentificacionRepresentante    = ($_POST['TipoIdentificacionRepresentante']);
+$NumeroIdentificacionRepresentante  = sanitizeString($_POST['NumeroIdentificacionRepresentante']);
+$CurpRepresentante                  = strtoupper(sanitizeString($_POST['CurpRepresentante']));
+$TipoDomicilioRepresentante         = ($_POST['TipoDomicilioRepresentante']);
+$TipoAsentamientoRepresentante      = ($_POST['TipoAsentamientoRepresentante']);
+$NombreAsentamientoRepresentante     = ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoRepresentante'])));
+$TipoVialidadRepresentante          = ($_POST['TipoVialidadRepresentante']);
+$NombreVialidadRepresentante        = ucfirst(strtolower(sanitizeString($_POST['NombreVialidadRepresentante'])));
+$NombreLocalidadRepresentante       = ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadRepresentante'])));
+$NombreMunicipioRepresentante       = ($_POST['NombreMunicipioRepresentante']);
+$ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadRepresentante'])));
 
-#echo $insert;
-
-if($con -> query($insert) ){
-  if ($con -> query($INSERT2)) {
-    echo "Datos Registrados <br>";
-  }
-    
-  }else {
-    echo $con -> error, "<br>";
-    echo $insert, "<br>";
-  }
 
 
 }
 
-function sanitizeString($var){
 
-  if(get_magic_quotes_gpc())
-    $var = stripcslashes($var);
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-  return $var;
-}
+  
+
+
+
  ?>
 
 
@@ -167,11 +78,67 @@ function sanitizeString($var){
 <head>
 	<title></title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
 
 
-<form method="post" action="#">
+<form method="POST" action="conceptosApoyoPM.php">
+
+
+<!--- Persona Moral -->
+<input type="hidden" name="FolioImpreso"    value=" <?php echo $FolioImpreso; ?> ">
+ <input type="hidden" name="VentanillaDireccionRegional"    value=" <?php echo $VentanillaDireccionRegional; ?> ">
+ <input type="hidden" name="VentanillaMunicipio"    value=" <?php echo $VentanillaMunicipio; ?> ">
+ <input type="hidden" name="NombreOrganizacion"   value=" <?php echo $NombreOrganizacion; ?> ">
+ <input type="hidden" name="TipoOrganizacion"   value=" <?php echo $TipoOrganizacion; ?> ">
+ <input type="hidden" name="NumeroTelefonoOrganizacion"   value=" <?php echo $NumeroTelefonoOrganizacion; ?> ">
+ <input type="hidden" name="CorreoElectronicoOrganizacion"    value=" <?php echo $CorreoElectronicoOrganizacion; ?> ">
+ <input type="hidden" name="FechaConstitucion "   value=" <?php echo $FechaConstitucion; ?> ">
+ <input type="hidden" name="TipoDomicilioOrganizacion"    value=" <?php echo $TipoDomicilioOrganizacion; ?> ">
+ <input type="hidden" name="TipoAsentamientoOrganizacion"   value=" <?php echo $TipoAsentamientoOrganizacion; ?> ">
+ <input type="hidden" name="NombreAsentamientoOrganizacion"  value=" <?php echo $NombreAsentamientoOrganizacion; ?> ">
+ <input type="hidden" name="TipoVialidadOrganizacion"   value=" <?php echo $TipoVialidadOrganizacion; ?> ">
+ <input type="hidden" name="NombreVialidadOrganizacion"  value=" <?php echo $NombreVialidadOrganizacion; ?> ">
+ <input type="hidden" name="NombreLocalidadOrganizacion"  value=" <?php echo $NombreLocalidadOrganizacion; ?> ">
+ <input type="hidden" name="NombreMunicipioOrganizacion"  value=" <?php echo $NombreMunicipioOrganizacion; ?> ">
+ <input type="hidden" name="ReferenciaVialidadOrganizacion"  value=" <?php echo $ReferenciaVialidadOrganizacion; ?> ">
+ <input type="hidden" name="TipoActividadEconomicaOrganizacion" value=" <?php echo $TipoActividadEconomicaOrganizacion; ?> ">
+
+
+
+<!--- Datos Personales  Representante -->
+
+ 
+ <input type="hidden" name="NombreRepresentante"    value="<?php echo $NombreRepresentante; ?>">
+ <input type="hidden" name="GeneroRepresentante"    value="<?php echo $GeneroRepresentante; ?>">
+
+ <input type="hidden" name="FechaNacimientoRepresentante"   value="<?php echo $FechaNacimientoRepresentante; ?>">
+ <input type="hidden" name="NacionalidadRepresentante"    value="<?php echo $NacionalidadRepresentante; ?>">
+ <input type="hidden" name="EstadoCivilRepresentante"   value="<?php echo $EstadoCivilRepresentante; ?>">
+ <input type="hidden" name="EstadoNacimientoRepresentante"    value="<?php echo $EstadoNacimientoRepresentante; ?>">
+ <input type="hidden" name="TelefonoRepresentante"    value="<?php echo $TelefonoRepresentante; ?>">
+ <input type="hidden" name="CorreoElectronicoRepresentante"   value="<?php echo $CorreoElectronicoRepresentante; ?>">
+ <input type="hidden" name="TipoIdentificacionRepresentante"    value="<?php echo $TipoIdentificacionRepresentante; ?>">
+ <input type="hidden" name="NumeroIdentificacionRepresentante"    value="<?php echo $NumeroIdentificacionRepresentante; ?>">
+ <input type="hidden" name="CurpRepresentante"  value="<?php echo $CurpRepresentante; ?>">
+ <input type="hidden" name="TipoDomicilioRepresentante"   value="<?php echo $TipoDomicilioRepresentante; ?>">
+ <input type="hidden" name="TipoAsentamientoRepresentante"    value="<?php echo $TipoAsentamientoRepresentante; ?>">
+ <input type="hidden" name="NombreAsentamientoRepresentante"   value="<?php echo $NombreAsentamientoRepresentante; ?>">
+ <input type="hidden" name="TipoVialidadRepresentante"  value="<?php echo $TipoVialidadRepresentante; ?>">
+ <input type="hidden" name="NombreVialidadRepresentante"    value="<?php echo $NombreVialidadRepresentante; ?>">
+ <input type="hidden" name="NombreLocalidadRepresentante"   value="<?php echo $NombreLocalidadRepresentante; ?>">
+ <input type="hidden" name="NombreMunicipioRepresentante"   value="<?php echo $NombreMunicipioRepresentante; ?>">
+ <input type="hidden" name="ReferenciaVialidadRepresentante"    value="<?php echo $ReferenciaVialidadRepresentante; ?>">
+
+
+
+
+
+
+
+
+
 
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">

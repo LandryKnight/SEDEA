@@ -79,7 +79,7 @@ $ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['Referen
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conceptos de Apoyos</title>
+	<title>Conceptos de Apoyos Persona Física</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
@@ -133,15 +133,16 @@ $ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['Referen
 
 
 <h1>Conceptos de Apoyo para Persona Física</h1>
+
 <table border="1">
 	
 	<tr>
-		<td>Conceptos de <br>Apoyo Solicitado</td> 
-		<td class="UnidadMedida">Unidad de <br>Medida</td>   
-		<td class="UnidadMedida">Cantidad <br>Solicitada</td> 
-		<td class="ApoyoEstatal">Apoyo Estatal <br>Solicitado (pesos) </td> 
-		<td class="ApoyoMunicipal">Apoyo Municipal <br>Solicitado (pesos) </td> 
-		<td class="AportaciónBeneficiario">Aportación Beneficiario (pesos)</td> 
+		<td><b>Conceptos de <br>Apoyo Solicitado</b></td> 
+		<td class="UnidadMedida"><b>Unidad de <br>Medida</b></td>   
+		<td class="UnidadMedida"><b>Cantidad <br>Solicitada</b></td> 
+		<td class="ApoyoEstatal"><b>Apoyo Estatal <br>Solicitado (pesos)</b> </td> 
+		<td class="ApoyoMunicipal"><b>Apoyo Municipal <br>Solicitado (pesos)</b> </td> 
+		<td class="AportaciónBeneficiario"><b>Aportación Beneficiario (pesos)</b></td> 
 	
 	</tr>
 

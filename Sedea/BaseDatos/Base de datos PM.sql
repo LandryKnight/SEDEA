@@ -11,24 +11,25 @@ truncate table personamoral;
 
 Create table personamoral(
 
-sFolioImpreso varchar(30) Primary key,
-sVentanillaDireccionRegional varchar(30),
-sVentanillaMunicipio varchar(30),
-sNombreOrganizacion varchar(50),
-sTipoOrganizacion  varchar(50),
-sNumeroTelefonoOrganizacion int(10),
-sCorreoElectronicoOrganizacion varchar(120),
-sFechaConstitucion varchar(10),
-sTipoDomicilioOrganizacion varchar(10),
-sTipoAsentamientoOrganizacion varchar(10),
-sNombreAsentamientoOrganizacion varchar(50),
-sTipoVialidadOrganizacion varchar(10),
-sNombreVialidadOrganizacion varchar(50),
-sNombreLocalidadOrganizacion varchar(50),
-sNombreMunicipioOrganizacion varchar(30),
-sReferenciaVialidadOrganizacion varchar(50),
-sTipoActividadEconomicaOrganizacion varchar(20),
-sIdProyectoPM int        #Foreing Key
+FolioImpreso varchar(30) Primary key,
+VentDirReg varchar(30), #VentanillaDireccionRegional
+VentaMunicipio varchar(30), #VentanillaMunicipio
+NOrg varchar(50), #NombreOrganizacion
+TipoOrg  varchar(50), #TipoOrganizacion
+TelefonoOrg int(10), #NumeroTelefonoOrganizacion
+CorreoOrg varchar(120), #CorreoElectronicoOrganizacion
+FechaConst varchar(10), #FechaConstitucion
+TipoDomicilioOrg varchar(10), #TipoDomicilioOrganizacion
+TipoAsentOrg varchar(10), #TipoAsentamientoOrganizacion 
+NAsent varchar(50), #NombreAsentamientoOrganizacion
+TipoVialOrg varchar(10), #TipoVialidadOrganizacion
+NVialOrg varchar(50), #NombreVialidadOrganizacion
+NLocalOrg varchar(50), #NombreLocalidadOrganizacion
+NMunicipioOrg varchar(30), #NombreMunicipioOrganizacion 
+RefVialOrg varchar(50), #ReferenciaVialidadOrganizacion
+TipoActEcoOrg varchar(20),TipoActividadEconomicaOrganizacion
+IdProyectoPM int,        #Foreing Key
+fechaReg varchar(30)
 )
 
 ALTER Table personamoral
@@ -38,48 +39,51 @@ add constraint FK_Id_Proyecto_PM Foreign key (sIdProyectoPM) references nombrepr
 /* telefono correo redundantes */
 
 Create Table nombreproyectoPM(
-sIdProyecto int Primary Key  auto_increment,
-sNombreProyecto varchar(80),
-sAntiguedadProyecto varchar(20),
-sTelefonoProyecto varchar(100),
-sCorreoElectronicoProyecto varchar(120),
-sFechaConstitucion varchar(10),
-sTipoDomicilioProyecto varchar(10),
-sTipoAsentamientoProyecto varchar(10),
-sNombreAsentamientoProyecto varchar(80),
-sTipoVialidadProyecto  varchar(10),
-sNombreVialidadProyecto varchar(80),
-sNombreLocalidadProyecto varchar(80),
-sNombreMunicipioProyecto varchar(30),
-sReferenciaVialidadProyecto varchar(50)
-
+IdProyecto int Primary Key  auto_increment,
+NProyecto varchar(80), #NombreProyecto 
+AntigProyecto varchar(20), #AntiguedadProyecto
+TelefonoProyecto varchar(100), #TelefonoProyecto
+CorreoProyecto varchar(120), #CorreoElectronicoProyecto
+FechaConstitucion varchar(10), #FechaConstitucion
+TDomicilioProyecto varchar(10), #TipoDomicilioProyecto
+TAsentProyecto varchar(10), #TipoAsentamientoProyecto 
+NAsentProyecto varchar(80), #NombreAsentamientoProyecto
+TVialProyecto  varchar(10), #TipoVialidadProyecto
+NVialProyecto varchar(80), #NombreVialidadProyecto
+NLocalProyecto varchar(80), #NombreLocalidadProyecto
+NMunicipioProyecto varchar(30), #NombreMunicipioProyecto
+RefVialProyecto varchar(50), #ReferenciaVialidadProyecto
+fechaReg varchar(30)
 )
 
 
 Create table representante(
-sIdRepre int Primary Key auto_increment,
-sRFolioImpreso varchar(20),
-sNombreRepresentante varchar(80),
-sGeneroRepresentante varchar(10),
-sFechaNacimientoRepresentante varchar(10),
-
-sNacionalidadRepresentante varchar(15),
-sEstadoCivilRepresentante  varchar(15),
-sEstadoNacimientoRepresentante varchar(40),
-sTelefonoRepresentante int(10),
-sCorreoElectronicoRepresentante varchar(120),
-sTipoIdentificacionRepresentante varchar(10),
-sNumeroIdentificacionRepresentante varchar(20),
-sCurpRepresentante varchar(14),
-sTipoDomicilioRepresentante varchar(15),
-sTipoAsentamientoRepresentante varchar(20),
-sNombreAsentamientoReprsentante varchar(50),
-sTipoVialidadRepresentante varchar(15),
-sNombreVialidadRepresentante  varchar(50),
-sNombreLocalidadRepresentante varchar(30),
-sNombreMunicipioRepresentante varchar(30),
-sReferenciaVialidadRepresentante varchar(50)
+IdRepre int Primary Key auto_increment,
+RFolioImpreso varchar(20),
+NRepre varchar(80), #NombreRepresentante 
+GeneroRepre varchar(10), #GeneroRepresentante
+FNacimientoRepre varchar(10), #FechaNacimientoRepresentante
+NacionalidadRepre varchar(15), #NacionalidadRepresentante
+EstadoCivilRepre  varchar(15), #EstadoCivilRepresentante
+EstadoNacimientoRepre varchar(40), #EstadoNacimientoRepresentante
+TelefonoRepre int(10), #Numero de telefono representante
+CorreoRepre varchar(120), #Correo representante
+TipoIdentRepre varchar(10), #tipo de identificacion representante
+NumIdentRepre varchar(20), #NumeroIdentificacionRepresentante
+CurpRepre varchar(14), #CurpRepresentante
+fechaReg varchar(30)
 )
+
+Create table Domiciliorepresentante{
+TipoDomicilioRepre varchar(15), #TipoDomicilioRepresentante 
+TipoAsentamientoRepre varchar(20), #TipoAsentamientoRepresentante
+NombreAsentamientoRepre varchar(50), #NombreAsentamientoReprsentante
+TipoVialidadRepre varchar(15), #TipoVialidadRepresentante
+NombreVialidadRepre  varchar(50), #NombreVialidadRepresentante
+NombreLocalidadRepre varchar(30), #NombreLocalidadRepresentante 
+NombreMunicipioRepre varchar(30), #NombreMunicipioRepresentante
+RefVialRepre varchar(50) #ReferenciaVialidadRepresentante
+}
 
 ALTER Table representante
 add constraint FK_Folio Foreign key(sRFolioImpreso) references personamoral(sFolioImpreso);
