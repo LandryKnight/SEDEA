@@ -1,6 +1,6 @@
 <?php 
 
- require_once('conceptosApoyoPM.php');
+
 
 
  
@@ -34,6 +34,6 @@
 <a href="http://localhost/sedea/inicio.php"><button class="boton">ir al Menú Principal</button></a>
 
 
- </div>	
+</div>	
 </body>
 </html>

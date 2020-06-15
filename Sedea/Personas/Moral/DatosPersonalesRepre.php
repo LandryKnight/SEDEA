@@ -3,36 +3,50 @@
 if(isset($_POST['enviarPM'])){
 
  #Persona Moral
-$FolioImpreso 							= strtoupper(sanitizeString($_POST['FolioImpreso']));
-$VentanillaDireccionRegional  			= ($_POST['VentanillaDireccionRegional']);
-$VentanillaMunicipio  					= ($_POST['VentanillaMunicipio']);
+$FolioImpreso 							         = strtoupper(sanitizeString($_POST['FolioImpreso']));
+$VentanillaDireccionRegional  			 = ($_POST['VentanillaDireccionRegional']);
+$VentanillaMunicipio  					     = ($_POST['VentanillaMunicipio']);
 
 #Organizacion
-$NombreOrganizacion  					= ucfirst(strtolower(sanitizeString($_POST['NombreOrganizacion'])));
-$TipoOrganizacion  						= ucfirst(strtolower(sanitizeString($_POST['TipoOrganizacion'])));
-$NumeroTelefonoOrganizacion  			= sanitizeString($_POST['NumeroTelefonoOrganizacion']);
-$CorreoElectronicoOrganizacion  		= strtolower(sanitizeString($_POST['CorreoElectronicoOrganizacion']));
+$NombreOrganizacion  					        = ucfirst(strtolower(sanitizeString($_POST['NombreOrganizacion'])));
+$TipoOrganizacion  						        = ucfirst(strtolower(sanitizeString($_POST['TipoOrganizacion'])));
+$NumeroTelefonoOrganizacion  			    = sanitizeString($_POST['NumeroTelefonoOrganizacion']);
+$CorreoElectronicoOrganizacion  		  = strtolower(sanitizeString($_POST['CorreoElectronicoOrganizacion']));
                 
-$DiaFechaConstitucion  					= ($_POST['DiaFechaConstitucion']);
-$MesFechaConstitucion  					= ($_POST['MesFechaConstitucion']);
-$AnioFechaConstitucion  				= ($_POST['AnioFechaConstitucion']);
+$DiaFechaConstitucion  					      = ($_POST['DiaFechaConstitucion']);
+$MesFechaConstitucion  					      = ($_POST['MesFechaConstitucion']);
+$AnioFechaConstitucion  				      = ($_POST['AnioFechaConstitucion']);
 
-$FechaConstitucion 						= $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+$FechaConstitucion 						        = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
 
-$TipoDomicilioOrganizacion  			= ($_POST['TipoDomicilioOrganizacion']);
-$TipoAsentamientoOrganizacion  			= ($_POST['TipoAsentamientoOrganizacion']);
-$NombreAsentamientoOrganizacion  		= sanitizeString(($_POST['NombreAsentamientoOrganizacion']));
-$TipoVialidadOrganizacion  				= ($_POST['TipoVialidadOrganizacion']);
-$NombreVialidadOrganizacion  			= ucfirst(sanitizeString($_POST['NombreVialidadOrganizacion']));
-$NombreLocalidadOrganizacion  			= ucfirst(sanitizeString($_POST['NombreLocalidadOrganizacion']));
-$NombreMunicipioOrganizacion  			= ($_POST['NombreMunicipioOrganizacion']);
-$ReferenciaVialidadOrganizacion  		= ucfirst(sanitizeString($_POST['ReferenciaVialidadOrganizacion']));
-$TipoActividadEconomicaOrganizacion  	= ($_POST['TipoActividadEconomicaOrganizacion']);
+$TipoDomicilioOrganizacion  			      = ($_POST['TipoDomicilioOrganizacion']);
+$TipoAsentamientoOrganizacion  			    = ($_POST['TipoAsentamientoOrganizacion']);
+$NombreAsentamientoOrganizacion  		    = sanitizeString(($_POST['NombreAsentamientoOrganizacion']));
+$TipoVialidadOrganizacion  				      = ($_POST['TipoVialidadOrganizacion']);
+$NombreVialidadOrganizacion  			      = ucfirst(sanitizeString($_POST['NombreVialidadOrganizacion']));
+$NombreLocalidadOrganizacion  			    = ucfirst(sanitizeString($_POST['NombreLocalidadOrganizacion']));
+$NombreMunicipioOrganizacion  			    = ($_POST['NombreMunicipioOrganizacion']);
+$ReferenciaVialidadOrganizacion  		    = ucfirst(sanitizeString($_POST['ReferenciaVialidadOrganizacion']));
+$TipoActividadEconomicaOrganizacion   	= ($_POST['TipoActividadEconomicaOrganizacion']);
 
                 
 }
 
  ?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datos Personales Representante</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+
+
 <div class="Marco">
 
 <form action="DatosProyectoPM.php">
@@ -374,3 +388,5 @@ $TipoActividadEconomicaOrganizacion  	= ($_POST['TipoActividadEconomicaOrganizac
 </div>
 
 
+</body>
+</html>

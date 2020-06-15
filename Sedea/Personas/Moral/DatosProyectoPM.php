@@ -76,13 +76,13 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dstos Proyecto Persona Moral</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 
-
+<div class="DatosProyectoPM">
 <form method="POST" action="conceptosApoyoPM.php">
 
 
@@ -139,7 +139,7 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 
 
 
-
+<div class="NombreProyecto">
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required" placeholder="Ej: Estufa Ecológica" maxlength="80">
 
@@ -164,9 +164,10 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 <p>Correo Electronico</p>
 <input type="text" name="CorreoElectronicoProyecto" placeholder="proyectoSedea@sedea.com" maxlength="120">
 
+</div>
 
-
-<p>Fecha Constitución</p>
+<h2> Fecha Constitución</h2>
+<div class="FechaConstitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion">
     <option value="Sin Seleccionar">Sin Seleccionar</option>
@@ -278,10 +279,12 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
        <option value="1952">1952</option>
   </select>
 
-
+</div>
 
 <h2>Domicilio del proyecto</h2>
 
+
+<div class="TipoDomicilioProyecto">
 <p>Tipo de domicilio</p>
 
 <select name="TipoDomicilioProyecto">
@@ -290,6 +293,9 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 	<option  value="Urbano">Urbano</option>
 	
 </select>
+
+<p>Nombre del Asentamiento</p>
+<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
 
 <p>Tipo de Asentamiento</p>
 
@@ -306,8 +312,7 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 </select>
 
 
-<p>Nombre del Asentamiento</p>
-<input type="text" name="NombreAsentamientoProyecto" maxlength="80">
+
 
 
 <p>Tipo de la vialidad</p>
@@ -362,10 +367,10 @@ $ReferenciaVialidadRepresentante    = ucfirst(strtolower(sanitizeString($_POST['
 
 <p>Referencia de la vialidad</p>
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> <br> <br>
+</div>
+<input type="submit" name="DatosProyectoPM" value="Enviar Información" class="boton" >
 
-<input type="submit" name="DatosProyectoPM" value="Enviar">
-
-
+</div>
 </form>
 </body>
 </html>

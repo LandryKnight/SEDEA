@@ -216,6 +216,64 @@ body{
 }
 
 
+
+.DatosProyectoPM{
+ top: 40px;
+ width: 62%;
+ height: 12in;
+ position: relative;
+ left: 18%;
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 45px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+
+.DatosProyectoPM input{
+	color: #9C1462;
+	border-radius: 15px;
+	border: none;
+	height: .3in;
+	width: 4in;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-indent: 10px;
+}
+
+.DatosProyectoPM select{
+	height: .3in;
+	width: 1.8in;
+	border-radius: 15px;
+	border: none;
+	text-indent: 10px;
+}
+
+.DatosProyectoPM p{
+	font-weight: bold;
+	margin-top: 10px;
+	
+}
+
+.NombreProyecto{
+	column-count: 2;
+}
+
+.FechaConstitucion{
+	column-count: 3;
+}
+
+
+.TipoDomicilioProyecto{
+	column-count: 2;
+}
 .conceptoApoyo{
 
 	width: 75%;
