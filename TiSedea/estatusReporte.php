@@ -58,7 +58,7 @@ $rows = $ResultR -> num_rows;
 
 <?php 
 
-echo "<table  border='2'><th class='tituloTable'>Nombre</th><th class='tituloTable'>Departamento</th><th class='tituloTable'>Falla</th><th class='tituloTable'>Estado</th><th class='tituloTable'>Fecha de Reporte<br> (Año/Mes/Dia)</th>";
+echo "<table  border='2'><th class='tituloTable'>Nombre</th><th class='tituloTable'>Departamento</th><th class='tituloTable'>Falla</th><th class='tituloTable'>Estado</th><th class='tituloTable'>Fecha de Reporte<br> (Año/Mes/Día)</th>";
 
 if($rows < 7){
 

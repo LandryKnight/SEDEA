@@ -1,7 +1,11 @@
 <?php 
 
-$numeroRand = random_int(1,10000);
 
+/*  global $numeroRand;
+
+$numeroRand = 500*300/
+
+random_int(1,10000); */
 
  ?>
 

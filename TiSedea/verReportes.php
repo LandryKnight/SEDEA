@@ -41,9 +41,9 @@ $rows = $result -> num_rows;
 
 
 
-echo "<table border='2'><tr><th class='tituloTable'>Nombre</th><th class='tituloTable'>Departamento</th><th class='tituloTable'>Ubicación</th><th class='tituloTable'>Descripción de Falla</th><th class='tituloTable'>Estado</th><th class='tituloTable'>Fecha (Año/Mes/Dia)</th><th class='tituloTable'>Número de Reporte</th></tr>";
+echo "<table border='2'><tr><th class='tituloTable'>Nombre</th><th class='tituloTable'>Departamento</th><th class='tituloTable'>Ubicación</th><th class='tituloTable'>Descripción de Falla</th><th class='tituloTable'>Estado</th><th class='tituloTable'>Fecha (Año/Mes/Día)</th><th class='tituloTable'>Número de Reporte</th></tr>";
 
-if($rows < 7){
+if($rows < 15){
 
 for ($i=0; $i<$rows; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
@@ -59,9 +59,9 @@ echo "</tr>";
 	
 		}
 
-}if($rows > 7){
+}if($rows > 15){
 
-	for ($i=0; $i<7; $i++) {
+	for ($i=0; $i<15; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 

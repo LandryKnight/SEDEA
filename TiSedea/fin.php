@@ -12,11 +12,19 @@ $Ubicacion 			=               $_POST['Ubicacion'];
 $Departamento 		=        		$_POST['departamento'];
 $falla 				=               ucfirst(strtolower(sanitizeString($_POST['falla'])));
 $Estado 			=               'Reportado';
-$numeroRand   		=        		sanitizeString($_POST['numeroRand']);
+
 
 
  		}
-$NumeroReporte =   strtoupper(substr($nombre,0,2).strlen($nombre).$numeroRand);
+
+$Cifrador   		= strlen($nombre).strlen($falla).strlen($Estado);
+
+
+$numeroRand = ($Cifrador * 2) *3;
+
+
+
+$NumeroReporte =   strtoupper(substr($nombre,0,2).strlen($nombre).substr($nombre, 2,4).$numeroRand);
 
 
 $select = "SELECT * FROM reportes WHERE nombre = '{$nombre}' AND falla = '{$falla}'";

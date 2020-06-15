@@ -77,8 +77,8 @@ body{
 	
 	position: absolute;
 	top: 100px;
-	left: 45px;
-	width: 15in;
+	left: 20px;
+	width: 14.6in;
 	border-radius: 5px 5px 15px 15px;
 	border-style: solid;
 	border:none;
@@ -151,7 +151,7 @@ body{
 	position: relative;
 	left: 90px;
 	margin-bottom: 25px;
-	width: 14in;
+	width: 13in;
 }
 
 .fin h2{
@@ -193,7 +193,7 @@ body{
 .estado{
 	border: none;
 	border-radius: 15px;
-	width: 1.5in;
+	width: 1.8in;
 	height: 0.3in;
 	color: #9C1462;
 	font-size: 14pt;
