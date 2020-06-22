@@ -124,6 +124,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
+
 ?>
 
 
@@ -143,7 +144,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 <div class="documentos">
 
-<form method="post" action="observaciones.php" enctype="multipart/form-data">
+
 
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
@@ -241,56 +242,41 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
+
+<form action="subirDocumentos.php" method="POST" enctype="multipart/form-data">
+
 <p>Selecciona la Identificación Oficial expedida por el <b>IFE o INE</b>: </p>
 
-  <input type="file" name="INE"  required="required">
+<input type="file" name="archivo[]"  required="required">
 	
-
-
-<?php 
-	
-	if ($_FILES) {
-	$nameINE = $_FILES['INE']['name'];
-
-	switch ($_FILES['INE']['type']){
-		case 'application/pdf': $ext = 'pdf'; break;
-		default: 	$ext =''; break;
-	}
-	
-
-
-	
-	if($ext){
-		$n = "Documentos/".$folioImpreso."_INE_.$ext";
-	move_uploaded_file($_FILES['INE']['tmp_name'],$n);
-	echo "<br> El archivo '$nameINE' fue subido como Identiticacion INE  '$n':<br>";
-	} else echo "No es un archivo PDF";
-
-
-	
-}  
- ?>
 
 </div>
 <div class="documentos">
 <p>Selecciona la  <b>CURP</b> Clave Única de Registro de Población:</p>
- <input type="file" name="INE"  required="required">
+ <input type="file" name="archivo[]"  required="required">
 </div>
 
 
 <div class="documentos">
 <p> Selecciona el <b>Comprobante de domicilio</b> o <br> Constancia de Residencia firmado por la autoridad competente:</p>
-<input type="file" name="INE" required="required" >
+<input type="file" name="archivo[]" required="required" >
 </div>
 
 <div class="documentos">
 <p>Selecciona el <b>Croquis</b> de bien a adquirir:</p>
- <input type="file" name="INE" required="required" >
+ <input type="file" name="archivo[]" required="required" >
  </div>
 
 
-<input type="submit" name="RequisitosG" value="Enviar información"  class="boton">
+
+<input type="submit" name="subirDocumentos" value="Subir Documentos">
 </form>
+
+
+
+
+
+
 
 
 
@@ -317,11 +303,12 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-
-
+<input type="submit" name="RequisitosG" value="Enviar información"  class="boton">
+</form>
+<br>
 
 <a href="http://localhost/sedea/Personas/Fisica/conceptosApoyoPF.php"><button class="boton"> Regresar  </button></a>
-<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
+<br><a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
 
 
 <h5>Autorizo que mis datos personales sean empleados para el trámite de la solución. Otorgo el consentimiento para que sean transferidos en caso de ser necesario y dar el cumplimiento conforme a lo previsto en los artículos 16 fracción II,59 y 61 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Querétaro; así como a las obligaciones de transparencia y acceso a la información pública de conformidad con la Ley del Estado de Querétaro.
@@ -332,6 +319,9 @@ La entrega de la presente solicitud, así como de la documentación solicitada, 
 
 
 </div>	
+
+
+
 
 
 </body>
