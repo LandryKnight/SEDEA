@@ -145,6 +145,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 <div class="documentos">
 
 
+<form action="observaciones.php" method="POST" enctype="multipart/form-data">
 
 <input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
@@ -243,7 +244,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-<form action="subirDocumentos.php" method="POST" enctype="multipart/form-data">
+
 
 <p>Selecciona la Identificación Oficial expedida por el <b>IFE o INE</b>: </p>
 

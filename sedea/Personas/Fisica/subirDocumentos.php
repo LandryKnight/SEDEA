@@ -14,7 +14,7 @@ for($i=0; $i<= $num_archivos; $i++){
 		}else{
 			$ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
 			move_uploaded_file($ruta_temporal, $ruta_nueva);
-			echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa" ;
+			echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
 		}
 	}
 }

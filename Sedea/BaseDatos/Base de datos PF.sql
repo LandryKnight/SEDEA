@@ -83,7 +83,7 @@ fechaRegistro varchar(30)
 Create Table personafisicaReqenerales(
 idRequisito int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
-observaciones varchar(194),
+observaciones varchar(250),
 fechaRegistro varchar(30)
 
 

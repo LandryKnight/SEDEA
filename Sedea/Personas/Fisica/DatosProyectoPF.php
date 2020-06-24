@@ -359,8 +359,8 @@ if(isset($_POST['EnviarPF'])){
 
 </form>
 <br>
-<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
-<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
+<a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
+<a href="sedea/index.php"><button class="boton">Menú Principal</button></a>
 </div>
 
 <?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'");  ?>

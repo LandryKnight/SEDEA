@@ -330,16 +330,62 @@ body{
 	border-radius: 15px;
 }
 
+
+.ObservacionesM{
+	position: absolute;
+	left: 150px;
+	width: calc(100% - 300px);
+	height: 5.5in;
+	border-radius: 15px;
+	border: none;
+	color: #FFFFFF;
+ 	background: #1D447D;
+
+}
+
+.ObservacionesM h3{
+	position: absolute;
+	top: 50px;
+	left: 110px;
+	color: #FFFFFF;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.ObservacionesM input{
+	position: absolute;
+	top: 3.5in;
+	left: calc((100 - 300px/2));
+}
+
 .observaciones{
-	position: relative;
-	left: 35px;
+	position: absolute;
+	left: 100px;
+	top:  80px;
+
+	width: calc(100% - 200px);
+	height: 1in;
+	
 	border-radius: 15px;
 	color: #9C1462;
 	font-weight: bold;
 	font-size: 14pt;
+
+	text-indent: 10px;
 	margin-bottom: 70px;
 
+
 }
+
+
+.ObservacionesM h5{
+	position: relative;
+	top: 420px;
+	left: 50px;
+	width: calc(100% - 100px);
+	
+}
+
 .documentos{
 	column-count:2;
 	margin-top: 12px;

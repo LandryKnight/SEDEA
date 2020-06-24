@@ -183,7 +183,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-<a href="http://localhost/sedea/inicio.php"><button class="boton">ir al Menú Principal</button></a>
+<a href="sedea/inicio.php"><button class="boton">ir al Menú Principal</button></a>
 
 
  </div>	

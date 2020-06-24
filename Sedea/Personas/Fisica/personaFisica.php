@@ -393,7 +393,7 @@
 <br>
 
 </form>
-<a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/sedea/index.php"><button class="boton">Menú Principal</button></a>
 </div>
 </body>
 </html>
