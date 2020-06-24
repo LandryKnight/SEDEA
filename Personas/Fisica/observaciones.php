@@ -1,8 +1,8 @@
 <?php 
 
 require_once('ConexionPF.php');
-global $folioImpreso;
 
+global $folioImpreso;
 if (isset($_POST['RequisitosG'])){
 
 
@@ -124,14 +124,16 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 }
 
 
+echo $folioImpreso;
+
 $num_archivos = count($_FILES['archivo']['name']);
 
 for($i=0; $i<= $num_archivos; $i++){
   if(!empty($_FILES['archivo']['name'][$i])){
 
-    $ruta_nueva  = "documentos/".$folioImpreso.$_FILES['archivo']['name'][$i];
+    $ruta_nueva  = "documentos/"."$folioImpreso".$_FILES['archivo']['name'][$i];
     if(file_exists($ruta_nueva)){
-      echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
+      //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
     }else{
       $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
       move_uploaded_file($ruta_temporal, $ruta_nueva);
@@ -204,13 +206,13 @@ for($i=0; $i<= $num_archivos; $i++){
 
 
 
-<input type ="hidden" name ="ApoyoSolicitado1" value="<?php echo $ApoyoSolicitado1; ?>">
-<input type ="hidden" name ="UniMedida1" value="<?php echo $UniMedida1; ?>">
-<input type ="hidden" name ="CanSolicitada1" value="<?php echo $CanSolicitada1; ?>">
-<input type ="hidden" name ="ApoyoEstatalSolicitado1" value="<?php echo $ApoyoEstatalSolicitado1; ?>">
+<input type ="hidden" name ="ApoyoSolicitado1"          value="<?php echo $ApoyoSolicitado1; ?>">
+<input type ="hidden" name ="UniMedida1"                value="<?php echo $UniMedida1; ?>">
+<input type ="hidden" name ="CanSolicitada1"            value="<?php echo $CanSolicitada1; ?>">
+<input type ="hidden" name ="ApoyoEstatalSolicitado1"   value="<?php echo $ApoyoEstatalSolicitado1; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado1" value="<?php echo $ApoyoMunicipalSolicitado1; ?>">
-<input type ="hidden" name ="AportacionBeneficiario1" value="<?php echo $AportacionBeneficiario1; ?>">
-<input type ="hidden" name ="InversionTotal1" value="<?php echo $InversionTotal1; ?>">
+<input type ="hidden" name ="AportacionBeneficiario1"   value="<?php echo $AportacionBeneficiario1; ?>">
+<input type ="hidden" name ="InversionTotal1"           value="<?php echo $InversionTotal1; ?>">
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado2" value="<?php echo $ApoyoSolicitado2; ?>">

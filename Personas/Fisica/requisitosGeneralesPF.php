@@ -123,7 +123,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-
+echo $folioImpreso;
 
 ?>
 

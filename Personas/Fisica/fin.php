@@ -47,19 +47,20 @@ $ReferenciaVialidadProyecto	  =	  $_POST['ReferenciaVialidadProyecto'];
 
 #recepcion de datos concepto de apoyo
 $ApoyoSolicitado1             = 		 ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado1'])));
-$UniMedida1	                  =			 sanitizeString(	$_POST['UniMedida1']);
-$CanSolicitada1	              =			 sanitizeString(	$_POST['CanSolicitada1']);
-$ApoyoEstatalSolicitado1	    =	     sanitizeString(	$_POST['ApoyoEstatalSolicitado1']);
-$ApoyoMunicipalSolicitado1	  =  	   sanitizeString(	$_POST['ApoyoMunicipalSolicitado1']);
-$AportacionBeneficiario1	    =	     sanitizeString(	$_POST['AportacionBeneficiario1']);
+$UniMedida1	                  =			 sanitizeString($_POST['UniMedida1']);
+$CanSolicitada1	              =			 sanitizeString($_POST['CanSolicitada1']);
+$ApoyoEstatalSolicitado1	    =	     sanitizeString($_POST['ApoyoEstatalSolicitado1']);
+$ApoyoMunicipalSolicitado1	  =  	   sanitizeString($_POST['ApoyoMunicipalSolicitado1']);
+$AportacionBeneficiario1	    =	     sanitizeString($_POST['AportacionBeneficiario1']);
 $InversionTotal1	            =			 $ApoyoEstatalSolicitado1 + $ApoyoMunicipalSolicitado1 + $AportacionBeneficiario1;
-						
-$ApoyoSolicitado2	            =			   sanitizeString(	$_POST['ApoyoSolicitado2']);
-$UniMedida2	                  =				 sanitizeString(	$_POST['UniMedida2']);
-$CanSolicitada2	              =				 sanitizeString(	$_POST['CanSolicitada2']);
-$ApoyoEstatalSolicitado2	    =	       sanitizeString(	$_POST['ApoyoEstatalSolicitado2']);
-$ApoyoMunicipalSolicitado2	  =	       sanitizeString(	$_POST['ApoyoMunicipalSolicitado2']);
-$AportacionBeneficiario2	    =        sanitizeString(	$_POST['AportacionBeneficiario2']);
+
+		
+$ApoyoSolicitado2	            =			   sanitizeString($_POST['ApoyoSolicitado2']);
+$UniMedida2	                  =				 sanitizeString($_POST['UniMedida2']);
+$CanSolicitada2	              =				 sanitizeString($_POST['CanSolicitada2']);
+$ApoyoEstatalSolicitado2	    =	       sanitizeString($_POST['ApoyoEstatalSolicitado2']);
+$ApoyoMunicipalSolicitado2	  =	       sanitizeString($_POST['ApoyoMunicipalSolicitado2']);
+$AportacionBeneficiario2	    =        sanitizeString($_POST['AportacionBeneficiario2']);
 
 if (is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) ) {
 	$InversionTotal2	=			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
@@ -136,7 +137,9 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
         $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
    			$InsertProyecto         = utf8_encode($InsertProyecto);
    			$InsertConceptoApoyo1   = utf8_encode($InsertConceptoApoyo1);
-
+   
+        echo $insertPF;
+   echo $InsertConceptoApoyo1;
 
     		      #echo $insertPF;
 
@@ -183,7 +186,7 @@ if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoE
 
 
 
-<a href="sedea/inicio.php"><button class="boton">ir al Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton">ir al Menú Principal</button></a>
 
 
  </div>	

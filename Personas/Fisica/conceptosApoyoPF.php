@@ -64,13 +64,7 @@ $ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['Referen
 
 
 
-	/* $result = queryMySql("SELECT * FROM personafisicaProyecto WHERE sNombreProyecto = '{$NombreProyecto}'");
- 	if ($result -> num_rows) {
-        		 echo "El Proyecto ya existe";
-
-         		 }
-
-         		 */
+echo $folioImpreso;
 
 ?>
 
@@ -218,7 +212,7 @@ $ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['Referen
 </form>
 
 <a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar  </button></a>
-<a href="sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 
 
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>

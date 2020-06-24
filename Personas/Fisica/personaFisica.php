@@ -377,6 +377,7 @@
 
 
 </div>
+
    <h2 id="titulo2">Actividad Económica</h2>
    <p>Seleccion el Tipo de Actividad</p>
    <select name="tipoActividadEconomica" required >
@@ -393,7 +394,7 @@
 <br>
 
 </form>
-<a href="http://localhost/sedea/sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 </div>
 </body>
 </html>

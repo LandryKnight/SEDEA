@@ -10,59 +10,51 @@ require_once('ConexionPF.php');
 if(isset($_POST['EnviarPF'])){
 
   #recepcion de datos PersonaFisica.php
-  $folioImpreso =           strtoupper(sanitizeString($_POST['FolioImpreso']));
+  $folioImpreso         =             strtoupper(sanitizeString($_POST['FolioImpreso']));
 
  
-  $dirReg =                 $_POST['DireccionRegional']; #direccionRegional
-  $municipio =              $_POST['ventanillaMunicipio'];
-  $nombres    =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
-  $apellidoPa =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
-  $apellidoMa =             strtolower(ucfirst(sanitizeString($_POST['apellidoMa'])));
+  $dirReg               =             $_POST['DireccionRegional']; #direccionRegional
+  $municipio            =             $_POST['ventanillaMunicipio'];
+  $nombres              =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
+  $apellidoPa           =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
+  $apellidoMa           =             strtolower(ucfirst(sanitizeString($_POST['apellidoMa'])));
 
-  $nombre = $nombres." ".$apellidoPa." ".$apellidoMa;
+  $nombre               =             $nombres." ".$apellidoPa." ".$apellidoMa;
 
-  $genero =                 $_POST['genero'];
+  $genero               =             $_POST['genero'];
 
-  $diaNacimiento  =         $_POST['DiaFechaNacimiento'];
-  $mesNacimiento  =         $_POST['MesFechaNacimiento'];
-  $anioNacimiento  =        $_POST['AnioFechaNacimiento'];
+  $diaNacimiento        =             $_POST['DiaFechaNacimiento'];
+  $mesNacimiento        =             $_POST['MesFechaNacimiento'];
+  $anioNacimiento       =             $_POST['AnioFechaNacimiento'];
 
   $fechaNacimiento = $diaNacimiento."/".$mesNacimiento."/".$anioNacimiento;
   #echo $fechaNacimiento;
 
-  $nacionalidad =           $_POST['Nacionalidad'];
-  $EstadoCivil =            $_POST['EstadoCivil'];
-  $estadoNacimiento =       $_POST['EstadoNacimiento'];
-  $telefono =               sanitizeString($_POST['Telefono']);
-  $correo =                 strtolower(sanitizeString($_POST['Correo'])); #correoElectronico
-  $tipoIdentificacion =     $_POST['tipoIdentificacion'];
+  $nacionalidad         =             $_POST['Nacionalidad'];
+  $EstadoCivil          =             $_POST['EstadoCivil'];
+  $estadoNacimiento     =             $_POST['EstadoNacimiento'];
+  $telefono             =             sanitizeString($_POST['Telefono']);
+  $correo               =             strtolower(sanitizeString($_POST['Correo'])); #correoElectronico
+  $tipoIdentificacion   =             $_POST['tipoIdentificacion'];
 
-  $numIdentificacion =      sanitizeString($_POST['numIdentificacion']);
-  $curp =                   strtoupper(sanitizeString($_POST['Curp']));
-  $tipoDomicilio =          $_POST['tipoDomicilio'];
-  $tipoAsentamiento =       $_POST['tipoAsentamiento'];
-  $nombreAsentamiento =     ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
-  $tipoVialidad =           $_POST['tipoVialidad'];
+  $numIdentificacion    =             sanitizeString($_POST['numIdentificacion']);
+  $curp                 =             strtoupper(sanitizeString($_POST['Curp']));
+  $tipoDomicilio        =             $_POST['tipoDomicilio'];
+  $tipoAsentamiento     =             $_POST['tipoAsentamiento'];
+  $nombreAsentamiento   =             ucfirst(strtolower(sanitizeString($_POST['nombreAsentamiento'])));
+  $tipoVialidad         =             $_POST['tipoVialidad'];
   
-  $nombreVialidad  =        ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
-  $nombreLocalidad =        ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
-  $nombreMunicipio =        $_POST['nombreDomicilioMunicipio'];
-  $refVial =                ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad']))); #referenciaVialidad
-  $actEco =                 $_POST['tipoActividadEconomica']; #actividadEconomica
+  $nombreVialidad       =             ucfirst(strtolower(sanitizeString($_POST['nombreVialidad'])));
+  $nombreLocalidad      =             ucfirst(strtolower(sanitizeString($_POST['nombreLocalidad'])));
+  $nombreMunicipio      =             $_POST['nombreDomicilioMunicipio'];
+  $refVial              =             ucfirst(strtolower(sanitizeString($_POST['referenciaVialidad']))); #referenciaVialidad
+  $actEco               =             $_POST['tipoActividadEconomica']; #actividadEconomica
 
     
 }
 
      
- /*   $result = queryMySql("SELECT * FROM personafisicaDatos WHERE sfolioImpresoPF = '{$folioImpreso}'");
-
-        if ($result -> num_rows) {
-           echo "El Folio ya existe";
-
-           }
-
-
-           */  
+echo $folioImpreso;
 
 
 
@@ -273,7 +265,9 @@ if(isset($_POST['EnviarPF'])){
 </div>
 
 <h2 id="titulo2">Domicilio del proyecto</h2>
+
 <div class="municipio">
+
 <p>Selecciona el Municipio</p>
     <Select name="NombreMunicipioProyecto" required>
     <option value="">Sin Seleccionar</option>
@@ -354,16 +348,16 @@ if(isset($_POST['EnviarPF'])){
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Enviar Información " class="boton">
+<input type="submit" name="DatosProyectoPF" value="Enviar Información" class="boton">
 <br>
 
 </form>
 <br>
-<a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
-<a href="sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
+<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 </div>
 
-<?php #queryMySql("DELETE FROM `personafisicaDatos` WHERE sfolioImpresoPF = '{$folioImpreso}'");  ?>
+
  
 </body>
 </html>
