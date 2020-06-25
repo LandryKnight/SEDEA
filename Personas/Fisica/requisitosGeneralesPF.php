@@ -270,7 +270,7 @@ echo $folioImpreso;
 
 
 
-<input type="submit" name="subirDocumentos" value="Subir Documentos">
+<input type="submit" name="RequisitosG" value="Subir Documentos">
 </form>
 
 
