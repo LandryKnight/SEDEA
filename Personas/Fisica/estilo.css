@@ -13,7 +13,7 @@ body{
 
  top: 20px;
  width: 9in;
-
+ height: 10in;
 
  position: absolute;
  left:calc((100% - 9in)/2);

@@ -37,7 +37,7 @@ $NombreProyecto 					= 					ucfirst(strtolower(sanitizeString($_POST['NombreProy
 $AntiguedadProyecto 				=  					$_POST['AntiguedadProyecto'];
 $TelefonoProyecto 					= 					sanitizeString($_POST['TelefonoProyecto']);
 
-$CorreoElectronicoProyecto 			= 					ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+$CorreoElectronicoProyecto 			= 					strtolower(sanitizeString($_POST['CorreoElectronicoProyecto']));
 
 $DiaFechaConstitucion 				= 					$_POST['DiaFechaConstitucion'];
 $MesFechaConstitucion 				= 					$_POST['MesFechaConstitucion'];

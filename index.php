@@ -26,9 +26,9 @@ Usuarios Admin
 
 <div align="center" class="Marco">
 
-	<img class="imgder" src="img/sedealogo.jfif">
+	<img class="imgizq" src="img/sedealogo.jfif">
 	<h2>Bienvenido al <br>Portal de la SEDEA</h2>
-	<img class="imgizq" src="img/qroOrgullo.png" >
+	<img class="imgder" src="img/qroOrgullo.png">
 	<h3>Productividad Agropecuaria Sustentable en <br> los Municipios del Estado de Querétaro</h3>
 
 	

@@ -128,9 +128,6 @@ echo $folioImpreso;
 <div class="requisitos">
 
 <h1>Requisitos Generales de Documentos para Persona Física</h1>
-<h4>Documentos Admitidos solo en formato PDF.</h4> <br>
-
-<div class="documentos">
 
 
 <form action="observaciones.php" method="POST" enctype="multipart/form-data">
@@ -232,11 +229,38 @@ echo $folioImpreso;
 
 
 
+<h2>Declaraciones del Solicitante:</h2>
+
+<div class="declaraciones">
+<p>a) Que no realizo actividades productivas ni comerciales ilícitas. </p>
+<p>b) Que no se aplicaran los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros.</p>
+
+<p>c) Que no he recibido o estoy recibiendo apoyo alguno para el mismo concepto en otro programa, que implique duplicidad de incentivos.</p>
+
+<p>d) Que los datos aquí expuestos son verídicos y me comprometo a cumplir con los ordenamientos establecidos en la mecánica operativa establecida.</p>
+
+<p>e) Expreso mi total y cabal compromiso, para realizar las inversiones y/o trabajos que corresponden para ejecutar las acciones del proyecto que requieran.</p>
+
+<p>f) Que estoy cierto que la entrega de esta solicitud, así como la de los documentos solicitados, no implica aceptación u obligación del pago de los incentivos solicitados.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<br>
+<h3>Documentos admitidos solo en formato PDF.</h3> 
+
+<div class="documentos">
 
 
 <p>Selecciona la Identificación Oficial expedida por el <b>IFE o INE</b>: </p>
 
-<input type="file" name="archivo[]"  required="required">
+<input type="file" name="archivo[]"  required="required" >
 	
 
 </div>
@@ -266,35 +290,10 @@ echo $folioImpreso;
 
 
 
-
-
-
-<h2>Declaraciones del Solicitante:</h2>
-
-<div class="declaraciones">
-<p>a) Que no realizo actividades productivas ni comerciales ilícitas. </p>
-<p>b) Que no se aplicaran los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros.</p>
-
-<p>c) Que no he recibido o estoy recibiendo apoyo alguno para el mismo concepto en otro programa, que implique duplicidad de incentivos.</p>
-
-<p>d) Que los datos aquí expuestos son verídicos y me comprometo a cumplir con los ordenamientos establecidos en la mecánica operativa establecida.</p>
-
-<p>e) Expreso mi total y cabal compromiso, para realizar las inversiones y/o trabajos que corresponden para ejecutar las acciones del proyecto que requieran.</p>
-
-<p>f) Que estoy cierto que la entrega de esta solicitud, así como la de los documentos solicitados, no implica aceptación u obligación del pago de los incentivos solicitados.</p>
-</div>
-
-
-
-
-
-
-
-
-
-<input type="submit" name="RequisitosG" value="Enviar información"  class="boton">
 </form>
 <br>
+
+
 
 <a href="http://localhost/sedea/Personas/Fisica/conceptosApoyoPF.php"><button class="boton"> Regresar  </button></a>
 <br><a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
