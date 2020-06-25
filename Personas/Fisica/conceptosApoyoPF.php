@@ -6,29 +6,29 @@ require_once('ConexionPF.php');
 if(isset($_POST['DatosProyectoPF'])){
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso  					= 				sanitizeString($_POST['IfolioImpreso']);
+  $folioImpreso  					= 					sanitizeString($_POST['IfolioImpreso']);
   $dirReg 							= 					$_POST['dirReg'];
   $municipio 						= 	 				$_POST['municipio'];
   $nombre 							= 	 				$_POST['nombre'];
   $genero 							= 	 				$_POST['genero'];
-  $fechaNacimiento 					= 		    $_POST['fechaNacimiento'];
-  $nacionalidad 					= 	 			$_POST['nacionalidad'];
-  $EstadoCivil 						= 	 			$_POST['EstadoCivil'];
-  $estadoNacimiento  				= 	 		$_POST['estadoNacimiento'];
+  $fechaNacimiento 					= 		    		$_POST['fechaNacimiento'];
+  $nacionalidad 					= 	 				$_POST['nacionalidad'];
+  $EstadoCivil 						= 	 				$_POST['EstadoCivil'];
+  $estadoNacimiento  				= 	 				$_POST['estadoNacimiento'];
   $telefono 						= 	 				$_POST['telefono'];
   $correo 							= 	 				$_POST['correo'];
-  $tipoIdentificacion 				= 	 	$_POST['tipoIdentificacion'];
-  $numIdentificacion = 	 		$_POST['numIdentificacion'];
-  $curp = 						$_POST['curp'];
-  $tipoDomicilio = 	 			$_POST['tipoDomicilio'];
-  $tipoAsentamiento = 	 		$_POST['tipoAsentamiento'];
-  $nombreAsentamiento = 	 	$_POST['nombreAsentamiento'];
-  $tipoVialidad = 	 			$_POST['tipoVialidad'];
-  $nombreVialidad = 	 		$_POST['nombreVialidad'];
-  $nombreLocalidad = 	 		$_POST['nombreLocalidad'];
-  $nombreMunicipio = 	 		$_POST['nombreMunicipio'];
-  $refVial = 	 				$_POST['refVial'];
-  $actEco = 	 				$_POST['actEco'];
+  $tipoIdentificacion 				= 	 				$_POST['tipoIdentificacion'];
+  $numIdentificacion 				= 			 		$_POST['numIdentificacion'];
+  $curp 							= 					$_POST['curp'];
+  $tipoDomicilio 					= 	 				$_POST['tipoDomicilio'];
+  $tipoAsentamiento 				= 	 				$_POST['tipoAsentamiento'];
+  $nombreAsentamiento 				= 	 				$_POST['nombreAsentamiento'];
+  $tipoVialidad 					= 	 				$_POST['tipoVialidad'];
+  $nombreVialidad 					= 	 				$_POST['nombreVialidad'];
+  $nombreLocalidad 					= 	 				$_POST['nombreLocalidad'];
+  $nombreMunicipio 					= 	 				$_POST['nombreMunicipio'];
+  $refVial 							= 	 				$_POST['refVial'];
+  $actEco 							= 	 				$_POST['actEco'];
 
 #recepcion de datos de DatosProyecto.php
 
