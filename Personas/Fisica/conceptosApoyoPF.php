@@ -33,26 +33,32 @@ if(isset($_POST['DatosProyectoPF'])){
 #recepcion de datos de DatosProyecto.php
 
 
-$NombreProyecto 					= 		ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
-$AntiguedadProyecto 				=  		$_POST['AntiguedadProyecto'];
-$TelefonoProyecto 					= 		sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+$NombreProyecto 					= 					ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
+$AntiguedadProyecto 				=  					$_POST['AntiguedadProyecto'];
+$TelefonoProyecto 					= 					sanitizeString($_POST['TelefonoProyecto']);
 
-$DiaFechaConstitucion 				= 		$_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion 				= 		$_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion 				= 		$_POST['AnioFechaConstitucion'];
+$CorreoElectronicoProyecto 			= 					ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+
+$DiaFechaConstitucion 				= 					$_POST['DiaFechaConstitucion'];
+$MesFechaConstitucion 				= 					$_POST['MesFechaConstitucion'];
+$AnioFechaConstitucion 				= 					$_POST['AnioFechaConstitucion'];
 
 
-$FechaConstitucion 					= $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+$FechaConstitucion 					= 					$DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
 
-$TipoDomicilioProyecto 				=		$_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  			= 		$_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto 		= 		ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
-$TipoVialidadProyecto  				= 		$_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
-$NombreLocalidadProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
-$NombreMunicipioProyecto 			= 		$_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto 		= 		ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
+$TipoDomicilioProyecto 				=					$_POST['TipoDomicilioProyecto'];
+$TipoAsentamientoProyecto  			= 					$_POST['TipoAsentamientoProyecto'];
+
+$NombreAsentamientoProyecto 		= 					ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
+
+$TipoVialidadProyecto  				= 					$_POST['TipoVialidadProyecto'];
+$NombreVialidadProyecto 			= 					ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
+
+$NombreLocalidadProyecto 			= 					ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
+
+$NombreMunicipioProyecto 			= 					$_POST['NombreMunicipioProyecto'];
+
+$ReferenciaVialidadProyecto 		= 					ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
 	
 
 
@@ -127,6 +133,9 @@ echo $folioImpreso;
 
 
 <h1>Conceptos de Apoyo para Persona Física</h1>
+
+<h3>Nota: Checa que todos los campos solo contengan digitos excepto conceptos de
+apoyo solicitado</h3> <br> <input type="checkbox" name="check" required="required">
 
 <table border="1">
 	
@@ -212,6 +221,7 @@ echo $folioImpreso;
 </form>
 
 <a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar  </button></a>
+<br>
 <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 
 

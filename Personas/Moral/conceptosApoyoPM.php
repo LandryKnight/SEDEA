@@ -97,6 +97,8 @@ $ReferenciaVialidadProyecto 	= 	ucfirst(strtolower(sanitizeString($_POST['Refere
 <form method="Post" action="requisitosGeneralesPM.php">
 
 <h1>Conceptos de Apoyo para Persona Moral</h1>
+<h3>Nota: Checa que todos los campos solo contengan digitos excepto conceptos de
+apoyo solicitado</h3> <br> <input type="checkbox" name="check" required="required">
 <table border="1">
 	
 	<tr>

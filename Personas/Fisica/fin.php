@@ -63,14 +63,14 @@ $ApoyoMunicipalSolicitado2	  =	       sanitizeString($_POST['ApoyoMunicipalSolic
 $AportacionBeneficiario2	    =        sanitizeString($_POST['AportacionBeneficiario2']);
 
 
-if (is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) ) {
+if (!is_null($ApoyoSolicitado2) & !is_null(is_numeric($UniMedida2)) & !is_null(is_numeric($CanSolicitada2))){ 
 
-	$InversionTotal2	=			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
-}  else{
-  echo "Checa que todos los campos solo contengan digitos excepto: conceptos de
-apoyo solicitado";
-}
+    if (is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) ) {
 
+	   $InversionTotal2	       =			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+
+      }  
+}  
 
 $ApoyoSolicitado3	          =			  sanitizeString($_POST['ApoyoSolicitado3']);
 $UniMedida3	                =				sanitizeString($_POST['UniMedida3']);
@@ -79,14 +79,16 @@ $ApoyoEstatalSolicitado3	  =	      sanitizeString($_POST['ApoyoEstatalSolicitado
 $ApoyoMunicipalSolicitado3	=	      sanitizeString($_POST['ApoyoMunicipalSolicitado3']);
 $AportacionBeneficiario3	  =      	sanitizeString($_POST['AportacionBeneficiario3']);
 
-if (is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) ) {
 
-	$InversionTotal3	=			$ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
-  
-} else{
-  echo "Checa que todos los campos solo contengan digitos excepto: conceptos de
-apoyo solicitado";
-}
+
+if (!is_null($ApoyoSolicitado3) & !is_null(is_numeric($UniMedida3)) & !is_null(is_numeric($CanSolicitada3))){ 
+    
+    if (is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) ) {
+
+	   $InversionTotal3	      =			$ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
+
+    }
+} 
 
 				
 $ApoyoSolicitado4	          =			  sanitizeString($_POST['ApoyoSolicitado4']);
@@ -96,14 +98,14 @@ $ApoyoEstatalSolicitado4	  =	      sanitizeString($_POST['ApoyoEstatalSolicitado
 $ApoyoMunicipalSolicitado4	=	      sanitizeString($_POST['ApoyoMunicipalSolicitado4']);
 $AportacionBeneficiario4	  =	      sanitizeString($_POST['AportacionBeneficiario4']);
 
-if (is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) ) {
+if (!is_null($ApoyoSolicitado4) & !is_null(is_numeric($UniMedida4)) & !is_null(is_numeric($CanSolicitada4))){ 
 
-	$InversionTotal4	=			$ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
-}  else{
-  echo "Checa que todos los campos solo contengan digitos excepto: conceptos de
-apoyo solicitado";
+      if (is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) ) {
+
+	     $InversionTotal4	     =			$ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
+
+      }  
 }
-
 
 
 $ApoyoSolicitado5	           =			sanitizeString($_POST['ApoyoSolicitado5']);
@@ -113,14 +115,15 @@ $ApoyoEstatalSolicitado5	   =	    sanitizeString($_POST['ApoyoEstatalSolicitado5
 $ApoyoMunicipalSolicitado5	 =	    sanitizeString($_POST['ApoyoMunicipalSolicitado5']);
 $AportacionBeneficiario5	   =	    sanitizeString($_POST['AportacionBeneficiario5']);
 
-if (is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) ) {
 
-	$InversionTotal5	=			$ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
-}  else{
-  echo "Checa que todos los campos solo contengan digitos excepto: conceptos de
-apoyo solicitado";
+if (!is_null($ApoyoSolicitado5) & !is_null(is_numeric($UniMedida5)) & !is_null(is_numeric($CanSolicitada5))){ 
+
+      if ( is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) ) {
+
+	     $InversionTotal5	     =			$ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
+
+      }  
 }
-
 
 
 
@@ -132,16 +135,15 @@ $ApoyoEstatalSolicitado6	  =    sanitizeString($_POST['ApoyoEstatalSolicitado6']
 $ApoyoMunicipalSolicitado6	=	   sanitizeString($_POST['ApoyoMunicipalSolicitado6']);
 $AportacionBeneficiario6	  =	   sanitizeString($_POST['AportacionBeneficiario6']);
 
+if (!is_null($ApoyoSolicitado6) & !is_null(is_numeric($UniMedida6)) & !is_null(is_numeric($CanSolicitada6))){ 
 
-if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) ) {
+        if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) ) {
 
-	$InversionTotal6	=			$ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
+	       $InversionTotal6	   =			$ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
 
 
 
-} else{
-  echo "Checa que todos los campos solo contengan digitos excepto: conceptos de
-apoyo solicitado";
+        } 
 }
 
 
