@@ -131,7 +131,7 @@ $num_archivos = count($_FILES['archivo']['name']);
 for($i=0; $i<= $num_archivos; $i++){
   if(!empty($_FILES['archivo']['name'][$i])){
 
-    $ruta_nueva  = "documentos/"."$folioImpreso".$_FILES['archivo']['name'][$i];
+    $ruta_nueva  = "documentos/"."$folioImpreso"."_".$_FILES['archivo']['name'][$i];
     if(file_exists($ruta_nueva)){
       //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
     }else{

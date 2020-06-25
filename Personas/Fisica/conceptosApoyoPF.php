@@ -6,18 +6,18 @@ require_once('ConexionPF.php');
 if(isset($_POST['DatosProyectoPF'])){
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso  = 				sanitizeString($_POST['IfolioImpreso']);
-  $dirReg = 					$_POST['dirReg'];
-  $municipio = 	 				$_POST['municipio'];
-  $nombre = 	 				$_POST['nombre'];
-  $genero = 	 				$_POST['genero'];
-  $fechaNacimiento = 		    $_POST['fechaNacimiento'];
-  $nacionalidad = 	 			$_POST['nacionalidad'];
-  $EstadoCivil = 	 			$_POST['EstadoCivil'];
-  $estadoNacimiento  = 	 		$_POST['estadoNacimiento'];
-  $telefono = 	 				$_POST['telefono'];
-  $correo = 	 				$_POST['correo'];
-  $tipoIdentificacion = 	 	$_POST['tipoIdentificacion'];
+  $folioImpreso  					= 				sanitizeString($_POST['IfolioImpreso']);
+  $dirReg 							= 					$_POST['dirReg'];
+  $municipio 						= 	 				$_POST['municipio'];
+  $nombre 							= 	 				$_POST['nombre'];
+  $genero 							= 	 				$_POST['genero'];
+  $fechaNacimiento 					= 		    $_POST['fechaNacimiento'];
+  $nacionalidad 					= 	 			$_POST['nacionalidad'];
+  $EstadoCivil 						= 	 			$_POST['EstadoCivil'];
+  $estadoNacimiento  				= 	 		$_POST['estadoNacimiento'];
+  $telefono 						= 	 				$_POST['telefono'];
+  $correo 							= 	 				$_POST['correo'];
+  $tipoIdentificacion 				= 	 	$_POST['tipoIdentificacion'];
   $numIdentificacion = 	 		$_POST['numIdentificacion'];
   $curp = 						$_POST['curp'];
   $tipoDomicilio = 	 			$_POST['tipoDomicilio'];
@@ -33,26 +33,26 @@ if(isset($_POST['DatosProyectoPF'])){
 #recepcion de datos de DatosProyecto.php
 
 
-$NombreProyecto = 				ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
-$AntiguedadProyecto =  			$_POST['AntiguedadProyecto'];
-$TelefonoProyecto = 			sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto = 	ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
+$NombreProyecto 					= 		ucfirst(strtolower(sanitizeString($_POST['NombreProyecto'])));
+$AntiguedadProyecto 				=  		$_POST['AntiguedadProyecto'];
+$TelefonoProyecto 					= 		sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['CorreoElectronicoProyecto'])));
 
-$DiaFechaConstitucion = 		$_POST['DiaFechaConstitucion'];
-$MesFechaConstitucion = 		$_POST['MesFechaConstitucion'];
-$AnioFechaConstitucion = 		$_POST['AnioFechaConstitucion'];
+$DiaFechaConstitucion 				= 		$_POST['DiaFechaConstitucion'];
+$MesFechaConstitucion 				= 		$_POST['MesFechaConstitucion'];
+$AnioFechaConstitucion 				= 		$_POST['AnioFechaConstitucion'];
 
 
-$FechaConstitucion = $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+$FechaConstitucion 					= $DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
 
-$TipoDomicilioProyecto = 		$_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto  = 	$_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto = 	ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
-$TipoVialidadProyecto  = 		$_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto = 		ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
-$NombreLocalidadProyecto = 		ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
-$NombreMunicipioProyecto = 		$_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto = 	ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
+$TipoDomicilioProyecto 				=		$_POST['TipoDomicilioProyecto'];
+$TipoAsentamientoProyecto  			= 		$_POST['TipoAsentamientoProyecto'];
+$NombreAsentamientoProyecto 		= 		ucfirst(strtolower(sanitizeString($_POST['NombreAsentamientoProyecto'])));
+$TipoVialidadProyecto  				= 		$_POST['TipoVialidadProyecto'];
+$NombreVialidadProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['NombreVialidadProyecto'])));
+$NombreLocalidadProyecto 			= 		ucfirst(strtolower(sanitizeString($_POST['NombreLocalidadProyecto'])));
+$NombreMunicipioProyecto 			= 		$_POST['NombreMunicipioProyecto'];
+$ReferenciaVialidadProyecto 		= 		ucfirst(strtolower(sanitizeString($_POST['ReferenciaVialidadProyecto'])));
 	
 
 

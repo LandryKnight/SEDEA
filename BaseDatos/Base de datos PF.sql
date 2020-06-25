@@ -2,7 +2,7 @@
 drop Database sedeaPF;
 
 
-Create Database sedeaPF;
+Create Database sedeapf;
 
 #Tabla Persona Fisica
 Create Table personafisicaDatos(
