@@ -11,7 +11,9 @@
 
 
 <div class="eleccion" >
-<h1>¿Qué deseas hacer?</h1>
+
+<h1>Menú para Persona Física</h1>
+<h2>¿Qué deseas hacer?</h2>
 
 
 <a href="personaFisica.php"><button class="boton">LLenar una solicitud</button></a>
