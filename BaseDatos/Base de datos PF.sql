@@ -1,5 +1,10 @@
 #Base de datos para persona fisica
-drop Database sedeaPF;
+drop Database sedeapf;
+
+
+
+tomar las letras de la curp y numeros de la ine
+
 
 
 Create Database sedeapf;
