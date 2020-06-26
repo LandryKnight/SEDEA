@@ -80,9 +80,10 @@ body{
 
 .Marco h2{
 	position: relative;
-	top: 80px;
+	top: 60px;
 	margin-top: 20px;
-	
+	font-size: 24pt;
+	font-weight: bold;
 	color: #FFFFFF;
 }
 
@@ -90,12 +91,15 @@ body{
 	margin-top: 180px;
 	margin-bottom: 50px;
 	color: #FFFFFF;
+	font-size: 18pt;
+	font-weight: bold;
 }
 
 .Marco p{
 	color: #FFFFFF;
 	margin-top: 50px;
-	font-size: 20px;
+	font-size: 14pt;
+	font-weight: bold;
 }
 
 

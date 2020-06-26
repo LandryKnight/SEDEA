@@ -8,12 +8,36 @@ body{
 	background-color: #FFFFFF;
 }
 
+.eleccion{
+ top: 20px;
+ width: 7in;
+ height: 10in;
+
+ position: absolute;
+ left:calc((100% - 7in)/2);
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+
+
+
 
 .Marco{
 
  top: 20px;
  width: 9in;
- height: 10in;
+ height: 14in;
 
  position: absolute;
  left:calc((100% - 9in)/2);
@@ -34,7 +58,16 @@ body{
 
 }
 
+
+
+
+
+
+
+
+
 .Marco input{
+	height: 35px;
 	border-radius: 8px;
 	margin-bottom: 5px;
 	font-weight:  bold;
@@ -176,7 +209,7 @@ body{
 	
 	border-radius: 15px;
 
-	width: 200px;
+	width: 250px;
 	height: 35px;
 	font-weight: bold;
 	color: #9C1462;

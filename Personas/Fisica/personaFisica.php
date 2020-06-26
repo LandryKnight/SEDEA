@@ -394,6 +394,9 @@
 <br>
 
 </form>
+
+<a href="http://localhost/sedea/Personas/Fisica/eleccionpf.php"><button class="boton">Regresar</button></a>
+<br>
 <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 </div>
 </body>
