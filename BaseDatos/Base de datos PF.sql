@@ -127,6 +127,7 @@ drop table personafisicaReqenerales;
 
 
 truncate table personafisicaDatos;
+truncate table personafisicaDomicilio;
 truncate table personafisicaProyecto;
 truncate table personafisicaConceptoApoyo;
 Truncate table personafisicaReqenerales;

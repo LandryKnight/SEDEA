@@ -2,7 +2,7 @@
 
 require_once('ConexionPF.php');
 
-if (isset($_POST['CompletarRegistro'])){
+if (isset($_POST['CompletarRegistro'])) { 
 
 #recepcion de datos de PersonaFisica.php
   $folioImpreso       = 				  sanitizeString($_POST['IfolioImpreso']);
@@ -46,7 +46,7 @@ $ReferenciaVialidadProyecto	  =	  $_POST['ReferenciaVialidadProyecto'];
 
 
 #recepcion de datos concepto de apoyo
-$ApoyoSolicitado1             = 		 ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado1'])));
+$ApoyoSolicitado1             = 		 sanitizeString($_POST['ApoyoSolicitado1']);
 $UniMedida1	                  =			 sanitizeString($_POST['UniMedida1']);
 $CanSolicitada1	              =			 sanitizeString($_POST['CanSolicitada1']);
 $ApoyoEstatalSolicitado1	    =	     sanitizeString($_POST['ApoyoEstatalSolicitado1']);
@@ -63,15 +63,6 @@ $ApoyoMunicipalSolicitado2	  =	       sanitizeString($_POST['ApoyoMunicipalSolic
 $AportacionBeneficiario2	    =        sanitizeString($_POST['AportacionBeneficiario2']);
 
 
-if (!is_null($ApoyoSolicitado2) & !is_null(is_numeric($UniMedida2)) & !is_null(is_numeric($CanSolicitada2))){ 
-
-    if (is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) & is_numeric(!is_null($ApoyoEstatalSolicitado2)) ) {
-
-	   $InversionTotal2	       =			$ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
-
-      }  
-}  
-
 $ApoyoSolicitado3	          =			  sanitizeString($_POST['ApoyoSolicitado3']);
 $UniMedida3	                =				sanitizeString($_POST['UniMedida3']);
 $CanSolicitada3	            =				sanitizeString($_POST['CanSolicitada3']);
@@ -80,82 +71,43 @@ $ApoyoMunicipalSolicitado3	=	      sanitizeString($_POST['ApoyoMunicipalSolicita
 $AportacionBeneficiario3	  =      	sanitizeString($_POST['AportacionBeneficiario3']);
 
 
+$ApoyoSolicitado4           =       sanitizeString($_POST['ApoyoSolicitado4']);
+$UniMedida4                 =       sanitizeString($_POST['UniMedida4']);
+$CanSolicitada4             =       sanitizeString($_POST['CanSolicitada4']);
+$ApoyoEstatalSolicitado4    =       sanitizeString($_POST['ApoyoEstatalSolicitado4']);
+$ApoyoMunicipalSolicitado4  =       sanitizeString($_POST['ApoyoMunicipalSolicitado4']);
+$AportacionBeneficiario4    =       sanitizeString($_POST['AportacionBeneficiario4']);
 
-if (!is_null($ApoyoSolicitado3) & !is_null(is_numeric($UniMedida3)) & !is_null(is_numeric($CanSolicitada3))){ 
-    
-    if (is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) & is_numeric(!is_null($ApoyoEstatalSolicitado3)) ) {
-
-	   $InversionTotal3	      =			$ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
-
-    }
-} 
-
-				
-$ApoyoSolicitado4	          =			  sanitizeString($_POST['ApoyoSolicitado4']);
-$UniMedida4	                =				sanitizeString($_POST['UniMedida4']);
-$CanSolicitada4	            =				sanitizeString($_POST['CanSolicitada4']);
-$ApoyoEstatalSolicitado4	  =	      sanitizeString($_POST['ApoyoEstatalSolicitado4']);
-$ApoyoMunicipalSolicitado4	=	      sanitizeString($_POST['ApoyoMunicipalSolicitado4']);
-$AportacionBeneficiario4	  =	      sanitizeString($_POST['AportacionBeneficiario4']);
-
-if (!is_null($ApoyoSolicitado4) & !is_null(is_numeric($UniMedida4)) & !is_null(is_numeric($CanSolicitada4))){ 
-
-      if (is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) & is_numeric(!is_null($ApoyoEstatalSolicitado4)) ) {
-
-	     $InversionTotal4	     =			$ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
-
-      }  
-}
+$ApoyoSolicitado5            =      sanitizeString($_POST['ApoyoSolicitado5']);
+$UniMedida5                  =      sanitizeString($_POST['UniMedida5']);
+$CanSolicitada5              =      sanitizeString($_POST['CanSolicitada5']);
+$ApoyoEstatalSolicitado5     =      sanitizeString($_POST['ApoyoEstatalSolicitado5']);
+$ApoyoMunicipalSolicitado5   =      sanitizeString($_POST['ApoyoMunicipalSolicitado5']);
+$AportacionBeneficiario5     =      sanitizeString($_POST['AportacionBeneficiario5']);
 
 
-$ApoyoSolicitado5	           =			sanitizeString($_POST['ApoyoSolicitado5']);
-$UniMedida5             	   =			sanitizeString($_POST['UniMedida5']);
-$CanSolicitada5	             =			sanitizeString($_POST['CanSolicitada5']);
-$ApoyoEstatalSolicitado5	   =	    sanitizeString($_POST['ApoyoEstatalSolicitado5']);
-$ApoyoMunicipalSolicitado5	 =	    sanitizeString($_POST['ApoyoMunicipalSolicitado5']);
-$AportacionBeneficiario5	   =	    sanitizeString($_POST['AportacionBeneficiario5']);
-
-
-if (!is_null($ApoyoSolicitado5) & !is_null(is_numeric($UniMedida5)) & !is_null(is_numeric($CanSolicitada5))){ 
-
-      if ( is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) & is_numeric(!is_null($ApoyoEstatalSolicitado5)) ) {
-
-	     $InversionTotal5	     =			$ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
-
-      }  
-}
+$ApoyoSolicitado6           =    sanitizeString($_POST['ApoyoSolicitado6']);
+$UniMedida6                 =    sanitizeString($_POST['UniMedida6']);
+$CanSolicitada6             =    sanitizeString($_POST['CanSolicitada6']);
+$ApoyoEstatalSolicitado6    =    sanitizeString($_POST['ApoyoEstatalSolicitado6']);
+$ApoyoMunicipalSolicitado6  =    sanitizeString($_POST['ApoyoMunicipalSolicitado6']);
+$AportacionBeneficiario6    =    sanitizeString($_POST['AportacionBeneficiario6']);
 
 
 
-						
-$ApoyoSolicitado6	          =		 sanitizeString($_POST['ApoyoSolicitado6']);
-$UniMedida6	                =		 sanitizeString($_POST['UniMedida6']);
-$CanSolicitada6	            =		 sanitizeString($_POST['CanSolicitada6']);
-$ApoyoEstatalSolicitado6	  =    sanitizeString($_POST['ApoyoEstatalSolicitado6']);
-$ApoyoMunicipalSolicitado6	=	   sanitizeString($_POST['ApoyoMunicipalSolicitado6']);
-$AportacionBeneficiario6	  =	   sanitizeString($_POST['AportacionBeneficiario6']);
+			$Observaciones       =      sanitizeString($_POST['observaciones']);	
 
-if (!is_null($ApoyoSolicitado6) & !is_null(is_numeric($UniMedida6)) & !is_null(is_numeric($CanSolicitada6))){ 
-
-        if (is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) & is_numeric(!is_null($ApoyoEstatalSolicitado6)) ) {
-
-	       $InversionTotal6	   =			$ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
-
-
-
-        } 
-}
-
-
-			$Observaciones =                sanitizeString($_POST['observaciones']);	
-	
+	        if (is_null($Observaciones) | empty($Observaciones)) {
+          
+          $Observaciones = "Sin Observaciones";
+        }
 
 
 
 }
 
 		      #Datos de Persona
-       		 $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono }','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}',curdate());";
+       		 $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono}','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}',curdate());";
 
          #Datos de Persona Domicilio
         $insertDomicilioPF = "INSERT INTO personafisicaDomicilio VALUES(null,'{$folioImpreso}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
@@ -169,7 +121,7 @@ if (!is_null($ApoyoSolicitado6) & !is_null(is_numeric($UniMedida6)) & !is_null(i
 
           #Datos de Requisitos Generales
 
-          $InsertRQG  = "INSERT INTO  personafisicaReqenerales VALUES(null,''{$folioImpreso}','{$Observaciones}',curdate());";
+          $InsertRQG  = "INSERT INTO  personafisicaReqenerales VALUES(null,'{$folioImpreso}','{$Observaciones}',curdate());";
 
      		$insertPF               = utf8_encode($insertPF);
         $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
@@ -179,27 +131,129 @@ if (!is_null($ApoyoSolicitado6) & !is_null(is_numeric($UniMedida6)) & !is_null(i
    
    
 
-    		  
+  
+
+
+            
+   
 
 
 
+        
+
+
+            echo $insertPF. "persona fisica"."<br>";
+            echo $insertDomicilioPF. "Domicilio pf"."<br>";
+            echo $InsertProyecto."<br>";
+            echo $InsertConceptoApoyo1 ."<br>";
+            echo $InsertRQG ."<br>";
+
+
+
+
+
+echo "<br>".$ApoyoSolicitado2;
+echo "<br>".$UniMedida2;
+echo "<br>".$CanSolicitada2;
+echo "<br>".$ApoyoEstatalSolicitado2;
+echo "<br>".$ApoyoMunicipalSolicitado2;
+echo "<br>".$AportacionBeneficiario2;  
+
+echo "<br>".$ApoyoSolicitado3;
+echo "<br>".$UniMedida3;
+echo "<br>".$CanSolicitada3;
+echo "<br>".$ApoyoEstatalSolicitado3;
+echo "<br>".$ApoyoMunicipalSolicitado3;
+echo "<br>".$AportacionBeneficiario3;  
+
+                       
+           # echo $InsertConceptoApoyo3;
+           # echo $InsertConceptoApoyo4;
+           # echo $InsertConceptoApoyo5;
+           # echo $InsertConceptoApoyo6;
 
               queryMySql("$insertPF"); 
               #echo "Datos Registrados de persona fisica";
-
-              queryMySql("$$insertDomicilioPF");
+              
+              queryMySql("$insertDomicilioPF");
               #echo "Datos Registrados de  Domicilio persona fisica";
            
               queryMySql("$InsertProyecto"); 
               #echo "Datos Registrados de Proyecto";
                        
               queryMySql("$InsertConceptoApoyo1"); 
-				      #echo "Datos de Concepto  de Persona Fisica";
+              #echo "Datos de Concepto  de Persona Fisica";
+
+
+ $InversionTotal2        =      $ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+
+     
+
+     $InsertConceptoApoyo2 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado2}','{$UniMedida2}','{$CanSolicitada2}','{$ApoyoEstatalSolicitado2}','{$ApoyoMunicipalSolicitado2}','{$AportacionBeneficiario2}','{$InversionTotal2}',curdate());";
+
+     $InsertConceptoApoyo2  = utf8_encode($InsertConceptoApoyo2);
+
+      queryMySql("$InsertConceptoApoyo2");
+
+      echo $InsertConceptoApoyo2."<br>";
+
+
+
+   
+ $InversionTotal3       =     $ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
+
+     $InsertConceptoApoyo3 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado3}','{$UniMedida3}','{$CanSolicitada3}','{$ApoyoEstatalSolicitado3}','{$ApoyoMunicipalSolicitado3}','{$AportacionBeneficiario3}','{$InversionTotal3}',curdate());";
+
+      $InsertConceptoApoyo3 = utf8_encode($InsertConceptoApoyo3);
+
+      queryMySql("$InsertConceptoApoyo3");
+
+      echo $InsertConceptoApoyo3."<br>";
+
+      $InversionTotal4      =      $ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
+
+
+       $InsertConceptoApoyo4 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado4}','{$UniMedida4}','{$CanSolicitada4}','{$ApoyoEstatalSolicitado4}','{$ApoyoMunicipalSolicitado4}','{$AportacionBeneficiario4}','{$InversionTotal4}',curdate());";
+
+        $InsertConceptoApoyo4 = utf8_encode($InsertConceptoApoyo4);
+        queryMySql("$InsertConceptoApoyo4");
+
+        echo $InsertConceptoApoyo4."<br>";
+
+     $InversionTotal5      =      $ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
+
+    $InsertConceptoApoyo5 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado5}','{$UniMedida5}','{$CanSolicitada5}','{$ApoyoEstatalSolicitado5}','{$ApoyoMunicipalSolicitado5}','{$AportacionBeneficiario5}','{$InversionTotal5}',curdate());";
+
+
+       $InsertConceptoApoyo5 = utf8_encode($InsertConceptoApoyo5);
+
+       queryMySql("$InsertConceptoApoyo5");
+
+       echo $InsertConceptoApoyo5."<br>";
+
+        $InversionTotal6    =      $ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
+
+         $InsertConceptoApoyo6 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado6}','{$UniMedida6}','{$CanSolicitada6}','{$ApoyoEstatalSolicitado6}','{$ApoyoMunicipalSolicitado6}','{$AportacionBeneficiario6}','{$InversionTotal6}',curdate());";
+
+         $InsertConceptoApoyo6 = utf8_encode($InsertConceptoApoyo6);
+         queryMySql("$InsertConceptoApoyo6");
+
+         echo $InsertConceptoApoyo6."<br>";
+
+
+
+
+
+
+
+
+
+
 
               queryMySql("$InsertRQG");
               #echo "Datos de requisitos generales de persona fisica"
 
-
+              
 
 
 

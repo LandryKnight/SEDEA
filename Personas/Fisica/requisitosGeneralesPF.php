@@ -134,7 +134,7 @@ $AportacionBeneficiario6		=					sanitizeString($_POST['AportacionBeneficiario6']
 
 <form action="observaciones.php" method="POST" enctype="multipart/form-data">
 
-<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
+<input type ="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">

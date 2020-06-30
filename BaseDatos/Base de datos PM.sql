@@ -2,7 +2,7 @@
 drop Database sedeaPM;
 
 
-Create Database sedeaPM;
+Create Database sedeapm;
 
 
 

@@ -3,7 +3,7 @@
 	$hostname 	= 	'localhost';
 	$user 		= 	'root';
 	$password 	=	'';
-	$database 	=	'sedeaPM';
+	$database 	=	'sedeapm';
 
 	$connection = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 	if($connection-> connect_error) die("Fatal Erorr");

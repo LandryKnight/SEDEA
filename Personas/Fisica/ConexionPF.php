@@ -3,11 +3,12 @@
 	$dbhost = 	'localhost';
 	$dbuser = 	'root';
 	$dbpass =	'';
-	$dbname =	'sedeaPF';
+	$dbname =	'sedeapf';
 
 	$connection = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 	if($connection-> connect_error) die("Fatal Erorr");
 
+	#No Connection to insert -> puede ser una llave primaria duplicada o algo mal en queryMySql
 	function queryMySql($query){
 	global $connection;
 	

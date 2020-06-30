@@ -50,7 +50,7 @@ $ReferenciaVialidadProyecto	 =	   $_POST['ReferenciaVialidadProyecto'];
 
 
 #recepcion de datos concepto de apoyo
-$ApoyoSolicitado1            = 			sanitizeString($_POST['ApoyoSolicitado1']);
+$ApoyoSolicitado1            = 		  sanitizeString($_POST['ApoyoSolicitado1']);
 $UniMedida1	                 =			sanitizeString($_POST['UniMedida1']);
 $CanSolicitada1	             =			sanitizeString($_POST['CanSolicitada1']);
 $ApoyoEstatalSolicitado1	   =	    sanitizeString($_POST['ApoyoEstatalSolicitado1']);
