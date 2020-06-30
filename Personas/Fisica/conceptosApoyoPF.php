@@ -6,7 +6,7 @@ require_once('ConexionPF.php');
 if(isset($_POST['DatosProyectoPF'])){
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso  					= 					sanitizeString($_POST['IfolioImpreso']);
+  
   $dirReg 							= 					$_POST['dirReg'];
   $municipio 						= 	 				$_POST['municipio'];
   $nombre 							= 	 				$_POST['nombre'];
@@ -70,7 +70,7 @@ $ReferenciaVialidadProyecto 		= 					ucfirst(strtolower(sanitizeString($_POST['R
 
 
 
-echo $folioImpreso;
+
 
 ?>
 
@@ -90,7 +90,7 @@ echo $folioImpreso;
 <form method="post" action="requisitosGeneralesPF.php">
 
 
-<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+
 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
@@ -134,9 +134,15 @@ echo $folioImpreso;
 
 <h1>Conceptos de Apoyo para Persona Física</h1>
 
-<h3>Nota: Checa que todos los campos solo contengan digitos excepto conceptos de
-apoyo solicitado</h3> <br> <input type="checkbox" name="check" required="required">
+<div class="nota">
+<h3>Nota: Checa que todos los campos solo contengan digitos, excepto conceptos de
+apoyo solicitado</h3> 
+<br>
+ <input type="checkbox" name="check" required="required">
 
+</div>
+
+<br>
 <table border="1">
 	
 	<tr>
@@ -216,13 +222,14 @@ apoyo solicitado</h3> <br> <input type="checkbox" name="check" required="require
 
 </table>
 
-<input type="submit" name="EnviarConceptosPF" value="Enviar Información" class="boton">
+
+<input type="submit" name="EnviarConceptosPF" value="Siguiente" class="boton" id="ubicacionConceptos">
 
 </form>
 
-<a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar  </button></a>
+<a href="sedea/Personas/Fisica/personaFisica.php"><button class="boton" id="ubicacionConceptos"> Regresar  </button></a>
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionConceptos">Menú Principal</button></a>
 
 
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>

@@ -19,12 +19,12 @@
 
 
 
- 
+
  <h1>Persona Física</h1>
  <h2>Datos de la Ventanilla Receptora</h2>
 
 
-   <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DQWRWEQ156" maxlength="30" >
+  
 
    <div class="regional">
 
@@ -71,10 +71,10 @@
   
   <div class="centro">
   <p>Nombre</p>
-  <input type="text" name="nombresPF" placeholder=" Ej: Maria Guadalupe" required="required" maxlength="40">
+  <input type="text" name="nombresPF" placeholder=" Ej: María Guadalupe" required="required" maxlength="40">
 
   <p>Apellido Paterno</p>
-  <input type="text" name="apellidoPa" placeholder=" Ej: Fernandez" required="required" maxlength="20">
+  <input type="text" name="apellidoPa" placeholder=" Ej: Fernández" required="required" maxlength="20">
 
   <p>Apellido Materno</p>
   <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20">
@@ -223,7 +223,8 @@
     <option value="Unión Libre">Unión Libre</option>
   </select>
 
-  
+  </div>
+  <div class="genero">
 
   <p>Selecciona el Estado de Nacimiento</p>
   <select name="EstadoNacimiento" required >
@@ -271,6 +272,9 @@
   <p>Correo Electrónico</p>
   <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80">
 
+</div>
+
+<div class="genero">
   <p>Tipo de Identificación</p>
   <select name="tipoIdentificacion" required>
     <option value="">Sin Seleccionar</option>
@@ -290,6 +294,9 @@
 
 
    <h2 id="titulo">Domicilio</h2>
+
+
+
  <div class="domicilio">
 
   <p>Selecciona el Nombre del Municipio</p>
@@ -314,6 +321,9 @@
     <option value="Tequisquiapan">Tequisquiapan</option>
     <option value="Tolimán">Tolimán</option>
    </Select>
+
+
+
    <p>Selecciona el Tipo de Domicilio</p>
    <select name="tipoDomicilio" required>
     <option value="">Sin Seleccionar</option>
@@ -378,7 +388,7 @@
 
 </div>
 
-   <h2 id="titulo2">Actividad Económica</h2>
+   <h2 id="actividad">Actividad Económica</h2>
    <p>Seleccion el Tipo de Actividad</p>
    <select name="tipoActividadEconomica" required >
     <option value="">Sin Seleccionar</option>
@@ -390,14 +400,18 @@
 
 
 <br>
-<input type="submit" name="EnviarPF" value="Enviar Información" class="boton">
+
+
+<input type="submit" name="EnviarPF" value="Siguiente" class="boton" id="ubicacion">
 <br>
 
 </form>
 
-<a href="http://localhost/sedea/Personas/Fisica/eleccionpf.php"><button class="boton">Regresar</button></a>
+<a href="http://localhost/sedea/Personas/Fisica/eleccionpf.php"><button class="boton" id="ubicacion">Regresar</button></a>
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
+
+
 </div>
 </body>
 </html>

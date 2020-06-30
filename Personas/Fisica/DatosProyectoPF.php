@@ -10,7 +10,7 @@ require_once('ConexionPF.php');
 if(isset($_POST['EnviarPF'])){
 
   #recepcion de datos PersonaFisica.php
-  $folioImpreso         =             strtoupper(sanitizeString($_POST['FolioImpreso']));
+  
 
  
   $dirReg               =             $_POST['DireccionRegional']; #direccionRegional
@@ -54,8 +54,6 @@ if(isset($_POST['EnviarPF'])){
 }
 
      
-echo $folioImpreso;
-
 
 
  ?>
@@ -70,12 +68,12 @@ echo $folioImpreso;
 </head>
 <body>
 
-<div class="Marco"> 
+<div class="MarcoDatos"> 
 <form method="post" action="conceptosApoyoPF.php">
   
 
 
-<input type="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">
+
 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?> ">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?> ">
@@ -101,13 +99,14 @@ echo $folioImpreso;
 <input type ="hidden" name ="actEco" value="<?php echo $actEco; ?> ">
 
 
-<h1 id="titulo3">Datos del Proyecto para Persona Física</h1>
+<h1 >Datos del Proyecto para Persona Física</h1>
 
 
 
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
 
+<br> <br>
 
 <div class="antiguedad">
 <p>Antiguedad del proyecto</p>
@@ -264,7 +263,7 @@ echo $folioImpreso;
 
 </div>
 
-<h2 id="titulo2">Domicilio del proyecto</h2>
+<h2 id="domiciliotitulo">Domicilio del proyecto</h2>
 
 <div class="municipio">
 
@@ -348,13 +347,13 @@ echo $folioImpreso;
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Enviar Información" class="boton">
+<input type="submit" name="DatosProyectoPF" value="Siguiente" class="boton" id="ubicacion">
 <br>
 
 </form>
 <br>
-<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton"> Regresar </button></a> <br>
-<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="http://localhost/sedea/Personas/Fisica/personaFisica.php"><button class="boton" id="ubicacion"> Regresar </button></a> <br>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
 </div>
 
 

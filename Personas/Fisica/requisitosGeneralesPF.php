@@ -7,7 +7,9 @@ global $folioImpreso;
 if (isset($_POST['EnviarConceptosPF'])){
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso  				=	 				sanitizeString($_POST['IfolioImpreso']);
+ 
+
+
   $dirReg 						=					$_POST['dirReg'];
   $municipio 					= 	 				$_POST['municipio'];
   $nombre 						= 	 				$_POST['nombre'];
@@ -107,11 +109,11 @@ $AportacionBeneficiario6		=					sanitizeString($_POST['AportacionBeneficiario6']
 
 
 
+  $folioImpreso = substr($curp, 0,1).strlen($municipio).substr($curp, 1,2).strlen($genero).substr($curp, 2,3).strlen($dirReg).strlen($nombre);
 
 
 
 
-echo $folioImpreso;
 
 ?>
 
