@@ -107,7 +107,7 @@ $AportacionBeneficiario6		=					sanitizeString($_POST['AportacionBeneficiario6']
 }
 
 
-
+  
 
   $folioImpreso = substr($curp, 0,1).strlen($municipio).substr($curp, 1,2).strlen($genero).substr($curp, 2,3).strlen($dirReg).strlen($nombre);
 
@@ -285,9 +285,6 @@ $AportacionBeneficiario6		=					sanitizeString($_POST['AportacionBeneficiario6']
 
 
 <input type="submit" name="RequisitosG" value="Subir Documentos" class="boton">
-</form>
-
-
 
 
 

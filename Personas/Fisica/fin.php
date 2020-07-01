@@ -109,6 +109,10 @@ $AportacionBeneficiario6    =    sanitizeString($_POST['AportacionBeneficiario6'
 		      #Datos de Persona
        		 $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono}','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}',curdate());";
 
+           #datos de identificacion persona fisica
+
+           $inserIdentificacionpf = "INSERT INTO identificacionpf VALUES (null,'{$numIdentificacion}','{$curp}',curdate());";
+
          #Datos de Persona Domicilio
         $insertDomicilioPF = "INSERT INTO personafisicaDomicilio VALUES(null,'{$folioImpreso}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
 
@@ -124,11 +128,12 @@ $AportacionBeneficiario6    =    sanitizeString($_POST['AportacionBeneficiario6'
           $InsertRQG  = "INSERT INTO  personafisicaReqenerales VALUES(null,'{$folioImpreso}','{$Observaciones}',curdate());";
 
      		$insertPF               = utf8_encode($insertPF);
+        $inserIdentificacionpf  = utf8_encode($inserIdentificacionpf);
         $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
    			$InsertProyecto         = utf8_encode($InsertProyecto);
    			$InsertConceptoApoyo1   = utf8_encode($InsertConceptoApoyo1);
         $InsertRQG              = utf8_encode($InsertRQG);
-   
+       
    
 
   
@@ -172,9 +177,25 @@ echo "<br>".$AportacionBeneficiario3;
            # echo $InsertConceptoApoyo5;
            # echo $InsertConceptoApoyo6;
 
+
+        $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
+
+
+        $select = utf8_decode($select);
+
+        $result = queryMySql("$select");
+
+
+        if($result -> num_rows){
+  
+        } else{
+
+
               queryMySql("$insertPF"); 
               #echo "Datos Registrados de persona fisica";
               
+              queryMySql("$inserIdentificacionpf");
+
               queryMySql("$insertDomicilioPF");
               #echo "Datos Registrados de  Domicilio persona fisica";
            
@@ -311,10 +332,15 @@ echo "<br>".$AportacionBeneficiario3;
 
 
 
-              queryMySql("$InsertRQG");
-              #echo "Datos de requisitos generales de persona fisica"
+        queryMySql("$InsertRQG");
+        #echo "Datos de requisitos generales de persona fisica"
 
               
+
+
+        }
+
+             
 
 
 
@@ -329,7 +355,7 @@ echo "<br>".$AportacionBeneficiario3;
 <head>
 	<title>Finalizar Registro</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
-	<meta charset="utf-8">
+	
 </head>
 <body>
 

@@ -1,10 +1,6 @@
 #Base de datos para persona fisica
+
 drop Database sedeapf;
-
-
-
-tomar las letras de la curp y numeros de la ine
-
 
 
 Create Database sedeapf;
@@ -25,6 +21,16 @@ correoPF varchar(80),
 tipoIdent varchar(30), #Tipo de identificacion
 NIdent varchar(15),#Numero de identificacion
 curp varchar(20),
+fechaReg varchar(30) #fecha de registro
+);
+
+
+
+
+Create Table identificacionpf(
+numeroIdent varchar(15) Primary key,	#Numero de identificacion
+curp varchar(20),
+folioImpresoPF varchar(30),
 fechaReg varchar(30)
 );
 
@@ -90,8 +96,6 @@ idRequisito int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 observaciones varchar(250),
 fechaRegistro varchar(30)
-
-
 );
 
 
