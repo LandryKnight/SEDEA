@@ -207,23 +207,29 @@ echo "<br>".$AportacionBeneficiario3;
 
 
 
-        if(is_numeric($ApoyoEstatalSolicitado2) & is_numeric($ApoyoMunicipalSolicitado2) &  is_numeric($AportacionBeneficiario2)){ 
+        
 
-          $InversionTotal2        =      $ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+         if (!empty($ApoyoSolicitado2) & !empty($UniMedida2) & !empty($CanSolicitada2)) {
+          
+            if(is_numeric($ApoyoEstatalSolicitado2) & is_numeric($ApoyoMunicipalSolicitado2) &  is_numeric($AportacionBeneficiario2)){ 
 
-           }
 
-         if (is_numeric($InversionTotal2) & !empty($ApoyoSolicitado2) & !empty($UniMedida2) & !empty($CanSolicitada2)) {
+              if(is_numeric($InversionTotal2)){ 
+
+              $InversionTotal2        =      $ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
+
           
 
+              $InsertConceptoApoyo2 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado2}','{$UniMedida2}','{$CanSolicitada2}','{$ApoyoEstatalSolicitado2}','{$ApoyoMunicipalSolicitado2}','{$AportacionBeneficiario2}','{$InversionTotal2}',curdate());";
 
-            $InsertConceptoApoyo2 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado2}','{$UniMedida2}','{$CanSolicitada2}','{$ApoyoEstatalSolicitado2}','{$ApoyoMunicipalSolicitado2}','{$AportacionBeneficiario2}','{$InversionTotal2}',curdate());";
+              $InsertConceptoApoyo2  = utf8_encode($InsertConceptoApoyo2);
 
-            $InsertConceptoApoyo2  = utf8_encode($InsertConceptoApoyo2);
+              queryMySql("$InsertConceptoApoyo2");
 
-            queryMySql("$InsertConceptoApoyo2");
+              echo $InsertConceptoApoyo2."<br>";
 
-            echo $InsertConceptoApoyo2."<br>";
+                  }
+               }
 
          }
 
@@ -231,27 +237,29 @@ echo "<br>".$AportacionBeneficiario3;
 
      
 
-        if(is_numeric($ApoyoEstatalSolicitado3) & is_numeric($ApoyoMunicipalSolicitado3) &  is_numeric($AportacionBeneficiario3)){ 
 
-          $InversionTotal3        =      $ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
-
-           }
-
-         if (is_numeric($InversionTotal3) & !empty($ApoyoSolicitado3) & !empty($UniMedida3) & !empty($CanSolicitada3)) {
+         if (!empty($ApoyoSolicitado3) & !empty($UniMedida3) & !empty($CanSolicitada3)) {
           
 
+           if(is_numeric($ApoyoEstatalSolicitado3) & is_numeric($ApoyoMunicipalSolicitado3) &  is_numeric($AportacionBeneficiario3)){ 
+
+            if(is_numeric($InversionTotal3) ){
+                      $InversionTotal3        =      $ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
+            
+            
+                      $InsertConceptoApoyo3 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado3}','{$UniMedida3}','{$CanSolicitada3}','{$ApoyoEstatalSolicitado3}','{$ApoyoMunicipalSolicitado3}','{$AportacionBeneficiario3}','{$InversionTotal3}',curdate());";
+            
+                      $InsertConceptoApoyo3 = utf8_encode($InsertConceptoApoyo3);
+            
+                      queryMySql("$InsertConceptoApoyo3");
+            
+                      echo $InsertConceptoApoyo3."<br>";
+
+                      }
+                  }
            
-
-          $InsertConceptoApoyo3 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado3}','{$UniMedida3}','{$CanSolicitada3}','{$ApoyoEstatalSolicitado3}','{$ApoyoMunicipalSolicitado3}','{$AportacionBeneficiario3}','{$InversionTotal3}',curdate());";
-
-          $InsertConceptoApoyo3 = utf8_encode($InsertConceptoApoyo3);
-
-          queryMySql("$InsertConceptoApoyo3");
-
-          echo $InsertConceptoApoyo3."<br>";
-
-         
-     }
+                   
+            }
 
 
       if(is_numeric($ApoyoEstatalSolicitado4) & is_numeric($ApoyoMunicipalSolicitado4) & is_numeric($AportacionBeneficiario4)){
