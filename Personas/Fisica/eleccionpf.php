@@ -20,7 +20,7 @@
 <a href="personaFisica.php"><button class="boton">LLenar una solicitud</button></a>
 <br>
 <h3>Agregar un nuevo concepto de <br>apoyo a una solicitud realizada:</h3>
-<a href=""><button class="boton">Agregar nuevo concepto</button></a>
+<a href="nuevoconcepto.php"><button class="boton">Agregar nuevo concepto</button></a>
 
 <br><br><br>
 <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>

@@ -302,7 +302,7 @@ La entrega de la presente solicitud, así como de la documentación solicitada, 
 </form>
  
 
-
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
  </div>
 
 

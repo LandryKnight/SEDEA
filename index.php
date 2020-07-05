@@ -41,7 +41,7 @@ Usuarios Admin
 	
 	<p>Dictamen de Solicitudes</p>
 	<br>
-	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2"><b>Persona Física</b></button> </a>
+	<a href="Personas/Fisica/dictamen/DictamenSolicitud.php"><button class="boton2"><b>Persona Física</b></button> </a>
  <br> 
 	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2"><b>Persona Moral</b></button></a>
 

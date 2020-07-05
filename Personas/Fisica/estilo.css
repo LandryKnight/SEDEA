@@ -9,16 +9,18 @@ body{
 }
 
 .eleccion{
- top: 20px;
- width: 7in;
+
+ width: 7.5in;
  height: 8in;
 
  position: absolute;
- left:calc((100% - 7in)/2);
+ left:calc((100% - 7.5in)/2);
+ top: 30px;
+
 
  color: #FFFFFF;
  background: #1D447D;
- padding-left: 43px;
+
  border-radius: 15px;
 
  border:none;

@@ -294,7 +294,7 @@ $AportacionBeneficiario6		=					sanitizeString($_POST['AportacionBeneficiario6']
 
 
 
-<a href="http://localhost/sedea/Personas/Fisica/conceptosApoyoPF.php"><button class="boton"> Regresar  </button></a>
+<a href="http://localhost/sedea/personas/fisica/conceptosApoyoPF.php"><button class="boton"> Regresar  </button></a>
 <br><a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
 
 
