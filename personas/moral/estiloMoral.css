@@ -9,6 +9,56 @@ body{
 }
 
 
+
+.eleccion{
+
+ width: 7.5in;
+ height: 8in;
+
+ position: absolute;
+ left:calc((100% - 7.5in)/2);
+ top: 30px;
+
+
+ color: #FFFFFF;
+ background: #1D447D;
+
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+
+.eleccion h1{
+	font-size: 28pt;
+	font-weight: bold;
+	margin-bottom: 100px;
+}
+
+.eleccion h2{
+	font-size: 24pt;
+	font-weight: bold;
+	margin-bottom: 130px;
+}
+
+.eleccion h3{
+	font-size: 24pt;
+	font-weight:bold;
+}
+
+
+.eleccion button{
+	height: .5in;
+}
+
+
+
+
 .Marco{
  top: 10px;
  width: 62%;
@@ -188,16 +238,15 @@ body{
 	
 	border-radius: 15px;
 
-	width: 200px;
-	height: 35px;
+	width: 2.5in;
+	height: .5in;
+
 	font-weight: bold;
 	color: #9C1462;
 	font-size: 14pt;
 	font-weight: bold;
 	margin-top: 15px;
-	margin-bottom: 50px;
-	position: relative;
-	left: 38%;
+	margin-bottom: 30px;
 }
 
 #botonPM{

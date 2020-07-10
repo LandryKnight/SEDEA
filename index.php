@@ -35,9 +35,9 @@ Usuarios Admin
 	<p>Elija el tipo de persona que le corresponde </p>
 
 	<br>
-	<a href="Personas/Fisica/eleccionpf.php"> <button class="boton"><b>Persona Física</b></button> </a> 
+	<a href="personas/fisica/eleccionpf.php"> <button class="boton"><b>Persona Física</b></button> </a> 
 	<br>
-	<a href="Personas/Moral/personaMoral.php"><button class="boton"><b>Persona Moral</b></button> </a> 
+	<a href="personas/moral/eleccionpm.php"><button class="boton"><b>Persona Moral</b></button> </a> 
 	
 	<p>Dictamen de Solicitudes</p>
 	<br>
