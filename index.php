@@ -27,7 +27,9 @@ Usuarios Admin
 <div align="center" class="Marco">
 
 	<img class="imgizq" src="img/sedealogo.jfif">
+	
 	<h2>Bienvenido al <br>Portal de la SEDEA</h2>
+
 	<img class="imgder" src="img/qroOrgullo.png">
 	<h3>Productividad Agropecuaria Sustentable en <br> los Municipios del Estado de Querétaro</h3>
 
@@ -41,9 +43,9 @@ Usuarios Admin
 	
 	<p>Dictamen de Solicitudes</p>
 	<br>
-	<a href="Personas/Fisica/dictamen/DictamenSolicitud.php"><button class="boton2"><b>Persona Física</b></button> </a>
+	<a href="http://localhost/sedea/personas/fisica/menudictamenpf.php"><button class="boton2"><b>Persona Física</b></button> </a>
  <br> 
-	<a href="Personas/Fisica/DictamenSolicitud.php"><button class="boton2"><b>Persona Moral</b></button></a>
+	<a href="http://localhost/sedea/personas/moral/menudictamenpm.php"><button class="boton2"><b>Persona Moral</b></button></a>
 
 
 </div>

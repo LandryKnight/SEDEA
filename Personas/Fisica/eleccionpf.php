@@ -17,8 +17,10 @@
 
 
 <h3>Crear una nueva solicitud</h3>
-<a href="personaFisica.php"><button class="boton">LLenar una solicitud</button></a>
+<a href="personaFisica.php"><button class="boton">Llenar una solicitud</button></a>
 <br>
+
+
 <h3>Agregar un nuevo concepto de <br>apoyo a una solicitud realizada:</h3>
 <a href="nuevoconcepto.php"><button class="boton">Agregar nuevo concepto</button></a>
 

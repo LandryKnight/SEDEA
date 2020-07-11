@@ -23,45 +23,6 @@ require_once('ConexionPF.php');
 
 
 
-<input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
-<input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
-<input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">
-<input type ="hidden" name ="genero" value="<?php echo $genero; ?>">
-<input type ="hidden" name ="fechaNacimiento" value="<?php echo $fechaNacimiento; ?>">
-<input type ="hidden" name ="nacionalidad" value="<?php echo $nacionalidad; ?>">
-<input type ="hidden" name ="EstadoCivil" value="<?php echo $EstadoCivil; ?>">
-<input type ="hidden" name ="estadoNacimiento" value="<?php echo $estadoNacimiento; ?>">
-<input type ="hidden" name ="telefono" value="<?php echo $telefono; ?>">
-<input type ="hidden" name ="correo" value="<?php echo $correo; ?>">
-<input type ="hidden" name ="tipoIdentificacion" value="<?php echo $tipoIdentificacion; ?>">
-<input type ="hidden" name ="numIdentificacion" value="<?php echo $numIdentificacion; ?>">
-<input type ="hidden" name ="curp" value="<?php echo $curp; ?>">
-<input type ="hidden" name ="tipoDomicilio" value="<?php echo $tipoDomicilio; ?>">
-<input type ="hidden" name ="tipoAsentamiento" value="<?php echo $tipoAsentamiento; ?>">
-<input type ="hidden" name ="nombreAsentamiento" value="<?php echo $nombreAsentamiento; ?>">
-<input type ="hidden" name ="tipoVialidad" value="<?php echo $tipoVialidad; ?>">
-<input type ="hidden" name ="nombreVialidad" value="<?php echo $nombreVialidad; ?>">
-<input type ="hidden" name ="nombreLocalidad" value="<?php echo $nombreLocalidad; ?>">
-<input type ="hidden" name ="nombreMunicipio" value="<?php echo $nombreMunicipio; ?>">
-<input type ="hidden" name ="refVial" value="<?php echo $refVial; ?>">
-<input type ="hidden" name ="actEco" value="<?php echo $actEco; ?>">
-
-
-<input type ="hidden" name ="NombreProyecto" value="<?php echo $NombreProyecto;  ?>">
-<input type ="hidden" name ="AntiguedadProyecto" value="<?php echo $AntiguedadProyecto;  ?>">
-<input type ="hidden" name ="TelefonoProyecto" value="<?php echo $TelefonoProyecto;  ?>">
-<input type ="hidden" name ="CorreoElectronicoProyecto" value="<?php echo $CorreoElectronicoProyecto;  ?>">
-<input type ="hidden" name ="FechaConstitucion" value="<?php echo $FechaConstitucion;  ?>">
-<input type ="hidden" name ="TipoDomicilioProyecto" value="<?php echo $TipoDomicilioProyecto;  ?>">
-<input type ="hidden" name ="TipoAsentamientoProyecto" value="<?php echo $TipoAsentamientoProyecto;  ?>">
-<input type ="hidden" name ="NombreAsentamientoProyecto" value="<?php echo $NombreAsentamientoProyecto; ?>">
-<input type ="hidden" name ="TipoVialidadProyecto" value="<?php echo $TipoVialidadProyecto;  ?>">
-<input type ="hidden" name ="NombreVialidadProyecto" value="<?php echo $NombreVialidadProyecto; ?>">
-<input type ="hidden" name ="NombreLocalidadProyecto" value="<?php echo $NombreLocalidadProyecto;  ?>">
-<input type ="hidden" name ="NombreMunicipioProyecto" value="<?php echo $NombreMunicipioProyecto;  ?>">
-<input type ="hidden" name ="ReferenciaVialidadProyecto" value="<?php echo $ReferenciaVialidadProyecto;  ?>">
-
-
 
 <h1>Conceptos de Apoyo para Persona Física</h1>
 
