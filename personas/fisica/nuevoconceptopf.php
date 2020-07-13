@@ -10,7 +10,7 @@ require_once('ConexionPF.php');
 <head>
 	<title>Agregar un nuevo concepto de apoyo</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
 
 </head>
 <body>

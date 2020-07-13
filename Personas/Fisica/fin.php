@@ -5,44 +5,48 @@ require_once('ConexionPF.php');
 if (isset($_POST['CompletarRegistro'])) { 
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso       = 				  sanitizeString($_POST['IfolioImpreso']);
-  $dirReg             = 					$_POST['dirReg'];
-  $municipio          = 	 				$_POST['municipio'];
-  $nombre             = 	 				$_POST['nombre'];
-  $genero             = 	 				$_POST['genero'];
-  $fechaNacimiento    = 		      $_POST['fechaNacimiento'];
-  $nacionalidad       = 	 			  $_POST['nacionalidad'];
-  $EstadoCivil        = 	 			  $_POST['EstadoCivil'];
-  $estadoNacimiento   = 	 		    $_POST['estadoNacimiento'];
-  $telefono           = 	 				$_POST['telefono'];
-  $correo             = 	 				$_POST['correo'];
-  $tipoIdentificacion = 	 	      $_POST['tipoIdentificacion'];
-  $numIdentificacion  = 	 		    $_POST['numIdentificacion'];
-  $curp               = 					$_POST['curp'];
-  $tipoDomicilio      = 	 			  $_POST['tipoDomicilio'];
-  $tipoAsentamiento   = 	 		    $_POST['tipoAsentamiento'];
-  $nombreAsentamiento = 	 	      $_POST['nombreAsentamiento'];
-  $tipoVialidad       = 	 			  $_POST['tipoVialidad'];
-  $nombreVialidad     = 	 		    $_POST['nombreVialidad'];
-  $nombreLocalidad    = 	 		    $_POST['nombreLocalidad'];
-  $nombreMunicipio    = 	 		    $_POST['nombreMunicipio'];
-  $refVial            = 	 				$_POST['refVial'];
-  $actEco             = 	 				$_POST['actEco']; #actividad economica
+  $folioImpreso               =                     sanitizeString($_POST['IfolioImpreso']);
 
+  
+
+  $dirReg                     =                      sanitizeString($_POST['dirReg']);
+  $municipio                  =                      sanitizeString($_POST['municipio']);
+  $nombre                     =                      sanitizeString($_POST['nombre']);
+  $genero                     =                      sanitizeString($_POST['genero']);
+  $fechaNacimiento            =                      sanitizeString($_POST['fechaNacimiento']);
+  $nacionalidad               =                      sanitizeString($_POST['nacionalidad']);
+  $EstadoCivil                =                      sanitizeString($_POST['EstadoCivil']);
+  $estadoNacimiento           =                      sanitizeString($_POST['estadoNacimiento']);
+  $telefono                   =                      sanitizeString($_POST['telefono']);
+  $correo                     =                      sanitizeString($_POST['correo']);
+  $tipoIdentificacion         =                      sanitizeString($_POST['tipoIdentificacion']);
+  $numIdentificacion          =                      sanitizeString($_POST['numIdentificacion']);
+  $curp                       =                      sanitizeString($_POST['curp']);
+  $tipoDomicilio              =                      sanitizeString($_POST['tipoDomicilio']);
+  $tipoAsentamiento           =                      sanitizeString($_POST['tipoAsentamiento']);
+  $nombreAsentamiento         =                      sanitizeString($_POST['nombreAsentamiento']);
+  $tipoVialidad               =                      sanitizeString($_POST['tipoVialidad']);
+  $nombreVialidad             =                      sanitizeString($_POST['nombreVialidad']);
+  $nombreLocalidad            =                      sanitizeString($_POST['nombreLocalidad']);
+  $nombreMunicipio            =                      sanitizeString($_POST['nombreMunicipio']);
+  $refVial                    =                      sanitizeString($_POST['refVial']);
+  $actEco                     =                      sanitizeString($_POST['actEco']);
+      
 #recepcion de datos de proyecto
-$NombreProyecto		            =	 	$_POST['NombreProyecto'];
-$AntiguedadProyecto		        =	 	$_POST['AntiguedadProyecto'];
-$TelefonoProyecto		          =		$_POST['TelefonoProyecto'];
-$CorreoElectronicoProyecto    =	  $_POST['CorreoElectronicoProyecto'];
-$FechaConstitucion		        =	 	$_POST['FechaConstitucion'];
-$TipoDomicilioProyecto		    =	  $_POST['TipoDomicilioProyecto'];
-$TipoAsentamientoProyecto	    =	  $_POST['TipoAsentamientoProyecto'];
-$NombreAsentamientoProyecto   =	  $_POST['NombreAsentamientoProyecto'];
-$TipoVialidadProyecto		      =	  $_POST['TipoVialidadProyecto'];
-$NombreVialidadProyecto       =	 	$_POST['NombreVialidadProyecto'];
-$NombreLocalidadProyecto      =	 	$_POST['NombreLocalidadProyecto'];
-$NombreMunicipioProyecto	    =   $_POST['NombreMunicipioProyecto'];
-$ReferenciaVialidadProyecto	  =	  $_POST['ReferenciaVialidadProyecto'];
+$NombreProyecto               =         sanitizeString($_POST['NombreProyecto']);
+$AntiguedadProyecto           =         sanitizeString($_POST['AntiguedadProyecto']);
+$TelefonoProyecto             =         sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto    =         sanitizeString($_POST['CorreoElectronicoProyecto']);
+$FechaConstitucion            =         sanitizeString($_POST['FechaConstitucion']);
+$TipoDomicilioProyecto        =         sanitizeString($_POST['TipoDomicilioProyecto']);
+$TipoAsentamientoProyecto     =         sanitizeString($_POST['TipoAsentamientoProyecto']);
+$NombreAsentamientoProyecto   =         sanitizeString($_POST['NombreAsentamientoProyecto']);
+$TipoVialidadProyecto         =         sanitizeString($_POST['TipoVialidadProyecto']);
+$NombreVialidadProyecto       =         sanitizeString($_POST['NombreVialidadProyecto']);
+$NombreLocalidadProyecto      =         sanitizeString($_POST['NombreLocalidadProyecto']);
+$NombreMunicipioProyecto      =         sanitizeString($_POST['NombreMunicipioProyecto']);
+$ReferenciaVialidadProyecto   =         sanitizeString($_POST['ReferenciaVialidadProyecto']);
+  
 
 
 #recepcion de datos concepto de apoyo
@@ -147,6 +151,9 @@ $AportacionBeneficiario6    =    sanitizeString($_POST['AportacionBeneficiario6'
         
 
 
+
+          /*
+
             echo $insertPF. "persona fisica"."<br>";
             echo $insertDomicilioPF. "Domicilio pf"."<br>";
             echo $InsertProyecto."<br>";
@@ -157,26 +164,28 @@ $AportacionBeneficiario6    =    sanitizeString($_POST['AportacionBeneficiario6'
 
 
 
-echo "<br>".$ApoyoSolicitado2;
-echo "<br>".$UniMedida2;
-echo "<br>".$CanSolicitada2;
-echo "<br>".$ApoyoEstatalSolicitado2;
-echo "<br>".$ApoyoMunicipalSolicitado2;
-echo "<br>".$AportacionBeneficiario2;  
-
-echo "<br>".$ApoyoSolicitado3;
-echo "<br>".$UniMedida3;
-echo "<br>".$CanSolicitada3;
-echo "<br>".$ApoyoEstatalSolicitado3;
-echo "<br>".$ApoyoMunicipalSolicitado3;
-echo "<br>".$AportacionBeneficiario3;  
-
-                       
-           # echo $InsertConceptoApoyo3;
-           # echo $InsertConceptoApoyo4;
-           # echo $InsertConceptoApoyo5;
-           # echo $InsertConceptoApoyo6;
-
+            echo "<br>".$ApoyoSolicitado2;
+            echo "<br>".$UniMedida2;
+            echo "<br>".$CanSolicitada2;
+            echo "<br>".$ApoyoEstatalSolicitado2;
+            echo "<br>".$ApoyoMunicipalSolicitado2;
+            echo "<br>".$AportacionBeneficiario2;  
+            
+            echo "<br>".$ApoyoSolicitado3;
+            echo "<br>".$UniMedida3;
+            echo "<br>".$CanSolicitada3;
+            echo "<br>".$ApoyoEstatalSolicitado3;
+            echo "<br>".$ApoyoMunicipalSolicitado3;
+            echo "<br>".$AportacionBeneficiario3; 
+            
+            echo $InsertConceptoApoyo3;
+            
+            echo $InsertConceptoApoyo4;
+            
+            echo $InsertConceptoApoyo5;
+            
+            echo $InsertConceptoApoyo6;
+ */
 
         $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
 
@@ -373,7 +382,7 @@ echo "<br>".$AportacionBeneficiario3;
 <html>
 <head>
 	<title>Finalizar Registro</title>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
 	
 </head>
 <body>

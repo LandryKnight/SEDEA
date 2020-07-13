@@ -8,7 +8,7 @@
 <head>
 	<title>Datos Persona Física</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="stylesheet" type="text/css" href="estiloFisica.css">
   </head>
 <body>
 
