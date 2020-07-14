@@ -64,7 +64,7 @@ if(isset($_POST['sesion'])){
 
 
 
-<form action="iniciosesion.php" method="post">
+<form action="iniciosesionpf.php" method="post">
 <h3>Usuario: </h3>
 <input type="text" name="usuarios" placeholder="Usuario SEDEA" required="required" maxlength="21" class="input">
 <h3>Contraseña: </h3>
