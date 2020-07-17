@@ -1,6 +1,6 @@
 <?php 
 
-require_once('ConexionPF.php');
+require_once('conexionPF.php');
 
 global $folioImpreso;
 if (isset($_POST['RequisitosG'])){
@@ -123,21 +123,37 @@ $AportacionBeneficiario6	  =	       sanitizeString($_POST['AportacionBeneficiari
 $num_archivos = count($_FILES['archivo']['name']);
 
 for($i=0; $i<= $num_archivos; $i++){
+
   if(!empty($_FILES['archivo']['name'][$i])){
 
      
 
-      $ruta_nueva_ine  = "documentos/"."$folioImpreso"."_"."ine_".$_FILES['archivo']['name'][$i];
+   $ruta_nueva_ine  = "documentos/"."$folioImpreso"."_"."ine_".$_FILES['archivo']['name'][$i];
 
-      $ruta_nueva_curp  = "documentos/"."$folioImpreso"."_"."curp_".$_FILES['archivo']['name'][$i];
+   $ruta_nueva_curp  = "documentos/"."$folioImpreso"."_"."curp_".$_FILES['archivo']['name'][$i];
     
-      $ruta_nueva_comprobanteDomicilio = "documentos/"."$folioImpreso"."_"."comprobantedeDomicilio_".$_FILES['archivo']['name'][$i];
+   $ruta_nueva_comprobanteDomicilio = "documentos/"."$folioImpreso"."_"."comprobantedeDomicilio_".$_FILES['archivo']['name'][$i];
 
-      $ruta_nueva_croquis  = "documentos/"."$folioImpreso"."_"."croquis_".$_FILES['archivo']['name'][$i];
+   $ruta_nueva_croquis  = "documentos/"."$folioImpreso"."_"."croquis_".$_FILES['archivo']['name'][$i];
     
-    if(file_exists($ruta_nueva)){
+    if(file_exists($ruta_nueva_ine) | file_exists($ruta_nueva_curp) | file_exists($ruta_nueva_comprobanteDomicilio) | file_exists($ruta_nueva_croquis)){
+
       //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
+      
     }else{
+
+      switch ($_FILES['archivo']['type']) {
+
+        case 'aplication/pdf': $ext = 'pdf';
+          break;
+        
+        default: $ext =''; 
+          break;
+      }
+
+      if($ext){ 
+
+
       $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
 
       if($i == 0){ 
@@ -161,6 +177,11 @@ for($i=0; $i<= $num_archivos; $i++){
       if($i == 3){ 
       move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
       echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
+
+       }
+
+
+
       }
 
     }
@@ -203,8 +224,8 @@ for($i=0; $i<= $num_archivos; $i++){
 <input type ="hidden" name ="correo" value="<?php echo $correo; ?>">
 <input type ="hidden" name ="tipoIdentificacion" value="<?php echo $tipoIdentificacion; ?>">
 <input type ="hidden" name ="numIdentificacion" value="<?php echo $numIdentificacion; ?>">
-<input type ="hidden" name ="curp" value="<?php echo $curp; ?>">
-<input type ="hidden" name ="tipoDomicilio" value="<?php echo $tipoDomicilio; ?>">
+<input type ="hidden" name ="curp"              value="<?php echo $curp; ?>">
+<input type ="hidden" name ="tipoDomicilio"     value="<?php echo $tipoDomicilio; ?>">
 <input type ="hidden" name ="tipoAsentamiento" value="<?php echo $tipoAsentamiento; ?>">
 <input type ="hidden" name ="nombreAsentamiento" value="<?php echo $nombreAsentamiento; ?>">
 <input type ="hidden" name ="tipoVialidad" value="<?php echo $tipoVialidad; ?>">

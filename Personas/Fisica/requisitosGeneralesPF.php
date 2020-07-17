@@ -1,6 +1,8 @@
 
 <?php  
-require_once('ConexionPF.php');
+
+require_once('conexionPF.php');
+
 
 global $folioImpreso;
 

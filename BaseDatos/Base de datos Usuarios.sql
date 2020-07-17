@@ -5,7 +5,7 @@ truncate Table usuariosReg;
 
 
 
-
+Create database usuariossdea;
 
 
 
@@ -18,7 +18,7 @@ pazz varchar(50)
 
 
 
-Create Table usuariosReg(
+Create Table usuariosreg(
 idUsuario int Primary Key auto_increment,
 nameUsuario varchar(50),
 pazz varchar(50)
@@ -27,9 +27,9 @@ pazz varchar(50)
 
 
 
-insert into Usuarios values(null,'adminSda','sdaAdmin@_@2020');
-insert into Usuarios values(null,'juliosede@','sdeaingjulio_2020');
-insert into Usuarios values(null,'sedea','sde@_@2020');
+insert into Usuarios values(null,'adminSda','zdaAdmin@_@2020');
+insert into Usuarios values(null,'juliosede@','zdeaingjulio_2020');
+insert into Usuarios values(null,'sedea','zde@_@2020');
 
 
 #idUsuario 1 AdminSda

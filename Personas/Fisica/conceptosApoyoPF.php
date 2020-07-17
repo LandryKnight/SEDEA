@@ -1,7 +1,6 @@
 <?php 
 
-require_once('ConexionPF.php');
-
+require_once('conexionPF.php');
 
 if(isset($_POST['EnviarConceptosPF'])){
 
@@ -70,9 +69,9 @@ $ReferenciaVialidadProyecto		=					sanitizeString($_POST['ReferenciaVialidadProy
 
 <div class="conceptoApoyo">
 
-<form method="post" action="conceptosApoyoPF.php">
+<form method="post" action="requisitosGeneralesPF.php">
 
-<input type ="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
+
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">

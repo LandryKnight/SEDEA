@@ -9,7 +9,7 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="stylesheet" type="text/css" href="estiloMoral.css">
 </head>
 <body>
 
@@ -308,8 +308,10 @@
 <input type="submit" name="enviarPM" value="Enviar Información" id="botonPM" class="boton">
 
 	<br>
-<a href=""><button id="botonPM" class="boton"> Menú Principal</button></a>
+
 </form>
+
+<a href="http://localhost/sedea/index.php"><button id="botonPM" class="boton"> Menú Principal</button></a>
 </div>
 
 </body>

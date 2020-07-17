@@ -17,11 +17,11 @@
 
 
 <h3>Dictaminar una solicitud</h3>
-<a href="http://localhost/sedea/personas/fisica/dictamen/DictamenSolicitudActualizacionPF.php"><button class="boton">Dictaminar</button></a>
+<a href="http://localhost/sedea/personas/fisica/dictamen/iniciosesionpf.php"><button class="boton">Dictaminar</button></a>
 
 <br><br>
 <h3>Ver el estatus de un Dictamen</h3>
-<a href="http://localhost/sedea/personas/fisica/dictamen/DictamenSolicitudEstatusPF.php"><button class="boton">Estatus de dictamen</button></a>
+<a href="http://localhost/sedea/personas/fisica/dictamen/iniciosesionpf.php"><button class="boton">Estatus de dictamen</button></a>
 
 <br><br><br>
 <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>

@@ -1,5 +1,5 @@
 <?php 
-require_once('ConexionPF.php');
+require_once('conexionDPF.php');
 
 
 global $user;
@@ -59,7 +59,7 @@ if(isset($_POST['sesion'])){
 <body>
 
 <div class="login" align="center">
-<h1>SEDEA Regional</h1>
+<h1>SEDEA Querétaro</h1>
 <h2>Ingresa los datos para <br>el inicio de sesión: </h2>
 
 

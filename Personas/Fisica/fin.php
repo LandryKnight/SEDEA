@@ -1,6 +1,10 @@
 <?php  
 
-require_once('ConexionPF.php');
+require_once('conexionPF.php');
+
+
+
+
 
 if (isset($_POST['CompletarRegistro'])) { 
 

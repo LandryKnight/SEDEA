@@ -1,10 +1,10 @@
 <?php 
 
+require_once('conexionPF.php');
 
-require_once('ConexionPF.php');
 
 
- global $folioImpreso;
+
 
  
 if(isset($_POST['EnviarPF'])){
