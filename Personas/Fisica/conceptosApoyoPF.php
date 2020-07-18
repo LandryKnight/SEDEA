@@ -2,7 +2,7 @@
 
 require_once('conexionPF.php');
 
-if(isset($_POST['EnviarConceptosPF'])){
+if(isset($_POST['DatosProyectoPF'])){
 
 
 

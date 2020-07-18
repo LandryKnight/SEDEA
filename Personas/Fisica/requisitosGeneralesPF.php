@@ -188,7 +188,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado1" value="<?php echo $ApoyoEstatalSolicitado1; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado1" value="<?php echo $ApoyoMunicipalSolicitado1; ?>">
 <input type ="hidden" name ="AportacionBeneficiario1" value="<?php echo $AportacionBeneficiario1; ?>">
-<input type ="hidden" name ="InversionTotal1" value="<?php echo $InversionTotal1; ?>">
+
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado2" value="<?php echo $ApoyoSolicitado2; ?>">
@@ -197,7 +197,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado2" value="<?php echo $ApoyoEstatalSolicitado2; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado2" value="<?php echo $ApoyoMunicipalSolicitado2; ?>">
 <input type ="hidden" name ="AportacionBeneficiario2" value="<?php echo $AportacionBeneficiario2; ?>">
-<input type ="hidden" name ="InversionTotal2" value="<?php echo $InversionTotal2; ?>">
+
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado3" value="<?php echo $ApoyoSolicitado3; ?>">
@@ -206,7 +206,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado3" value="<?php echo $ApoyoEstatalSolicitado3; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado3" value="<?php echo $ApoyoMunicipalSolicitado3; ?>">
 <input type ="hidden" name ="AportacionBeneficiario3" value="<?php echo $AportacionBeneficiario3; ?>">
-<input type ="hidden" name ="InversionTotal3" value="<?php echo $InversionTotal3; ?>">
+
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado4" value="<?php echo $ApoyoSolicitado4; ?>">
@@ -215,7 +215,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado4" value="<?php echo $ApoyoEstatalSolicitado4; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado4" value="<?php echo $ApoyoMunicipalSolicitado4; ?>">
 <input type ="hidden" name ="AportacionBeneficiario4" value="<?php echo $AportacionBeneficiario4; ?>">
-<input type ="hidden" name ="InversionTotal4" value="<?php echo $InversionTotal4; ?>">
+
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado5" value="<?php echo $ApoyoSolicitado5; ?>">
@@ -224,7 +224,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado5" value="<?php echo $ApoyoEstatalSolicitado5; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado5" value="<?php echo $ApoyoMunicipalSolicitado5; ?>">
 <input type ="hidden" name ="AportacionBeneficiario5" value="<?php echo $AportacionBeneficiario5; ?>">
-<input type ="hidden" name ="InversionTotal5" value="<?php echo $InversionTotal5; ?>">
+
 							
 							
 <input type ="hidden" name ="ApoyoSolicitado6" value="<?php echo $ApoyoSolicitado6; ?>">
@@ -233,7 +233,7 @@ $AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6'
 <input type ="hidden" name ="ApoyoEstatalSolicitado6" value="<?php echo $ApoyoEstatalSolicitado6; ?>">
 <input type ="hidden" name ="ApoyoMunicipalSolicitado6" value="<?php echo $ApoyoMunicipalSolicitado6; ?>">
 <input type ="hidden" name ="AportacionBeneficiario6" value="<?php echo $AportacionBeneficiario6; ?>">
-<input type ="hidden" name ="InversionTotal6" value="<?php echo $InversionTotal6; ?>">
+
 
 
 
