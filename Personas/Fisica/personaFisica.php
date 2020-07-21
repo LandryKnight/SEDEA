@@ -213,7 +213,7 @@
   <P>Selecciona el Estado Civil</P>
     <select name="EstadoCivil" required>
     <option value="">Sin Seleccionar</option>
-    <option value="Soltero">Soltero</option>
+    <option value="Solter@">Solter@</option>
     <option value="Casado">Casado</option>
     <option value="Divorciado">Divorciado</option>
     <option value="Unión Libre">Unión Libre</option>

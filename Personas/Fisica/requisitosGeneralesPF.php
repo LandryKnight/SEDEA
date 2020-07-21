@@ -33,22 +33,22 @@ if (isset($_POST['EnviarConceptosPF'])){
   $actEco                     =                      sanitizeString($_POST['actEco']);
       
 #recepcion de datos de proyecto
-$NombreProyecto               =         sanitizeString($_POST['NombreProyecto']);
-$AntiguedadProyecto           =         sanitizeString($_POST['AntiguedadProyecto']);
-$TelefonoProyecto             =         sanitizeString($_POST['TelefonoProyecto']);
-$CorreoElectronicoProyecto    =         sanitizeString($_POST['CorreoElectronicoProyecto']);
-$FechaConstitucion            =         sanitizeString($_POST['FechaConstitucion']);
-$TipoDomicilioProyecto        =         sanitizeString($_POST['TipoDomicilioProyecto']);
-$TipoAsentamientoProyecto     =         sanitizeString($_POST['TipoAsentamientoProyecto']);
-$NombreAsentamientoProyecto   =         sanitizeString($_POST['NombreAsentamientoProyecto']);
-$TipoVialidadProyecto         =         sanitizeString($_POST['TipoVialidadProyecto']);
-$NombreVialidadProyecto       =         sanitizeString($_POST['NombreVialidadProyecto']);
-$NombreLocalidadProyecto      =         sanitizeString($_POST['NombreLocalidadProyecto']);
-$NombreMunicipioProyecto      =         sanitizeString($_POST['NombreMunicipioProyecto']);
-$ReferenciaVialidadProyecto   =         sanitizeString($_POST['ReferenciaVialidadProyecto']);
-  
-
-
+$NombreProyecto               =                      sanitizeString($_POST['NombreProyecto']);
+$AntiguedadProyecto           =                      sanitizeString($_POST['AntiguedadProyecto']);
+$TelefonoProyecto             =                      sanitizeString($_POST['TelefonoProyecto']);
+$CorreoElectronicoProyecto    =                      sanitizeString($_POST['CorreoElectronicoProyecto']);
+$FechaConstitucion            =                      sanitizeString($_POST['FechaConstitucion']);
+$TipoDomicilioProyecto        =                      sanitizeString($_POST['TipoDomicilioProyecto']);
+$TipoAsentamientoProyecto     =                      sanitizeString($_POST['TipoAsentamientoProyecto']);
+$NombreAsentamientoProyecto   =                      sanitizeString($_POST['NombreAsentamientoProyecto']);
+$TipoVialidadProyecto         =                      sanitizeString($_POST['TipoVialidadProyecto']);
+$NombreVialidadProyecto       =                      sanitizeString($_POST['NombreVialidadProyecto']);
+$NombreLocalidadProyecto      =                      sanitizeString($_POST['NombreLocalidadProyecto']);
+$NombreMunicipioProyecto      =                      sanitizeString($_POST['NombreMunicipioProyecto']);
+$ReferenciaVialidadProyecto   =                      sanitizeString($_POST['ReferenciaVialidadProyecto']);
+               
+             
+             
 
 
 
@@ -57,54 +57,54 @@ $ReferenciaVialidadProyecto   =         sanitizeString($_POST['ReferenciaVialida
 
 
 #recepcion de datos concepto de apoyo
-$ApoyoSolicitado1 				  = 				ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado1'])));
-$UniMedida1						      =					sanitizeString($_POST['UniMedida1']);
-$CanSolicitada1					    =					sanitizeString($_POST['CanSolicitada1']);
-$ApoyoEstatalSolicitado1		=					sanitizeString($_POST['ApoyoEstatalSolicitado1']);
-$ApoyoMunicipalSolicitado1	=					sanitizeString($_POST['ApoyoMunicipalSolicitado1']);
-$AportacionBeneficiario1		=					sanitizeString($_POST['AportacionBeneficiario1']);
+$ApoyoSolicitado1 				  = 				              ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado1'])));
+$UniMedida1						      =					              sanitizeString($_POST['UniMedida1']);
+$CanSolicitada1					    =					              sanitizeString($_POST['CanSolicitada1']);
+$ApoyoEstatalSolicitado1		=					              sanitizeString($_POST['ApoyoEstatalSolicitado1']);
+$ApoyoMunicipalSolicitado1	=					              sanitizeString($_POST['ApoyoMunicipalSolicitado1']);
+$AportacionBeneficiario1		=					              sanitizeString($_POST['AportacionBeneficiario1']);
 
 						
-$ApoyoSolicitado2				    =					ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado2'])));
-$UniMedida2						      =					sanitizeString($_POST['UniMedida2']);
-$CanSolicitada2					    =					sanitizeString($_POST['CanSolicitada2']);
-$ApoyoEstatalSolicitado2		=					sanitizeString($_POST['ApoyoEstatalSolicitado2']);
-$ApoyoMunicipalSolicitado2	=					sanitizeString($_POST['ApoyoMunicipalSolicitado2']);
-$AportacionBeneficiario2		=					sanitizeString($_POST['AportacionBeneficiario2']);
+$ApoyoSolicitado2				    =					              ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado2'])));
+$UniMedida2						      =					              sanitizeString($_POST['UniMedida2']);
+$CanSolicitada2					    =					              sanitizeString($_POST['CanSolicitada2']);
+$ApoyoEstatalSolicitado2		=					              sanitizeString($_POST['ApoyoEstatalSolicitado2']);
+$ApoyoMunicipalSolicitado2	=					              sanitizeString($_POST['ApoyoMunicipalSolicitado2']);
+$AportacionBeneficiario2		=					              sanitizeString($_POST['AportacionBeneficiario2']);
 
 
 
-$ApoyoSolicitado3				   =					ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado3'])));
-$UniMedida3						     =					sanitizeString($_POST['UniMedida3']);
-$CanSolicitada3				     =					sanitizeString($_POST['CanSolicitada3']);
-$ApoyoEstatalSolicitado3	 =					sanitizeString($_POST['ApoyoEstatalSolicitado3']);
-$ApoyoMunicipalSolicitado3 =					sanitizeString($_POST['ApoyoMunicipalSolicitado3']);
-$AportacionBeneficiario3	 =					sanitizeString($_POST['AportacionBeneficiario3']);
+$ApoyoSolicitado3				   =					              ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado3'])));
+$UniMedida3						     =					              sanitizeString($_POST['UniMedida3']);
+$CanSolicitada3				     =					              sanitizeString($_POST['CanSolicitada3']);
+$ApoyoEstatalSolicitado3	 =					              sanitizeString($_POST['ApoyoEstatalSolicitado3']);
+$ApoyoMunicipalSolicitado3 =					              sanitizeString($_POST['ApoyoMunicipalSolicitado3']);
+$AportacionBeneficiario3	 =					              sanitizeString($_POST['AportacionBeneficiario3']);
 
 
 				
-$ApoyoSolicitado4				     =					ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado4'])));
-$UniMedida4						       =					sanitizeString($_POST['UniMedida4']);
-$CanSolicitada4					     =					sanitizeString($_POST['CanSolicitada4']);
-$ApoyoEstatalSolicitado4		 =					sanitizeString($_POST['ApoyoEstatalSolicitado4']);
-$ApoyoMunicipalSolicitado4	 =					sanitizeString($_POST['ApoyoMunicipalSolicitado4']);
-$AportacionBeneficiario4		 =					sanitizeString($_POST['AportacionBeneficiario4']);
+$ApoyoSolicitado4				     =					            ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado4'])));
+$UniMedida4						       =					            sanitizeString($_POST['UniMedida4']);
+$CanSolicitada4					     =					            sanitizeString($_POST['CanSolicitada4']);
+$ApoyoEstatalSolicitado4		 =					            sanitizeString($_POST['ApoyoEstatalSolicitado4']);
+$ApoyoMunicipalSolicitado4	 =					            sanitizeString($_POST['ApoyoMunicipalSolicitado4']);
+$AportacionBeneficiario4		 =					            sanitizeString($_POST['AportacionBeneficiario4']);
 
 
-$ApoyoSolicitado5				     =					ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado5'])));
-$UniMedida5						       =					sanitizeString($_POST['UniMedida5']);
-$CanSolicitada5					     =					sanitizeString($_POST['CanSolicitada5']);
-$ApoyoEstatalSolicitado5		 =					sanitizeString($_POST['ApoyoEstatalSolicitado5']);
-$ApoyoMunicipalSolicitado5	 =					sanitizeString($_POST['ApoyoMunicipalSolicitado5']);
-$AportacionBeneficiario5		 =					sanitizeString($_POST['AportacionBeneficiario5']);
+$ApoyoSolicitado5				     =					            ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado5'])));
+$UniMedida5						       =					            sanitizeString($_POST['UniMedida5']);
+$CanSolicitada5					     =					            sanitizeString($_POST['CanSolicitada5']);
+$ApoyoEstatalSolicitado5		 =					            sanitizeString($_POST['ApoyoEstatalSolicitado5']);
+$ApoyoMunicipalSolicitado5	 =					            sanitizeString($_POST['ApoyoMunicipalSolicitado5']);
+$AportacionBeneficiario5		 =					            sanitizeString($_POST['AportacionBeneficiario5']);
 
 						
-$ApoyoSolicitado6				     =					ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado6'])));
-$UniMedida6						       =					sanitizeString($_POST['UniMedida6']);
-$CanSolicitada6					     =					sanitizeString($_POST['CanSolicitada6']);
-$ApoyoEstatalSolicitado6		 =					sanitizeString($_POST['ApoyoEstatalSolicitado6']);
-$ApoyoMunicipalSolicitado6	 =					sanitizeString($_POST['ApoyoMunicipalSolicitado6']);
-$AportacionBeneficiario6		 =					sanitizeString($_POST['AportacionBeneficiario6']);
+$ApoyoSolicitado6				     =					            ucfirst(strtolower(sanitizeString($_POST['ApoyoSolicitado6'])));
+$UniMedida6						       =					            sanitizeString($_POST['UniMedida6']);
+$CanSolicitada6					     =					            sanitizeString($_POST['CanSolicitada6']);
+$ApoyoEstatalSolicitado6		 =					            sanitizeString($_POST['ApoyoEstatalSolicitado6']);
+$ApoyoMunicipalSolicitado6	 =					            sanitizeString($_POST['ApoyoMunicipalSolicitado6']);
+$AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBeneficiario6']);
 
 
 

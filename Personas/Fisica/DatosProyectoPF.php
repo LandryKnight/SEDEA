@@ -12,9 +12,9 @@ if(isset($_POST['EnviarPF'])){
  
   $dirReg               =             $_POST['DireccionRegional']; #direccionRegional
   $municipio            =             $_POST['ventanillaMunicipio'];
-  $nombres              =             strtolower(ucfirst(sanitizeString($_POST['nombresPF'])));
+  $nombres              =             ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));
   $apellidoPa           =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
-  $apellidoMa           =             strtolower(ucfirst(sanitizeString($_POST['apellidoMa'])));
+  $apellidoMa           =             ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
 
   $nombre               =             $nombres." ".$apellidoPa." ".$apellidoMa;
 

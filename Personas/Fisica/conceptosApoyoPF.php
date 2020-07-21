@@ -35,7 +35,14 @@ $NombreProyecto					=			 		sanitizeString($_POST['NombreProyecto']);
 $AntiguedadProyecto				=				 	sanitizeString($_POST['AntiguedadProyecto']);
 $TelefonoProyecto				=					sanitizeString($_POST['TelefonoProyecto']);
 $CorreoElectronicoProyecto 		=					sanitizeString($_POST['CorreoElectronicoProyecto']);
-$FechaConstitucion				=				 	sanitizeString($_POST['FechaConstitucion']);
+
+$DiaFechaConstitucion			= 					($_POST['DiaFechaConstitucion']);
+$MesFechaConstitucion			=					($_POST['MesFechaConstitucion']);
+$AnioFechaConstitucion			=					($_POST['AnioFechaConstitucion']);
+
+$FechaConstitucion				=				 	$DiaFechaConstitucion."/".$MesFechaConstitucion."/".$AnioFechaConstitucion;
+
+
 $TipoDomicilioProyecto			=					sanitizeString($_POST['TipoDomicilioProyecto']);
 $TipoAsentamientoProyecto		=					sanitizeString($_POST['TipoAsentamientoProyecto']);
 $NombreAsentamientoProyecto 	=					sanitizeString($_POST['NombreAsentamientoProyecto']);
