@@ -3,6 +3,9 @@
 drop Database sedeapf;
 
 
+
+#crear la carpeta documentospf para que se guarden los documentos
+
 Create Database sedeapf;
 
 #Tabla Persona Fisica

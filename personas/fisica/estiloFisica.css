@@ -204,8 +204,9 @@ body{
 
 #ubicacion{
 	position: relative;
+	top: 2in;
 
-	left: 3.33in;
+	left: 4.7in;
 }
 
 
@@ -540,10 +541,10 @@ body{
 
 .ObservacionesM{
 	position: absolute;
-	left: 150px;
-	top: 80px;
-	width: calc(100% - 300px);
-	height: 5.5in;
+	left: calc((100% - 12in)/2);
+	top: 1.6in;
+	width: 12in;
+	height: 5.8in;
 	border-radius: 15px;
 	border: none;
 	color: #FFFFFF;
@@ -588,7 +589,7 @@ body{
 
 .ObservacionesM h5{
 	position: relative;
-	top: 420px;
+	top: 450px;
 	left: 50px;
 	width: calc(100% - 100px);
 	
@@ -669,4 +670,13 @@ body{
 
 .input{
 	text-indent: 10px;
+}
+
+
+.mensaje{
+
+	
+	font-weight: bold;
+	font-size: 14pt;
+	color: red;
 }

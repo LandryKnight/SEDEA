@@ -2,6 +2,9 @@
 drop Database sedeaPM;
 
 
+
+
+#crear la carpeta documentospm para que se guarden los documentos
 Create Database sedeapm;
 
 

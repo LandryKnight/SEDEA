@@ -30,7 +30,8 @@
 <p>RFC Registro Federal de Contribuyentes</p>
 <input type="text" name="RFC" maxlength="20" required="required">
 
-<a href="https://www.sat.gob.mx/aplicacion/operacion/79615/valida-en-linea-rfc%C2%B4s-uno-a-uno-o-de-manera-masiva-hasta-5-mil-registros"> <button class="boton"> Validar RFC </button> </a>
+
+<a href="https://www.sat.gob.mx/aplicacion/operacion/79615/valida-en-linea-rfc´s-uno-a-uno-o-de-manera-masiva-hasta-5-mil-registros" target="_blank"><button class="boton">Verificar RFC</button></a>
 
 
 

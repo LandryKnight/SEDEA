@@ -122,80 +122,96 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-$num_archivos = count($_FILES['archivo']['name']);
+        $num_archivos = count($_FILES['archivo']['name']);
 
-    for($i=0; $i<= $num_archivos; $i++){
+        for($i=0; $i<= $num_archivos; $i++){
 
         if(!empty($_FILES['archivo']['name'][$i])){
 
+           $nombre = $_FILES['archivo']['name'][$i]; 
+           $tipoarchivo = $_FILES['archivo']['type'][$i];
+           $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
+           
 
-     switch ($_FILES['archivo']['type'][$i]) {
+           if ($tipoarchivo === "application/pdf") 
 
-        case 'aplication/pdf': $ext = 'pdf';
+                {
 
-          break;
+                #echo "<br>el archivo $nombre si es un pdf";
+
+              $nuevonombre_ine = "$folioImpreso"."_INE_"."$nombre";                     
+              $nuevonombre_curp = "$folioImpreso"."_CURP_"."$nombre";
+              $nuevonombre_comprobanteDomicilio = "$folioImpreso"."_COMPROBANTEDOMICILIO_"."$nombre";
+              $nuevonombre_croquis = "$folioImpreso"."_CROQUIS_"."$nombre";         
+  
+
+              #ruta donde se va a guardar el archivo pdf
+              $ruta_nueva_ine  = "documentospf/"."$nuevonombre_ine";
+  
+              $ruta_nueva_curp  = "documentospf/"."$nuevonombre_curp";
         
-        default: $ext =''; 
-          break;
+              $ruta_nueva_comprobanteDomicilio = "documentospf/"."$nuevonombre_comprobanteDomicilio";
+  
+              $ruta_nueva_croquis  = "documentospf/"."$nuevonombre_croquis";
+
+
+               if(file_exists($ruta_nueva_ine) || file_exists($ruta_nueva_curp) || file_exists($ruta_nueva_comprobanteDomicilio) || file_exists($ruta_nueva_croquis))
+               {
+
+                    //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
+
+                } else {
+
+                  if($i == 0){
+
+                  move_uploaded_file($ruta_temporal, $ruta_nueva_ine);
+                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa ";
+
+
+                   }
+                  if($i == 1){
+
+                  move_uploaded_file($ruta_temporal, $ruta_nueva_curp);
+                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  }
+                  
+
+                  if($i == 2){
+
+                  move_uploaded_file($ruta_temporal, $ruta_nueva_comprobanteDomicilio);
+                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  }
+                  
+                  if($i == 3){
+
+                  move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
+                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  }
+                  
+
+                      }
+
+
+
+            
+
+
+
+
+                  } else {
+
+
+
+                  echo "<br><p class='mensaje'>El archivo $nombre no es un pdf</p>";
+
+           }
+        }   
+
       }
 
-   $ruta_nueva_ine  = "documentos/"."$folioImpreso"."_"."INE_".$_FILES['archivo']['name'][$i];
-
-   $ruta_nueva_curp  = "documentos/"."$folioImpreso"."_"."CURP_".$_FILES['archivo']['name'][$i];
-    
-   $ruta_nueva_comprobanteDomicilio = "documentos/"."$folioImpreso"."_"."COMPROBANTEDOMICILIO_".$_FILES['archivo']['name'][$i];
-
-   $ruta_nueva_croquis  = "documentos/"."$folioImpreso"."_"."CROQUIS".$_FILES['archivo']['name'][$i];
-    
-    if(file_exists($ruta_nueva_ine) || file_exists($ruta_nueva_curp) || file_exists($ruta_nueva_comprobanteDomicilio) || file_exists($ruta_nueva_croquis)){
-
-      //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
-
-    }else{
-
-   
-
-       
-
-      if($ext)  { 
-
-
-      $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
-
-      $ruta_temporal = strtolower(ereg_replace("^[A-Za-z0-9.]","", $ruta_temporal));
-
-      if($i == 0){ 
-      move_uploaded_file($ruta_temporal, $ruta_nueva_ine);
-      echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
-      }
-
-
-      if($i == 1){ 
-      move_uploaded_file($ruta_temporal, $ruta_nueva_curp);
-      echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
-      }
-
-
-      if($i == 2){ 
-      move_uploaded_file($ruta_temporal, $ruta_nueva_comprobanteDomicilio);
-      echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
-      }
-
-
-      if($i == 3){ 
-      move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
-      echo "El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>" ;
-
-       }
 
 
 
-         
-       }
-
-              }
-          }
-      }
 
 
 
@@ -334,7 +350,8 @@ $num_archivos = count($_FILES['archivo']['name']);
 La entrega de la presente solicitud, así como de la documentación solicitada, no implica aceptación u obligación del pago de los incentivos.
 </h5>
 
-<input class="boton"  type="submit" name="CompletarRegistro"	value="Finalizar Registro">
+
+<input class="boton"  type="submit" name="CompletarRegistro"	id="ubicacion" value="Finalizar Registro">
 
 </form>
  
