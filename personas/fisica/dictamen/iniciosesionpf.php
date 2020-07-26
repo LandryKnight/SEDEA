@@ -70,10 +70,13 @@
 <br>
 <input type="submit" name="sesion" value="Iniciar sesión" class="boton"></a>
 
-<br><br>
+
 
  </form>
+ <br><br>
  <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button>
+
+
 </div>
 
 
