@@ -108,8 +108,8 @@ fechaRegistro varchar(30)
 
 Create Table rutaarchivos( 
 idarchivo int Primary key auto_increment,
-folioImpreso varchar(30),
-ruta varchar(250),
+folioImpreso varchar(30) not null,
+ruta varchar(250) not null,
 fechaRegistro varchar(30)	
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 

@@ -308,7 +308,7 @@ echo "<br>".$AportacionBeneficiario6;
 
               echo $InsertConceptoApoyo2."<br>";
 
-                  }
+                  }                                                                                                                               
                }
 
          }
@@ -466,6 +466,7 @@ echo "<br> la ruta es ".$ruta_SQL_croquis;
   if(!empty($ruta_SQL_comprobantedomicilio) | !is_null($ruta_SQL_comprobantedomicilio) | $ruta_SQL_comprobantedomicilio != ""){
 
     $insertrutaSQL_comprobantedomicilio = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_comprobantedomicilio}',curdate());";
+    
     $insertrutaSQL_comprobantedomicilio = utf8_encode($insertrutaSQL_comprobantedomicilio);
     queryMySql("$insertrutaSQL_comprobantedomicilio");
 
