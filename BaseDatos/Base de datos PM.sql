@@ -5,7 +5,9 @@ drop Database sedeaPM;
 
 
 #crear la carpeta documentospm para que se guarden los documentos
-Create Database sedeapm;
+Create Database sedeapm
+  CHARACTER SET utf8
+  COLLATE utf8_spanish_ci;
 
 
 
@@ -30,10 +32,10 @@ NVialOrg varchar(50), #NombreVialidadOrganizacion
 NLocalOrg varchar(50), #NombreLocalidadOrganizacion
 NMunicipioOrg varchar(30), #NombreMunicipioOrganizacion 
 RefVialOrg varchar(50), #ReferenciaVialidadOrganizacion
-TipoActEcoOrg varchar(20),TipoActividadEconomicaOrganizacion
+TipoActEcoOrg varchar(20),#TipoActividadEconomicaOrganizacion
 IdProyectoPM int,        #Foreing Key
 fechaReg varchar(30)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 ALTER Table personamoral
 add constraint FK_Id_Proyecto_PM Foreign key (sIdProyectoPM) references nombreproyectoPM(sIdProyecto);
@@ -57,7 +59,7 @@ NLocalProyecto varchar(80), #NombreLocalidadProyecto
 NMunicipioProyecto varchar(30), #NombreMunicipioProyecto
 RefVialProyecto varchar(50), #ReferenciaVialidadProyecto
 fechaReg varchar(30)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 Create table representante(
@@ -75,9 +77,9 @@ TipoIdentRepre varchar(10), #tipo de identificacion representante
 NumIdentRepre varchar(20), #NumeroIdentificacionRepresentante
 CurpRepre varchar(14), #CurpRepresentante
 fechaReg varchar(30)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-Create table Domiciliorepresentante{
+Create table Domiciliorepresentante(
 TipoDomicilioRepre varchar(15), #TipoDomicilioRepresentante 
 TipoAsentamientoRepre varchar(20), #TipoAsentamientoRepresentante
 NombreAsentamientoRepre varchar(50), #NombreAsentamientoReprsentante
@@ -86,7 +88,7 @@ NombreVialidadRepre  varchar(50), #NombreVialidadRepresentante
 NombreLocalidadRepre varchar(30), #NombreLocalidadRepresentante 
 NombreMunicipioRepre varchar(30), #NombreMunicipioRepresentante
 RefVialRepre varchar(50) #ReferenciaVialidadRepresentante
-}
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 ALTER Table representante
 add constraint FK_Folio Foreign key(sRFolioImpreso) references personamoral(sFolioImpreso);
@@ -102,4 +104,4 @@ ApoyoEstatalSolicitado varchar(20),
 ApoyoMunicipalSolicitado varchar(20),
 AportacionBeneficiario varchar(20),
 InversionTotal varchar(20)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;

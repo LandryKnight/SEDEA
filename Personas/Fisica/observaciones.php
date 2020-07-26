@@ -122,13 +122,78 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
+echo "<br>".$ApoyoSolicitado1; 
+echo "<br>".$UniMedida1;
+echo "<br>".$CanSolicitada1;
+echo "<br>".$ApoyoEstatalSolicitado1; 
+echo "<br>".$ApoyoMunicipalSolicitado1;
+echo "<br>".$AportacionBeneficiario1; 
+
+echo "<br>".$ApoyoSolicitado2;
+echo "<br>".$UniMedida2;
+echo "<br>".$CanSolicitada2;
+echo "<br>".$ApoyoEstatalSolicitado2;
+echo "<br>".$ApoyoMunicipalSolicitado2;
+echo "<br>".$AportacionBeneficiario2;
+
+echo "<br>".$ApoyoSolicitado3;
+echo "<br>".$UniMedida3;
+echo "<br>".$CanSolicitada3;
+echo "<br>".$ApoyoEstatalSolicitado3;
+echo "<br>".$ApoyoMunicipalSolicitado3;
+echo "<br>".$AportacionBeneficiario3;
+      
+echo "<br>".$ApoyoSolicitado4;
+echo "<br>".$UniMedida4;
+echo "<br>".$CanSolicitada4;
+echo "<br>".$ApoyoEstatalSolicitado4;
+echo "<br>".$ApoyoMunicipalSolicitado4;
+echo "<br>".$AportacionBeneficiario4;
+
+echo "<br>".$ApoyoSolicitado5;
+echo "<br>".$UniMedida5;
+echo "<br>".$CanSolicitada5;
+echo "<br>".$ApoyoEstatalSolicitado5;
+echo "<br>".$ApoyoMunicipalSolicitado5;
+echo "<br>".$AportacionBeneficiario5;
+         
+echo "<br>".$ApoyoSolicitado6;
+echo "<br>".$UniMedida6;
+echo "<br>".$CanSolicitada6;
+echo "<br>".$ApoyoEstatalSolicitado6;
+echo "<br>".$ApoyoMunicipalSolicitado6;
+echo "<br>".$AportacionBeneficiario6;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        global $ruta_SQL_ine;
+        global $ruta_SQL_curp;
+        global $ruta_SQL_comprobantedomicilio;
+        global $ruta_SQL_croquis;
+
+
         $num_archivos = count($_FILES['archivo']['name']);
 
         for($i=0; $i<= $num_archivos; $i++){
 
         if(!empty($_FILES['archivo']['name'][$i])){
 
-           $nombre = $_FILES['archivo']['name'][$i]; 
+           $nombrearchivo = $_FILES['archivo']['name'][$i]; 
            $tipoarchivo = $_FILES['archivo']['type'][$i];
            $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
            
@@ -139,10 +204,10 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
                 #echo "<br>el archivo $nombre si es un pdf";
 
-              $nuevonombre_ine = "$folioImpreso"."_INE_"."$nombre";                     
-              $nuevonombre_curp = "$folioImpreso"."_CURP_"."$nombre";
-              $nuevonombre_comprobanteDomicilio = "$folioImpreso"."_COMPROBANTEDOMICILIO_"."$nombre";
-              $nuevonombre_croquis = "$folioImpreso"."_CROQUIS_"."$nombre";         
+              $nuevonombre_ine = "$folioImpreso"."_INE_"."$nombrearchivo";                     
+              $nuevonombre_curp = "$folioImpreso"."_CURP_"."$nombrearchivo";
+              $nuevonombre_comprobanteDomicilio = "$folioImpreso"."_COMPROBANTEDOMICILIO_"."$nombrearchivo";
+              $nuevonombre_croquis = "$folioImpreso"."_CROQUIS_"."$nombrearchivo";         
   
 
               #ruta donde se va a guardar el archivo pdf
@@ -166,13 +231,15 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_ine);
                   echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa ";
-
+                  $ruta_SQL_ine = "$ruta_nueva_ine";
 
                    }
                   if($i == 1){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_curp);
                   echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  $ruta_SQL_curp = "$ruta_nueva_curp";
+                 
                   }
                   
 
@@ -180,12 +247,17 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_comprobanteDomicilio);
                   echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                   $ruta_SQL_comprobantedomicilio = "$ruta_nueva_comprobanteDomicilio";
+                  
+
                   }
                   
                   if($i == 3){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
                   echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  $ruta_SQL_croquis = "$ruta_nueva_croquis";
+                  
                   }
                   
 
@@ -202,7 +274,7 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-                  echo "<br><p class='mensaje'>El archivo $nombre no es un pdf</p>";
+                  echo "<br><p class='mensaje'>El archivo $nombrearchivo no es un pdf</p>";
 
            }
         }   
@@ -211,6 +283,10 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
+        echo  "<br>ruta ".$ruta_SQL_ine;
+        echo  "<br>ruta ".$ruta_SQL_curp;
+        echo  "<br>ruta ".$ruta_SQL_comprobantedomicilio;
+        echo  "<br>ruta ".$ruta_SQL_croquis;
 
 
 
@@ -237,8 +313,9 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 <form action="fin.php" method="Post">
 
+<!-- envio de informacion de persona fisica -->
 
-<input type ="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
+<input type ="hidden" name ="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">
@@ -262,6 +339,7 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 <input type ="hidden" name ="refVial" value="<?php echo $refVial; ?>">
 <input type ="hidden" name ="actEco" value="<?php echo $actEco; ?>">
 
+<!-- envio de informacion de datos de proyecto-->
 
 <input type ="hidden" name ="NombreProyecto" value="<?php echo $NombreProyecto;  ?>">
 <input type ="hidden" name ="AntiguedadProyecto" value="<?php echo $AntiguedadProyecto;  ?>">
@@ -278,7 +356,7 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 <input type ="hidden" name ="ReferenciaVialidadProyecto" value="<?php echo $ReferenciaVialidadProyecto;  ?>">
 
 
-
+<!-- envio de informacion de conceptos de apoyo -->
 <input type ="hidden" name ="ApoyoSolicitado1"          value="<?php echo $ApoyoSolicitado1; ?>">
 <input type ="hidden" name ="UniMedida1"                value="<?php echo $UniMedida1; ?>">
 <input type ="hidden" name ="CanSolicitada1"            value="<?php echo $CanSolicitada1; ?>">
@@ -333,9 +411,12 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
+<!-- envio de informacion de rutas -->
 
-
-
+<input type="hidden" name="ruta_SQL_ine" value="<?php  echo $ruta_SQL_ine; ?>">
+<input type="hidden" name="ruta_SQL_curp" value="<?php  echo $ruta_SQL_curp; ?>">
+<input type="hidden" name="ruta_SQL_comprobantedomicilio" value="<?php  echo $ruta_SQL_comprobantedomicilio; ?>">
+<input type="hidden" name="ruta_SQL_croquis" value="<?php  echo $ruta_SQL_croquis; ?>">
 
 
 

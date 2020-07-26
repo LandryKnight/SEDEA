@@ -480,23 +480,26 @@ body{
 }
 
 .requisitos{
-	width: 70%;
-	height: 12in;
-	position: relative;
- 	left: 200px;
+
+	width: 12in;
+	height: 11.5in;
+	
+	
  	top: 50px;
 
  	color: #FFFFFF;
  	background: #1D447D;
- 	padding-left: 43px;
+ 	
  	border-radius: 15px;
 	
 	border:none;
  	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
  	margin-bottom: 50px;
+
  	padding-top: 30px;
  	padding-bottom: 30px;
- 	padding-right: 35px;
+ 	padding-right: 43px;
+	padding-left: 43px;
 
  	text-align: justify;
 
@@ -519,9 +522,10 @@ body{
 	margin-bottom: 15px;
 }
 
-.requisitos p{
-	
 
+.requisitos h5{
+	position: relative;
+	top: 1in;
 }
 
 .declaraciones{
@@ -538,6 +542,9 @@ body{
 	border-radius: 15px;
 }
 
+.requisitos i{
+	font-size: 18pt;
+}
 
 .ObservacionesM{
 	position: absolute;
@@ -599,8 +606,12 @@ body{
 	column-count:2;
 	margin-top: 12px;
 	margin-bottom: 12px;
+	font-size: 14pt;
 }
 
+.documentos input{
+	margin-left: 2in;
+}
 
 .final{
  top: 10px;
@@ -679,4 +690,11 @@ body{
 	font-weight: bold;
 	font-size: 14pt;
 	color: red;
+}
+
+
+#ubicacionrg{
+	position: relative;
+	left: calc((100% - 2.5in)/2);
+
 }

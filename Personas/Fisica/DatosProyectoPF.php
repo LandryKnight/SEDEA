@@ -349,7 +349,7 @@ if(isset($_POST['EnviarPF'])){
 
 </form>
 <br>
-<a href="http://localhost/sedea/personas/fisica/personaFisica.php"><button class="boton" id="ubicacion"> Regresar </button></a> <br>
+
 <a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
 </div>
 

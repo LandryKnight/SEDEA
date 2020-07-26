@@ -6,7 +6,11 @@ drop Database sedeapf;
 
 #crear la carpeta documentospf para que se guarden los documentos
 
-Create Database sedeapf;
+
+
+CREATE DATABASE sedeapf
+  CHARACTER SET utf8
+  COLLATE utf8_spanish_ci;
 
 #Tabla Persona Fisica
 Create Table personafisicaDatos(
@@ -25,7 +29,7 @@ tipoIdent varchar(30), #Tipo de identificacion
 NIdent varchar(15),#Numero de identificacion
 curp varchar(20),
 fechaReg varchar(30) #fecha de registro
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 
@@ -35,7 +39,7 @@ numeroIdent varchar(15) Primary key,	#Numero de identificacion
 curp varchar(20),
 folioImpresoPF varchar(30),
 fechaReg varchar(30)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Domicilio Persona Fisica
@@ -54,7 +58,7 @@ referenciaVialidad varchar(50),
 tipoActividad varchar(15),
 fechaReg varchar(30)
 
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Nombre Proyecto
@@ -76,7 +80,7 @@ NomMuniciPr varchar(30), #sNombreMunicipioProyecto
 RefVialPr varchar(50), #sReferenciaVialidadProyecto
 fechaRegistro varchar(30)
 
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Concepto Apoyo
@@ -91,7 +95,7 @@ ApoyoMunicipalSolicitado varchar(10),
 AportacionBeneficiario varchar(10),
 InversionTotal varchar(20),
 fechaRegistro varchar(30)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 #requisitos Generales
 Create Table personafisicaReqenerales(
@@ -99,7 +103,15 @@ idRequisito int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 observaciones varchar(250),
 fechaRegistro varchar(30)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+Create Table rutaarchivos( 
+idarchivo int Primary key auto_increment,
+folioImpreso varchar(30),
+ruta varchar(250),
+fechaRegistro varchar(30)	
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Add Constrain
@@ -140,3 +152,5 @@ truncate table personafisicaDomicilio;
 truncate table personafisicaProyecto;
 truncate table personafisicaConceptoApoyo;
 Truncate table personafisicaReqenerales;
+
+truncate Table rutaarchivos;

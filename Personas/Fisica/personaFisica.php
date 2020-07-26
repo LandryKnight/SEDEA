@@ -403,7 +403,7 @@
 
 </form>
 
-<a href="http://localhost/sedea/personas/fisica/eleccionpf.php"><button class="boton" id="ubicacion">Regresar</button></a>
+
 <br>
 <a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
 

@@ -242,7 +242,7 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 <div class="declaraciones">
 <p>a) Que no realizo actividades productivas ni comerciales ilícitas. </p>
-<p>b) Que no se aplicaran los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros.</p>
+<p>b) Que no se aplicarán los incentivos únicamente para los fines autorizados, y en caso de no realizarlo se entregara el recurso, así como los productos financieros.</p>
 
 <p>c) Que no he recibido o estoy recibiendo apoyo alguno para el mismo concepto en otro programa, que implique duplicidad de incentivos.</p>
 
@@ -262,7 +262,7 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 
 <br>
-<h3>Documentos admitidos solo en formato PDF.</h3> 
+<h3><i>Solo se admiten documentos en formato PDF.</i></h3> 
 
 <div class="documentos">
 
@@ -291,7 +291,7 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 
 
-<input type="submit" name="RequisitosG" value="Subir Documentos" class="boton">
+<input type="submit" name="RequisitosG" value="Subir Documentos" class="boton" id="ubicacionrg">
 
 
 
@@ -301,8 +301,8 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 
 
-<a href="http://localhost/sedea/personas/fisica/conceptosApoyoPF.php"><button class="boton"> Regresar  </button></a>
-<br><a href="http://localhost/sedea/inicio.php"><button class="boton">Menú Principal</button></a>
+
+<br><a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionrg" >Menú Principal</button></a>
 
 
 <h5>Autorizo que mis datos personales sean empleados para el trámite de la solución. Otorgo el consentimiento para que sean transferidos en caso de ser necesario y dar el cumplimiento conforme a lo previsto en los artículos 16 fracción II,59 y 61 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Querétaro; así como a las obligaciones de transparencia y acceso a la información pública de conformidad con la Ley del Estado de Querétaro.
