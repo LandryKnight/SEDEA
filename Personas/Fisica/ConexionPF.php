@@ -29,6 +29,8 @@
     return $connection -> real_escape_string($var);
 	}
 
+	
+
 	function destroySession(){
 		$_SESSION = arrat();
 		if(session_id() != "" || isset($_COOKIE[session_name()]))

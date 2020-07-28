@@ -285,123 +285,126 @@ echo "<br>".$AportacionBeneficiario6;
 
 
 
-        
 
-         if (!empty($ApoyoSolicitado2) & is_numeric($UniMedida2) & is_numeric($CanSolicitada2)) {
-          
-            if(is_numeric($ApoyoEstatalSolicitado2) & is_numeric($ApoyoMunicipalSolicitado2) &  is_numeric($AportacionBeneficiario2)){ 
+if(empty($ApoyoSolicitado2)){} else {
+  if(is_numeric($UniMedida2)){
+    if(is_numeric($CanSolicitada2)){
+      if(is_numeric($ApoyoEstatalSolicitado2)){
+        if(is_numeric($ApoyoMunicipalSolicitado2)){
+          if(is_numeric($AportacionBeneficiario2)){
+            $InversionTotal2 = $ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
 
-              $InversionTotal2        =      $ApoyoEstatalSolicitado2 + $ApoyoMunicipalSolicitado2 + $AportacionBeneficiario2;
-
-              if(is_numeric($InversionTotal2)){ 
-
-              
-              echo "$InversionTotal2 es numerico";
-
-          
-
-              $InsertConceptoApoyo2 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado2}','{$UniMedida2}','{$CanSolicitada2}','{$ApoyoEstatalSolicitado2}','{$ApoyoMunicipalSolicitado2}','{$AportacionBeneficiario2}','{$InversionTotal2}',curdate());";
+             $InsertConceptoApoyo2 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado2}','{$UniMedida2}','{$CanSolicitada2}','{$ApoyoEstatalSolicitado2}','{$ApoyoMunicipalSolicitado2}','{$AportacionBeneficiario2}','{$InversionTotal2}',curdate());";
 
               $InsertConceptoApoyo2  = utf8_encode($InsertConceptoApoyo2);
 
               queryMySql("$InsertConceptoApoyo2");
 
-              echo $InsertConceptoApoyo2."<br>";
-
-                  }                                                                                                                               
-               }
-
-         }
-
-     
-
-     
+          }
+        }
+      }
+    }
+  }
+}
 
 
-         if (!empty($ApoyoSolicitado3) & is_numeric($UniMedida3) & is_numeric($CanSolicitada3)) {
-          
 
-           if(is_numeric($ApoyoEstatalSolicitado3) & is_numeric($ApoyoMunicipalSolicitado3) &  is_numeric($AportacionBeneficiario3)){ 
-              
-              $InversionTotal3        =      $ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
 
-            if(is_numeric($InversionTotal3) ){
+if(empty($ApoyoSolicitado3)){} else {
+  if(is_numeric($UniMedida3)){
+    if(is_numeric($CanSolicitada3)){
+      if(is_numeric($ApoyoEstatalSolicitado3)){
+        if(is_numeric($ApoyoMunicipalSolicitado3)){
+          if(is_numeric($AportacionBeneficiario3)){
+              $InversionTotal3 = $ApoyoEstatalSolicitado3 + $ApoyoMunicipalSolicitado3 + $AportacionBeneficiario3;
 
-                      
-            
-            
-                      $InsertConceptoApoyo3 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado3}','{$UniMedida3}','{$CanSolicitada3}','{$ApoyoEstatalSolicitado3}','{$ApoyoMunicipalSolicitado3}','{$AportacionBeneficiario3}','{$InversionTotal3}',curdate());";
+
+            $InsertConceptoApoyo3 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado3}','{$UniMedida3}','{$CanSolicitada3}','{$ApoyoEstatalSolicitado3}','{$ApoyoMunicipalSolicitado3}','{$AportacionBeneficiario3}','{$InversionTotal3}',curdate());";
             
                       $InsertConceptoApoyo3 = utf8_encode($InsertConceptoApoyo3);
             
                       queryMySql("$InsertConceptoApoyo3");
-            
-                      echo $InsertConceptoApoyo3."<br>";
 
-                      }
-                  }
-           
-                   
-            }
-
+          }
+        }
+      }
+    }
+  }
+}
 
 
-      
+if(empty($ApoyoSolicitado4)){} else {
+  if(is_numeric($UniMedida4)){
+    if(is_numeric($CanSolicitada4)){
+      if(is_numeric($ApoyoEstatalSolicitado4)){
+        if(is_numeric($ApoyoMunicipalSolicitado4)){
+          if(is_numeric($AportacionBeneficiario4)){
+            $InversionTotal4 = $ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
 
-      if(!empty($ApoyoSolicitado4) & is_numeric($UniMedida4) & is_numeric($CanSolicitada4))
-
-     {  
-
-       if(is_numeric($ApoyoEstatalSolicitado4) & is_numeric($ApoyoMunicipalSolicitado4) & is_numeric($AportacionBeneficiario4))
-       {
-
-          $InversionTotal4      =      $ApoyoEstatalSolicitado4 + $ApoyoMunicipalSolicitado4 + $AportacionBeneficiario4;
-
-        if(is_numeric($InversionTotal4)){
-                
-        
-        
-                   $InsertConceptoApoyo4 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado4}','{$UniMedida4}','{$CanSolicitada4}','{$ApoyoEstatalSolicitado4}','{$ApoyoMunicipalSolicitado4}','{$AportacionBeneficiario4}','{$InversionTotal4}',curdate());";
+            $InsertConceptoApoyo4 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado4}','{$UniMedida4}','{$CanSolicitada4}','{$ApoyoEstatalSolicitado4}','{$ApoyoMunicipalSolicitado4}','{$AportacionBeneficiario4}','{$InversionTotal4}',curdate());";
         
                 $InsertConceptoApoyo4 = utf8_encode($InsertConceptoApoyo4);
                 queryMySql("$InsertConceptoApoyo4");
-        
-                echo $InsertConceptoApoyo4."<br>";
-              }
           }
-      
-       }
-
-
-
-
-       
-
-
-
-         if (!empty($ApoyoSolicitado5) & is_numeric($UniMedida5) & is_numeric($CanSolicitada5)) {
-          
-             if(is_numeric($ApoyoEstatalSolicitado5) & is_numeric($ApoyoMunicipalSolicitado5) &  is_numeric($AportacionBeneficiario5)){ 
-
-          $InversionTotal5        =      $ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
-
-          
-
-         if(is_numeric($InversionTotal5)){
-         
-
-                   $InsertConceptoApoyo5 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado5}','{$UniMedida5}','{$CanSolicitada5}','{$ApoyoEstatalSolicitado5}','{$ApoyoMunicipalSolicitado5}','{$AportacionBeneficiario5}','{$InversionTotal5}',curdate());";
-         
-         
-                    $InsertConceptoApoyo5 = utf8_encode($InsertConceptoApoyo5);
-         
-                     queryMySql("$InsertConceptoApoyo5");
-         
-                     echo $InsertConceptoApoyo5."<br>";
-
-                   }
-            }
         }
+      }
+    }
+  }
+}
+
+
+if(empty($ApoyoSolicitado5)){} else {
+  if(is_numeric($UniMedida5)){
+    if(is_numeric($CanSolicitada5)){
+      if(is_numeric($ApoyoEstatalSolicitado5)){
+        if(is_numeric($ApoyoMunicipalSolicitado5)){
+          if(is_numeric($AportacionBeneficiario5)){
+
+            $InversionTotal5 = $ApoyoEstatalSolicitado5 + $ApoyoMunicipalSolicitado5 + $AportacionBeneficiario5;
+
+
+            $InsertConceptoApoyo5 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado5}','{$UniMedida5}','{$CanSolicitada5}','{$ApoyoEstatalSolicitado5}','{$ApoyoMunicipalSolicitado5}','{$AportacionBeneficiario5}','{$InversionTotal5}',curdate());";
+         
+         
+                 $InsertConceptoApoyo5 = utf8_encode($InsertConceptoApoyo5);
+         
+                 queryMySql("$InsertConceptoApoyo5");
+          }
+        }
+      }
+    }
+  }
+}
+
+
+if(empty($ApoyoSolicitado6)){} else {
+  if(is_numeric($UniMedida6)){
+    if(is_numeric($CanSolicitada6)){
+      if(is_numeric($ApoyoEstatalSolicitado6)){
+        if(is_numeric($ApoyoMunicipalSolicitado6)){
+          if(is_numeric($AportacionBeneficiario6)){
+
+            $InversionTotal6 = $ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
+
+            $InsertConceptoApoyo6 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado6}','{$UniMedida6}','{$CanSolicitada6}','{$ApoyoEstatalSolicitado6}','{$ApoyoMunicipalSolicitado6}','{$AportacionBeneficiario6}','{$InversionTotal6}',curdate());";
+          
+               $InsertConceptoApoyo6 = utf8_encode($InsertConceptoApoyo6);
+                   queryMySql("$InsertConceptoApoyo6");
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+         
+     
+     
+
+     
 
 
 
@@ -409,33 +412,14 @@ echo "<br>".$AportacionBeneficiario6;
 
 
 
-         if (!empty($ApoyoSolicitado6) & is_numeric($UniMedida6) & is_numeric($CanSolicitada6)) {
-
-          if(is_numeric($ApoyoEstatalSolicitado6) & is_numeric($ApoyoMunicipalSolicitado6) &  is_numeric($AportacionBeneficiario6)){ 
-
-          $InversionTotal6        =      $ApoyoEstatalSolicitado6 + $ApoyoMunicipalSolicitado6 + $AportacionBeneficiario6;
-
-         
-          if(is_numeric($InversionTotal6))
-          {
-                   $InsertConceptoApoyo6 = "INSERT INTO personafisicaConceptoApoyo VALUES(null,'{$folioImpreso}','{$ApoyoSolicitado6}','{$UniMedida6}','{$CanSolicitada6}','{$ApoyoEstatalSolicitado6}','{$ApoyoMunicipalSolicitado6}','{$AportacionBeneficiario6}','{$InversionTotal6}',curdate());";
-          
-                   $InsertConceptoApoyo6 = utf8_encode($InsertConceptoApoyo6);
-                   queryMySql("$InsertConceptoApoyo6");
-          
-                   echo $InsertConceptoApoyo6."<br>";
-              }
-          }
-
-      }
-
+       /* 
        echo $InsertConceptoApoyo1."<br>";
        echo $InsertConceptoApoyo2."<br>";
        echo $InsertConceptoApoyo3."<br>";
        echo $InsertConceptoApoyo4."<br>";
        echo $InsertConceptoApoyo5."<br>";
        echo $InsertConceptoApoyo6."<br>";
-       
+       */
 
 echo "<br> la ruta es ".$ruta_SQL_ine;
 echo "<br> la ruta es ".$ruta_SQL_curp;
@@ -444,54 +428,72 @@ echo "<br> la ruta es ".$ruta_SQL_croquis;
 
 
 
+/* 
+else if(is_null($ruta_SQL_ine)) {
+
+    echo "la ruta del ine es nula";
 
 
-  if(!empty($ruta_SQL_ine) | !is_null($ruta_SQL_ine)){
+  } else if(isset($ruta_SQL_ine)){
+  echo "el valor es";
+}
+ 
+*/
 
-  $insertrutaSQL_ine = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_ine}',curdate());";
+
+
+if(empty($ruta_SQL_ine) ){
+  
+  }else {
+
+    $insertrutaSQL_ine = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_ine}',curdate());";
    $insertrutaSQL_ine  = utf8_encode($insertrutaSQL_ine);
    queryMySql("$insertrutaSQL_ine");
 
 
+
   }
-  if(!empty($ruta_SQL_curp) | !is_null($ruta_SQL_curp)){
+
+     
+if(empty($ruta_SQL_curp)){
+  
+  }else{
 
     $insertrutaSQL_curp = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_curp}',curdate());";
     $insertrutaSQL_curp = utf8_encode($insertrutaSQL_curp);
     queryMySql("$insertrutaSQL_curp");
-
-
   }
 
-  if(!empty($ruta_SQL_comprobantedomicilio) | !is_null($ruta_SQL_comprobantedomicilio) | $ruta_SQL_comprobantedomicilio != ""){
 
+if(empty($ruta_SQL_comprobantedomicilio)){
+  
+  }else {
     $insertrutaSQL_comprobantedomicilio = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_comprobantedomicilio}',curdate());";
     
     $insertrutaSQL_comprobantedomicilio = utf8_encode($insertrutaSQL_comprobantedomicilio);
     queryMySql("$insertrutaSQL_comprobantedomicilio");
 
-
   }
 
-  if(!empty($ruta_SQL_croquis) | !is_null($ruta_SQL_croquis) | $ruta_SQL_croquis != ""){
+  if(empty($ruta_SQL_croquis)){
+ 
+  }else {
 
     $insertrutaSQL_croquis = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_croquis}',curdate());";
      $insertrutaSQL_croquis = utf8_encode($insertrutaSQL_croquis);
 
      queryMySql("$insertrutaSQL_croquis");
 
-
   }
 
 
 
-
-
+        
 
         queryMySql("$InsertRQG");
 
 
-        #echo "Datos de requisitos generales de persona fisica"
+
 
               
 
