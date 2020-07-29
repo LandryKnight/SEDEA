@@ -3,7 +3,7 @@
 	$dbhost = 	'localhost';
 	$dbuser = 	'root';
 	$dbpass =	'';
-	$dbname =	'usuariossdea';
+	$dbname =	'sedeapf';
 
 
 

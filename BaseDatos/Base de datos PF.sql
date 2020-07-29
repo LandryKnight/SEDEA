@@ -106,12 +106,23 @@ fechaRegistro varchar(30)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-Create Table rutaarchivos( 
+Create Table personafisicarutaarchivos( 
 idarchivo int Primary key auto_increment,
 folioImpreso varchar(30) not null,
 ruta varchar(250) not null,
 fechaRegistro varchar(30)	
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+Create Table personafisicaDictamenes(
+iddictamen int Primary Key auto_increment,
+folioImpreso varchar(30),
+nombre varchar(80),
+dirRegional varchar(30),  #Ventanilla Direccion regional
+estatusdictamen varchar(30),
+fechaRegistro varchar(30),
+fechaactualizacion varchar(30)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 
 
 #Add Constrain
@@ -137,12 +148,19 @@ drop Foreign Key FK_Folio_Requisito_PF;
 
 
 
-DROP DATABASE sedea;
 
-drop table personafisicaDatos;
-drop table personafisicaProyecto;
-drop table personafisicaConceptoApoyo;
-drop table personafisicaReqenerales;
+
+
+
+
+drop table  personafisicaDatos;
+drop table  identificacionpf;
+drop table  personafisicaDomicilio;
+drop table  personafisicaProyecto;
+drop table  personafisicaConceptoApoyo;
+drop table  personafisicaReqenerales;
+drop table  personafisicaDictamenes;
+drop table  personafisicarutaarchivos;
 
 
 truncate table personafisicaDatos;
@@ -152,5 +170,5 @@ truncate table personafisicaDomicilio;
 truncate table personafisicaProyecto;
 truncate table personafisicaConceptoApoyo;
 Truncate table personafisicaReqenerales;
-
-truncate Table rutaarchivos;
+Truncate table personafisicaDictamenes;
+truncate table personafisicarutaarchivos;

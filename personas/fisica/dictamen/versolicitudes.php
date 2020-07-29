@@ -1,9 +1,8 @@
 <?php 
 
+require_once('conexionDPF.php');
 
-require_once("ConexcionPF.php");
-
-$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.NIdent.personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo";
+$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo ORDER BY personafisicaDatos.nombre ASC";
 
 $select = utf8_decode($select);
 
@@ -31,12 +30,13 @@ $rows = $result -> num_rows;
 </head>
 <body>
 
-<div class="marco">
+<div class="Marco">
 
+<h1>Solicitudes</h1>
 
 <?php 
 
-echo "<table border='2'><tr><th>Folio Impreso</th><th>Nombre</th><th>No.de Identificación</th><th>CURP</th><th>Proyecto</th><th>Apoyo Solicitado</th><th>Inversión Total</th><th>Fecha de Registro</th></tr>";
+echo "<table border='2'><tr><th>Folio Impreso</th><th>Nombre</th><th>Dirección Regional</th><th>CURP</th><th>Proyecto</th><th>Apoyo Solicitado</th><th>Inversión Total</th><th>Fecha de Registro</th></tr>";
 
 
 
@@ -46,7 +46,7 @@ for ($i=0; $i<$rows; $i++) {
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=1; $j<9; $j++)
+for($j=0; $j<8; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
@@ -62,7 +62,7 @@ echo "</tr>";
 $row = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
-for($j=1; $j<9; $j++)
+for($j=0; $j<8; $j++)
 
 echo "<td>" . utf8_decode($row[$j])."</td>";
 
@@ -78,6 +78,12 @@ echo "</table>";
 
 
  ?>
+
+
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionConceptos">Menú Principal</button></a>
+
+
+<h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 
 </div>
 

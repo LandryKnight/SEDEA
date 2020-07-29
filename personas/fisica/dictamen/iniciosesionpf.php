@@ -33,7 +33,7 @@
 
 			} else {
 
-					if(is_null($user) || is_null($pazz) ){
+					if(is_null($user) | is_null($pazz) ){
 						echo "Revisa los campos de usuario/contraseña";	
 					}
 					

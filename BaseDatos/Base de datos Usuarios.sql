@@ -5,7 +5,6 @@ truncate Table usuariosReg;
 
 
 
-Create database usuariossdea;
 
 
 

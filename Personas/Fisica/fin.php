@@ -127,51 +127,6 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
 }
 
 
-echo "<br>".$ApoyoSolicitado1; 
-echo "<br>".$UniMedida1;
-echo "<br>".$CanSolicitada1;
-echo "<br>".$ApoyoEstatalSolicitado1; 
-echo "<br>".$ApoyoMunicipalSolicitado1;
-echo "<br>".$AportacionBeneficiario1; 
-
-echo "<br>".$ApoyoSolicitado2;
-echo "<br>".$UniMedida2;
-echo "<br>".$CanSolicitada2;
-echo "<br>".$ApoyoEstatalSolicitado2;
-echo "<br>".$ApoyoMunicipalSolicitado2;
-echo "<br>".$AportacionBeneficiario2;
-
-echo "<br>".$ApoyoSolicitado3;
-echo "<br>".$UniMedida3;
-echo "<br>".$CanSolicitada3;
-echo "<br>".$ApoyoEstatalSolicitado3;
-echo "<br>".$ApoyoMunicipalSolicitado3;
-echo "<br>".$AportacionBeneficiario3;
-      
-echo "<br>".$ApoyoSolicitado4;
-echo "<br>".$UniMedida4;
-echo "<br>".$CanSolicitada4;
-echo "<br>".$ApoyoEstatalSolicitado4;
-echo "<br>".$ApoyoMunicipalSolicitado4;
-echo "<br>".$AportacionBeneficiario4;
-
-echo "<br>".$ApoyoSolicitado5;
-echo "<br>".$UniMedida5;
-echo "<br>".$CanSolicitada5;
-echo "<br>".$ApoyoEstatalSolicitado5;
-echo "<br>".$ApoyoMunicipalSolicitado5;
-echo "<br>".$AportacionBeneficiario5;
-         
-echo "<br>".$ApoyoSolicitado6;
-echo "<br>".$UniMedida6;
-echo "<br>".$CanSolicitada6;
-echo "<br>".$ApoyoEstatalSolicitado6;
-echo "<br>".$ApoyoMunicipalSolicitado6;
-echo "<br>".$AportacionBeneficiario6;
-
-
-
-
 
 
 		      #Datos de Persona
@@ -195,66 +150,23 @@ echo "<br>".$AportacionBeneficiario6;
 
           $InsertRQG  = "INSERT INTO  personafisicaReqenerales VALUES(null,'{$folioImpreso}','{$Observaciones}',curdate());";
 
-     		$insertPF               = utf8_encode($insertPF);
-        $inserIdentificacionpf  = utf8_encode($inserIdentificacionpf);
-        $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
-   			$InsertProyecto         = utf8_encode($InsertProyecto);
-   			$InsertConceptoApoyo1   = utf8_encode($InsertConceptoApoyo1);
-        $InsertRQG              = utf8_encode($InsertRQG);
-       
-   
-       /*" echo $insertPF;
-               echo "<br>".$inserIdentificacionpf;
-               echo "<br>".$insertDomicilioPF;
-               echo "<br>".$InsertProyecto;
-               echo "<br>".$InsertConceptoApoyo1;
-               echo "<br>".$InsertRQG;
-         */
+          #Datos de Dictamenes 
+     		$insertDictamen = "INSERT INTO personafisicaDictamenes VALUES(null,'{$folioImpreso}','{$nombre}','{$dirReg}','Sin Dictaminar',curdate(),curdate());";
 
-
-            
-   
+          $insertPF               = utf8_encode($insertPF);
+          $inserIdentificacionpf  = utf8_encode($inserIdentificacionpf);
+          $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
+   			  $InsertProyecto         = utf8_encode($InsertProyecto);
+   			  $InsertConceptoApoyo1   = utf8_encode($InsertConceptoApoyo1);
+          $InsertRQG              = utf8_encode($InsertRQG);
+          $insertDictamen         = utf8_encode($insertDictamen);  
 
 
 
-        
+      
 
+        echo "Dictamenes ". $insertDictamen;
 
-
-          /*
-
-            echo $insertPF. "persona fisica"."<br>";
-            echo $insertDomicilioPF. "Domicilio pf"."<br>";
-            echo $InsertProyecto."<br>";
-            echo $InsertConceptoApoyo1 ."<br>";
-            echo $InsertRQG ."<br>";
-
-
-
-
-
-            echo "<br>".$ApoyoSolicitado2;
-            echo "<br>".$UniMedida2;
-            echo "<br>".$CanSolicitada2;
-            echo "<br>".$ApoyoEstatalSolicitado2;
-            echo "<br>".$ApoyoMunicipalSolicitado2;
-            echo "<br>".$AportacionBeneficiario2;  
-            
-            echo "<br>".$ApoyoSolicitado3;
-            echo "<br>".$UniMedida3;
-            echo "<br>".$CanSolicitada3;
-            echo "<br>".$ApoyoEstatalSolicitado3;
-            echo "<br>".$ApoyoMunicipalSolicitado3;
-            echo "<br>".$AportacionBeneficiario3; 
-            
-            echo $InsertConceptoApoyo3;
-            
-            echo $InsertConceptoApoyo4;
-            
-            echo $InsertConceptoApoyo5;
-            
-            echo $InsertConceptoApoyo6;
- */
 
         $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
 
@@ -265,6 +177,7 @@ echo "<br>".$AportacionBeneficiario6;
 
 
         if($result -> num_rows){
+          echo "ya existe el folio";
   
         } else {
 
@@ -282,6 +195,8 @@ echo "<br>".$AportacionBeneficiario6;
                        
               queryMySql("$InsertConceptoApoyo1"); 
               #echo "Datos de Concepto  de Persona Fisica";
+
+              
 
 
 
@@ -398,55 +313,13 @@ if(empty($ApoyoSolicitado6)){} else {
 }
 
 
-
-
-         
-     
-     
-
-     
-
-
-
-        
-
-
-
-       /* 
-       echo $InsertConceptoApoyo1."<br>";
-       echo $InsertConceptoApoyo2."<br>";
-       echo $InsertConceptoApoyo3."<br>";
-       echo $InsertConceptoApoyo4."<br>";
-       echo $InsertConceptoApoyo5."<br>";
-       echo $InsertConceptoApoyo6."<br>";
-       */
-
-echo "<br> la ruta es ".$ruta_SQL_ine;
-echo "<br> la ruta es ".$ruta_SQL_curp;
-echo "<br> la ruta es ".$ruta_SQL_comprobantedomicilio;
-echo "<br> la ruta es ".$ruta_SQL_croquis;
-
-
-
-/* 
-else if(is_null($ruta_SQL_ine)) {
-
-    echo "la ruta del ine es nula";
-
-
-  } else if(isset($ruta_SQL_ine)){
-  echo "el valor es";
-}
- 
-*/
-
-
+#envio de las rutas a la BD
 
 if(empty($ruta_SQL_ine) ){
   
   }else {
 
-    $insertrutaSQL_ine = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_ine}',curdate());";
+    $insertrutaSQL_ine = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_ine}',curdate());";
    $insertrutaSQL_ine  = utf8_encode($insertrutaSQL_ine);
    queryMySql("$insertrutaSQL_ine");
 
@@ -459,7 +332,7 @@ if(empty($ruta_SQL_curp)){
   
   }else{
 
-    $insertrutaSQL_curp = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_curp}',curdate());";
+    $insertrutaSQL_curp = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_curp}',curdate());";
     $insertrutaSQL_curp = utf8_encode($insertrutaSQL_curp);
     queryMySql("$insertrutaSQL_curp");
   }
@@ -468,7 +341,7 @@ if(empty($ruta_SQL_curp)){
 if(empty($ruta_SQL_comprobantedomicilio)){
   
   }else {
-    $insertrutaSQL_comprobantedomicilio = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_comprobantedomicilio}',curdate());";
+    $insertrutaSQL_comprobantedomicilio = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_comprobantedomicilio}',curdate());";
     
     $insertrutaSQL_comprobantedomicilio = utf8_encode($insertrutaSQL_comprobantedomicilio);
     queryMySql("$insertrutaSQL_comprobantedomicilio");
@@ -479,7 +352,7 @@ if(empty($ruta_SQL_comprobantedomicilio)){
  
   }else {
 
-    $insertrutaSQL_croquis = "INSERT INTO rutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_croquis}',curdate());";
+    $insertrutaSQL_croquis = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_croquis}',curdate());";
      $insertrutaSQL_croquis = utf8_encode($insertrutaSQL_croquis);
 
      queryMySql("$insertrutaSQL_croquis");
@@ -491,7 +364,7 @@ if(empty($ruta_SQL_comprobantedomicilio)){
         
 
         queryMySql("$InsertRQG");
-
+        queryMySql("$insertDictamen");
 
 
 
@@ -500,7 +373,27 @@ if(empty($ruta_SQL_comprobantedomicilio)){
 
         }
 
-             
+
+
+echo "<br>". $insertPF;             
+echo "<br>". $inserIdentificacionpf;
+echo "<br>". $insertDomicilioPF;
+echo "<br>". $InsertProyecto;
+
+echo "<br>". $InsertRQG;
+echo "<br>". $insertDictamen;
+
+echo "<br>". $InsertConceptoApoyo1;
+echo "<br>". $InsertConceptoApoyo2;
+echo "<br>". $InsertConceptoApoyo3;
+echo "<br>". $InsertConceptoApoyo4;
+echo "<br>". $InsertConceptoApoyo5;
+echo "<br>". $InsertConceptoApoyo6;
+echo "<br>". $ruta_SQL_ine;
+echo "<br>". $ruta_SQL_curp;
+echo "<br>". $ruta_SQL_comprobantedomicilio;
+echo "<br>". $ruta_SQL_croquis;
+
 
 
 

@@ -214,7 +214,7 @@ apoyo solicitado</h3>
 
 </form>
 
-<a href="eleccionpf.php"><button class="boton" id="ubicacionConceptos"> Regresar  </button></a>
+
 <br>
 <a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionConceptos">Menú Principal</button></a>
 

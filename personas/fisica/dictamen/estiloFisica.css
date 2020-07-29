@@ -58,11 +58,11 @@ body{
 .Marco{
 
  top: 20px;
- width: 10in;
+ width: 12in;
  height: 16in;
 
  position: absolute;
- left:calc((100% - 10in)/2);
+ left:calc((100% - 12in)/2);
 
  color: #FFFFFF;
  background: #1D447D;

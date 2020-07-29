@@ -67,13 +67,13 @@
   
   <div class="centro">
   <p>Nombre</p>
-  <input type="text" name="nombresPF" placeholder=" Ej: María Guadalupe" required="required" maxlength="40">
+  <input type="text" name="nombresPF" placeholder=" Ej: María Guadalupe" required="required" maxlength="40" autocomplete="off">
 
   <p>Apellido Paterno</p>
-  <input type="text" name="apellidoPa" placeholder=" Ej: Fernández" required="required" maxlength="20">
+  <input type="text" name="apellidoPa" placeholder=" Ej: Fernández" required="required" maxlength="20" autocomplete="off">
 
   <p>Apellido Materno</p>
-  <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20">
+  <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20" autocomplete="off">
   
  </div>
   
@@ -262,11 +262,11 @@
   </select>
 
   <p>Teléfono</p>
-  <input type="text" name="Telefono" placeholder="Ej: 442 031 4120" required="required" maxlength="10">
+  <input type="text" name="Telefono" placeholder="Ej: 442 031 4120" required="required" maxlength="10" autocomplete="off">
 
 
   <p>Correo Electrónico</p>
-  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80">
+  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80" autocomplete="off">
 
 </div>
 
@@ -280,11 +280,11 @@
 
 
   <p>Numero de Identificación</p>
-  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="15">
+  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="15" autocomplete="off">
 
 
   <p>Curp</p>
-  <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20">
+  <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20" autocomplete="off">
 
  </div>
 

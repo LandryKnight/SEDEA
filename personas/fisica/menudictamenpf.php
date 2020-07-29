@@ -16,6 +16,9 @@
 <h2>¿Qué deseas hacer?</h2>
 
 
+<h3>Ver Solicitudes a Dictaminar</h3>
+<a href="http://localhost/sedea/personas/fisica/dictamen/versolicitudes.php"><button class="boton">Solicitudes</button></a>
+
 <h3>Dictaminar una solicitud</h3>
 <a href="http://localhost/sedea/personas/fisica/dictamen/iniciosesionpf.php"><button class="boton">Dictaminar</button></a>
 
@@ -23,7 +26,7 @@
 <h3>Ver el estatus de un Dictamen</h3>
 <a href="http://localhost/sedea/personas/fisica/dictamen/iniciosesionpf.php"><button class="boton">Estatus de dictamen</button></a>
 
-<br><br><br>
+<br><br>
 <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
 
 </div>
