@@ -1,0 +1,700 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*Color de fondo de toda la pagina */
+	background-color: #FFFFFF;
+}
+
+.eleccion{
+
+ width: 7.5in;
+ height: 8in;
+
+ position: absolute;
+ left:calc((100% - 7.5in)/2);
+ top: 30px;
+
+
+ color: #FFFFFF;
+ background: #1D447D;
+
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+
+.eleccion h1{
+	font-size: 28pt;
+	font-weight: bold;
+	margin-bottom: 100px;
+}
+
+.eleccion h2{
+	font-size: 24pt;
+	font-weight: bold;
+	margin-bottom: 130px;
+}
+
+.eleccion h3{
+	font-size: 24pt;
+	font-weight:bold;
+}
+
+
+.eleccion button{
+	height: .5in;
+}
+
+
+.Marco{
+
+ top: 20px;
+ width: 10in;
+ height: 16in;
+
+ position: absolute;
+ left:calc((100% - 10in)/2);
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+
+
+}
+
+
+
+
+
+.Marco input{
+	height: .35in;
+
+	border-radius: 8px;
+	margin-bottom: 5px;
+
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+	text-indent: 10px;
+    color: #9C1462;
+
+
+}
+
+
+.Marco select{
+	height: .35in;
+
+	border-radius: 8px;
+	margin-bottom: 5px;
+	color: #9C1462;
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+}
+
+.Marco h1 {
+	position: relative;
+	left: 3.33in;
+
+}
+
+
+
+.Marco h2{
+
+
+	position: relative;
+	left: 2.5in;
+	margin: 5px;
+	margin-top: .35in;
+	margin-bottom: .25in;
+}
+
+
+
+
+
+.Marco p{
+	margin: 8px;
+	font-size: 14pt;
+	font-weight:  bold;
+}
+
+
+
+
+.MarcoDatos{
+ top: 20px;
+ width: 10in;
+ height: 11in;
+
+ position: absolute;
+ left:calc((100% - 10in)/2);
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+.MarcoDatos input{
+	height: .35in;
+
+	border-radius: 8px;
+	margin-bottom: 5px;
+
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+	text-indent: 10px;
+    color: #9C1462;
+}
+
+.MarcoDatos select{
+	height: .35in;
+	width: 2.5in;
+
+	border-radius: 8px;
+	margin-bottom: 5px;
+	color: #9C1462;
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+}
+
+
+.MarcoDatos p{
+	margin: 8px;
+	font-size: 14pt;
+	font-weight:  bold;
+}
+
+.MarcoDatos h1{
+
+	position: relative;
+	left: 1.8in;
+}
+
+
+#ubicacion{
+	position: relative;
+	top: 2in;
+
+	left: 4.7in;
+}
+
+
+#titulo{
+	margin-top: .5in;
+	margin-bottom: .35in;
+
+	position: relative;
+	left: 35%;
+
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+#titulo2{
+	position: relative;
+	left: 1.8in;
+
+	margin-top: .35in;
+
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+#actividad{
+	position: relative;
+	left: 2.6in;
+
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+#titulo3{
+	margin-top: 12px;
+	margin-bottom: 12px;
+	position: relative;
+	left: 16%;
+}
+
+
+#domiciliotitulo{
+	font-size: 24pt;
+	font-weight: bold;
+	position: relative;
+	left: 2.8in;
+}
+
+#correo{
+	width: 270px;
+}
+.Marco h3{
+	position: relative;
+	left: 20%;
+	margin: 6px;
+}
+
+.regional{
+	top: 25px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+	column-count: 2;
+}
+
+.regional p{
+	margin-top: 3px;
+	margin-bottom: 6px;
+}
+
+
+.centro{
+	column-count: 3;
+	
+}
+
+.centro p{
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.nacimiento{
+	
+	column-count: 3;
+}
+
+.nacimiento p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+
+.nacimiento select{
+	margin-bottom: .35in;
+}
+
+.genero{
+	margin-top: 10px;
+	column-count: 3;
+}
+
+.genero p{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.domicilio{
+	column-count: 2;
+}
+
+
+.domicilio p{
+	margin-top: 9px;
+	margin-bottom: 6px;
+}
+
+
+.municipio{
+	column-count: 2;
+}
+.asentamiento{
+	column-count: 2
+
+}
+
+.asentamiento input{
+	width: 350px;
+}
+
+
+.boton{
+	background: #FFFFFF;
+
+	border-style: solid;
+	
+	border-radius: 15px;
+
+	width: 2.5in;
+	height: .5in;
+
+
+	color: #9C1462;
+	font-size: 14pt;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	
+}
+
+
+.antiguedad{
+	column-count:3;
+}
+
+.constitucion{
+	column-count: 3;
+}
+
+
+.conceptoApoyo{
+	width: 12in;
+	height: 7.5in;
+
+	position: absolute;
+	top: 50px;
+	left: calc((100% - 12in)/2);
+
+ 	
+
+ 	color: #FFFFFF;
+ 	background: #1D447D;
+
+ 	padding-left:15px;
+	padding-top: 30px;
+ 	padding-bottom: 30px;
+
+
+ 	border-radius: 15px;
+	border:none;
+	
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+ 	margin-bottom: 50px;
+ 	
+}
+
+.conceptoApoyo h1{
+	margin-top: 10px;
+	position: relative;
+	left: 26%;
+	padding-bottom: 20px;
+}
+
+.conceptoApoyo h5{
+	position: absolute;
+	top: 5in;
+
+
+}
+	table{
+	
+	width: 11in;
+
+	position: relative;
+	left: calc((100% - 11in)/4);
+	border-radius:15px;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	margin-bottom: 12px;
+	font-size: 14pt;
+}
+
+
+
+.conceptoApoyo input{
+	border-radius: 15px;
+	color: #9C1462;
+
+
+	width: 3.3in;
+	height: .35in;
+	text-indent: 5px;
+	font-size: 14pt;
+
+}
+
+
+
+
+.UnidadMedida input{
+	width: 70px;
+	text-indent: 10px;
+}
+
+.ApoyoEstatal input{
+	width: 180px;
+	text-indent: 75px;
+    
+}
+.ApoyoMunicipal input{
+ 	width: 180px;
+	text-indent: 75px;
+}
+
+
+.AportaciónBeneficiario input{
+	width: 220px;
+	text-indent: 100px;
+}
+
+
+
+.nota{
+	width: 100%;
+	column-count: 2;
+}
+
+.nota input{
+	border: none;
+	position: relative;
+	left: 3.5in;
+	width: .20in;
+	height: .20in;
+}
+
+
+
+#ubicacionConceptos{
+	top: .35in;
+	width: 2.5in;
+	height: .45in;
+	position: relative;
+	left: calc((100% - 3in)/2);
+}
+
+.requisitos{
+
+	width: 12in;
+	height: 11.5in;
+	
+	
+ 	top: 50px;
+
+ 	color: #FFFFFF;
+ 	background: #1D447D;
+ 	
+ 	border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ 	margin-bottom: 50px;
+
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
+ 	padding-right: 43px;
+	padding-left: 43px;
+
+ 	text-align: justify;
+
+}
+
+
+.requisitos h1{
+	position:relative;
+	left: 120px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+
+
+.requisitos h3{
+	position: relative;
+	left: 380px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+
+.requisitos h5{
+	position: relative;
+	top: 1in;
+}
+
+.declaraciones{
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.declaraciones p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.requisitos input{
+	border-radius: 15px;
+}
+
+.requisitos i{
+	font-size: 18pt;
+}
+
+.ObservacionesM{
+	position: absolute;
+	left: calc((100% - 12in)/2);
+	top: 1.6in;
+	width: 12in;
+	height: 5.8in;
+	border-radius: 15px;
+	border: none;
+	color: #FFFFFF;
+ 	background: #1D447D;
+
+}
+
+.ObservacionesM h3{
+	position: absolute;
+	top: 50px;
+	left: 110px;
+	color: #FFFFFF;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.ObservacionesM input{
+	position: absolute;
+	top: 3.5in;
+	left: calc((100 - 300px/2));
+}
+
+.observaciones{
+	position: absolute;
+	left: 100px;
+	top:  100px;
+
+	width: calc(100% - 200px);
+	height: 1in;
+	
+	border-radius: 15px;
+	color: #9C1462;
+	font-weight: bold;
+	font-size: 14pt;
+
+	text-indent: 10px;
+	margin-bottom: 70px;
+
+
+}
+
+
+.ObservacionesM h5{
+	position: relative;
+	top: 450px;
+	left: 50px;
+	width: calc(100% - 100px);
+	
+}
+
+.documentos{
+	column-count:2;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-size: 14pt;
+}
+
+.documentos input{
+	margin-left: 2in;
+}
+
+.final{
+ top: 10px;
+ width: 60%;
+ position: relative;
+ left: 18%;
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+	
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+
+.login{
+
+	width: 6.5in;
+	height: 7in;
+	position: absolute;
+	top: 30px;
+	left: calc((100% - 6.5in)/2);
+	
+	border-radius: 15px;
+	border-style: solid;
+	border:none;
+
+	background: #1D447D;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+	margin-bottom: 50px;
+	color: #FFFFFF;
+
+}
+
+.login h1{
+	margin-top: 15px;
+	margin-bottom: 25px;
+	
+}
+
+.login h2{
+	margin-top: 15px;
+	margin-bottom: 25px;
+	
+}
+
+.login h3{
+	margin-top: 50px;
+}
+
+.login input{
+	width: 3in;
+	height: 0.35in;
+	color: #9C1462;
+	font-size: 14pt;
+	font-weight: bold;
+
+	border-radius: 15px;
+
+	margin-bottom: 15px;
+}
+
+.input{
+	text-indent: 10px;
+}
+
+
+.mensaje{
+
+	
+	font-weight: bold;
+	font-size: 14pt;
+	color: red;
+}
+
+
+#ubicacionrg{
+	position: relative;
+	left: calc((100% - 2.5in)/2);
+
+}
