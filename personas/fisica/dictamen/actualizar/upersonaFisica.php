@@ -1,10 +1,34 @@
+<?php 
+
+require_once('uconexionPF.php');
+
+global $Folio;
+if(isset($_POST['EnviarFolio'])){
+  $Folio  = sanitizeString($_POST['folio']);
+
+  echo $Folio;
+}
+
+  $select = "SELECT * FROM personafisicaDatos,personafisicadomicilio WHERE personafisicaDatos.folioImpresoPF = personafisicaDomicilio.folioImpreso  AND  personafisicaDatos.folioImpresoPF =  '{$Folio}'";
+  $select = utf8_decode($select);
+
+  $result = queryMySql("$select");
+
+  if(!$result) die("No se pudo extraer los datos de la tabla");
+
+  $dato = $result -> fetch_array(MYSQLI_NUM);
+
+ ?>
+
+
+
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Datos Persona Física</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="estiloFisica.css">
+  <link rel="stylesheet" type="text/css" href="uestiloFisica.css">
   </head>
 <body>
 
@@ -13,7 +37,7 @@
 
 <form action="uDatosProyectoPF.php" method="post">
 
-
+<input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 
 
  <h1>Persona Física</h1>
@@ -26,7 +50,8 @@
 
   <p> Selecciona la Dirección Regional</p> 
   <select name="DireccionRegional"  required> 
-    <option value="">Sin Seleccionar</option>
+    
+    <option value="<?php echo $dato[1]; ?>"><?php echo $dato[1]; ?></option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
     <option value="Jalpan de Serra">Jalpan de Serra</option>
     <option value="Querétaro">Querétaro</option>
@@ -38,7 +63,7 @@
 
 <p>Selecciona el Municipio</p>
    <Select name="ventanillaMunicipio" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[2]; ?>"><?php echo $dato[2]; ?></option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -66,24 +91,29 @@
   <h2>Datos del Solicitante - Persona Física </h2> 
   
   <div class="centro">
-  <p>Nombre</p>
-  <input type="text" name="nombresPF" placeholder=" Ej: María Guadalupe" required="required" maxlength="40" autocomplete="off">
+  <p>Nombre Completo</p>
+  <input type="text" name="nombresPF" placeholder=" Ej: María Guadalupe" required="required" maxlength="40" autocomplete="off" value="<?php echo $dato[3]; ?>">
 
-  <p>Apellido Paterno</p>
-  <input type="text" name="apellidoPa" placeholder=" Ej: Fernández" required="required" maxlength="20" autocomplete="off">
-
-  <p>Apellido Materno</p>
-  <input type="text" name="apellidoMa" placeholder="Ej: Gutierrez" required="required" maxlength="20" autocomplete="off">
+ 
   
  </div>
   
 
+
+<?php 
+
+
+$dia  = substr($dato[5], 0,2);
+
+$mes = substr($dato[5], 3,2);
+$anio = substr($dato[5],6,4);
+ ?>
  
   <h3 id="titulo2">Selecciona la Fecha de Nacimiento</h3>
    <div class="nacimiento" >
   <p>Selecciona el Día </p>
         <select name="DiaFechaNacimiento" required >
-        <option value="">Sin Seleccionar</option>
+        <option value="<?php echo $dia;  ?>"><?php echo $dia;  ?></option>
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -119,7 +149,7 @@
   </select>
   <p>Selecciona el Mes</p>
   <select name="MesFechaNacimiento" required >
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $mes; ?>"><?php echo $mes; ?></option>
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -136,7 +166,7 @@
   </select>
   <p>Selecciona el Año</p>
   <select name="AnioFechaNacimiento" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $anio; ?>"><?php echo $anio; ?></option>
       <option value="2002">2002</option>
        <option value="2001">2001</option>
        <option value="2000">2000</option>
@@ -197,14 +227,14 @@
    <div class="genero">
   <p>Selecciona el Género</p>
   <select name="genero" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[4]; ?>"><?php echo $dato[4]; ?></option>
     <option value="Masculino">Masculino</option>
     <option value="Femenino">Femenino</option>
   </select>
 
   <p>Selecciona la Nacionalidad</p>
     <select name="Nacionalidad" required >
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[6]; ?>"><?php echo $dato[6]; ?></option>
     <option value="Mexicana">Mexicana</option>
     <option value="Extranjera">Extranjera</option>
   </select> 
@@ -212,7 +242,7 @@
 
   <P>Selecciona el Estado Civil</P>
     <select name="EstadoCivil" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[7]; ?>"><?php echo $dato[7]; ?></option>
     <option value="Solter@">Solter@</option>
     <option value="Casado">Casado</option>
     <option value="Divorciado">Divorciado</option>
@@ -224,7 +254,7 @@
 
   <p>Selecciona el Estado de Nacimiento</p>
   <select name="EstadoNacimiento" required >
-       <option value="">Sin Seleccionar</option>
+       <option value="<?php echo $dato[8]; ?>"><?php echo $dato[8]; ?></option>
        <option value="Aguascalientes">Aguascalientes</option>
        <option value="Baja California B.C.">Baja California B.C.</option>
        <option value="Baja California Sur">Baja California Sur</option>
@@ -262,29 +292,29 @@
   </select>
 
   <p>Teléfono</p>
-  <input type="text" name="Telefono" placeholder="Ej: 442 031 4120" required="required" maxlength="10" autocomplete="off">
+  <input type="text" name="Telefono" placeholder="Ej: 442 031 4120" required="required" maxlength="10" autocomplete="off" value="<?php echo $dato[9]; ?>">
 
 
   <p>Correo Electrónico</p>
-  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80" autocomplete="off">
+  <input type="text" name="Correo" placeholder="Ej: sedea@gmail.com"  maxlength="80" autocomplete="off" value="<?php echo $dato[10]; ?>">
 
 </div>
 
 <div class="genero">
   <p>Tipo de Identificación</p>
   <select name="tipoIdentificacion" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[11]; ?>"><?php echo $dato[11]; ?></option>
     <option value="INE">INE - IFE</option>
   </select>
   
 
 
   <p>Numero de Identificación</p>
-  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="15" autocomplete="off">
+  <input type="text" name="numIdentificacion" required="required" placeholder="Ej:897456789582" maxlength="15" autocomplete="off" value="<?php echo $dato[12]; ?>">
 
 
   <p>Curp</p>
-  <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20" autocomplete="off">
+  <input type="text" name="Curp" required="required" placeholder="Ej:SDFDS445678POD" maxlength="20" autocomplete="off" value="<?php echo $dato[13]; ?>">
 
  </div>
 
@@ -297,7 +327,7 @@
 
   <p>Selecciona el Nombre del Municipio</p>
    <Select name="nombreDomicilioMunicipio"  required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo utf8_decode($dato[17]); ?>"><?php echo utf8_decode($dato[17]); ?></option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -322,14 +352,14 @@
 
    <p>Selecciona el Tipo de Domicilio</p>
    <select name="tipoDomicilio" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[18]; ?>"><?php echo $dato[18]; ?></option>
     <option value="Urbano">Urbano</option>
     <option value="Rural">Rural</option>
    </select>
   
    <p>Selecciona el Tipo de Vialidad</p>
    <select name="tipoVialidad" required>
-      <option value="">Sin Seleccionar</option>
+      <option value="<?php echo $dato[19]; ?>"><?php echo $dato[19]; ?></option>
       <option value="Calle">Calle</option>  
       <option value="Callejón">Callejón</option>
       <option value="Privada">Privada</option>
@@ -341,7 +371,7 @@
 
    <p>Selecciona el Tipo de Asentamiento</p>
    <select name="tipoAsentamiento"  required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[20]; ?>"><?php echo $dato[20]; ?></option>
     <option value="Colonia">Colonia</option>
     <option value="Pueblo">Pueblo</option>
     <option value="Rancho">Rancho</option>
@@ -359,11 +389,11 @@
    
    <div class="asentamiento">
  <p>Nombre del Asentamiento</p>
-   <input type="Text" name="nombreAsentamiento" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
+   <input type="Text" name="nombreAsentamiento" placeholder="Ej: Pozo Blanco" required="required" maxlength="50" value="<?php echo $dato[21]; ?>">
 
      
       <p>Nombre de la Vialidad</p>
-   <input type="text" name="nombreVialidad" required="required" maxlength="50">
+   <input type="text" name="nombreVialidad" required="required" maxlength="50" value="<?php echo $dato[22]; ?>">
 
 
 
@@ -371,10 +401,10 @@
 
  
    <p>Nombre de la Localidad </p>
-   <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50">
+   <input type="text" name="nombreLocalidad" placeholder="Ej: Pozo Blanco" required="required" maxlength="50" value="<?php echo $dato[23]; ?>">
 
    <p>Referencia de Vialidad</p>
-   <input type="text" name="referenciaVialidad" maxlength="50">
+   <input type="text" name="referenciaVialidad" maxlength="50" value="<?php echo $dato[24]; ?>">
 
 
 
@@ -387,7 +417,7 @@
    <h2 id="actividad">Actividad Económica</h2>
    <p>Seleccion el Tipo de Actividad</p>
    <select name="tipoActividadEconomica" required >
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[25]; ?>"><?php echo $dato[25]; ?></option>
     <option value="Agrícola">Agrícola</option>
     <option value="Pecuaria">Pecuaria</option>
     <option value="Pesca/Acuicola">Pesca/Acuícola</option>

@@ -6,6 +6,34 @@ require_once('conexionDPF.php');
  ?>
 
 
+<?php 
+
+	global $Folio;
+	if(isset($_POST['buscarFolio'])){
+		$Folio = sanitizeString($_POST['bfolio']);
+
+	}
+
+	$select = "SELECT * FROM personafisicaDatos WHERE folioImpresoPF =  '{$Folio}'";
+	$select = utf8_decode($select);
+
+	$result = queryMySql("$select");
+
+	if(!$result) die("No se pudo extraer los datos de la tabla");
+
+	$dato = $result -> fetch_array(MYSQLI_NUM);
+
+	
+
+
+
+
+
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,65 +43,40 @@ require_once('conexionDPF.php');
 </head>
 <body>
 
+<h2>Buscador de Folios</h2>
+
+<form method="POST" action="dictaminarpf.php">
+<input type="text" name="bfolio" placeholder="Ej:SDFDS445678POD" maxlength="30" autocomplete="off">
+<input type="submit" name="buscarFolio" value="Buscar Folio">
+</form>
+
 
 <?php 
-
-	$select = "SELECT * FROM personafisicaDatos";
-	$select = utf8_decode($select);
-
-	$result = queryMySql("$select");
-
-	if(!$result) die("No se pudo extraer los datos de la tabla");
-
-	$rows = $result -> num_rows;
+if($result -> num_rows){
+		
 
 	
 
 
 
-
-$dato = $result -> fetch_array(MYSQLI_NUM);
-
-
-
-$datos = $dato[5];
-
-echo "fecha completa".$datos ."<br>";
-
-
-$dia  = substr($dato[5], 0,2);
-
-$mes = substr($dato[5], 3,2);
-$anio = substr($dato[5],6,4);
-
-
-echo "<br> dia ".$dia;
-echo "<br>mes ".$mes;
-echo "<br>año ".$anio."<br>";
-
+	
 
  ?>
-<input type="text" name="var" value="<?php echo utf8_decode($dato[0]); ?>">
-<input type="text" name="var" value="<?php echo utf8_decode($dato[1]); ?>">
-<input type="text" name="var" value="<?php echo utf8_decode($dato[2]); ?>">
-<input type="text" name="var" value="<?php echo utf8_decode($dato[3]); ?>">
-<input type="text" name="var" value="<?php echo utf8_decode($dato[4]); ?>">
+
+<form method="POST" action="actualizar/upersonaFisica.php">
+<input type="hidden" name="folio" value="<?php echo $Folio; ?>">
+<input type="submit" name="EnviarFolio" value="Siguiente">	
+</form>
 
 
-<select name="dia" required>
-	<option value="<?php echo $dia; ?>"><?php echo $dia;?></option>
-</select>
 
-<h2>Dictamen de la solicitud</h2>
+<?php 
 
-<select name="DictSolicitud" required>
-	<option value="">Sin Seleccionar</option>
-	<option value="Positiva">Positiva</option>
-	<option value="Negativa">Negativa</option>
+}else {
+		echo "No se encontro ningun folio";
+	}
 
-</select>
-
-
+ ?>
 
 
 

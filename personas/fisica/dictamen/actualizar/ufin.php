@@ -1,6 +1,6 @@
 <?php  
 
-require_once('conexionPF.php');
+require_once('uconexionPF.php');
 
 
 
@@ -407,7 +407,7 @@ echo "<br>". $ruta_SQL_croquis;
 <html>
 <head>
 	<title>Finalizar Registro</title>
-	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
+	<link rel="stylesheet" type="text/css" href="uestiloFisica.css">
 	
 </head>
 <body>

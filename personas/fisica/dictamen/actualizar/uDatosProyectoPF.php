@@ -1,22 +1,21 @@
 <?php 
 
-require_once('conexionPF.php');
+require_once('uconexionPF.php');
 
-
+global $Folio;
  
 if(isset($_POST['EnviarPF'])){
 
   #recepcion de datos PersonaFisica.php
   
 
- 
+  $Folio                =             sanitizeString($_POST['folio']);
   $dirReg               =             $_POST['DireccionRegional']; #direccionRegional
   $municipio            =             $_POST['ventanillaMunicipio'];
   $nombres              =             ucfirst(strtolower(sanitizeString($_POST['nombresPF'])));
-  $apellidoPa           =             ucfirst(strtolower(sanitizeString($_POST['apellidoPa'])));
-  $apellidoMa           =             ucfirst(strtolower(sanitizeString($_POST['apellidoMa'])));
+  
 
-  $nombre               =             $nombres." ".$apellidoPa." ".$apellidoMa;
+  $nombre               =             $nombres;
 
   $genero               =             $_POST['genero'];
 
@@ -50,8 +49,17 @@ if(isset($_POST['EnviarPF'])){
     
 }
 
-     
+  $select = "SELECT * FROM personafisicaproyecto WHERE folioImpreso =  '{$Folio}'";
+  $select = utf8_decode($select);
 
+  $result = queryMySql("$select");
+
+  if(!$result) die("No se pudo extraer los datos de la tabla");
+
+  $dato = $result -> fetch_array(MYSQLI_NUM);
+
+echo $Folio;
+echo  $actEco;
 
  ?>
 
@@ -61,17 +69,17 @@ if(isset($_POST['EnviarPF'])){
 <head>
 	<title>Datos del Proyecto Persona Física</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="estiloFisica.css">
+  <link rel="stylesheet" type="text/css" href="uestiloFisica.css">
 </head>
 <body>
 
 <div class="MarcoDatos"> 
-<form method="post" action="conceptosApoyoPF.php">
+<form method="post" action="uconceptosApoyoPF.php">
   
 
 
 
-
+<input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?> ">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?> ">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?> ">
@@ -101,7 +109,7 @@ if(isset($_POST['EnviarPF'])){
 
 
 <p>Nombre del proyecto</p>	
-<input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
+<input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80" value="<?php echo $dato[2]; ?>">
 
 <br> <br>
 
@@ -109,7 +117,7 @@ if(isset($_POST['EnviarPF'])){
 <p>Antiguedad del proyecto</p>
 
 <select name="AntiguedadProyecto" required>
-	<option value="">Sin Seleccionar</option>
+	<option value="<?php echo $dato[3]; ?>"><?php echo $dato[3]; ?></option>
 	<option value="Antiguedad en años">Antiguedad en años</option>
 	<option value="Continuidad">Continuidad</option>
 	<option value="Nuevo">Nuevo</option>
@@ -120,18 +128,29 @@ if(isset($_POST['EnviarPF'])){
 
 
 <p>Teléfono</p>
-<input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10" >
+<input type="text" name="TelefonoProyecto" placeholder="Ej: 442 255 2556" maxlength="10"  value="<?php echo $dato[4]; ?>">
 
 <p>Correo Electrónico</p>
-<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="80">
+<input type="text" name="CorreoElectronicoProyecto" id="correo" placeholder="proyectoSedea@sedea.com" maxlength="80" value="<?php echo $dato[5]; ?>">
 
 </div>
+
+
+<?php 
+
+$dia  = substr($dato[6], 0,2);
+
+$mes = substr($dato[6], 3,2);
+$anio = substr($dato[6],6,4);
+
+
+ ?>
 
 <h3 id="titulo">Fecha Constitución</h3>
 <div class="constitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dia; ?>"><?php echo $dia; ?></option>
       	<option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -168,7 +187,7 @@ if(isset($_POST['EnviarPF'])){
 
   <p>Selecciona el Mes</p>
   <select name="MesFechaConstitucion" required>
-    	  <option value="">Sin Seleccionar</option>
+    	  <option value="<?php echo $mes ?>"><?php echo $mes ?></option>
     	  <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -186,7 +205,7 @@ if(isset($_POST['EnviarPF'])){
 
   <p>Selecciona el Año</p>
   <select name="AnioFechaConstitucion" required>
-       <option value="">Sin Seleccionar</option>
+       <option value="<?php echo $anio ?>"><?php echo $anio ?></option>
        <option value="2020">2020</option>
        <option value="2019">2019</option>
        <option value="2018">2018</option>
@@ -266,7 +285,7 @@ if(isset($_POST['EnviarPF'])){
 
 <p>Selecciona el Municipio</p>
     <Select name="NombreMunicipioProyecto" required>
-    <option value="">Sin Seleccionar</option>
+    <option value="<?php echo $dato[13]; ?>"><?php echo $dato[13]; ?></option>
     <option value="Amealco de Bonfil">Amealco de Bonfil</option>
     <option value="Arroyo Seco">Arroyo Seco</option>
     <option value="Cadereyta de Montes">Cadereyta de Montes</option>
@@ -291,7 +310,7 @@ if(isset($_POST['EnviarPF'])){
 <p>Tipo de domicilio</p>
 
 <select name="TipoDomicilioProyecto" required>
-	<option  value="">Sin Seleccionar</option>
+	<option  value="<?php echo $dato[7]; ?>"><?php echo $dato[7]; ?></option>
 	<option  value="Rural">Rural</option>
 	<option  value="Urbano">Urbano</option>
 	
@@ -300,7 +319,7 @@ if(isset($_POST['EnviarPF'])){
 <p>Tipo de Asentamiento</p>
 
 <select name="TipoAsentamientoProyecto" required>
-	<option value="">Sin Seleccionar</option>
+	<option value="<?php echo $dato[8]; ?>"><?php echo $dato[8]; ?></option>
 	<option value="Colonia">Colonia</option>
 	<option value="Ejido">Ejido</option>
 	<option value="Hacienda">Hacienda</option>
@@ -317,7 +336,7 @@ if(isset($_POST['EnviarPF'])){
 <p>Tipo de la vialidad</p>
 
 <select name="TipoVialidadProyecto" required>
-  <option value="">Sin Seleccionar</option>
+  <option value="<?php echo $dato[10]; ?>"><?php echo $dato[10]; ?></option>
   <option value="Calle">Calle</option>
   <option value="Callejón">Callejón</option>
   <option value="Carretera">Carretera</option>
@@ -330,18 +349,18 @@ if(isset($_POST['EnviarPF'])){
 </div>
 <div class="asentamiento">
 <p>Nombre del Asentamiento</p>
-<input type="text" name="NombreAsentamientoProyecto" required="required" maxlength="80">
+<input type="text" name="NombreAsentamientoProyecto" required="required" maxlength="80" value="<?php echo $dato[9]; ?>">
 
 
 <p>Nombre de la Vialidad</p>
-<input type="text" name="NombreVialidadProyecto" maxlength="80">
+<input type="text" name="NombreVialidadProyecto" maxlength="80" value="<?php echo $dato[11]; ?>"> 
 
 <p>Nombre de la Localidad</p>
-<input type="text" name="NombreLocalidadProyecto" maxlength="80">
+<input type="text" name="NombreLocalidadProyecto" maxlength="80" value="<?php echo $dato[12]; ?>">
 
 
 <p>Referencia de la Vialidad</p>
-<input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
+<input type="text" name="ReferenciaVialidadProyecto" maxlength="50" value="<?php echo $dato[14]; ?>"> 
 </div>
 <br> <br>
 <input type="submit" name="DatosProyectoPF" value="Siguiente" class="boton" id="ubicacion">

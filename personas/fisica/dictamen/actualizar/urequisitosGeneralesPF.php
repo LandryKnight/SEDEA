@@ -1,12 +1,14 @@
 
 <?php  
 
-require_once('conexionPF.php');
+require_once('uconexionPF.php');
 
 
 global $folioImpreso;
 
 if (isset($_POST['EnviarConceptosPF'])){
+
+   $Folio                     =                       sanitizeString($_POST['folio']);
 
 #recepcion de datos de Persona Fisica.php
   $dirReg                     =                      sanitizeString($_POST['dirReg']);
@@ -108,15 +110,15 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 
 
-	
-
-
+$var = ($_POST['var']);	
+echo $var;
+echo "Apoyoz".$ApoyoSolicitado1;
 }
 
 
   
 
-  $folioImpreso = substr($curp, 0,1).strlen($municipio).substr($curp, 1,2).strlen($genero).substr($curp, 2,3).strlen($dirReg).strlen($nombre);
+
 
 
 
@@ -130,7 +132,7 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 <head>
 	<title>Requisitos Generales de Documentos para Persona Física</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
+	<link rel="stylesheet" type="text/css" href="uestiloFisica.css">
 </head>
 <body>
 
@@ -139,9 +141,9 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 <h1>Requisitos Generales de Documentos para Persona Física</h1>
 
 
-<form action="observaciones.php" method="POST" enctype="multipart/form-data">
+<form action="uobservaciones.php" method="POST" enctype="multipart/form-data">
 
-<input type ="hidden" name="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
+<input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">

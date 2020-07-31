@@ -137,7 +137,7 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
            $inserIdentificacionpf = "INSERT INTO identificacionpf VALUES ('{$numIdentificacion}','{$curp}','{$folioImpreso}',curdate());";
 
          #Datos de Persona Domicilio
-        $insertDomicilioPF = "INSERT INTO personafisicaDomicilio VALUES(null,'{$folioImpreso}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
+        $insertDomicilioPF = "INSERT INTO personafisicaDomicilio VALUES(null,'{$folioImpreso}','{$nombreMunicipio}','{$tipoDomicilio}','{$tipoVialidad}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$nombreVialidad}','{$nombreLocalidad}','{$refVial}','{$actEco}',curdate());";
 
    			#Datos de Proyecto
    			$InsertProyecto = "INSERT INTO personafisicaProyecto VALUES(null,'{$folioImpreso}','{$NombreProyecto}','{$AntiguedadProyecto}','{$TelefonoProyecto}','{$CorreoElectronicoProyecto}','{$FechaConstitucion}','{$TipoDomicilioProyecto}','{$TipoAsentamientoProyecto}','{$NombreAsentamientoProyecto}','{$TipoVialidadProyecto}','{$NombreVialidadProyecto}','{$NombreLocalidadProyecto}','{$NombreMunicipioProyecto}','{$ReferenciaVialidadProyecto}',curdate());";

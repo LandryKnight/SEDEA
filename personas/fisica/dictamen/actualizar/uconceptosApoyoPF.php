@@ -1,11 +1,13 @@
 <?php 
 
-require_once('conexionPF.php');
+require_once('uconexionPF.php');
 
+
+global $Folio;
 if(isset($_POST['DatosProyectoPF'])){
 
 
-
+  $Folio                		=             		sanitizeString($_POST['folio']);
   #recepcion de datos de PersonaFisica.php
   $dirReg 						=					sanitizeString($_POST['dirReg']);
   $municipio 					= 	 				sanitizeString($_POST['municipio']);
@@ -59,8 +61,6 @@ $ReferenciaVialidadProyecto		=					sanitizeString($_POST['ReferenciaVialidadProy
 
 
 
-
-
 ?>
 
 
@@ -70,15 +70,18 @@ $ReferenciaVialidadProyecto		=					sanitizeString($_POST['ReferenciaVialidadProy
 <head>
 	<title>Conceptos de Apoyos Persona Física</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
-</head>
+	<link rel="stylesheet" type="text/css" href="uestiloFisica.css">
 <body>
+
+
+
 
 <div class="conceptoApoyo">
 
-<form method="post" action="requisitosGeneralesPF.php">
+<form method="post" action="urequisitosGeneralesPF.php">
 
 
+<input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">
@@ -130,85 +133,219 @@ apoyo solicitado</h3>
 </div>
 
 <br>
-<table border="1">
+
+<?php 
+
+
+
+ $select = "SELECT * FROM personafisicaconceptoapoyo WHERE sfolioImpreso =  '{$Folio}'";
+  $select = utf8_decode($select);
+
+  $result = queryMySql("$select");
+
+  if(!$result) die("No se pudo extraer los datos de la tabla");
+	$rows = $result -> num_rows;
+
+echo "filas".$rows;
+
+echo "<table border='2'><th><b>Conceptos de <br>Apoyo Solicitado</b></th><th class='UnidadMedida'><b>Unidad de <br>Medida</b> </th>
+<th  class='UnidadMedida'><b>Cantidad <br>Solicitada</b></th><th  class='ApoyoEstatal'><b>Apoyo Estatal <br>Solicitado (pesos)</b></th><th  class='ApoyoMunicipal'><b>Apoyo Municipal <br>Solicitado (pesos)</b></th>
+<th  class='AportaciónBeneficiario'><b>Aportación Beneficiario (pesos)</b></th></tr>";
+
+
+
+
+for ($i=0; $i<$rows; $i++) {
+$dato = $result -> fetch_array(MYSQLI_NUM);
+
+echo "<tr>"; 
+for($j=2; $j<8; $j++)
+{
+
+
+if($i == 0){
+
+
+if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado1' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida1' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada1' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado1' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado1' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario1' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+}
+if($i == 1){
+	if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado2' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida2' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada2' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado2' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado2' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario2' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+
+
+}
+if($i == 2){
+
+if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado3' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida3' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada3' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado3' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado3' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario3' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+
+}
+if($i == 3){
+	if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado4' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida4' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada4' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado4' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado4' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario4' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+
+}
+if($i == 4){
+
+	if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado5' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida5' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada5' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado5' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado5' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario5' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+}
+if($i == 5){
+
+	if($j == 2){
+	echo "<td>"."<input type='text' name='ApoyoSolicitado6' maxlength='35'  value='$dato[$j]'>"."</td>";
+}
+if($j == 3){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='UniMedida6' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 4){
+	echo "<td class='UnidadMedida'>"."<input type='text' name='CanSolicitada6' maxlength='5' value='$dato[$j]'>"."</td>";
+}
+if($j == 5){
+	echo "<td class='ApoyoEstatal'>"."<input type='text' name='ApoyoEstatalSolicitado6' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 6){
+	echo "<td class='ApoyoMunicipal'>"."<input type='text' name='ApoyoMunicipalSolicitado6' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+if($j == 7){
+	echo "<td class='AportaciónBeneficiario'>"."<input type='text' name='AportacionBeneficiario6' maxlength='10' value='$dato[$j]'>"."</td>";
+}
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+echo "</tr>";
+
 	
-	<tr>
-		<td><b>Conceptos de <br>Apoyo Solicitado</b></td> 
-		<td class="UnidadMedida"><b>Unidad de <br>Medida</b></td>   
-		<td class="UnidadMedida"><b>Cantidad <br>Solicitada</b></td> 
-		<td class="ApoyoEstatal"><b>Apoyo Estatal <br>Solicitado (pesos)</b> </td> 
-		<td class="ApoyoMunicipal"><b>Apoyo Municipal <br>Solicitado (pesos)</b> </td> 
-		<td class="AportaciónBeneficiario"><b>Aportación Beneficiario (pesos)</b></td> 
-	
-	</tr>
+		}
 
-	<tr>
-		<td><input type="text" name="ApoyoSolicitado1" maxlength="35" 	placeholder=" Estufa ecológica" required="required"> </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida1" maxlength="5" 	placeholder="      2" required="required">  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada1" maxlength="5" 	placeholder="      2" required="required">  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado1" maxlength="10" 	placeholder="   $500,000" required="required"> </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado1" maxlength="10"	placeholder="   $250,000" required="required"> </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario1" maxlength="10" 	placeholder="    $250,000" required="required"> </td>
-		
-	</tr>
-
-	<tr>
-		<td><input type="text" name="ApoyoSolicitado2" maxlength="35" 	placeholder=" Estufa ecológica" > </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida2" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada2" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado2" maxlength="10" 	placeholder="   $500,000" > </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado2" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario2" maxlength="10" 	placeholder="    $250,000" > </td>
-	
-		
-	</tr>
+		echo "</table>";
 
 
 
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado3" maxlength="35" 	placeholder=" Estufa ecológica" > </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida3" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada3" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado3" maxlength="10" 	placeholder="   $500,000" > </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado3" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario3" maxlength="10" 	placeholder="    $250,000" > </td>
-		
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado4" maxlength="35" 	placeholder=" Estufa ecológica" > </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida4" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada4" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado4" maxlength="10" 	placeholder="   $500,000" > </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado4" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario4" maxlength="10" 	placeholder="    $250,000" > </td>
-		
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado5" maxlength="35" 	placeholder=" Estufa ecológica" > </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida5" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada5" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado5" maxlength="10" 	placeholder="   $500,000" > </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado5" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario5" maxlength="10" 	placeholder="    $250,000" > </td>
-		
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado6" maxlength="35" 	placeholder=" Estufa ecológica" > </td>
-		<td class="UnidadMedida"><input type="text" name="UniMedida6" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="UnidadMedida"><input type="text" name="CanSolicitada6" maxlength="5" 	placeholder="      2" >  </td>
-		<td class="ApoyoEstatal"><input type="text" name="ApoyoEstatalSolicitado6" maxlength="10" 	placeholder="   $500,000" > </td>
-		<td class="ApoyoMunicipal"><input type="text" name="ApoyoMunicipalSolicitado6" maxlength="10"	placeholder="   $250,000" > </td>
-		<td class="AportaciónBeneficiario"><input type="text" name="AportacionBeneficiario6" maxlength="10" 	placeholder="    $250,000" > </td>
-		
-	</tr>
 
 
 
-</table>
 
+
+
+ ?>
+
+
+
+
+
+
+<input type ="hidden" name ="filas" value="<?php echo $rows;  ?>">
 
 <input type="submit" name="EnviarConceptosPF" value="Siguiente" class="boton" id="ubicacionConceptos">
 

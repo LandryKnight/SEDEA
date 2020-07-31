@@ -1,6 +1,6 @@
 <?php 
 
-require_once('conexionPF.php');
+require_once('uconexionPF.php');
 
 global $folioImpreso;
 
@@ -222,6 +222,7 @@ echo "<br>".$AportacionBeneficiario6;
 
                if(file_exists($ruta_nueva_ine) || file_exists($ruta_nueva_curp) || file_exists($ruta_nueva_comprobanteDomicilio) || file_exists($ruta_nueva_croquis))
                {
+                #PDF_delete(pdfdoc)
 
                     //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
 
@@ -302,7 +303,7 @@ echo "<br>".$AportacionBeneficiario6;
  <html>
  <head>
  	<title>Fin de Registro</title>
- 	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
+ 	<link rel="stylesheet" type="text/css" href="uestiloFisica.css">
  	<meta charset="utf-8">
  </head>
  <body>
@@ -311,7 +312,7 @@ echo "<br>".$AportacionBeneficiario6;
 <div class="ObservacionesM">
 <h3>Observaciones:</h3>
 
-<form action="fin.php" method="Post">
+<form action="ufin.php" method="Post">
 
 <!-- envio de informacion de persona fisica -->
 

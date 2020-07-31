@@ -12,7 +12,7 @@ CREATE DATABASE sedeapf
   CHARACTER SET utf8
   COLLATE utf8_spanish_ci;
 
-#Tabla Persona Fisica
+#Tabla Persona Fisica 
 Create Table personafisicaDatos(
 folioImpresoPF varchar(30) Primary Key,
 dirRegional varchar(30),  #Ventanilla Direccion regional
@@ -47,13 +47,13 @@ fechaReg varchar(30)
 Create Table personafisicaDomicilio( 
 idDomicilio int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
+nombreMunicipio varchar(30),
 tipoDomicilio varchar(8),
+tipoVialidad varchar(10),
 tipoAsentamiento varchar(8),
 nombreAsentamiento varchar(50),
-tipoVialidad varchar(10),
 nombreVialidad varchar(50),
 nombreLocalidad varchar(50),
-nombreMunicipio varchar(30),
 referenciaVialidad varchar(50),
 tipoActividad varchar(15),
 fechaReg varchar(30)
