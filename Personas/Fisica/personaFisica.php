@@ -13,7 +13,7 @@
 
 <form action="DatosProyectoPF.php" method="post">
 
-
+ 
 
 
  <h1>Persona Física</h1>

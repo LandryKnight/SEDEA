@@ -32,7 +32,9 @@ $rows = $result -> num_rows;
 
 <div class="Marco">
 
-<h1>Solicitudes</h1>
+<div class="tituloSolicitudes">
+<h1>Solicitudes Sin Dictaminar / Dictaminadas</h1>
+</div>
 
 <?php 
 
@@ -80,7 +82,7 @@ echo "</table>";
  ?>
 
 
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionConceptos">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionsolicitudes">Menú Principal</button></a>
 
 
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>

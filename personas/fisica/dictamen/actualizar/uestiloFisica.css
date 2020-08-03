@@ -278,8 +278,11 @@ body{
 
 
 .centro{
-	column-count: 3;
 	
+	
+}
+.centro input{
+	width: 5in;
 }
 
 .centro p{
@@ -298,6 +301,7 @@ body{
 
 
 .nacimiento select{
+	width: 1in;
 	margin-bottom: .35in;
 }
 

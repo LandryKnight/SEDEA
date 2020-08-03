@@ -12,6 +12,8 @@ require_once('conexionDPF.php');
 <html>
 <head>
 	<title>Dictamen de la solicitud</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
 </head>
 <body>
 

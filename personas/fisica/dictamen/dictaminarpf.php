@@ -43,11 +43,15 @@ require_once('conexionDPF.php');
 </head>
 <body>
 
+
+
+
+<div class="dictaminarpf">
 <h2>Buscador de Folios</h2>
 
 <form method="POST" action="dictaminarpf.php">
-<input type="text" name="bfolio" placeholder="Ej:SDFDS445678POD" maxlength="30" autocomplete="off">
-<input type="submit" name="buscarFolio" value="Buscar Folio">
+<input type="text" name="bfolio" placeholder="Ej:SDFDS445678POD" maxlength="30" autocomplete="off"><br>
+<input type="submit" name="buscarFolio" value="Buscar Folio" class="boton">
 </form>
 
 
@@ -65,7 +69,7 @@ if($result -> num_rows){
 
 <form method="POST" action="actualizar/upersonaFisica.php">
 <input type="hidden" name="folio" value="<?php echo $Folio; ?>">
-<input type="submit" name="EnviarFolio" value="Siguiente">	
+<input type="submit" name="EnviarFolio" value="Siguiente" class="boton">	
 </form>
 
 
@@ -73,7 +77,7 @@ if($result -> num_rows){
 <?php 
 
 }else {
-		echo "No se encontro ningun folio";
+		echo "<b>No se encontro ningun folio</b>";
 	}
 
  ?>

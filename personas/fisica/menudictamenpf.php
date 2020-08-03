@@ -16,7 +16,7 @@
 <h2>¿Qué deseas hacer?</h2>
 
 
-<h3>Ver Solicitudes a Dictaminar</h3>
+<h3>Ver lista de solicitudes</h3>
 <a href="http://localhost/sedea/personas/fisica/dictamen/versolicitudes.php"><button class="boton">Solicitudes</button></a>
 
 <h3>Dictaminar una solicitud</h3>

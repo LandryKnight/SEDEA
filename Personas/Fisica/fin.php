@@ -294,7 +294,7 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
 
       
 
-        echo "Dictamenes ". $insertDictamen;
+       
 
 
         $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
@@ -306,7 +306,7 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
 
 
         if($result -> num_rows){
-          echo "ya existe el folio";
+          echo "<div class = 'Mensajefin'>ya existe el folio, revisa los datos desde el inicio.</div>";
   
         } else {
 
@@ -470,7 +470,7 @@ if(empty($ApoyoSolicitado6)){} else {
           
                $InsertConceptoApoyo6zh = utf8_encode($InsertConceptoApoyo6zh);
                    queryMySql("$InsertConceptoApoyo6zh");
-          }
+          
 
                    
           }
@@ -483,7 +483,7 @@ if(empty($ApoyoSolicitado6)){} else {
 
 #envio de las rutas a la BD
 
-if(empty($ruta_SQL_ine) ){
+if(empty($ruta_SQL_ine)){
   
   }else {
 
@@ -562,36 +562,7 @@ if(empty($ruta_SQL_comprobantedomicilio)){
         queryMySql("$insertDictamenzh");
 
 
-
-
-              
-
-
-        }
-
-
-
-/*echo "<br>". $insertPF;             
-
-echo "<br>". $insertDomicilioPF;
-echo "<br>". $InsertProyecto;
-
-echo "<br>". $InsertRQG;
-echo "<br>". $insertDictamen;
-
-echo "<br>". $InsertConceptoApoyo1;
-echo "<br>". $InsertConceptoApoyo2;
-echo "<br>". $InsertConceptoApoyo3;
-echo "<br>". $InsertConceptoApoyo4;
-echo "<br>". $InsertConceptoApoyo5;
-echo "<br>". $InsertConceptoApoyo6;
-echo "<br>". $ruta_SQL_ine;
-echo "<br>". $ruta_SQL_curp;
-echo "<br>". $ruta_SQL_comprobantedomicilio;
-echo "<br>". $ruta_SQL_croquis;
-
-*/
-
+ }
 
 
 ?>
@@ -613,21 +584,29 @@ echo "<br>". $ruta_SQL_croquis;
  	
  <div class="final">
  
+<div class="fintitulop">
+<h1>Se realizo con éxito el registro del Folio:</h1>
+</div>
 
-<h1>Se realizo con éxito el registro del Folio: <?php echo $folioImpreso; ?> </h1>
+<div class="folio">
+<p><?php echo $folioImpreso; ?></p>
+</div>
 
 
-<br>
 
+<br><br><br>
+
+
+<div class="fintitulo">
 <h3>¡Que tengas un excelente día!</h3>
+</div>
 
 
 
 
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionfin">Menú Principal</button></a>
 
-<a href="http://localhost/sedea/index.php"><button class="boton">ir al Menú Principal</button></a>
 
-
- </div>	
+</div>	
 </body>
 </html>

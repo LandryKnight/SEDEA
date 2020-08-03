@@ -112,57 +112,13 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-	
-
-
-
 
 }
 
 
 
 
-echo "<br>".$ApoyoSolicitado1; 
-echo "<br>".$UniMedida1;
-echo "<br>".$CanSolicitada1;
-echo "<br>".$ApoyoEstatalSolicitado1; 
-echo "<br>".$ApoyoMunicipalSolicitado1;
-echo "<br>".$AportacionBeneficiario1; 
 
-echo "<br>".$ApoyoSolicitado2;
-echo "<br>".$UniMedida2;
-echo "<br>".$CanSolicitada2;
-echo "<br>".$ApoyoEstatalSolicitado2;
-echo "<br>".$ApoyoMunicipalSolicitado2;
-echo "<br>".$AportacionBeneficiario2;
-
-echo "<br>".$ApoyoSolicitado3;
-echo "<br>".$UniMedida3;
-echo "<br>".$CanSolicitada3;
-echo "<br>".$ApoyoEstatalSolicitado3;
-echo "<br>".$ApoyoMunicipalSolicitado3;
-echo "<br>".$AportacionBeneficiario3;
-      
-echo "<br>".$ApoyoSolicitado4;
-echo "<br>".$UniMedida4;
-echo "<br>".$CanSolicitada4;
-echo "<br>".$ApoyoEstatalSolicitado4;
-echo "<br>".$ApoyoMunicipalSolicitado4;
-echo "<br>".$AportacionBeneficiario4;
-
-echo "<br>".$ApoyoSolicitado5;
-echo "<br>".$UniMedida5;
-echo "<br>".$CanSolicitada5;
-echo "<br>".$ApoyoEstatalSolicitado5;
-echo "<br>".$ApoyoMunicipalSolicitado5;
-echo "<br>".$AportacionBeneficiario5;
-         
-echo "<br>".$ApoyoSolicitado6;
-echo "<br>".$UniMedida6;
-echo "<br>".$CanSolicitada6;
-echo "<br>".$ApoyoEstatalSolicitado6;
-echo "<br>".$ApoyoMunicipalSolicitado6;
-echo "<br>".$AportacionBeneficiario6;
 
 
 
@@ -283,10 +239,7 @@ echo "<br>".$AportacionBeneficiario6;
 
 
 
-        echo  "<br>ruta ".$ruta_SQL_ine;
-        echo  "<br>ruta ".$ruta_SQL_curp;
-        echo  "<br>ruta ".$ruta_SQL_comprobantedomicilio;
-        echo  "<br>ruta ".$ruta_SQL_croquis;
+      
 
 
 

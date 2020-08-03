@@ -343,6 +343,8 @@ if(isset($_POST['EnviarPF'])){
 <p>Referencia de la Vialidad</p>
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50"> 
 </div>
+
+
 <br> <br>
 <input type="submit" name="DatosProyectoPF" value="Siguiente" class="boton" id="ubicaciondp">
 <br>

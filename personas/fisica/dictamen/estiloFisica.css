@@ -59,7 +59,7 @@ body{
 
  top: 20px;
  width: 12in;
- height: 16in;
+ height: 12in;
 
  position: absolute;
  left:calc((100% - 12in)/2);
@@ -81,7 +81,15 @@ body{
 }
 
 
+.tituloSolicitudes{
+	
+	width: 6.5in;
+	position: relative;
+	left: calc((100% - 6.5in)/2);
+	margin-top: .35in;
+	margin-bottom: .35in;
 
+}
 
 
 .Marco input{
@@ -111,11 +119,7 @@ body{
 	border: none;
 }
 
-.Marco h1 {
-	position: relative;
-	left: 3.33in;
 
-}
 
 
 
@@ -130,7 +134,13 @@ body{
 }
 
 
-
+.Marco h5{
+	position: relative;
+	top:  8in;
+	left: calc((100% - 9in) /2);
+	
+	width: 9in;
+}
 
 
 .Marco p{
@@ -243,6 +253,14 @@ body{
 	margin-bottom: 12px;
 	position: relative;
 	left: 16%;
+}
+
+
+#ubicacionsolicitudes{
+	position: relative;
+	top:  8in;
+	left: calc((100% - 2.5in)/2);
+
 }
 
 
@@ -669,4 +687,67 @@ body{
 
 .input{
 	text-indent: 10px;
+}
+
+
+/*  */
+
+.dictaminarpf{
+	width: 8in;
+	height: 6in;
+
+	position: relative;
+	left: calc((100% - 8in)/2);
+	top: .35in;
+	color: #FFFFFF;
+    background: #1D447D;
+
+    border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+}
+
+.dictaminarpf h2{
+	
+	width: 3in;
+	position: relative;
+	left: calc((100% -  3in)/2);
+
+	font-size: 24pt;
+	font-weight: bold;
+	padding-top: .15in;
+	margin-bottom: .35in;
+
+}
+
+.dictaminarpf input{
+	position: relative;
+	left: calc((100% - 3in)/2);
+	height: .35in;
+	width: 3in;
+	border-radius: 8px;
+	margin-bottom: .35in;
+
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+	text-indent: 10px;
+    color: #9C1462;
+}
+
+
+.dictaminarpf b{
+	font-size: 14pt;
+	font-weight: bold;
+	color: white;
+
+	
+	width: 5in;
+
+	position: relative;
+	top: .35in;
+
+	left: 2.8in;
 }

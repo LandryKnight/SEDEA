@@ -4,7 +4,7 @@ require_once('conexionPF.php');
 
 if(isset($_POST['DatosProyectoPF'])){
 
-
+ 
 
   #recepcion de datos de PersonaFisica.php
   $dirReg 						=					sanitizeString($_POST['dirReg']);

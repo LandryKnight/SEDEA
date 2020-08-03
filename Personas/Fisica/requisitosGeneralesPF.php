@@ -135,9 +135,9 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 <body>
 
 <div class="requisitos">
-
+<div class="RGtitullo">
 <h1>Requisitos Generales de Documentos para Persona Física</h1>
-
+</div>
 
 <form action="observaciones.php" method="POST" enctype="multipart/form-data">
 
@@ -262,7 +262,10 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 
 
 <br>
+<div class="RGtitulo2">
 <h3><i>Solo se admiten documentos en formato PDF.</i></h3> 
+</div>
+
 
 <div class="documentos">
 
@@ -270,7 +273,7 @@ $AportacionBeneficiario6		 =					            sanitizeString($_POST['AportacionBe
 <p>Selecciona la Identificación Oficial expedida por el <b>IFE o INE</b>: </p>
 
 <input type="file" name="archivo[]"  required="required" >
-	
+
 
 </div>
 <div class="documentos">
