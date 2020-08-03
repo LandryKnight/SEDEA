@@ -58,11 +58,12 @@ body{
 .Marco{
 
  top: 20px;
- width: 10in;
+ width: 10.5in;
  height: 16in;
 
- position: absolute;
- left:calc((100% - 10in)/2);
+ position: relative;
+
+ left: calc((100% - 9in)/2);
 
  color: #FFFFFF;
  background: #1D447D;
@@ -113,17 +114,19 @@ body{
 
 .Marco h1 {
 	position: relative;
-	left: 3.33in;
+	left: 4in;
 
 }
-
-
+#Ventanilla{
+	position: relative;
+	left: 3.25in;
+}
 
 .Marco h2{
 
 
 	position: relative;
-	left: 2.5in;
+	left: 3in;
 	margin: 5px;
 	margin-top: .35in;
 	margin-bottom: .25in;
@@ -202,6 +205,22 @@ body{
 }
 
 
+#constitucion{
+	position: relative;
+	left: 3.3in;
+	font-weight: bold;
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom:.20in;
+}
+
+#ubicacionpf{
+	position: relative;
+	left: 3.8in;
+
+}
+
+
 #ubicacion{
 	position: relative;
 	top: 2in;
@@ -215,7 +234,7 @@ body{
 	margin-bottom: .35in;
 
 	position: relative;
-	left: 35%;
+	left: 4.25in;
 
 	font-weight: bold;
 	font-size: 24pt;
@@ -223,7 +242,7 @@ body{
 
 #titulo2{
 	position: relative;
-	left: 1.8in;
+	left: 2.4in;
 
 	margin-top: .35in;
 
@@ -233,7 +252,7 @@ body{
 
 #actividad{
 	position: relative;
-	left: 2.6in;
+	left: 3.5in;
 
 	font-size: 24pt;
 	font-weight: bold;
@@ -251,7 +270,10 @@ body{
 	font-size: 24pt;
 	font-weight: bold;
 	position: relative;
-	left: 2.8in;
+	left: 3in;
+
+	margin-top: .35in;
+	margin-bottom: .35in;
 }
 
 #correo{
@@ -282,6 +304,10 @@ body{
 	
 }
 
+.centro input{
+	width: 3in;
+}
+
 .centro p{
 	margin-top: 3px;
 	margin-bottom: 5px;
@@ -299,11 +325,17 @@ body{
 
 .nacimiento select{
 	margin-bottom: .35in;
+	width: 2in;
 }
 
 .genero{
 	margin-top: 10px;
 	column-count: 3;
+
+}
+
+.genero select{
+	width: 2.2in;
 }
 
 .genero p{

@@ -17,7 +17,7 @@
 
 
  <h1>Persona Física</h1>
- <h2>Datos de la Ventanilla Receptora</h2>
+ <h2 id="Ventanilla">Datos de la Ventanilla Receptora</h2>
 
 
   
@@ -222,7 +222,7 @@
   </div>
   <div class="genero">
 
-  <p>Selecciona el Estado de Nacimiento</p>
+  <p >Selecciona el Estado de Nacimiento</p>
   <select name="EstadoNacimiento" required >
        <option value="">Sin Seleccionar</option>
        <option value="Aguascalientes">Aguascalientes</option>
@@ -398,14 +398,14 @@
 <br>
 
 
-<input type="submit" name="EnviarPF" value="Siguiente" class="boton" id="ubicacion">
+<input type="submit" name="EnviarPF" value="Siguiente" class="boton" id="ubicacionpf">
 <br>
 
 </form>
 
 
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionpf">Menú Principal</button></a>
 
 
 </div>

@@ -188,18 +188,18 @@ $anio = substr($dato[6],6,4);
   <p>Selecciona el Mes</p>
   <select name="MesFechaConstitucion" required>
     	  <option value="<?php echo $mes ?>"><?php echo $mes ?></option>
-    	  <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="08">08</option>
-        <option value="09">09</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
+    	  <option value="01">01 - Enero</option>
+        <option value="02">02 - Febrero</option>
+        <option value="03">03 - Marzo</option>
+        <option value="04">04 - Abril</option>
+        <option value="05">05 - Mayo</option>
+        <option value="06">06 - Junio</option>
+        <option value="07">07 - Julio</option>
+        <option value="08">08 - Agosto</option>
+        <option value="09">09 - Septiembre</option>
+        <option value="10">10 - Octubre</option>
+        <option value="11">11 - Noviembre</option>
+        <option value="12">12 - Diciembre</option>
     
   </select>
 
