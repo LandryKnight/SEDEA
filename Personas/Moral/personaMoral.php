@@ -17,9 +17,9 @@
 <form action="DatosPersonalesRepre.php" method="post">
 
  <h1>Persona Moral</h1>
- <h2>Datos de la Ventanilla Receptora</h2>
+
   
-  <p>Folio Impreso</p> <input type="text" name="FolioImpreso" required="required" placeholder="Ej:DRWRWEQ156" maxlength="30">
+
 
 
   <h2>Datos de la Ventanilla Receptora</h2>
@@ -71,7 +71,7 @@
 	<input type="text" name="NombreOrganizacion" placeholder="Ej: Agricultores Unidos" required="required" maxlength="50">
 
 	<p>Tipo de Organización</p> 
-	<input type="text" name="TipoOrganizacion" placeholder="Ej:  " required="required">
+	<input type="text" name="TipoOrganizacion" placeholder="Ej: Organización Formal  " required="required">
 
 	<p>Teléfono</p> 
 	<input type="text" name="NumeroTelefonoOrganizacion" placeholder="Ej: 442 456 4684" required="required" maxlength="10">
@@ -121,18 +121,18 @@
 	<p>Selecciona el Mes</p>
 	<select name="MesFechaConstitucion" required>
 		<option value="">Sin Seleccionar</option>
-		    <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="08">08</option>
-        <option value="09">09</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
+		    <option value="01">01 - Enero</option>
+        <option value="02">02 - Febrero</option>
+        <option value="03">03 - Marzo</option>
+        <option value="04">04 - Abril</option>
+        <option value="05">05 - Mayo</option>
+        <option value="06">06 - Junio</option>
+        <option value="07">07 - Julio</option>
+        <option value="08">08 - Agosto</option>
+        <option value="09">09 - Septiembre</option>
+        <option value="10">10 - Octubre</option>
+        <option value="11">11 - Noviembre</option>
+        <option value="12">12 - Diciembre</option>
 		
 	</select>
 	<p>Selecciona el Año</p>

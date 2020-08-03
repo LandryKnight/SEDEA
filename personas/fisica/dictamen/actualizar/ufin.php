@@ -9,57 +9,117 @@ require_once('uconexionPF.php');
 if (isset($_POST['CompletarRegistro'])) { 
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso               =                     sanitizeString($_POST['IfolioImpreso']);
+  $Folio                     =                       sanitizeString($_POST['folio']);
+  $Folio = trim($Folio);
+  echo $Folio;
 
-  
-
-  $dirReg                     =                      sanitizeString($_POST['dirReg']);
-  $municipio                  =                      sanitizeString($_POST['municipio']);
-  $nombre                     =                      sanitizeString($_POST['nombre']);
-  $genero                     =                      sanitizeString($_POST['genero']);
-  $fechaNacimiento            =                      sanitizeString($_POST['fechaNacimiento']);
-  $nacionalidad               =                      sanitizeString($_POST['nacionalidad']);
-  $EstadoCivil                =                      sanitizeString($_POST['EstadoCivil']);
-  $estadoNacimiento           =                      sanitizeString($_POST['estadoNacimiento']);
-  $telefono                   =                      sanitizeString($_POST['telefono']);
-  $correo                     =                      sanitizeString($_POST['correo']);
-  $tipoIdentificacion         =                      sanitizeString($_POST['tipoIdentificacion']);
-  $numIdentificacion          =                      sanitizeString($_POST['numIdentificacion']);
-  $curp                       =                      sanitizeString($_POST['curp']);
-  $tipoDomicilio              =                      sanitizeString($_POST['tipoDomicilio']);
-  $tipoAsentamiento           =                      sanitizeString($_POST['tipoAsentamiento']);
-  $nombreAsentamiento         =                      sanitizeString($_POST['nombreAsentamiento']);
-  $tipoVialidad               =                      sanitizeString($_POST['tipoVialidad']);
-  $nombreVialidad             =                      sanitizeString($_POST['nombreVialidad']);
-  $nombreLocalidad            =                      sanitizeString($_POST['nombreLocalidad']);
-  $nombreMunicipio            =                      sanitizeString($_POST['nombreMunicipio']);
-  $refVial                    =                      sanitizeString($_POST['refVial']);
-  $actEco                     =                      sanitizeString($_POST['actEco']);
+$dirReg                     =                      sanitizeString($_POST['dirReg']);
+$dirReg            = trim($dirReg);
+$municipio                  =                      sanitizeString($_POST['municipio']);
+$municipio         = trim($municipio);
+$nombre                     =                      sanitizeString($_POST['nombre']);
+$nombre            = trim($nombre);
+$genero                     =                      sanitizeString($_POST['genero']);
+$genero            = trim($genero);
+$fechaNacimiento            =                      sanitizeString($_POST['fechaNacimiento']);
+$fechaNacimiento   = trim($fechaNacimiento);
+$nacionalidad               =                      sanitizeString($_POST['nacionalidad']);
+$nacionalidad      = trim($nacionalidad);
+$EstadoCivil                =                      sanitizeString($_POST['EstadoCivil']);
+$EstadoCivil       = trim($EstadoCivil);
+$estadoNacimiento           =                      sanitizeString($_POST['estadoNacimiento']);
+$estadoNacimiento  = trim($estadoNacimiento);
+$telefono                   =                      sanitizeString($_POST['telefono']);
+$telefono          = trim($telefono);
+$correo                     =                      sanitizeString($_POST['correo']);
+$correo            = trim($correo);
+$tipoIdentificacion         =                      sanitizeString($_POST['tipoIdentificacion']);
+$tipoIdentificacion= trim($tipoIdentificacion);
+$numIdentificacion          =                      sanitizeString($_POST['numIdentificacion']);
+$numIdentificacion = trim($numIdentificacion);
+$curp                       =                      sanitizeString($_POST['curp']);
+$curp              = trim($curp);
+$tipoDomicilio              =                      sanitizeString($_POST['tipoDomicilio']);
+$tipoDomicilio     = trim($tipoDomicilio);
+$tipoAsentamiento           =                      sanitizeString($_POST['tipoAsentamiento']);
+$tipoAsentamiento  = trim($tipoAsentamiento);
+$nombreAsentamiento         =                      sanitizeString($_POST['nombreAsentamiento']);
+$nombreAsentamiento= trim($nombreAsentamiento);
+$tipoVialidad               =                      sanitizeString($_POST['tipoVialidad']);
+$tipoVialidad      = trim($tipoVialidad);
+$nombreVialidad             =                      sanitizeString($_POST['nombreVialidad']);
+$nombreVialidad    = trim($nombreVialidad);
+$nombreLocalidad            =                      sanitizeString($_POST['nombreLocalidad']);
+$nombreLocalidad   = trim($nombreLocalidad);
+$nombreMunicipio            =                      sanitizeString($_POST['nombreMunicipio']);
+$nombreMunicipio   = trim($nombreMunicipio);
+$refVial                    =                      sanitizeString($_POST['refVial']);
+$refVial           = trim($refVial);
+$actEco                     =                      sanitizeString($_POST['actEco']);
+$actEco            = trim($actEco);
       
 #recepcion de datos de proyecto
 $NombreProyecto               =                      sanitizeString($_POST['NombreProyecto']);
+$NombreProyecto               =   trim($NombreProyecto);
+
 $AntiguedadProyecto           =                      sanitizeString($_POST['AntiguedadProyecto']);
+$AntiguedadProyecto           =   trim($AntiguedadProyecto);
+
 $TelefonoProyecto             =                      sanitizeString($_POST['TelefonoProyecto']);
+$TelefonoProyecto             =   trim($TelefonoProyecto);
+
 $CorreoElectronicoProyecto    =                      sanitizeString($_POST['CorreoElectronicoProyecto']);
+$CorreoElectronicoProyecto    =   trim($CorreoElectronicoProyecto);
+
 $FechaConstitucion            =                      sanitizeString($_POST['FechaConstitucion']);
+$FechaConstitucion            =   trim($FechaConstitucion);
+
 $TipoDomicilioProyecto        =                      sanitizeString($_POST['TipoDomicilioProyecto']);
+$TipoDomicilioProyecto        =   trim($TipoDomicilioProyecto);
+
 $TipoAsentamientoProyecto     =                      sanitizeString($_POST['TipoAsentamientoProyecto']);
+$TipoAsentamientoProyecto     =   trim($TipoAsentamientoProyecto);
+
 $NombreAsentamientoProyecto   =                      sanitizeString($_POST['NombreAsentamientoProyecto']);
+$NombreAsentamientoProyecto   =   trim($NombreAsentamientoProyecto);
+
 $TipoVialidadProyecto         =                      sanitizeString($_POST['TipoVialidadProyecto']);
+$TipoVialidadProyecto         =   trim($TipoVialidadProyecto);
+
 $NombreVialidadProyecto       =                      sanitizeString($_POST['NombreVialidadProyecto']);
+$NombreVialidadProyecto       =   trim($NombreVialidadProyecto);
+
 $NombreLocalidadProyecto      =                      sanitizeString($_POST['NombreLocalidadProyecto']);
+$NombreLocalidadProyecto      =   trim($NombreLocalidadProyecto);
+
 $NombreMunicipioProyecto      =                      sanitizeString($_POST['NombreMunicipioProyecto']);
+$NombreMunicipioProyecto      =   trim($NombreMunicipioProyecto);
+
 $ReferenciaVialidadProyecto   =                      sanitizeString($_POST['ReferenciaVialidadProyecto']);
+$ReferenciaVialidadProyecto   =   trim($ReferenciaVialidadProyecto);
+
                
 
 
 #recepcion de datos concepto de apoyo
 $ApoyoSolicitado1             = 		                 sanitizeString($_POST['ApoyoSolicitado1']);
+$ApoyoSolicitado1             =   trim($ApoyoSolicitado1);
+
 $UniMedida1	                  =			                 sanitizeString($_POST['UniMedida1']);
+$UniMedida1                   =   trim($UniMedida1);
+
 $CanSolicitada1	              =			                 sanitizeString($_POST['CanSolicitada1']);
+$CanSolicitada1               =   trim($CanSolicitada1);
+
 $ApoyoEstatalSolicitado1	    =	                     sanitizeString($_POST['ApoyoEstatalSolicitado1']);
+$ApoyoEstatalSolicitado1      =   trim($ApoyoEstatalSolicitado1);
+
 $ApoyoMunicipalSolicitado1	  =  	                   sanitizeString($_POST['ApoyoMunicipalSolicitado1']);
+$ApoyoMunicipalSolicitado1    =   trim($ApoyoMunicipalSolicitado1);
+
 $AportacionBeneficiario1	    =	                     sanitizeString($_POST['AportacionBeneficiario1']);
+$AportacionBeneficiario1      =   trim($AportacionBeneficiario1);
+
 $InversionTotal1	            =			                 $ApoyoEstatalSolicitado1 + $ApoyoMunicipalSolicitado1 + $AportacionBeneficiario1;
 
 		
@@ -102,13 +162,9 @@ $ApoyoMunicipalSolicitado6  =                        sanitizeString($_POST['Apoy
 $AportacionBeneficiario6    =                        sanitizeString($_POST['AportacionBeneficiario6']);
 
 
-#ruta de archivos en BD
-$ruta_SQL_ine                  =                        sanitizeString($_POST['ruta_SQL_ine']);
-$ruta_SQL_curp                 =                        sanitizeString($_POST['ruta_SQL_curp']);
-$ruta_SQL_comprobantedomicilio =                        sanitizeString($_POST['ruta_SQL_comprobantedomicilio']);
-$ruta_SQL_croquis              =                        sanitizeString($_POST['ruta_SQL_croquis']);
 
 
+$estatusDictamen            =                           ($_POST['DictSolicitud']);
 
 
 
@@ -126,15 +182,16 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
 
 }
 
+        
 
+        $folioImpreso = $Folio;
 
 
 		      #Datos de Persona
        		 $insertPF = "INSERT INTO personafisicaDatos VALUES ('{$folioImpreso}','{$dirReg}','{$municipio}','{$nombre}','{$genero}','{$fechaNacimiento}','{$nacionalidad}','{$EstadoCivil}','{$estadoNacimiento}','{$telefono}','{$correo}','{$tipoIdentificacion}','{$numIdentificacion}','{$curp}',curdate());";
 
-           #datos de identificacion persona fisica
+          
 
-           $inserIdentificacionpf = "INSERT INTO identificacionpf VALUES ('{$numIdentificacion}','{$curp}','{$folioImpreso}',curdate());";
 
          #Datos de Persona Domicilio
         $insertDomicilioPF = "INSERT INTO personafisicaDomicilio VALUES(null,'{$folioImpreso}','{$tipoDomicilio}','{$tipoAsentamiento}','{$nombreAsentamiento}','{$tipoVialidad}','{$nombreVialidad}','{$nombreLocalidad}','{$nombreMunicipio}','{$refVial}','{$actEco}',curdate());";
@@ -151,10 +208,10 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
           $InsertRQG  = "INSERT INTO  personafisicaReqenerales VALUES(null,'{$folioImpreso}','{$Observaciones}',curdate());";
 
           #Datos de Dictamenes 
-     		$insertDictamen = "INSERT INTO personafisicaDictamenes VALUES(null,'{$folioImpreso}','{$nombre}','{$dirReg}','Sin Dictaminar',curdate(),curdate());";
+     		 $insertDictamen = "INSERT INTO personafisicaDictamenes VALUES(null,'{$folioImpreso}','{$nombre}','{$dirReg}','{$estatusDictamen}',curdate(),curdate());";
 
           $insertPF               = utf8_encode($insertPF);
-          $inserIdentificacionpf  = utf8_encode($inserIdentificacionpf);
+          
           $insertDomicilioPF      = utf8_encode($insertDomicilioPF);
    			  $InsertProyecto         = utf8_encode($InsertProyecto);
    			  $InsertConceptoApoyo1   = utf8_encode($InsertConceptoApoyo1);
@@ -162,10 +219,36 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
           $insertDictamen         = utf8_encode($insertDictamen);  
 
 
-
-      
-
-        echo "Dictamenes ". $insertDictamen;
+           
+           
+                       $deletepf = "DELETE  FROM personafisicaDatos   WHERE folioImpresoPF ='{$folioImpreso}';";
+           queryMySql("$deletepf");
+           
+           
+                       $deletepd = "DELETE  FROM personafisicaDomicilio   WHERE folioImpreso ='{$folioImpreso}';";
+           queryMySql("$deletepd");
+           
+           
+                       $deleteppr = "DELETE  FROM personafisicaProyecto   WHERE folioImpreso ='{$folioImpreso}';";
+           queryMySql("$deleteppr");
+           
+           
+                       $deletepco = "DELETE  FROM personafisicaConceptoApoyo WHERE sfolioImpreso ='{$folioImpreso}';";
+           queryMySql("$deletepco");
+           
+           
+                       $deleteprg = "DELETE  FROM personafisicaReqenerales   WHERE  folioImpreso ='{$folioImpreso}';";
+           queryMySql("$deleteprg");
+           
+           
+                       $updatepru ="UPDATE personafisicarutaarchivos SET fechaRegistro =(curdate()) WHERE folioImpreso = '{$folioImpreso}';";
+           queryMySql("$updatepru");
+           
+                       $deletepdc = "DELETE  FROM personafisicaDictamenes   WHERE  folioImpreso  ='{$folioImpreso}';";
+           queryMySql("$deletepdc");
+                 
+           
+                   echo "Dictamenes ". $insertDictamen;
 
 
         $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
@@ -177,7 +260,7 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
 
 
         if($result -> num_rows){
-          echo "ya existe el folio";
+          
   
         } else {
 
@@ -185,7 +268,7 @@ $ruta_SQL_croquis              =                        sanitizeString($_POST['r
               queryMySql("$insertPF"); 
               #echo "Datos Registrados de persona fisica";
               
-              queryMySql("$inserIdentificacionpf");
+              
 
               queryMySql("$insertDomicilioPF");
               #echo "Datos Registrados de  Domicilio persona fisica";
@@ -313,51 +396,6 @@ if(empty($ApoyoSolicitado6)){} else {
 }
 
 
-#envio de las rutas a la BD
-
-if(empty($ruta_SQL_ine) ){
-  
-  }else {
-
-    $insertrutaSQL_ine = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_ine}',curdate());";
-   $insertrutaSQL_ine  = utf8_encode($insertrutaSQL_ine);
-   queryMySql("$insertrutaSQL_ine");
-
-
-
-  }
-
-     
-if(empty($ruta_SQL_curp)){
-  
-  }else{
-
-    $insertrutaSQL_curp = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_curp}',curdate());";
-    $insertrutaSQL_curp = utf8_encode($insertrutaSQL_curp);
-    queryMySql("$insertrutaSQL_curp");
-  }
-
-
-if(empty($ruta_SQL_comprobantedomicilio)){
-  
-  }else {
-    $insertrutaSQL_comprobantedomicilio = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_comprobantedomicilio}',curdate());";
-    
-    $insertrutaSQL_comprobantedomicilio = utf8_encode($insertrutaSQL_comprobantedomicilio);
-    queryMySql("$insertrutaSQL_comprobantedomicilio");
-
-  }
-
-  if(empty($ruta_SQL_croquis)){
- 
-  }else {
-
-    $insertrutaSQL_croquis = "INSERT INTO personafisicarutaarchivos VALUES(null,'{$folioImpreso}','{$ruta_SQL_croquis}',curdate());";
-     $insertrutaSQL_croquis = utf8_encode($insertrutaSQL_croquis);
-
-     queryMySql("$insertrutaSQL_croquis");
-
-  }
 
 
 
@@ -376,7 +414,7 @@ if(empty($ruta_SQL_comprobantedomicilio)){
 
 
 /*echo "<br>". $insertPF;             
-echo "<br>". $inserIdentificacionpf;
+
 echo "<br>". $insertDomicilioPF;
 echo "<br>". $InsertProyecto;
 
@@ -418,7 +456,7 @@ echo "<br>". $ruta_SQL_croquis;
  <div class="final">
  
 
-<h1>Se realizo con éxito el registro del Folio: <?php echo $folioImpreso; ?> </h1>
+<h1>Se realizo con éxito la actualización/Dictaminación del Folio: <?php echo $Folio; ?> </h1>
 
 
 <br>

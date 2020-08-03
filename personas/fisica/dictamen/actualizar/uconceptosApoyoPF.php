@@ -144,9 +144,9 @@ apoyo solicitado</h3>
   $result = queryMySql("$select");
 
   if(!$result) die("No se pudo extraer los datos de la tabla");
-	$rows = $result -> num_rows;
+	$filas = $result -> num_rows;
 
-echo "filas".$rows;
+
 
 echo "<table border='2'><th><b>Conceptos de <br>Apoyo Solicitado</b></th><th class='UnidadMedida'><b>Unidad de <br>Medida</b> </th>
 <th  class='UnidadMedida'><b>Cantidad <br>Solicitada</b></th><th  class='ApoyoEstatal'><b>Apoyo Estatal <br>Solicitado (pesos)</b></th><th  class='ApoyoMunicipal'><b>Apoyo Municipal <br>Solicitado (pesos)</b></th>
@@ -155,7 +155,7 @@ echo "<table border='2'><th><b>Conceptos de <br>Apoyo Solicitado</b></th><th cla
 
 
 
-for ($i=0; $i<$rows; $i++) {
+for ($i=0; $i<$filas; $i++) {
 $dato = $result -> fetch_array(MYSQLI_NUM);
 
 echo "<tr>"; 
@@ -345,7 +345,7 @@ echo "</tr>";
 
 
 
-<input type ="hidden" name ="filas" value="<?php echo $rows;  ?>">
+<input type ="hidden" name ="filas" value="<?php echo $filas;  ?>">
 
 <input type="submit" name="EnviarConceptosPF" value="Siguiente" class="boton" id="ubicacionConceptos">
 

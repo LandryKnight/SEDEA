@@ -2,7 +2,7 @@
 
 require_once('uconexionPF.php');
 
-global $folioImpreso;
+global $Folio;
 
 
 if (isset($_POST['RequisitosG']))  {
@@ -10,8 +10,8 @@ if (isset($_POST['RequisitosG']))  {
 
 
 #recepcion de datos de PersonaFisica.php
-  $folioImpreso               = 				            sanitizeString($_POST['IfolioImpreso']);
-
+  $Folio                      =                       sanitizeString($_POST['folio']);
+  
   
 
   $dirReg                     =                      sanitizeString($_POST['dirReg']);
@@ -170,131 +170,6 @@ echo "<br>".$AportacionBeneficiario6;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        global $ruta_SQL_ine;
-        global $ruta_SQL_curp;
-        global $ruta_SQL_comprobantedomicilio;
-        global $ruta_SQL_croquis;
-
-
-        $num_archivos = count($_FILES['archivo']['name']);
-
-        for($i=0; $i<= $num_archivos; $i++){
-
-        if(!empty($_FILES['archivo']['name'][$i])){
-
-           $nombrearchivo = $_FILES['archivo']['name'][$i]; 
-           $tipoarchivo = $_FILES['archivo']['type'][$i];
-           $ruta_temporal = $_FILES['archivo']['tmp_name'][$i];
-           
-
-           if ($tipoarchivo === "application/pdf") 
-
-                {
-
-                #echo "<br>el archivo $nombre si es un pdf";
-
-              $nuevonombre_ine = "$folioImpreso"."_INE_"."$nombrearchivo";                     
-              $nuevonombre_curp = "$folioImpreso"."_CURP_"."$nombrearchivo";
-              $nuevonombre_comprobanteDomicilio = "$folioImpreso"."_COMPROBANTEDOMICILIO_"."$nombrearchivo";
-              $nuevonombre_croquis = "$folioImpreso"."_CROQUIS_"."$nombrearchivo";         
-  
-
-              #ruta donde se va a guardar el archivo pdf
-              $ruta_nueva_ine  = "documentospf/"."$nuevonombre_ine";
-  
-              $ruta_nueva_curp  = "documentospf/"."$nuevonombre_curp";
-        
-              $ruta_nueva_comprobanteDomicilio = "documentospf/"."$nuevonombre_comprobanteDomicilio";
-  
-              $ruta_nueva_croquis  = "documentospf/"."$nuevonombre_croquis";
-
-
-               if(file_exists($ruta_nueva_ine) || file_exists($ruta_nueva_curp) || file_exists($ruta_nueva_comprobanteDomicilio) || file_exists($ruta_nueva_croquis))
-               {
-                #PDF_delete(pdfdoc)
-
-                    //echo "El PDF".$_FILES['archivo']['name'][$i]." ya se encuentra en el servidor<br> ";
-
-                } else {
-
-                  if($i == 0){
-
-                  move_uploaded_file($ruta_temporal, $ruta_nueva_ine);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa ";
-                  $ruta_SQL_ine = "$ruta_nueva_ine";
-
-                   }
-                  if($i == 1){
-
-                  move_uploaded_file($ruta_temporal, $ruta_nueva_curp);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
-                  $ruta_SQL_curp = "$ruta_nueva_curp";
-                 
-                  }
-                  
-
-                  if($i == 2){
-
-                  move_uploaded_file($ruta_temporal, $ruta_nueva_comprobanteDomicilio);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
-                   $ruta_SQL_comprobantedomicilio = "$ruta_nueva_comprobanteDomicilio";
-                  
-
-                  }
-                  
-                  if($i == 3){
-
-                  move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
-                  $ruta_SQL_croquis = "$ruta_nueva_croquis";
-                  
-                  }
-                  
-
-                      }
-
-
-
-            
-
-
-
-
-                  } else {
-
-
-
-                  echo "<br><p class='mensaje'>El archivo $nombrearchivo no es un pdf</p>";
-
-           }
-        }   
-
-      }
-
-
-
-        echo  "<br>ruta ".$ruta_SQL_ine;
-        echo  "<br>ruta ".$ruta_SQL_curp;
-        echo  "<br>ruta ".$ruta_SQL_comprobantedomicilio;
-        echo  "<br>ruta ".$ruta_SQL_croquis;
-
-
-
-
-
-
-
  ?>
 
 
@@ -316,7 +191,7 @@ echo "<br>".$AportacionBeneficiario6;
 
 <!-- envio de informacion de persona fisica -->
 
-<input type ="hidden" name ="IfolioImpreso" value="<?php echo $folioImpreso; ?>">	
+<input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 <input type ="hidden" name ="dirReg" value="<?php echo $dirReg; ?>">
 <input type ="hidden" name ="municipio" value="<?php echo $municipio; ?>">
 <input type ="hidden" name ="nombre" value="<?php echo $nombre; ?>">
@@ -411,17 +286,39 @@ echo "<br>".$AportacionBeneficiario6;
 <input type ="hidden" name ="AportacionBeneficiario6" value="<?php echo $AportacionBeneficiario6; ?>">
 
 
+<?php 
 
-<!-- envio de informacion de rutas -->
-
-<input type="hidden" name="ruta_SQL_ine" value="<?php  echo $ruta_SQL_ine; ?>">
-<input type="hidden" name="ruta_SQL_curp" value="<?php  echo $ruta_SQL_curp; ?>">
-<input type="hidden" name="ruta_SQL_comprobantedomicilio" value="<?php  echo $ruta_SQL_comprobantedomicilio; ?>">
-<input type="hidden" name="ruta_SQL_croquis" value="<?php  echo $ruta_SQL_croquis; ?>">
+echo $Folio;
+$selectD = "SELECT estatusdictamen FROM personafisicadictamenes WHERE  folioImpreso = '{$Folio}';";
+$selectD = utf8_decode($selectD);
 
 
+  $result = queryMySql("$selectD");
 
-<textarea class="observaciones" name="observaciones" rows="2" cols="90" maxlength="250" placeholder="(opcional)"></textarea>
+  if(!$result) die("No se pudo extraer los datos de la tabla");
+
+  $dato = $result -> fetch_array(MYSQLI_NUM);
+
+
+ ?>
+
+
+
+
+
+
+<h2>Dictamen de la solicitud</h2>
+<select name="DictSolicitud" required>
+  <option value="<?php echo $dato[0]; ?>"><?php echo $dato[0]; ?></option>
+  <option value="">Sin Seleccionar</option>
+  <option value="Positiva">Positiva</option>
+  <option value="Negativa">Negativa</option>
+
+</select>
+
+
+
+<textarea class="observaciones" name="observaciones" rows="2" cols="90" maxlength="250" placeholder="(opcional) Ej: Actualización debido a un error en algunos datos. "></textarea>
 
 
 
@@ -433,7 +330,7 @@ La entrega de la presente solicitud, así como de la documentación solicitada, 
 </h5>
 
 
-<input class="boton"  type="submit" name="CompletarRegistro"	id="ubicacion" value="Finalizar Registro">
+<input class="boton"  type="submit" name="CompletarRegistro"	id="ubicacion" value="Finalizar Actualización">
 
 </form>
  
