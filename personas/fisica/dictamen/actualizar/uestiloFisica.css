@@ -58,11 +58,12 @@ body{
 .Marco{
 
  top: 20px;
- width: 10in;
+ width: 10.5in;
  height: 16in;
 
- position: absolute;
- left:calc((100% - 10in)/2);
+ position: relative;
+
+ left: calc((100% - 9in)/2);
 
  color: #FFFFFF;
  background: #1D447D;
@@ -75,7 +76,6 @@ body{
 
  padding-top: 30px;
  padding-bottom: 30px;
-
 
 
 }
@@ -111,27 +111,34 @@ body{
 	border: none;
 }
 
-.Marco h1 {
-	position: relative;
-	left: 3.33in;
 
+.tituloP{
+	
+
+	position: relative;
+	width: 2.1in;
+	left: calc((100% - 2.55in)/2);
 }
 
-
-
-.Marco h2{
-
-
-	position: relative;
-	left: 2.5in;
-	margin: 5px;
+.ventanilla{
 	margin-top: .35in;
-	margin-bottom: .25in;
+	margin-bottom: .20in;
+	width: 3.5in;
+
+	position: relative;
+	left: calc((100% - 3.75in)/2);
 }
 
+#datossolicitante{
+	
+	width: 4in;
 
+	margin-top: .35in;
+	margin-bottom: .20in;
 
-
+	position: relative;
+	left: calc((100% - 4in)/2);
+}
 
 .Marco p{
 	margin: 8px;
@@ -204,9 +211,9 @@ body{
 
 #ubicacion{
 	position: relative;
-	top: 2in;
+	top: 2.7in;
 
-	left: 4.7in;
+	left: calc((100% - 2.5in)/2);
 }
 
 
@@ -223,14 +230,13 @@ body{
 
 #titulo2{
 	position: relative;
-	left: 1.8in;
+	left: 2.4in;
 
 	margin-top: .35in;
 
 	font-weight: bold;
 	font-size: 24pt;
 }
-
 #actividad{
 	position: relative;
 	left: 2.6in;
@@ -251,7 +257,10 @@ body{
 	font-size: 24pt;
 	font-weight: bold;
 	position: relative;
-	left: 2.8in;
+	left: 3in;
+
+	margin-top: .35in;
+	margin-bottom: .35in;
 }
 
 #correo{
@@ -277,10 +286,7 @@ body{
 }
 
 
-.centro{
-	
-	
-}
+
 .centro input{
 	width: 5in;
 }
@@ -301,7 +307,7 @@ body{
 
 
 .nacimiento select{
-	width: 1in;
+	width: 2in;
 	margin-bottom: .35in;
 }
 
@@ -403,7 +409,7 @@ body{
 
 .conceptoApoyo h5{
 	position: absolute;
-	top: 5in;
+	top: 7.8in;
 
 
 }
@@ -465,6 +471,11 @@ body{
 	column-count: 2;
 }
 
+.nota h3{
+	position: relative;
+	left: .35in;
+}
+
 .nota input{
 	border: none;
 	position: relative;
@@ -483,11 +494,20 @@ body{
 	left: calc((100% - 3in)/2);
 }
 
+
+#ubicaciondp{
+	position: relative;
+	left: 3.3in;
+}
+
+
 .requisitos{
 
-	width: 12in;
-	height: 11.5in;
+	width: 11in;
 	
+	
+	position: relative;
+	left: calc((100% - 11.65in)/2);
 	
  	top: 50px;
 
@@ -509,6 +529,12 @@ body{
 
 }
 
+.pdf{
+	width: 11in;
+	height: 11in;
+	
+
+}
 
 .requisitos h1{
 	position:relative;
@@ -520,8 +546,7 @@ body{
 
 
 .requisitos h3{
-	position: relative;
-	left: 380px;
+	
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
@@ -529,7 +554,7 @@ body{
 
 .requisitos h5{
 	position: relative;
-	top: 1in;
+	top: .15in;
 }
 
 .declaraciones{
@@ -546,20 +571,66 @@ body{
 	border-radius: 15px;
 }
 
-.requisitos i{
-	font-size: 18pt;
+
+
+#ine{
+	
+	width: 7in;
+	position: relative;
+	left: calc((100% - 7in)/2);
+
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom: .35in;
+
 }
 
+#curp{
+	width: 7in;
+	position: relative;
+	left: calc((100% - 7in)/2);
+
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom: .35in;
+}
+
+
+#comprobantedomicilio{
+	
+	width: 4in;
+	position: relative;
+	left: calc((100% - 4in)/2);
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom: .35in;
+}
+
+
+#croquis{
+	
+	width: 4in;
+
+	position: relative;
+	left: calc((100% - 4in)/2);
+
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom: .35in;
+
+
+}
 .ObservacionesM{
 	position: absolute;
 	left: calc((100% - 12in)/2);
-	top: 1.6in;
+	top: .5in;
 	width: 12in;
-	height: 5.8in;
+	height: 7in;
 	border-radius: 15px;
 	border: none;
 	color: #FFFFFF;
  	background: #1D447D;
+ 	margin-bottom: .5in;
 
 }
 
@@ -600,7 +671,7 @@ body{
 
 .ObservacionesM h5{
 	position: relative;
-	top: 450px;
+	top: 5.5in;
 	left: 50px;
 	width: calc(100% - 100px);
 	
@@ -617,24 +688,7 @@ body{
 	margin-left: 2in;
 }
 
-.final{
- top: 10px;
- width: 60%;
- position: relative;
- left: 18%;
 
- color: #FFFFFF;
- background: #1D447D;
- padding-left: 43px;
- border-radius: 15px;
-	
- border:none;
- box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
- margin-bottom: 50px;
- padding-top: 30px;
- padding-bottom: 30px;
-
-}
 
 .login{
 
@@ -700,5 +754,101 @@ body{
 #ubicacionrg{
 	position: relative;
 	left: calc((100% - 2.5in)/2);
+
+}
+/*--------------------*/
+
+#ubicacionpd{
+	position: relative;
+	left: calc((100% - 2.5in)/2);
+
+}
+
+#constitucion{
+	position: relative;
+	left: 3.3in;
+	font-weight: bold;
+	font-size: 24pt;
+	margin-top: .35in;
+	margin-bottom:.20in;
+}
+
+
+.titulodictamen{
+	
+	width: 2.6in;
+	position: relative;
+	top: 2.5in;
+	left: calc((100% - 2.6in)/2);
+
+}
+
+
+.dictamensolicitud{
+	
+	width: 2.6in;
+	height: .35in;
+	position: relative;
+	top: 2.6in;
+	left: calc((100% - 2.6in)/2);
+	border-radius: 15px;
+
+	color: #9C1462;
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+}
+
+.ObservacionesM a{
+	position: relative;
+
+	top: 2.8in;
+	left: calc((100% - 2.5in)/2);
+}
+
+.final{
+ top: .35in;
+ width: 9in;
+ height: 5in;
+ position: relative;
+ left: calc((100% - 9in)/2);
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: .35in;
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+}
+
+.final h3{
+	font-size: 24pt;
+	font-weight: bold;
+	
+	position: relative;
+	top: 2in;
+	left: calc((100% - 4.3in)/2);
+}
+
+.final h2{
+	font-size: 22pt;
+	font-weight: bold;
+
+	
+	position: relative;
+	top: 0.35in;
+	left: calc((100% - 3in)/2);
+}
+
+#ubicacionfinal{
+	position: relative;
+	left: calc((100% - 3in )/2);
+	top: 2.5in;
 
 }

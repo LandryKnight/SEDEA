@@ -58,8 +58,7 @@ if(isset($_POST['EnviarPF'])){
 
   $dato = $result -> fetch_array(MYSQLI_NUM);
 
-echo $Folio;
-echo  $actEco;
+
 
  ?>
 
@@ -117,7 +116,7 @@ echo  $actEco;
 <p>Antiguedad del proyecto</p>
 
 <select name="AntiguedadProyecto" required>
-	<option value="<?php echo $dato[3]; ?>"><?php echo $dato[3]; ?></option>
+	<option value="<?php echo $dato[3]; ?>"><?php echo utf8_decode($dato[3]); ?></option>
 	<option value="Antiguedad en años">Antiguedad en años</option>
 	<option value="Continuidad">Continuidad</option>
 	<option value="Nuevo">Nuevo</option>
@@ -146,7 +145,7 @@ $anio = substr($dato[6],6,4);
 
  ?>
 
-<h3 id="titulo">Fecha Constitución</h3>
+<h3 id="constitucion">Fecha Constitución</h3>
 <div class="constitucion">
 <p>Selecciona el Día</p>
 <select name="DiaFechaConstitucion" required>
@@ -363,13 +362,13 @@ $anio = substr($dato[6],6,4);
 <input type="text" name="ReferenciaVialidadProyecto" maxlength="50" value="<?php echo $dato[14]; ?>"> 
 </div>
 <br> <br>
-<input type="submit" name="DatosProyectoPF" value="Siguiente" class="boton" id="ubicacion">
+<input type="submit" name="DatosProyectoPF" value="Siguiente" class="boton" id="ubicaciondp">
 <br>
 
 </form>
 <br>
 
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicaciondp">Menú Principal</button></a>
 </div>
 
 

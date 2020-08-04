@@ -122,50 +122,6 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-echo "<br>".$ApoyoSolicitado1; 
-echo "<br>".$UniMedida1;
-echo "<br>".$CanSolicitada1;
-echo "<br>".$ApoyoEstatalSolicitado1; 
-echo "<br>".$ApoyoMunicipalSolicitado1;
-echo "<br>".$AportacionBeneficiario1; 
-
-echo "<br>".$ApoyoSolicitado2;
-echo "<br>".$UniMedida2;
-echo "<br>".$CanSolicitada2;
-echo "<br>".$ApoyoEstatalSolicitado2;
-echo "<br>".$ApoyoMunicipalSolicitado2;
-echo "<br>".$AportacionBeneficiario2;
-
-echo "<br>".$ApoyoSolicitado3;
-echo "<br>".$UniMedida3;
-echo "<br>".$CanSolicitada3;
-echo "<br>".$ApoyoEstatalSolicitado3;
-echo "<br>".$ApoyoMunicipalSolicitado3;
-echo "<br>".$AportacionBeneficiario3;
-      
-echo "<br>".$ApoyoSolicitado4;
-echo "<br>".$UniMedida4;
-echo "<br>".$CanSolicitada4;
-echo "<br>".$ApoyoEstatalSolicitado4;
-echo "<br>".$ApoyoMunicipalSolicitado4;
-echo "<br>".$AportacionBeneficiario4;
-
-echo "<br>".$ApoyoSolicitado5;
-echo "<br>".$UniMedida5;
-echo "<br>".$CanSolicitada5;
-echo "<br>".$ApoyoEstatalSolicitado5;
-echo "<br>".$ApoyoMunicipalSolicitado5;
-echo "<br>".$AportacionBeneficiario5;
-         
-echo "<br>".$ApoyoSolicitado6;
-echo "<br>".$UniMedida6;
-echo "<br>".$CanSolicitada6;
-echo "<br>".$ApoyoEstatalSolicitado6;
-echo "<br>".$ApoyoMunicipalSolicitado6;
-echo "<br>".$AportacionBeneficiario6;
-
-
-
 
 
 
@@ -269,26 +225,26 @@ echo "<br>".$AportacionBeneficiario6;
 
 							
 							
-<input type ="hidden" name ="ApoyoSolicitado5" value="<?php echo $ApoyoSolicitado5; ?>">
-<input type ="hidden" name ="UniMedida5" value="<?php echo $UniMedida5; ?>">
-<input type ="hidden" name ="CanSolicitada5" value="<?php echo $CanSolicitada5; ?>">
-<input type ="hidden" name ="ApoyoEstatalSolicitado5" value="<?php echo $ApoyoEstatalSolicitado5; ?>">
-<input type ="hidden" name ="ApoyoMunicipalSolicitado5" value="<?php echo $ApoyoMunicipalSolicitado5; ?>">
-<input type ="hidden" name ="AportacionBeneficiario5" value="<?php echo $AportacionBeneficiario5; ?>">
+<input type ="hidden" name ="ApoyoSolicitado5" value="<?php echo $ApoyoSolicitado5;?>">
+<input type ="hidden" name ="UniMedida5" value="<?php echo $UniMedida5;?>">
+<input type ="hidden" name ="CanSolicitada5" value="<?php echo $CanSolicitada5;?>">
+<input type ="hidden" name ="ApoyoEstatalSolicitado5" value="<?php echo $ApoyoEstatalSolicitado5;?>">
+<input type ="hidden" name ="ApoyoMunicipalSolicitado5" value="<?php echo $ApoyoMunicipalSolicitado5;?>">
+<input type ="hidden" name ="AportacionBeneficiario5" value="<?php echo $AportacionBeneficiario5;?>">
 
 							
 							
-<input type ="hidden" name ="ApoyoSolicitado6" value="<?php echo $ApoyoSolicitado6; ?>">
-<input type ="hidden" name ="UniMedida6" value="<?php echo $UniMedida6; ?>">
-<input type ="hidden" name ="CanSolicitada6" value="<?php echo $CanSolicitada6; ?>">
-<input type ="hidden" name ="ApoyoEstatalSolicitado6" value="<?php echo $ApoyoEstatalSolicitado6; ?>">
-<input type ="hidden" name ="ApoyoMunicipalSolicitado6" value="<?php echo $ApoyoMunicipalSolicitado6; ?>">
-<input type ="hidden" name ="AportacionBeneficiario6" value="<?php echo $AportacionBeneficiario6; ?>">
+<input type ="hidden" name ="ApoyoSolicitado6" value="<?php echo $ApoyoSolicitado6;?>">
+<input type ="hidden" name ="UniMedida6" value="<?php echo $UniMedida6;?>">
+<input type ="hidden" name ="CanSolicitada6" value="<?php echo $CanSolicitada6;?>">
+<input type ="hidden" name ="ApoyoEstatalSolicitado6" value="<?php echo $ApoyoEstatalSolicitado6;?>">
+<input type ="hidden" name ="ApoyoMunicipalSolicitado6" value="<?php echo $ApoyoMunicipalSolicitado6;?>">
+<input type ="hidden" name ="AportacionBeneficiario6" value="<?php echo $AportacionBeneficiario6;?>">
 
 
 <?php 
 
-echo $Folio;
+
 $selectD = "SELECT estatusdictamen FROM personafisicadictamenes WHERE  folioImpreso = '{$Folio}';";
 $selectD = utf8_decode($selectD);
 
@@ -307,20 +263,20 @@ $selectD = utf8_decode($selectD);
 
 
 
-<h2>Dictamen de la solicitud</h2>
-<select name="DictSolicitud" required>
-  <option value="<?php echo $dato[0]; ?>"><?php echo $dato[0]; ?></option>
-  <option value="">Sin Seleccionar</option>
-  <option value="Positiva">Positiva</option>
-  <option value="Negativa">Negativa</option>
-
-</select>
 
 
 
 <textarea class="observaciones" name="observaciones" rows="2" cols="90" maxlength="250" placeholder="(opcional) Ej: Actualización debido a un error en algunos datos. "></textarea>
 
 
+<h2 class="titulodictamen">Dictamen de la solicitud</h2>
+<select class="dictamensolicitud" name="DictSolicitud" required>
+  <option value="<?php echo $dato[0]; ?>"><?php echo $dato[0]; ?></option>
+  <option value="">Sin Seleccionar</option>
+  <option value="Positiva">Positiva</option>
+  <option value="Negativa">Negativa</option>
+
+</select>
 
 
 
@@ -335,7 +291,7 @@ La entrega de la presente solicitud, así como de la documentación solicitada, 
 </form>
  
 
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
  </div>
 
 

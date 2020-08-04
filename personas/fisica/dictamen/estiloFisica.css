@@ -259,7 +259,7 @@ body{
 #ubicacionsolicitudes{
 	position: relative;
 	top:  8in;
-	left: calc((100% - 2.5in)/2);
+	left: calc((100% - 3in)/2);
 
 }
 
@@ -680,9 +680,17 @@ body{
 	font-size: 14pt;
 	font-weight: bold;
 
+	border: none;
 	border-radius: 15px;
 
 	margin-bottom: 15px;
+}
+
+
+.login p{
+	font-size: 18pt;
+	font-weight: bold;
+	
 }
 
 .input{
@@ -742,12 +750,22 @@ body{
 	font-size: 14pt;
 	font-weight: bold;
 	color: white;
-
+	margin-bottom: .35in;
 	
-	width: 5in;
+	
+	
 
 	position: relative;
-	top: .35in;
-
+	top: .15in;
 	left: 2.8in;
+
+	
 }
+
+.dictaminarpf a{
+	position: relative;
+	top: 1in;
+	left: calc((100% - 2.5in)/2);
+
+}
+

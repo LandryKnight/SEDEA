@@ -564,13 +564,6 @@ $select = utf8_decode($select);
 
 
 
- echo "<br>".$rutaIne;
-
-/*
- echo "<br>".$rutaCurp;
- echo "<br>".$rutaComprobanteDomicilio;
- echo "<br>".$rutaCroquis;
-*/
 
  ?>
 
@@ -578,7 +571,7 @@ $select = utf8_decode($select);
 <?php 
 if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 
-<h3><i>Identificación Oficial expedida por el <b>IFE o INE</b>: </i></h3> 
+<h3 id="ine"><i>Identificación Oficial expedida por el <b>IFE o INE</b>: </i></h3> 
 <iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaIne; ?>'></iframe>
 
 
@@ -590,7 +583,7 @@ if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 <?php 
 if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else {  ?>
 
-<h3><i><b>CURP</b> Clave Única de Registro de Población:</i></h3> 
+<h3 id="curp"><i><b>CURP</b> Clave Única de Registro de Población:</i></h3> 
 <iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaCurp; ?>'></iframe>
 
 
@@ -600,7 +593,7 @@ if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else
 
 <?php 
 if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento del Comprobante de DOMICILIO";} else{ ?>
-<h3><i>Comprobante de domicilio</b> o <br> Constancia de Residencia firmado por la autoridad competente:</i></h3> 
+<h3 id="comprobantedomicilio"><i>Comprobante de domicilio</b>:</i></h3> 
 <iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaComprobanteDomicilio; ?>'></iframe>
 
 
@@ -610,7 +603,7 @@ if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento 
 
 <?php 
 if(empty($rutaCroquis)){ echo "No se pudo localizar el Documento del CROQUIS";} else { ?>
-<h3><i>Selecciona el <b>Croquis</b> de bien a adquirir:</i></h3> 
+<h3 id="croquis"><i><b>Croquis</b> de bien a adquirir:</i></h3> 
 <iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaCroquis; ?>'></iframe>
 
 

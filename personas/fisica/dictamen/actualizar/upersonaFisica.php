@@ -18,6 +18,8 @@ if(isset($_POST['EnviarFolio'])){
 
   $dato = $result -> fetch_array(MYSQLI_NUM);
 
+
+
  ?>
 
 
@@ -40,8 +42,8 @@ if(isset($_POST['EnviarFolio'])){
 <input type ="hidden" name ="folio" value="<?php echo $Folio; ?>"> 
 
 
- <h1>Persona Física</h1>
- <h2>Datos de la Ventanilla Receptora</h2>
+ <h1 class="tituloP">Persona Física</h1>
+ <h2 class="ventanilla">Datos de la Ventanilla Receptora</h2>
 
 
   
@@ -88,7 +90,7 @@ if(isset($_POST['EnviarFolio'])){
   </div>
 
   
-  <h2>Datos del Solicitante - Persona Física </h2> 
+  <h2 id="datossolicitante">Datos del Solicitante - Persona Física </h2> 
   
   <div class="centro" align="center">
   <p>Nombre Completo</p>
@@ -428,14 +430,14 @@ $anio = substr($dato[5],6,4);
 <br>
 
 
-<input type="submit" name="EnviarPF" value="Siguiente" class="boton" id="ubicacion">
+<input type="submit" name="EnviarPF" value="Siguiente" class="boton" id="ubicacionpd">
 <br>
 
 </form>
 
 
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacion">Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionpd">Menú Principal</button></a>
 
 
 </div>

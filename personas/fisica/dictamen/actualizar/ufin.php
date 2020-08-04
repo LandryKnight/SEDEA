@@ -11,7 +11,7 @@ if (isset($_POST['CompletarRegistro'])) {
 #recepcion de datos de PersonaFisica.php
   $Folio                     =                       sanitizeString($_POST['folio']);
   $Folio = trim($Folio);
-  echo $Folio;
+  
 
 $dirReg                     =                      sanitizeString($_POST['dirReg']);
 $dirReg            = trim($dirReg);
@@ -248,7 +248,7 @@ $estatusDictamen            =                           ($_POST['DictSolicitud']
            queryMySql("$deletepdc");
                  
            
-                   echo "Dictamenes ". $insertDictamen;
+                   
 
 
         $select = "SELECT * FROM personafisicaDatos WHERE  folioImpresoPF  = '{$folioImpreso}'";
@@ -413,26 +413,6 @@ if(empty($ApoyoSolicitado6)){} else {
 
 
 
-/*echo "<br>". $insertPF;             
-
-echo "<br>". $insertDomicilioPF;
-echo "<br>". $InsertProyecto;
-
-echo "<br>". $InsertRQG;
-echo "<br>". $insertDictamen;
-
-echo "<br>". $InsertConceptoApoyo1;
-echo "<br>". $InsertConceptoApoyo2;
-echo "<br>". $InsertConceptoApoyo3;
-echo "<br>". $InsertConceptoApoyo4;
-echo "<br>". $InsertConceptoApoyo5;
-echo "<br>". $InsertConceptoApoyo6;
-echo "<br>". $ruta_SQL_ine;
-echo "<br>". $ruta_SQL_curp;
-echo "<br>". $ruta_SQL_comprobantedomicilio;
-echo "<br>". $ruta_SQL_croquis;
-
-*/
 
 
 
@@ -456,8 +436,8 @@ echo "<br>". $ruta_SQL_croquis;
  <div class="final">
  
 
-<h1>Se realizo con éxito la actualización/Dictaminación del Folio: <?php echo $Folio; ?> </h1>
-
+<h1>Se realizo con éxito la actualización/Dictaminación del Folio: </h1>
+<h2><?php echo $Folio; ?></h2>
 
 <br>
 
@@ -467,7 +447,7 @@ echo "<br>". $ruta_SQL_croquis;
 
 
 
-<a href="http://localhost/sedea/index.php"><button class="boton">ir al Menú Principal</button></a>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionfinal">ir al Menú Principal</button></a>
 
 
  </div>	

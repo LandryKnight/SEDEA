@@ -431,7 +431,7 @@ body{
 
 .conceptoApoyo h5{
 	position: absolute;
-	top: 5in;
+	top: 7.8in;
 
 
 }
@@ -491,6 +491,11 @@ body{
 .nota{
 	width: 100%;
 	column-count: 2;
+}
+
+.nota h3{
+	position: relative;
+	left: .35in;
 }
 
 .nota input{

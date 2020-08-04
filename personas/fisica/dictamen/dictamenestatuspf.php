@@ -1,114 +1,93 @@
-
 <?php 
 
 require_once('conexionDPF.php');
+
+$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDictamenes.estatusdictamen,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo,personafisicaDictamenes WHERE personafisicaDatos.folioImpresoPF = personafisicaProyecto.folioImpreso AND personafisicaDatos.folioImpresoPF = personafisicaConceptoApoyo.sfolioImpreso AND personafisicaDictamenes.folioImpreso = personafisicaDatos.folioImpresoPF  ORDER BY personafisicaDictamenes.estatusdictamen DESC ,personafisicaDatos.nombre ASC";
+
+$select = utf8_decode($select);
+
+
+
+$result = queryMySql("$select");
+
+if(!$result) die("No se pudo extraer los datos de la tabla");
+
+$rows = $result -> num_rows;
+
+
+
+
+
+
+ ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estatus Solicitudes</title>
+	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div class="Marco">
+
+<div class="tituloSolicitudes">
+<h1>Estatus de Solicitudes Dictaminadas</h1>
+</div>
+
+<?php 
+
+echo "<table border='2'><tr><th>Folio Impreso</th><th>Nombre</th><th>Dirección Regional</th><th>CURP</th><th>Proyecto</th><th>Apoyo Solicitado</th><th>Inversión Total</th><th>Estatus Dictamen</th><th>Fecha de Registro</th></tr>";
+
+
+
+if($rows < 15){
+
+for ($i=0; $i<$rows; $i++) {
+$row = $result -> fetch_array(MYSQLI_NUM);
+
+echo "<tr>"; 
+for($j=0; $j<9; $j++)
+
+echo "<td>" . utf8_decode($row[$j])."</td>";
+
+
+echo "</tr>";
+
+	
+		}
+
+}if($rows > 15){
+
+	for ($i=0; $i<15; $i++) {
+$row = $result -> fetch_array(MYSQLI_NUM);
+
+echo "<tr>"; 
+for($j=0; $j<9; $j++)
+
+echo "<td>" . utf8_decode($row[$j])."</td>";
+
+
+echo "</tr>";
+		}
+
+ }
+echo "</table>";
+
+
 
 
 
  ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dictamen de la solicitud</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
-</head>
-<body>
+<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionsolicitudes">Menú Principal</button></a>
 
 
-<h2>Dictamen de la solicitud</h2>
+<h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 
-<select name="DictSolicitud">
-	<option value="Sin Seleccionar">Sin Seleccionar</option>
-	<option value="Positiva">Positiva</option>
-	<option value="Negativa">Negativa</option>
-
-</select>
-
-
-<table border="1">
-	
-	<tr>
-		<td>Conceptos de <br>Apoyo Solicitado</td> 
-		<td>Unidad de <br>Medida</td>   
-		<td>Cantidad <br>Solicitada</td> 
-		<td>Apoyo Estatal <br>Solicitado (pesos) </td> 
-		<td>Apoyo Municipal <br>Solicitado (pesos) </td> 
-		<td>Aportación Beneficiario (pesos)</td> 
-		<td>Inversión Total (pesos)</td>  
-	</tr>
-
-	<tr>
-		<td><input type="text" name="ApoyoSolicitado1" maxlength="35" 	placeholder="Estufa ecológica" required="required"> </td>
-		<td><input type="text" name="UniMedida1" maxlength="5" 	placeholder="2" required="required">  </td>
-		<td><input type="text" name="CanSolicitada1" maxlength="5" 	placeholder="2" required="required">  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado1" maxlength="20" 	placeholder="$500,000" required="required"> </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado1" maxlength="20"	placeholder="$250,000" required="required"> </td>
-		<td><input type="text" name="AportacionBeneficiario1" maxlength="20" 	placeholder="$250,000" required="required"> </td>
-		<td><input type="text" name="InversionTotal1" maxlength="20"	placeholder="$1,000,000" required="required"> </td>
-	</tr>
-
-	<tr>
-		<td><input type="text" name="ApoyoSolicitado2" maxlength="35" 	placeholder="Estufa ecológica" > </td>
-		<td><input type="text" name="UniMedida2" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="CanSolicitada2" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado2" maxlength="20" 	placeholder="$500,000" > </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado2" maxlength="20"	placeholder="$250,000" > </td>
-		<td><input type="text" name="AportacionBeneficiario2" maxlength="20" 	placeholder="$250,000" > </td>
-		<td><input type="text" name="InversionTotal2" maxlength="20"	placeholder="$1,000,000" > </td>
-	</tr>
-
-
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado3" maxlength="35" 	placeholder="Estufa ecológica" > </td>
-		<td><input type="text" name="UniMedida3" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="CanSolicitada3" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado3" maxlength="20" 	placeholder="$500,000" > </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado3" maxlength="20"	placeholder="$250,000" > </td>
-		<td><input type="text" name="AportacionBeneficiario3" maxlength="20" 	placeholder="$250,000" > </td>
-		<td><input type="text" name="InversionTotal3" maxlength="20"	placeholder="$1,000,000" > </td>
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado4" maxlength="35" 	placeholder="Estufa ecológica" > </td>
-		<td><input type="text" name="UniMedida4" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="CanSolicitada4" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado4" maxlength="20" 	placeholder="$500,000" > </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado4" maxlength="20"	placeholder="$250,000" > </td>
-		<td><input type="text" name="AportacionBeneficiario4" maxlength="20" 	placeholder="$250,000" > </td>
-		<td><input type="text" name="InversionTotal4" maxlength="20"	placeholder="$1,000,000" > </td>
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado5" maxlength="35" 	placeholder="Estufa ecológica" > </td>
-		<td><input type="text" name="UniMedida5" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="CanSolicitada5" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado5" maxlength="20" 	placeholder="$500,000" > </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado5" maxlength="20"	placeholder="$250,000" > </td>
-		<td><input type="text" name="AportacionBeneficiario5" maxlength="20" 	placeholder="$250,000" > </td>
-		<td><input type="text" name="InversionTotal5" maxlength="20"	placeholder="$1,000,000" > </td>
-	</tr>
-
-		<tr>
-		<td><input type="text" name="ApoyoSolicitado6" maxlength="35" 	placeholder="Estufa ecológica" > </td>
-		<td><input type="text" name="UniMedida6" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="CanSolicitada6" maxlength="5" 	placeholder="2" >  </td>
-		<td><input type="text" name="ApoyoEstatalSolicitado6" maxlength="20" 	placeholder="$500,000" > </td>
-		<td><input type="text" name="ApoyoMunicipalSolicitado6" maxlength="20"	placeholder="$250,000" > </td>
-		<td><input type="text" name="AportacionBeneficiario6" maxlength="20" 	placeholder="$250,000" > </td>
-		<td><input type="text" name="InversionTotal6" maxlength="20"	placeholder="$1,000,000" > </td>
-	</tr>
-
-
-
-</table>
-
-
-
-<p>Fecha </p>
+</div>
 
 </body>
 </html>
