@@ -60,20 +60,23 @@ body{
 
 
 .Marco{
- top: 10px;
- width: 62%;
- height: 12in;
+ top: 20px;
+ width: 9in;
+ height: 13.5in;
+
  position: relative;
- left: 18%;
+
+ left: calc((100% - 9in)/2);
 
  color: #FFFFFF;
  background: #1D447D;
- padding-left: 45px;
+ padding-left: 43px;
  border-radius: 15px;
-	
+
  border:none;
  box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
  margin-bottom: 50px;
+
  padding-top: 30px;
  padding-bottom: 30px;
 
@@ -82,6 +85,8 @@ body{
 }
 
 .Marco input{
+	height: .35in;
+
 	border-radius: 8px;
 	margin-bottom: 5px;
 	text-indent: 10px;
@@ -93,6 +98,7 @@ body{
 }
 
 .Marco select{
+	height: .35in;
 	border-radius: 8px;
 	margin-bottom: 5px;
 	font-weight: bold;
@@ -141,8 +147,12 @@ body{
 }
 
 #titulo2{
+	
+
 	position: relative;
-	left: 27%;
+	left: calc((100% - 3.7in)/2);
+	font-weight: bold;
+	font-size: 24pt;
 	margin-top: 12px;
 }
 
@@ -250,8 +260,13 @@ body{
 }
 
 #botonPM{
-	bottom: 200px;
-	left: 6.4in;
+	
+	position: relative;
+	top: 1in;
+	left: calc((100% - 3in)/2);
+	
+
+
 }
 
 
@@ -471,16 +486,21 @@ body{
 }
 .documentos{
 	column-count:2;
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	font-size: 14pt;
 }
 
+.documentos input{
+	margin-left: 2in;
+}
 
 .final{
- top: 10px;
- width: 60%;
+ top: .35in;
+ width: 10in;
+ height: 3in;
  position: relative;
- left: 18%;
+ left: calc((100% - 10.25in)/2);
 
  color: #FFFFFF;
  background: #1D447D;

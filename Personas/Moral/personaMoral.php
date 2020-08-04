@@ -216,7 +216,7 @@
 	
 </div>
 
-	<h2>Domicilio de la Organización</h2>
+	<br><h2>Domicilio de la Organización</h2><br>
    <div class="organizacion">
     <p>Selecciona el Nombre del Municipio</p>
     <Select name="NombreMunicipioOrganizacion" required >
@@ -293,6 +293,7 @@
 	<input type="text" name="ReferenciaVialidadOrganizacion" maxlength="50">
 	
 </div>
+  <br>  <br>
 	<h2>Actividad Economica</h2>
    <p>Seleccion el Tipo de Actividad</p>
    <select name="TipoActividadEconomicaOrganizacion" required>
@@ -303,7 +304,7 @@
    	<option value="Otra">Otra</option>
    </select>
 
-</div>
+<br>
 
 <input type="submit" name="enviarPM" value="Enviar Información" id="botonPM" class="boton">
 

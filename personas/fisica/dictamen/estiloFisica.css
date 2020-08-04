@@ -62,7 +62,7 @@ body{
 
  top: 20px;
  width: 12in;
- height: 12in;
+ height: 11in;
 
  position: absolute;
  left:calc((100% - 12in)/2);
@@ -180,7 +180,7 @@ body{
 
 .Marco h5{
 	position: relative;
-	top:  8in;
+	top:  4.5in;
 	left: calc((100% - 9in) /2);
 	
 	width: 9in;
@@ -302,7 +302,7 @@ body{
 
 #ubicacionsolicitudes{
 	position: relative;
-	top:  1in;
+	top:  4in;
 	left: calc((100% - 3in)/2);
 
 }

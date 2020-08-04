@@ -165,14 +165,14 @@ Create Table zhpersonafisicaProyecto(
 IdProyecto int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 NProyecto varchar(80), #Nombre Proyecto
-AntiguedadPr varchar(20), #sAntiguedadProyecto 
+AntiguedadPr varchar(50), #sAntiguedadProyecto 
 TelefonoPr varchar(100), #sTelefonoProyecto
 CorreoPr varchar(80), #sCorreoElectronicoProyecto
 FConst varchar(10), #Fecha Constitucion 
-TiDomiPr varchar(20), #sTipoDomicilioProyecto
-TiAsentPr varchar(20), #sTipoAsentamientoProyecto
+TiDomiPr varchar(30), #sTipoDomicilioProyecto
+TiAsentPr varchar(30), #sTipoAsentamientoProyecto
 NomAsentPr varchar(80), #sNombreAsentamientoProyecto
-TiVialPr  varchar(10), #sTipoVialidadProyecto 
+TiVialPr  varchar(30), #sTipoVialidadProyecto 
 NomVialPr varchar(80),  #sNombreVialidadProyecto
 NomLocalPr varchar(80), #sNombreLocalidadProyecto
 NomMuniciPr varchar(30), #sNombreMunicipioProyecto
