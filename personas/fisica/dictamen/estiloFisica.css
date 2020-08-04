@@ -8,6 +8,9 @@ body{
 	background-color: #FFFFFF;
 }
 
+
+
+
 .eleccion{
 
  width: 7.5in;
@@ -79,13 +82,54 @@ body{
 
 
 }
+.Marco2{
 
+ top: 20px;
+ width: 12in;
+ height: 7in;
+
+ position: absolute;
+ left:calc((100% - 12in)/2);
+
+ color: #FFFFFF;
+ background: #1D447D;
+ padding-left: 43px;
+ border-radius: 15px;
+
+ border:none;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+ margin-bottom: 50px;
+
+ padding-top: 30px;
+ padding-bottom: 30px;
+
+
+
+}
+
+.Marco2 h5{
+	position: relative;
+	top:  1in;
+	left: calc((100% - 9in) /2);
+	
+	width: 9in;
+}
 
 .tituloSolicitudes{
 	
 	width: 6.5in;
 	position: relative;
 	left: calc((100% - 6.5in)/2);
+	margin-top: .35in;
+	margin-bottom: .35in;
+
+}
+
+.tituloSolicitudes2{
+	
+	width: 5.4in;
+	position: relative;
+	left: calc((100% - 5.9in)/2);
 	margin-top: .35in;
 	margin-bottom: .35in;
 
@@ -258,7 +302,7 @@ body{
 
 #ubicacionsolicitudes{
 	position: relative;
-	top:  8in;
+	top:  1in;
 	left: calc((100% - 3in)/2);
 
 }

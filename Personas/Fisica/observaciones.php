@@ -186,14 +186,14 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
                   if($i == 0){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_ine);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa ";
+                  #echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa ";
                   $ruta_SQL_ine = "$ruta_nueva_ine";
 
                    }
                   if($i == 1){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_curp);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  #echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
                   $ruta_SQL_curp = "$ruta_nueva_curp";
                  
                   }
@@ -202,7 +202,7 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
                   if($i == 2){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_comprobanteDomicilio);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  #echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
                    $ruta_SQL_comprobantedomicilio = "$ruta_nueva_comprobanteDomicilio";
                   
 
@@ -211,7 +211,7 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
                   if($i == 3){
 
                   move_uploaded_file($ruta_temporal, $ruta_nueva_croquis);
-                  echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
+                  #echo "<br>El PDF ".$_FILES['archivo']['name'][$i]." se subio de manera exitosa <br>";
                   $ruta_SQL_croquis = "$ruta_nueva_croquis";
                   
                   }

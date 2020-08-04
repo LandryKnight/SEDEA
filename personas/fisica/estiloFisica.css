@@ -713,7 +713,7 @@ body{
 	
 	width: 5.8in;
 	position: relative;
-	left: calc((100% - 5.8in)/2);
+	left: calc((100% - 6.3in)/2);
 	margin-bottom: .35in;
 }
 
@@ -748,7 +748,7 @@ body{
 
 #ubicacionfin{
 	position: relative;
-	left: calc((100% - 2.5in)/2);
+	left: calc((100% - 3in)/2);
 }
 
 .login{

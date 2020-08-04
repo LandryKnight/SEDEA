@@ -239,7 +239,9 @@ body{
 }
 #actividad{
 	position: relative;
-	left: 2.6in;
+	margin-top: .35in;
+
+	left: calc((100% - 3.7in)/2);
 
 	font-size: 24pt;
 	font-weight: bold;
@@ -760,7 +762,7 @@ body{
 
 #ubicacionpd{
 	position: relative;
-	left: calc((100% - 2.5in)/2);
+	left: calc((100% - 3in)/2);
 
 }
 

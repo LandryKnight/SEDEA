@@ -41,14 +41,14 @@ Create Table personafisicaDomicilio(
 idDomicilio int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 nombreMunicipio varchar(30),
-tipoDomicilio varchar(8),
-tipoVialidad varchar(10),
-tipoAsentamiento varchar(8),
+tipoDomicilio varchar(20),
+tipoVialidad varchar(20),
+tipoAsentamiento varchar(20),
 nombreAsentamiento varchar(50),
 nombreVialidad varchar(50),
 nombreLocalidad varchar(50),
 referenciaVialidad varchar(50),
-tipoActividad varchar(15),
+tipoActividad varchar(20),
 fechaReg varchar(30)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -59,14 +59,14 @@ Create Table personafisicaProyecto(
 IdProyecto int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 NProyecto varchar(80), #Nombre Proyecto
-AntiguedadPr varchar(20), #sAntiguedadProyecto 
+AntiguedadPr varchar(50), #sAntiguedadProyecto 
 TelefonoPr varchar(100), #sTelefonoProyecto
 CorreoPr varchar(80), #sCorreoElectronicoProyecto
 FConst varchar(10), #Fecha Constitucion 
 TiDomiPr varchar(15), #sTipoDomicilioProyecto
 TiAsentPr varchar(15), #sTipoAsentamientoProyecto
 NomAsentPr varchar(80), #sNombreAsentamientoProyecto
-TiVialPr  varchar(10), #sTipoVialidadProyecto 
+TiVialPr  varchar(20), #sTipoVialidadProyecto 
 NomVialPr varchar(80),  #sNombreVialidadProyecto
 NomLocalPr varchar(80), #sNombreLocalidadProyecto
 NomMuniciPr varchar(30), #sNombreMunicipioProyecto
@@ -147,14 +147,14 @@ Create Table zhpersonafisicaDomicilio(
 idDomicilio int Primary Key auto_increment,
 folioImpreso varchar(30), #Foreign Key
 nombreMunicipio varchar(30),
-tipoDomicilio varchar(8),
-tipoVialidad varchar(10),
-tipoAsentamiento varchar(8),
+tipoDomicilio varchar(20),
+tipoVialidad varchar(20),
+tipoAsentamiento varchar(20),
 nombreAsentamiento varchar(50),
 nombreVialidad varchar(50),
 nombreLocalidad varchar(50),
 referenciaVialidad varchar(50),
-tipoActividad varchar(15),
+tipoActividad varchar(20),
 fechaReg varchar(30)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -169,8 +169,8 @@ AntiguedadPr varchar(20), #sAntiguedadProyecto
 TelefonoPr varchar(100), #sTelefonoProyecto
 CorreoPr varchar(80), #sCorreoElectronicoProyecto
 FConst varchar(10), #Fecha Constitucion 
-TiDomiPr varchar(15), #sTipoDomicilioProyecto
-TiAsentPr varchar(15), #sTipoAsentamientoProyecto
+TiDomiPr varchar(20), #sTipoDomicilioProyecto
+TiAsentPr varchar(20), #sTipoAsentamientoProyecto
 NomAsentPr varchar(80), #sNombreAsentamientoProyecto
 TiVialPr  varchar(10), #sTipoVialidadProyecto 
 NomVialPr varchar(80),  #sNombreVialidadProyecto

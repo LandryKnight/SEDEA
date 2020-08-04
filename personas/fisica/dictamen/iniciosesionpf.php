@@ -54,7 +54,7 @@
 	
 		if($result -> num_rows)	{
 		
-					header('location:dictaminarpf.php');
+					header('location:verdictaminar.php');
 
 			}else if($resultreg -> num_rows)
 

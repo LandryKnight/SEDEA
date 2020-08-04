@@ -2,10 +2,17 @@
 
 require_once('conexionDPF.php');
 
-$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDictamenes.estatusdictamen,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo,personafisicaDictamenes WHERE personafisicaDatos.folioImpresoPF = personafisicaProyecto.folioImpreso AND personafisicaDatos.folioImpresoPF = personafisicaConceptoApoyo.sfolioImpreso AND personafisicaDictamenes.folioImpreso = personafisicaDatos.folioImpresoPF  ORDER BY personafisicaDictamenes.estatusdictamen DESC ,personafisicaDatos.nombre ASC";
+global $Folio;
+if(isset($_POST['EnviarFolio'])){
+
+	$Folio = sanitizeString($_POST['folio']);
+}
+
+
+
+$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDictamenes.estatusdictamen,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo,personafisicaDictamenes WHERE personafisicaDatos.folioImpresoPF = '{$Folio}'AND personafisicaDatos.folioImpresoPF = personafisicaProyecto.folioImpreso AND personafisicaDatos.folioImpresoPF = personafisicaConceptoApoyo.sfolioImpreso AND personafisicaDictamenes.folioImpreso = personafisicaDatos.folioImpresoPF  ORDER BY personafisicaDictamenes.estatusdictamen DESC ,personafisicaDatos.nombre ASC";
 
 $select = utf8_decode($select);
-
 
 
 $result = queryMySql("$select");
@@ -30,9 +37,11 @@ $rows = $result -> num_rows;
 </head>
 <body>
 
-<div class="Marco">
 
-<div class="tituloSolicitudes">
+
+<div class="Marco2">
+
+<div class="tituloSolicitudes2">
 <h1>Estatus de Solicitudes Dictaminadas</h1>
 </div>
 
@@ -87,7 +96,7 @@ echo "</table>";
 
 <h5>"Este programa es público; ajeno a cualquier partido político. Queda prohibido el uso para fines distinto a los establecidos al Programa"</h5>
 
-</div>
 
+</div>
 </body>
 </html>
