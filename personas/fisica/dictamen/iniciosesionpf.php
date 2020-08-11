@@ -79,7 +79,7 @@
 
 
  <br><br>
- <a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button>
+ <a href="/sedea/index.php"><button class="boton">Menú Principal</button>
 
 
 </div>

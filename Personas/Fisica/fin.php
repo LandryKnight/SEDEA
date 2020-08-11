@@ -575,7 +575,7 @@ if(empty($ruta_SQL_comprobantedomicilio)){
 <head>
 	<title>Finalizar Registro</title>
 	<link rel="stylesheet" type="text/css" href="estiloFisica.css">
-	
+	<meta charset="utf-8">
 </head>
 <body>
 

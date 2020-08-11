@@ -17,10 +17,10 @@
 
 
 <h3>Ver lista de solicitudes</h3>
-<a href="http://localhost/sedea/personas/fisica/dictamen/versolicitudes.php"><button class="boton">Solicitudes</button></a>
+<a href="/sedea/personas/fisica/dictamen/versolicitudes.php"><button class="boton">Solicitudes</button></a>
 
 <h3>Dictaminar una solicitud</h3>
-<a href="http://localhost/sedea/personas/fisica/dictamen/dictaminarpf.php"><button class="boton">Dictaminar</button></a>
+<a href="/sedea/personas/fisica/dictamen/dictaminarpf.php"><button class="boton">Dictaminar</button></a>
 
 
 

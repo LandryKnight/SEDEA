@@ -572,7 +572,7 @@ $select = utf8_decode($select);
 if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 
 <h3 id="ine"><i>Identificación Oficial expedida por el <b>IFE o INE</b>: </i></h3> 
-<iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaIne; ?>'></iframe>
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaIne; ?>'></iframe>
 
 
 
@@ -584,7 +584,7 @@ if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else {  ?>
 
 <h3 id="curp"><i><b>CURP</b> Clave Única de Registro de Población:</i></h3> 
-<iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaCurp; ?>'></iframe>
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCurp; ?>'></iframe>
 
 
 
@@ -594,7 +594,7 @@ if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else
 <?php 
 if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento del Comprobante de DOMICILIO";} else{ ?>
 <h3 id="comprobantedomicilio"><i>Comprobante de domicilio</b>:</i></h3> 
-<iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaComprobanteDomicilio; ?>'></iframe>
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaComprobanteDomicilio; ?>'></iframe>
 
 
 
@@ -604,7 +604,7 @@ if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento 
 <?php 
 if(empty($rutaCroquis)){ echo "No se pudo localizar el Documento del CROQUIS";} else { ?>
 <h3 id="croquis"><i><b>Croquis</b> de bien a adquirir:</i></h3> 
-<iframe class='pdf' src='http://localhost/sedea/personas/fisica/<?php echo $rutaCroquis; ?>'></iframe>
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCroquis; ?>'></iframe>
 
 
 <?php  } ?>
@@ -623,7 +623,7 @@ if(empty($rutaCroquis)){ echo "No se pudo localizar el Documento del CROQUIS";} 
 
 
 </form>
-<br><a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionrg" >Menú Principal</button></a>
+<br><a href="/sedea/index.php"><button class="boton" id="ubicacionrg" >Menú Principal</button></a>
 
 
 <h5>Autorizo que mis datos personales sean empleados para el trámite de la solución. Otorgo el consentimiento para que sean transferidos en caso de ser necesario y dar el cumplimiento conforme a lo previsto en los artículos 16 fracción II,59 y 61 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Querétaro; así como a las obligaciones de transparencia y acceso a la información pública de conformidad con la Ley del Estado de Querétaro.

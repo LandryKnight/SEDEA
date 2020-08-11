@@ -437,7 +437,7 @@ $anio = substr($dato[5],6,4);
 
 
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton" id="ubicacionpd">Menú Principal</button></a>
+<a href="/sedea/index.php"><button class="boton" id="ubicacionpd">Menú Principal</button></a>
 
 
 </div>

@@ -25,7 +25,7 @@
 <a href="nuevoconceptopf.php"><button class="boton">Agregar nuevo concepto</button></a>
 
 <br><br><br>
-<a href="http://localhost/sedea/index.php"><button class="boton">Menú Principal</button></a>
+<a href="/sedea/index.php"><button class="boton">Menú Principal</button></a>
 
 </div>
 

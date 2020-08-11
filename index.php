@@ -1,18 +1,7 @@
 <?php 
 
 
-/*
-Usuarios Admin
-		 Funcionario Sedea
-		 Funcionario Regional
-		 
 
-		 Logo de Secretaria de Desarrollo Agropecuario
-		 Logo  Qro orgullo de Qro
-		 
-
-
- */
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +32,9 @@ Usuarios Admin
 	
 	<p>Dictamen de Solicitudes</p>
 	<br>
-	<a href="http://localhost/sedea/personas/fisica/menudictamenpf.php"><button class="boton2"><b>Persona Física</b></button> </a>
+	<a href="personas/fisica/menudictamenpf.php"><button class="boton2"><b>Persona Física</b></button> </a>
  <br> 
-	<a href="http://localhost/sedea/personas/moral/menudictamenpm.php"><button class="boton2"><b>Persona Moral</b></button></a>
+	<a href="personas/moral/menudictamenpm.php"><button class="boton2"><b>Persona Moral</b></button></a>
 
 
 </div>

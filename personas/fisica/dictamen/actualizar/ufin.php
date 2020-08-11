@@ -426,7 +426,7 @@ if(empty($ApoyoSolicitado6)){} else {
 <head>
 	<title>Finalizar Registro</title>
 	<link rel="stylesheet" type="text/css" href="uestiloFisica.css">
-	
+	<meta charset="utf-8">
 </head>
 <body>
 

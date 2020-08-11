@@ -83,7 +83,7 @@ if($result -> num_rows){
  ?>
 
 <br>
-<a href="http://localhost/sedea/index.php"><button class="boton"> Menú Principal</button></a>
+<a href="/sedea/index.php"><button class="boton"> Menú Principal</button></a>
 
 </div>
 </body>
