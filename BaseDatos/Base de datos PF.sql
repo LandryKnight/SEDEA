@@ -35,6 +35,8 @@ fechaReg varchar(30) #fecha de registro
 
 
 
+
+
 #Domicilio Persona Fisica
 
 Create Table personafisicaDomicilio( 
@@ -50,8 +52,9 @@ nombreLocalidad varchar(50),
 referenciaVialidad varchar(50),
 tipoActividad varchar(20),
 fechaReg varchar(30)
-
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
 
 
 #Nombre Proyecto
@@ -72,14 +75,13 @@ NomLocalPr varchar(80), #sNombreLocalidadProyecto
 NomMuniciPr varchar(30), #sNombreMunicipioProyecto
 RefVialPr varchar(50), #sReferenciaVialidadProyecto
 fechaRegistro varchar(30)
-
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Concepto Apoyo
 Create Table personafisicaConceptoApoyo(
 idConcepto int Primary key auto_increment,
-sfolioImpreso varchar(30), #Foreign Key
+folioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
 UniMedida int(5),
 CanSolicitada int(5),
@@ -89,6 +91,8 @@ AportacionBeneficiario varchar(10),
 InversionTotal varchar(20),
 fechaRegistro varchar(30)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
 
 #requisitos Generales
 Create Table personafisicaReqenerales(
@@ -114,6 +118,10 @@ estatusdictamen varchar(30),
 fechaRegistro varchar(30),
 fechaactualizacion varchar(30)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+
+
 
 
 
@@ -156,7 +164,6 @@ nombreLocalidad varchar(50),
 referenciaVialidad varchar(50),
 tipoActividad varchar(20),
 fechaReg varchar(30)
-
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
@@ -178,14 +185,13 @@ NomLocalPr varchar(80), #sNombreLocalidadProyecto
 NomMuniciPr varchar(30), #sNombreMunicipioProyecto
 RefVialPr varchar(50), #sReferenciaVialidadProyecto
 fechaRegistro varchar(30)
-
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 #Concepto Apoyo
 Create Table zhpersonafisicaConceptoApoyo(
 idConcepto int Primary key auto_increment,
-sfolioImpreso varchar(30), #Foreign Key
+folioImpreso varchar(30), #Foreign Key
 ApoyoSolicitado varchar(35),
 UniMedida int(5),
 CanSolicitada int(5),
@@ -223,19 +229,48 @@ fechaactualizacion varchar(30)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-
-
-
-
-#Add Constrain
-ALTER Table personafisicaConceptoApoyo
-add constraint FK_Folio_Concepto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
+#add constrains 
+ALTER Table personafisicaDomicilio
+add constraint FK_Folio_Domicilio_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
 
 ALTER Table personafisicaProyecto
-add constraint FK_Folio_Proyecto_PF Foreign Key (sfolioImpreso) references  personafisicaDatos(sfolioImpresoPF);
+add constraint FK_Folio_Proyecto_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
+
+ALTER Table personafisicaConceptoApoyo
+add constraint FK_Folio_ConceptoApoyo_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
 
 ALTER Table personafisicaReqenerales
-add constraint FK_Folio_Requisito_PF Foreign Key (sfolioImpreso) references personafisicaDatos(sfolioImpresoPF);
+add constraint FK_Folio_Reqenerales_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
+
+ALTER Table personafisicarutaarchivos
+add constraint FK_Folio_Rutaarchivos_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
+
+ALTER Table personafisicaDictamenes
+add constraint FK_Folio_Dictamenes_PF Foreign Key (folioImpreso) references  personafisicaDatos(folioImpresoPF);
+
+
+
+#add constrains para tablas historial
+ALTER Table zhpersonafisicaDomicilio
+add constraint FK_Folio_zhDomicilio_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+ALTER Table zhpersonafisicaProyecto
+add constraint FK_Folio_zhProyecto_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+ALTER Table zhpersonafisicaConceptoApoyo
+add constraint FK_Folio_zhConceptoApoyo_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+ALTER Table zhpersonafisicaReqenerales
+add constraint FK_Folio_zhReqenerales_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+ALTER Table zhpersonafisicarutaarchivos
+add constraint FK_Folio_zhRutaarchivos_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+ALTER Table zhpersonafisicaDictamenes
+add constraint FK_Folio_zhDictamenes_PF Foreign Key (folioImpreso) references  zhpersonafisicaDatos(folioImpresoPF);
+
+
+
 
 
 #Drop Foreign Key

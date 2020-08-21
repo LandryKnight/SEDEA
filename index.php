@@ -1,8 +1,4 @@
-<?php 
 
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -26,9 +22,9 @@
 	<p>Elija el tipo de persona que le corresponde </p>
 
 	<br>
-	<a href="personas/fisica/eleccionpf.php"> <button class="boton"><b>Persona Física</b></button> </a> 
+	<a href="personas/fisica/personaFisica.php"> <button class="boton"><b>Persona Física</b></button> </a> 
 	<br>
-	<a href="personas/moral/eleccionpm.php"><button class="boton"><b>Persona Moral</b></button> </a> 
+	<a href="personas/moral/personaMoral.php"><button class="boton"><b>Persona Moral</b></button> </a> 
 	
 	<p>Dictamen de Solicitudes</p>
 	<br>

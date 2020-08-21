@@ -99,10 +99,10 @@ if(isset($_POST['EnviarPF'])){
 <h1>Datos del Proyecto para Persona Física</h1>
 
 
-
+<div class="nombreproyecto">
 <p>Nombre del proyecto</p>	
 <input type="text" name="NombreProyecto" required="required"  placeholder="Ej: Estufa Ecológica" maxlength="80">
-
+</div>
 <br> <br>
 
 <div class="antiguedad">

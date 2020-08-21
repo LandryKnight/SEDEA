@@ -796,6 +796,75 @@ body{
 	color: white;
 	margin-bottom: .35in;
 	
+	position: relative;
+	top: .15in;
+	left: 2.8in;
+
+	
+}
+
+.dictaminarpf a{
+	position: relative;
+	top: 1in;
+	left: calc((100% - 2.5in)/2);
+
+}
+
+
+/* Buscar Folio */
+
+.buscarFolio{
+	width: 8in;
+	height: 6in;
+
+	position: relative;
+	left: calc((100% - 8in)/2);
+	top: .35in;
+	color: #FFFFFF;
+    background: #1D447D;
+
+    border-radius: 15px;
+	
+	border:none;
+ 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
+
+}
+
+.buscarFolio h2{
+	
+	width: 3in;
+	position: relative;
+	left: calc((100% -  3in)/2);
+
+	font-size: 24pt;
+	font-weight: bold;
+	padding-top: .15in;
+	margin-bottom: .35in;
+
+}
+
+.buscarFolio input{
+	position: relative;
+	left: calc((100% - 3in)/2);
+	height: .35in;
+	width: 3in;
+	border-radius: 8px;
+	margin-bottom: .35in;
+
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+	text-indent: 10px;
+    color: #9C1462;
+}
+
+
+.buscarFolio b{
+	font-size: 14pt;
+	font-weight: bold;
+	color: white;
+	margin-bottom: .35in;
+	
 	
 	
 
@@ -806,7 +875,7 @@ body{
 	
 }
 
-.dictaminarpf a{
+.buscarFolio a{
 	position: relative;
 	top: 1in;
 	left: calc((100% - 2.5in)/2);

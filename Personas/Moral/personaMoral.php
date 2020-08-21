@@ -306,7 +306,7 @@
 
 <br>
 
-<input type="submit" name="enviarPM" value="Enviar Información" id="botonPM" class="boton">
+<input type="submit" name="enviarPM" value="Siguiente" id="botonPM" class="boton">
 
 	<br>
 

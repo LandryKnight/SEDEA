@@ -46,7 +46,7 @@ require_once('conexionDPF.php');
 
 
 
-<div class="dictaminarpf">
+<div class="buscarFolio">
 <h2>Buscador de Folios</h2>
 
 <form method="POST" action="buscarfolio.php">
