@@ -111,18 +111,56 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-
+$borrarine                    =                    ($_POST['pdfine']);
+$borrarcurp                   =                    ($_POST['pdfcurp']);
+$borrarcroquis                =                    ($_POST['pdfdomicilio']);
+$borrardomicilio              =                    ($_POST['pdfcroquis']);
 	
-
+$rutaine                      =                     ($_POST['rutaIne']);
+$rutacurp                     =                     ($_POST['rutaCurp']);
+$rutacroquis                  =                     ($_POST['rutaCroquis']);
+$rutadomicilio                =                     ($_POST['rutaComprobanteDomicilio']);
 
 
 
 }
 
+$rutaprincipal                =                     "C:/XAMPP/htdocs/sedea/personas/fisica/";
+
+$nuevarutaine                 =                   $rutaprincipal.$rutaine;
+$nuevarutacurp                =                   $rutaprincipal.$rutacurp;
+$nuevarutacroquis             =                   $rutaprincipal.$rutacroquis;
+$nuevarutadomicilio           =                   $rutaprincipal.$rutadomicilio;
 
 
 
 
+
+
+if( $borrarine === "Si" ){
+unlink("$nuevarutaine");
+
+$deleteine = "DELETE FROM personafisicarutaarchivos WHERE ruta = '{$rutaine}'";
+
+}
+
+if( $borrarcurp === "Si"){
+unlink($nuevarutacurp);
+$deletecurp = "DELETE FROM personafisicarutaarchivos WHERE ruta = '{$rutacurp}'";
+
+}
+
+if($borrarcroquis === "Si"){
+unlink($nuevarutacroquis);
+$deletecroquis  = "DELETE FROM personafisicarutaarchivos WHERE ruta = '{$rutacroquis}'";
+
+}
+
+if( $borrardomicilio === "Si"){
+unlink($nuevarutadomicilio);
+$deletedomicilio = "DELETE FROM personafisicarutaarchivos WHERE ruta = '{$rutadomicilio }'";
+
+}
 
 
 

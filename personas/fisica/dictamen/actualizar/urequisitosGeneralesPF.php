@@ -572,8 +572,15 @@ $select = utf8_decode($select);
 if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 
 <h3 id="ine"><i>Identificación Oficial expedida por el <b>IFE o INE</b>: </i></h3> 
+<h2>Borrar este PDF</h2>  
+<select name="pdfine" required>
+  <option value="">Sin Seleccionar</option>
+  <option value="No">No</option>
+  <option value="Si">Si</option>
+  
+</select>
 <iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaIne; ?>'></iframe>
-
+<input type ="hidden" name ="rutaIne" value="<?php echo $rutaIne; ?>">
 
 
 <?php } ?>
@@ -583,9 +590,17 @@ if(empty($rutaIne)){ echo "No se pudo localizar el Documento del INE";}else{ ?>
 <?php 
 if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else {  ?>
 
-<h3 id="curp"><i><b>CURP</b> Clave Única de Registro de Población:</i></h3> 
-<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCurp; ?>'></iframe>
+<h3 id="curp"><i><b>CURP</b> Clave Única de Registro de Población:</i></h3>
+<h2>Borrar este PDF</h2>  
+<select name="pdfcurp" required>
+  <option value="">Sin Seleccionar</option>
+  <option value="No">No</option>
+  <option value="Si">Si</option>
+  
+</select>
 
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCurp; ?>'></iframe>
+<input type ="hidden" name ="rutaCurp" value="<?php echo $rutaCurp; ?>">
 
 
 
@@ -594,7 +609,16 @@ if(empty($rutaCurp)){ echo "No se pudo localizar el Documento de la CURP";} else
 <?php 
 if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento del Comprobante de DOMICILIO";} else{ ?>
 <h3 id="comprobantedomicilio"><i>Comprobante de domicilio</b>:</i></h3> 
+
+<h2>Borrar este PDF</h2>  
+<select name="pdfdomicilio" required>
+  <option value="">Sin Seleccionar</option>
+  <option value="No">No</option>
+  <option value="Si">Si</option>
+  
+</select>
 <iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaComprobanteDomicilio; ?>'></iframe>
+<input type ="hidden" name ="rutaComprobanteDomicilio" value="<?php echo $rutaComprobanteDomicilio; ?>">
 
 
 
@@ -603,9 +627,17 @@ if(empty($rutaComprobanteDomicilio)) {  echo "No se pudo localizar el Documento 
 
 <?php 
 if(empty($rutaCroquis)){ echo "No se pudo localizar el Documento del CROQUIS";} else { ?>
-<h3 id="croquis"><i><b>Croquis</b> de bien a adquirir:</i></h3> 
-<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCroquis; ?>'></iframe>
+<h3 id="croquis"><i><b>Croquis</b> de bien a adquirir:</i></h3>
 
+<h2>Borrar este PDF</h2>  
+<select name="pdfcroquis" required>
+  <option value="">Sin Seleccionar</option>
+  <option value="No">No</option>
+  <option value="Si">Si</option>
+  
+</select> 
+<iframe class='pdf' src='/sedea/personas/fisica/<?php echo $rutaCroquis; ?>'></iframe>
+<input type ="hidden" name ="rutaCroquis" value="<?php echo $rutaCroquis; ?>">
 
 <?php  } ?>
 

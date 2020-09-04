@@ -559,6 +559,26 @@ body{
 	top: .15in;
 }
 
+.requisitos select{
+	position: relative;
+	left: 2in;
+	bottom: .25in;
+	height: .35in;
+
+	border-radius: 8px;
+	
+	color: #9C1462;
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+}
+
+
+
+.requisitos input{
+	border-radius: 15px;
+}
+
 .declaraciones{
 	font-size: 14pt;
 	margin-top: 10px;
@@ -568,9 +588,6 @@ body{
 .declaraciones p{
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-.requisitos input{
-	border-radius: 15px;
 }
 
 

@@ -82,38 +82,46 @@ body{
 
 
 }
+
 .Marco2{
-
- top: 20px;
+ 
  width: 12in;
- height: 7in;
-
+ 
  position: absolute;
- left:calc((100% - 12in)/2);
+ left: calc((100% - 12in)/2);
+ top: 20px;
 
  color: #FFFFFF;
  background: #1D447D;
+
  padding-left: 43px;
+
  border-radius: 15px;
-
  border:none;
- box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
- margin-bottom: 50px;
 
- padding-top: 30px;
- padding-bottom: 30px;
+ box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 
 
 
 }
+
 
 .Marco2 h5{
-	position: relative;
-	top:  1in;
-	left: calc((100% - 9in) /2);
-	
 	width: 9in;
+	position: relative;
+	left: calc((100% - 9in) /2);
+	margin-top: .55in;
+		
 }
+
+
+#ubicacionsolicitudes{
+	position: relative;
+	left: calc((100% - 3in)/2);
+	margin-top: .35in;
+
+}
+
 
 .tituloSolicitudes{
 	
@@ -300,12 +308,7 @@ body{
 }
 
 
-#ubicacionsolicitudes{
-	position: relative;
-	top:  4in;
-	left: calc((100% - 3in)/2);
 
-}
 
 
 #domiciliotitulo{
@@ -746,7 +749,7 @@ body{
 
 .dictaminarpf{
 	width: 8in;
-	height: 6in;
+	height: 7in;
 
 	position: relative;
 	left: calc((100% - 8in)/2);
@@ -772,6 +775,16 @@ body{
 	padding-top: .15in;
 	margin-bottom: .35in;
 
+}
+
+.dictaminarpf h3{
+	position: relative;
+	left: calc( (100% - 3.1in)/2);
+	
+	
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14pt;
 }
 
 .dictaminarpf input{
@@ -815,7 +828,7 @@ body{
 
 .buscarFolio{
 	width: 8in;
-	height: 6in;
+	height: 7.3in;
 
 	position: relative;
 	left: calc((100% - 8in)/2);
@@ -856,6 +869,8 @@ body{
 	border: none;
 	text-indent: 10px;
     color: #9C1462;
+
+
 }
 
 
@@ -864,15 +879,50 @@ body{
 	font-weight: bold;
 	color: white;
 	margin-bottom: .35in;
-	
-	
-	
-
 	position: relative;
 	top: .15in;
 	left: 2.8in;
 
 	
+}
+
+.buscarFolio h3{
+	position: relative;
+	left: calc( (100% - 3.1in)/2);
+	
+	
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14pt;
+
+}
+
+.buscarFolio h4{
+	position: relative;
+	left: calc(( 100%  - 2.7in)/2);
+	
+
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+.buscarFolio select{
+	position: relative;
+	left:  calc( ( 100% - 2.5in )/2);
+
+	border-radius: 8px;
+	width: 2.5in;
+	height: .35in;
+
+	color: #9C1462;
+	font-weight:  bold;
+	font-size: 14pt;
+	border: none;
+
+	margin-bottom: 20px;
+
+
 }
 
 .buscarFolio a{

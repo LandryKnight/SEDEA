@@ -29,7 +29,7 @@
 	<p>Dictamen de Solicitudes</p>
 	<br>
 	<a href="personas/fisica/menudictamenpf.php"><button class="boton2"><b>Persona Física</b></button> </a>
- <br> 
+ 	<br> 
 	<a href="personas/moral/menudictamenpm.php"><button class="boton2"><b>Persona Moral</b></button></a>
 
 

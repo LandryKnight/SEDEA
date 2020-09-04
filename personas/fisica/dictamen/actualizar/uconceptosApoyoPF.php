@@ -138,7 +138,7 @@ apoyo solicitado</h3>
 
 
 
- $select = "SELECT * FROM personafisicaconceptoapoyo WHERE sfolioImpreso =  '{$Folio}'";
+ $select = "SELECT * FROM personafisicaconceptoapoyo WHERE folioImpreso =  '{$Folio}'";
   $select = utf8_decode($select);
 
   $result = queryMySql("$select");

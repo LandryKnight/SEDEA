@@ -27,10 +27,6 @@ require_once('conexionDPF.php');
 
 
 
-
-
-
-
  ?>
 
 
@@ -47,10 +43,25 @@ require_once('conexionDPF.php');
 
 
 <div class="buscarFolio">
-<h2>Buscador de Folios</h2>
+<h2> SEDEA Regional Buscador de Folios  </h2>
 
 <form method="POST" action="buscarfolio.php">
-<input type="text" name="bfolio" placeholder="Ej:SDFDS445678POD" maxlength="30" autocomplete="off"><br>
+<h3>Escribe el folio que deseas encontrar: </h3>
+
+<input type="text" name="bfolio" placeholder="Ej:SDFDS445678POD" maxlength="30" autocomplete="off" required="required">
+<br>
+
+<br>
+  <h4> Selecciona la Dirección Regional</h4> 
+  <select name="DireccionRegional"  required> 
+    <option value="">Sin Seleccionar</option>
+    <option value="Cadereyta de Montes">Cadereyta de Montes</option>
+    <option value="Jalpan de Serra">Jalpan de Serra</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="San Juan del Río">San Juan del Río</option>
+  </select>
+<br>
+
 <input type="submit" name="buscarFolio" value="Buscar Folio" class="boton">
 </form>
 
@@ -82,6 +93,8 @@ if($result -> num_rows){
 
  ?>
 
+<br>
+<a href="/sedea/personas/fisica/menudictamenpf.php"><button class="boton">Menú Dictamen</button></a>
 <br>
 <a href="/sedea/index.php"><button class="boton"> Menú Principal</button></a>
 

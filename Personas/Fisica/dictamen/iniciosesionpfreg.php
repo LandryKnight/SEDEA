@@ -11,16 +11,21 @@
 <body>
 
 <div class="login" align="center">
-<h1>SEDEA Querétaro</h1>
+<h1>SEDEA Regional</h1>
 <h2>Ingresa los datos para <br>el inicio de sesión: </h2>
 
 
 
-<form action="iniciosesionpf.php" method="post">
+<form action="iniciosesionpfreg.php" method="post">
 <h3>Usuario: </h3>
 <input type="text" name="usuarios" placeholder="Usuario SEDEA" required="required" maxlength="21" class="input" autocomplete="off">
 <h3>Contraseña: </h3>
 <input type="password" name="contras" placeholder="Contraseña SEDEA" required="required" maxlength="21" class="input">
+
+
+
+
+  
 
 <br>
 <br>
@@ -45,15 +50,16 @@
 
 		}
 
-		$select    = "SELECT nameUsuario,pazz FROM usuarios 	WHERE nameUsuario = '{$user}' AND pazz = '{$pazz}'";
-		$result    = queryMySql("$select");
-
-
-		
 	
-		if($result -> num_rows)	{
-		
-					header('location:verdictaminar.php');
+
+		$selectreg = "SELECT nameUsuario,pazz FROM usuariosreg 	WHERE nameUsuario = '{$user}' AND pazz = '{$pazz}'";
+		$resultreg = queryMySql("$selectreg");
+	
+		 if($resultreg -> num_rows)
+
+			{
+
+					header('location:buscarfolio.php');
 
 			} else {
 

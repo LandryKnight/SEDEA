@@ -214,14 +214,14 @@
     <select name="EstadoCivil" required>
     <option value="">Sin Seleccionar</option>
     <option value="Solter@">Solter@</option>
-    <option value="Casado">Casado</option>
-    <option value="Divorciado">Divorciado</option>
+    <option value="Casad@">Casad@</option>
+    <option value="Divorciad@">Divorciad@</option>
     <option value="Unión Libre">Unión Libre</option>
   </select>
 
   </div>
-  <div class="genero">
 
+  <div class="genero">
   <p >Selecciona el Estado de Nacimiento</p>
   <select name="EstadoNacimiento" required >
        <option value="">Sin Seleccionar</option>

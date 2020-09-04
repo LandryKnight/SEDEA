@@ -10,7 +10,7 @@ if(isset($_POST['EnviarFolio'])){
 
 
 
-$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDictamenes.estatusdictamen,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo,personafisicaDictamenes WHERE personafisicaDatos.folioImpresoPF = '{$Folio}'AND personafisicaDatos.folioImpresoPF = personafisicaProyecto.folioImpreso AND personafisicaDatos.folioImpresoPF = personafisicaConceptoApoyo.sfolioImpreso AND personafisicaDictamenes.folioImpreso = personafisicaDatos.folioImpresoPF  ORDER BY personafisicaDictamenes.estatusdictamen DESC ,personafisicaDatos.nombre ASC";
+$select = "SELECT personafisicaDatos.folioImpresoPF,personafisicaDatos.nombre,personafisicaDatos.dirRegional,personafisicaDatos.curp,personafisicaProyecto.NProyecto,personafisicaConceptoApoyo.ApoyoSolicitado,personafisicaConceptoApoyo.InversionTotal,personafisicaDictamenes.estatusdictamen,personafisicaDatos.fechaReg FROM personafisicaDatos,personafisicaProyecto,personafisicaConceptoApoyo,personafisicaDictamenes WHERE personafisicaDatos.folioImpresoPF = '{$Folio}' AND personafisicaDatos.folioImpresoPF = personafisicaProyecto.folioImpreso AND personafisicaDatos.folioImpresoPF = personafisicaConceptoApoyo.folioImpreso AND personafisicaDictamenes.folioImpreso = personafisicaDatos.folioImpresoPF  ORDER BY personafisicaDictamenes.estatusdictamen DESC ,personafisicaDatos.nombre ASC, personafisicaConceptoApoyo.ApoyoSolicitado ASC";
 
 $select = utf8_decode($select);
 
@@ -90,7 +90,8 @@ echo "</table>";
 
  ?>
 
-
+<a href="/sedea/personas/fisica/dictamen/buscarfolio.php"><button class="boton" id="ubicacionsolicitudes">Buscar Folio</button></a>
+<br>
 <a href="/sedea/index.php"><button class="boton" id="ubicacionsolicitudes">Menú Principal</button></a>
 
 

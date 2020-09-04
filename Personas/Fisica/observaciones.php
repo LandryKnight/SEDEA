@@ -119,24 +119,6 @@ $AportacionBeneficiario6	  =	                     sanitizeString($_POST['Aportac
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         global $ruta_SQL_ine;
         global $ruta_SQL_curp;
         global $ruta_SQL_comprobantedomicilio;

@@ -246,8 +246,8 @@ $anio = substr($dato[5],6,4);
     <select name="EstadoCivil" required>
     <option value="<?php echo $dato[7]; ?>"><?php echo $dato[7]; ?></option>
     <option value="Solter@">Solter@</option>
-    <option value="Casado">Casado</option>
-    <option value="Divorciado">Divorciado</option>
+    <option value="Casad@">Casad@</option>
+    <option value="Divorciad@">Divorciad@</option>
     <option value="Unión Libre">Unión Libre</option>
   </select>
 
